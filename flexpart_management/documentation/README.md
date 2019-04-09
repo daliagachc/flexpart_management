@@ -8,3 +8,4 @@ hosted here: https://buildmedia.readthedocs.org/media/pdf/pflexible/latest/pflex
 
 - compilation: information about the compilation process at taito should come in this [folder](./compilation)
 
+- example: first succesful? example is [here](./example)

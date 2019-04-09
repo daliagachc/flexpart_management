@@ -15,3 +15,6 @@ notebooks showing/processing data should be hosted at [nbs](./flexpart_managemen
 
 ## papers
 literature, references, and literature summary goes [here](./flexpart_management/papers)
+
+## runs 
+run conf files go [here](./flexpart_management/runs)

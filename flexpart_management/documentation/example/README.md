@@ -1,0 +1,14 @@
+- here i will try the example described [here](
+https://www.flexpart.eu/wiki/FpLimitedareaWrf
+)
+
+- the test case input data links are:
+  - https://www.flexpart.eu/downloads/flexwrf_v31_testcases.tar.gz  
+  - https://www.flexpart.eu/downloads/flexwrf_v30_testcases.tar.gz
+  
+- the wrf input files are: 
+  - https://www.flexpart.eu/downloads/Wrfdata.tar.gz
+  - https://www.flexpart.eu/downloads/Wrfdata.tar.gz\
+  they are similar here. 
+
+  
