@@ -13,4 +13,6 @@ https://www.flexpart.eu/wiki/FpLimitedareaWrf
   
 - make sure you use the example provided by version 3.3.1 input since otherwise you will get the pathname error
   - solution for that error was provided by Victoria's [post](https://www.flexpart.eu/ticket/167)
-  - copy data file from 
+  - copy data file from version 3.3
+  - if error "calcpar - richardson" 
+    - init time needs to be changed. see info [here](https://www.flexpart.eu/ticket/171) 
