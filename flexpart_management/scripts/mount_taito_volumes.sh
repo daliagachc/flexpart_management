@@ -28,3 +28,4 @@ umount -f $mount_dir
 echo 'cont'
 sshfs -oreconnect -o volname=$name $log_addr:$remote_dir $mount_dir
 
+
