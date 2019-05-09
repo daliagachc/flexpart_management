@@ -96,6 +96,7 @@ def is_interactive():
 # %%
 if __name__ == "__main__" and is_interactive == False:
     import sys
+    print('starting program')
     path_files=sys.argv[1]
     prefix = sys.argv[2]
     ex_path = sys.argv[3]
