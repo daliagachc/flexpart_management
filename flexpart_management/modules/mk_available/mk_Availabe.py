@@ -91,10 +91,10 @@ def is_interactive():
     return not hasattr(main, '__file__')
 
 # %%
-
+print('interactive',is_interactive())
 
 # %%
-if __name__ == "__main__" and is_interactive == False:
+if __name__ == "__main__" and is_interactive() == False:
     import sys
     print('starting program')
     path_files=sys.argv[1]
