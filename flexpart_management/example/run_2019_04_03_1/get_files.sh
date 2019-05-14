@@ -1,0 +1,2 @@
+rsync -a aliagadi@taito-login3.csc.fi:/proj/atm/saltena/runs/run_2019_04_03_1/wrf2/namelist.input ./
+rsync -a aliagadi@taito-login3.csc.fi:/homeappl/home/aliagadi/appl_taito/flexpart/Src_flexwrf_v3.3.2-omp/examples/flexwrf.input.forward1 ./
