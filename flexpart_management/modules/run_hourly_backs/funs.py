@@ -15,7 +15,6 @@
 # %%
 from useful_scit.imps import *
 import datetime as dt
-import flexpart_management.modules.run_hourly_backs.input_template
 import flexpart_management.modules.mk_available.mk_Availabe as ma
 
 # %%
