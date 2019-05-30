@@ -1,12 +1,12 @@
 =====================FORMER PATHNAMES FILE===================
 {path_simulation}/
-{path_wrf_files}
+{path_wrf_files}/
 {path_avail_01}
-{path_wrf_files}
+{path_wrf_files}/
 {path_avail_02}
-{path_wrf_files}
+{path_wrf_files}/
 {path_avail_03}
-{path_wrf_files}
+{path_wrf_files}/
 {path_avail_04}
 =============================================================
 =====================FORMER COMMAND FILE=====================
