@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/launch_hour.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/launch_hour.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/input_template.txt" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/input_template.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,11 +45,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/input_template.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1590">
-                  <caret line="106" column="45" selection-start-line="106" selection-start-column="45" selection-end-line="106" selection-end-column="45" />
+                <state relative-caret-position="15">
+                  <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
                 </state>
               </provider>
             </entry>
@@ -63,7 +63,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/funs.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="255">
@@ -162,10 +162,10 @@
         <option value="$PROJECT_DIR$/flexpart_management/modules/mk_available/mk_Availabe.py" />
         <option value="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/input_template.py" />
         <option value="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/input_hour_funs.py" />
-        <option value="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/input_template.txt" />
         <option value="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/run_flex_template.sh" />
         <option value="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/funs.py" />
         <option value="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/launch_hour.py" />
+        <option value="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/input_template.txt" />
       </list>
     </option>
   </component>
@@ -384,12 +384,12 @@
       <workItem from="1558544825538" duration="17000" />
       <workItem from="1558729428733" duration="18836000" />
       <workItem from="1558799615344" duration="22104000" />
-      <workItem from="1559161678123" duration="18851000" />
+      <workItem from="1559161678123" duration="19121000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109098000" />
+    <option name="totallyTimeSpent" value="109368000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
@@ -715,20 +715,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/run_flex_template.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/input_template.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1590">
-          <caret line="106" column="45" selection-start-line="106" selection-start-column="45" selection-end-line="106" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_23-58-16_/local_run.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -761,6 +747,20 @@
             <element signature="e#272#302#0" expanded="true" />
             <element signature="e#765#2164#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/run_flex_template.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/input_template.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
         </state>
       </provider>
     </entry>

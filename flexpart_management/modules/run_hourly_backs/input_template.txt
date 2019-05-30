@@ -1,5 +1,5 @@
 =====================FORMER PATHNAMES FILE===================
-{path_simulation}
+{path_simulation}/
 {path_wrf_files}
 {path_avail_01}
 {path_wrf_files}
