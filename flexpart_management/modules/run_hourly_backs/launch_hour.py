@@ -58,7 +58,7 @@ def create_run_from_d1(d1:dt.datetime,
                 cpu_num=1,
                 run_time='04:00:00',
                 run_type='serial',
-                run_mem=4000,
+                run_mem=8000,
                 run_name='flex' + run_name
         )
         # %%
