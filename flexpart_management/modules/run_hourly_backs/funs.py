@@ -29,8 +29,8 @@ def create_single_run(
         release_time_h: int,
         hours_back_in_time: int,
         num_particles: int,
-        path_wrf_files: str,
-        path_simulation: str,
+        path_wrf_files_: str,
+        path_simulation_: str,
         input_template: str,
         run_temp_path: str,
         run_flex_name: str,
@@ -39,6 +39,8 @@ def create_single_run(
 ):
     # %%
     # date_start_release = dt.datetime(2017,12,7,0,0)
+    path_simulation = os.path.join(path_simulation_,'')
+    path_wrf_files = os.path.join(path_wrf_files_,'')
 
     doms = [i for i in range(1, 5)]
     flx_input_name = 'flx.input.txt'

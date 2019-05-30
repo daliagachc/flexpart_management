@@ -16,23 +16,26 @@
 from useful_scit.imps import *
 import datetime as dt
 from flexpart_management.modules.run_hourly_backs import funs
-
+from flexpart_management.modules.mk_available import mk_Availabe as ma
 
 
 
 
 # %%
 d1 = dt.datetime(2017,12,6)
-d2 = dt.datetime(2017,12,26)
+d2 = dt.datetime(2017,12,27)
+
+# d1 = dt.datetime(2017,12,25,4)
+# d2 = dt.datetime(2017,12,25,10)
 
 # %%
 date_range = pd.date_range(d1,d2,freq='1H').values
 source_run_path = '/homeappl/home/aliagadi/wrk/DONOTREMOVE/flexpart_management_data/runs/2019-05-30_01-38-03_'
+# source_run_path = '/tmp/run_flx/'
 path_wrf_files = '/proj/atm/saltena/runs/run_2019_05_15/wrf'
+# path_wrf_files = '/Users/diego/Downloads/wrf_test_d01//'
 
 # %%
-
-    
 
 # %%
 def create_run_from_d1(d1:dt.datetime,
@@ -42,7 +45,8 @@ def create_run_from_d1(d1:dt.datetime,
         # date_start_release = dt.datetime(2017, 12, 25, 3, 15)
         date_start_release = d1
         release_time_h = 1
-        hours_back_in_time = 24
+        hours_back_in_time = 72
+#         hours_back_in_time = 2
         num_particles = 10000
         # path_wrf_files = '/Users/diego/Downloads/wrf_test_d01/'  # 'where are the input files'
         input_template = './input_template.txt'
