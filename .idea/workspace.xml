@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/mk_available/mk_Availabe.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/mk_available/mk_Availabe.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/mk_available/mk_Availabe.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/mk_available/mk_Availabe.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/example/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/example/run_2019_04_03_1/get_files.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/example/run_2019_04_03_1/working_victoria.forward1_d04_18th_nests_conc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,18 +15,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="105">
-                <caret line="7" column="83" selection-start-line="7" selection-start-column="83" selection-end-line="7" selection-end-column="83" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flexpart_management/modules/mk_available/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -37,12 +27,36 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/flexpart_management/scripts/mount_taito_volumes.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flexpart_management/example/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor>
+                <caret column="48" selection-start-column="48" selection-end-column="48" />
+              </first_editor>
+              <second_editor />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flexpart_management/example/run_2019_04_03_1/get_files.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="139" selection-start-line="1" selection-start-column="139" selection-end-line="1" selection-end-column="139" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flexpart_management/example/run_2019_04_03_1/working_diego.forward1">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/flexpart_management/example/run_2019_04_03_1/namelist.input">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-296" />
           </provider>
         </entry>
       </file>
@@ -87,13 +101,15 @@
         <option value="$PROJECT_DIR$/flexpart_management/scripts/compile_flexpart.sh" />
         <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/flex_examples_victoria/README.md" />
         <option value="$PROJECT_DIR$/flexpart_management/modules/mk_available/README.md" />
+        <option value="$PROJECT_DIR$/flexpart_management/example/README.md" />
+        <option value="$PROJECT_DIR$/flexpart_management/example/run_2019_04_03_1/directories" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="1027" />
+    <option name="width" value="1920" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -103,6 +119,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -120,19 +137,40 @@
               <item name="flexpart_management" type="b2602c69:ProjectViewProjectNode" />
               <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
               <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flexpart_management" type="b2602c69:ProjectViewProjectNode" />
               <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
               <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="run_2019_04_03_1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flexpart_management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
+              <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
+              <item name="runs_config_dir" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flexpart_management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
+              <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
+              <item name="runs_config_dir" type="462c0819:PsiDirectoryNode" />
+              <item name="flex_examples_victoria" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flexpart_management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
+              <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
+              <item name="runs_config_dir" type="462c0819:PsiDirectoryNode" />
+              <item name="flex_examples_victoria" type="462c0819:PsiDirectoryNode" />
+              <item name="FLEXPART" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -145,16 +183,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.documentation.PythonDocumentationConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/flexpart_management" />
-      <recent name="$PROJECT_DIR$/flexpart_management/source_code" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/flexpart_management/example/run_2019_04_03_1" />
       <recent name="$PROJECT_DIR$/flexpart_management/modules/mk_available" />
       <recent name="$PROJECT_DIR$/flexpart_management/scripts" />
       <recent name="$PROJECT_DIR$/flexpart_management/runs/flexwrf_v31_testcases/flexwrf_v31_testcases" />
       <recent name="$PROJECT_DIR$/flexpart_management/runs/flexwrf_v31_testcases" />
-      <recent name="$PROJECT_DIR$/flexpart_management/papers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/flexpart_management" />
+      <recent name="$PROJECT_DIR$/flexpart_management/source_code" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -201,22 +239,24 @@
       <updated>1554816296162</updated>
       <workItem from="1554816297601" duration="13267000" />
       <workItem from="1555315517483" duration="3791000" />
-      <workItem from="1557357718329" duration="4141000" />
+      <workItem from="1557357718329" duration="4589000" />
+      <workItem from="1557375137149" duration="1707000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21199000" />
+    <option name="totallyTimeSpent" value="23354000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="DB Browser" order="2" />
       <window_info id="Favorites" order="3" sideWeight="0.51867664" side_tool="true" weight="0.26797387" />
-      <window_info id="Structure" order="4" sideWeight="0.48301485" side_tool="true" visible="true" weight="0.17678382" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.5169851" visible="true" weight="0.17678382" />
+      <window_info id="Structure" order="4" sideWeight="0.48407644" side_tool="true" visible="true" weight="0.17838125" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.51592356" visible="true" weight="0.17838125" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32870865" />
@@ -226,7 +266,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32997987" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.23460722" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.16454352" />
       <window_info anchor="bottom" id="DB Execution Console" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
@@ -360,13 +400,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/sym_links/taito_mount_mac/home/appl_taito/back_up_flexpart/flexpart_wrf-3.3/makefile.mom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="107" column="25" selection-start-line="107" selection-start-column="25" selection-end-line="107" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/sym_links/taito_mount_mac/home/appl_taito/back_up_flexpart/flexpart_wrf-3.3/makefile.mom" />
     <entry file="file://$PROJECT_DIR$/flexpart_management/sym_links/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -382,13 +416,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/sym_links/taito_mount_mac/home/appl_taito/back_up_flexpart/compile_flexpart.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/sym_links/taito_mount_mac/home/appl_taito/back_up_flexpart/compile_flexpart.sh" />
     <entry file="file://$PROJECT_DIR$/flexpart_management/documentation/compilation/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -447,16 +475,6 @@
     <entry file="file://$PROJECT_DIR$/flexpart_management/modules/mk_available/mkAVAIL_v7.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/modules/mk_available/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="15">
-            <caret line="1" column="66" selection-start-line="1" selection-start-column="66" selection-end-line="1" selection-end-column="66" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flexpart_management/modules/mk_available/mk_Availabe.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
@@ -479,6 +497,41 @@
         <state relative-caret-position="225">
           <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/modules/mk_available/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="15">
+            <caret line="1" column="66" selection-start-line="1" selection-start-column="66" selection-end-line="1" selection-end-column="66" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/example/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="48" selection-start-column="48" selection-end-column="48" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/example/run_2019_04_03_1/get_files.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="139" selection-start-line="1" selection-start-column="139" selection-end-line="1" selection-end-column="139" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/example/run_2019_04_03_1/working_diego.forward1">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/example/run_2019_04_03_1/namelist.input">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-296" />
       </provider>
     </entry>
   </component>
