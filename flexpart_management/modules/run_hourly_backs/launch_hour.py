@@ -16,7 +16,6 @@
 from useful_scit.imps import *
 import datetime as dt
 from flexpart_management.modules.run_hourly_backs import funs
-importlib.reload(funs)
 
 
 
