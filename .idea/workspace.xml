@@ -2,10 +2,71 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/funs.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/funs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/input_template.txt" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/input_template.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/launch_hour.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/launch_hour.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/launch_hour.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/launch_hour.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/diego.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/modules/daily_back/ConfigDayRun.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/modules/daily_back/config_file.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/modules/daily_back/daily_back.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/modules/daily_back/flex_input_templ" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/modules/daily_back/run_flex_templ.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/modules/flx_array.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_12-30-30_/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_12-30-30_/flex_input" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_12-30-30_/flex_input_templ" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_12-30-30_/get_files.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_12-30-30_/local_run.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_12-30-30_/run_flex.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_12-30-30_/run_flex_test.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_12-30-30_/run_name.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_1/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_1/flex_input" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_1/flex_input_templ" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_1/get_files.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_1/local_run.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_1/run_flex.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_1/run_flex_test.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_1/run_name.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_2/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_2/flex_input" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_2/flex_input_templ" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_2/get_files.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_2/local_run.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_2/run_flex.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_2/run_flex_test.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_2/run_name.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_1/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_1/flex_input" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_1/flex_input_templ" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_1/get_files.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_1/local_run.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_1/run_flex.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_1/run_flex_test.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_1/run_name.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_2/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_2/flex_input" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_2/flex_input_templ" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_2/get_files.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_2/local_run.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_2/run_flex.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_2/run_flex_test.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_2/run_name.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_17-28-37_/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_17-28-37_/flex_input" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_17-28-37_/flex_input_templ" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_17-28-37_/get_files.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_17-28-37_/local_run.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_17-28-37_/run_flex.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_17-28-37_/run_flex_test.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_17-28-37_/run_name.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-06-03_23-39-12_/flex_input_templ" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-06-03_23-39-12_/run_flex_templ.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/flexpart_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flexpart_management.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,45 +79,43 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/launch_hour.py">
+            <entry file="file://$PROJECT_DIR$/flexpart_management/modules/daily_back/config_file.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="631">
-                  <caret line="62" column="25" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
+                <state relative-caret-position="75">
+                  <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
                   <folding>
-                    <element signature="e#272#302#0" expanded="true" />
+                    <element signature="e#91#112#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_23-58-16_/local_run.sh">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="465">
-                  <caret line="31" selection-start-line="31" selection-end-line="31" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_23-58-16_/run_flex.sh">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/run_flex_template.sh">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/input_template.txt">
+            <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-06-03_23-39-12_/Untitled.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="87">
-                  <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+                <state relative-caret-position="183">
+                  <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="95" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-06-03_23-39-12_/flex_input_templ">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1410">
+                  <caret line="94" selection-start-line="94" selection-end-line="94" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/flexpart_management/modules/flx_array.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1665">
+                  <caret line="275" column="33" selection-start-line="275" selection-start-column="33" selection-end-line="275" selection-end-column="33" />
+                  <folding>
+                    <element signature="e#91#135#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -66,26 +125,13 @@
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/funs.py">
+            <entry file="file://$PROJECT_DIR$/flexpart_management/modules/daily_back/daily_back.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="194">
-                  <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+                <state relative-caret-position="340">
+                  <caret line="134" column="31" selection-start-line="134" selection-start-column="31" selection-end-line="134" selection-end-column="31" />
                   <folding>
-                    <element signature="e#272#302#0" expanded="true" />
-                    <element signature="e#427#489#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/flexpart_management/modules/mk_available/mk_Availabe.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1335">
-                  <caret line="135" column="15" selection-start-line="135" selection-start-column="15" selection-end-line="135" selection-end-column="15" />
-                  <folding>
-                    <element signature="e#272#281#0" expanded="true" />
-                    <element signature="e#2064#2957#0" expanded="true" />
+                    <element signature="e#92#107#0" expanded="true" />
+                    <element signature="e#2696#3560#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -111,10 +157,22 @@
       <find>maxnests</find>
       <find>wrf</find>
       <find>{exe}</find>
+      <find>,</find>
+      <find>=</find>
+      <find>end_date_release</find>
+      <find>dt</find>
+      <find>\s\s+</find>
+      <find>'lat'</find>
+      <find>lat</find>
+      <find>fa.</find>
     </findStrings>
     <replaceStrings>
       <replace>##</replace>
       <replace>{path_wrf_files}</replace>
+      <replace>\t\t\t = \t\t\t\t,</replace>
+      <replace>\t\t\t=\t</replace>
+      <replace>end_dt_rel</replace>
+      <replace>\t</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/flexpart_management/source_code</dir>
@@ -127,31 +185,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/flexpart_management/sym_links/README.md" />
-        <option value="$PROJECT_DIR$/flexpart_management/scripts/mount_taito_volumes.sh" />
-        <option value="$PROJECT_DIR$/flexpart_management/scripts/compile_flexpart.sh" />
-        <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/flex_examples_victoria/README.md" />
-        <option value="$PROJECT_DIR$/flexpart_management/modules/mk_available/README.md" />
-        <option value="$PROJECT_DIR$/flexpart_management/example/README.md" />
-        <option value="$PROJECT_DIR$/flexpart_management/example/run_2019_04_03_1/directories" />
-        <option value="$PROJECT_DIR$/flexpart_management/example/run_2019_04_03_1/namelist.wps" />
-        <option value="$PROJECT_DIR$/flexpart_management/example/run_2019_04_03_1/working_diego.forward1.bu" />
-        <option value="$PROJECT_DIR$/flexpart_management/example/run_2019_04_03_1/working_diego.forward1" />
-        <option value="$PROJECT_DIR$/flexpart_management/example/run_2019_04_03_1/working_diego.backward1" />
-        <option value="$PROJECT_DIR$/flexpart_management/example/run_2019_04_03_1/flexwrf.input.backward1_chc" />
-        <option value="$PROJECT_DIR$/flexpart_management/example/run_2019_04_03_1/flexwrf.input.forward1_chc" />
-        <option value="$PROJECT_DIR$/flexpart_management/example/run_2019_04_03_1/run_flex_test.sh" />
-        <option value="$PROJECT_DIR$/flexpart_management/example/run_2019_04_03_1/run_flex_for.sh" />
-        <option value="$PROJECT_DIR$/flexpart_management/example/run_2019_04_03_1/get_files.sh" />
-        <option value="$PROJECT_DIR$/flexpart_management/example/run_2019_04_03_1/f_in_for_chc_v02" />
-        <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_17-45-51_/run_local.sh" />
-        <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_17-45-51_/run_flex_test.sh" />
-        <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_17-45-51_/run_flex.sh" />
-        <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_19-44-48_/flex_input" />
-        <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_19-50-42_/flex_input" />
-        <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_17-45-51_/flex_input" />
-        <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_17-45-51_/flex_input_templ" />
-        <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_17-45-51_/local_run.sh" />
         <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_19-50-42_/local_run.sh" />
         <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_19-44-48_/local_run.sh" />
         <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_21-02-34_/flex_input_templ" />
@@ -178,13 +211,38 @@
         <option value="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/launch_hour.py" />
         <option value="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/input_template.txt" />
         <option value="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/funs.py" />
+        <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_17-45-51_/flex_input" />
+        <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_12-30-30_/run_flex_test.sh" />
+        <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_12-30-30_/README.md" />
+        <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_12-30-30_/flex_input_templ" />
+        <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_1/flex_input_templ" />
+        <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_1/README.md" />
+        <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_1/flex_input_templ" />
+        <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_2/flex_input_templ" />
+        <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_2/flex_input_templ" />
+        <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_17-28-37_/flex_input_templ" />
+        <option value="$PROJECT_DIR$/flexpart_management/modules/xarray.py" />
+        <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_17-28-37_/README.md" />
+        <option value="$PROJECT_DIR$/flexpart_management/modules/create_release_file.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_15.sql" />
+        <option value="$PROJECT_DIR$/flexpart_management/modules/flx_input_temp.tsv" />
+        <option value="$PROJECT_DIR$/flexpart_management/modules/daily_back/config_dic_keys.py" />
+        <option value="$PROJECT_DIR$/flexpart_management/modules/daily_back/daily_back.py" />
+        <option value="$PROJECT_DIR$/flexpart_management/modules/daily_back/run_flex_templ.sh" />
+        <option value="$PROJECT_DIR$/flexpart_management/modules/daily_back/flex_input_templ" />
+        <option value="$PROJECT_DIR$/flexpart_management/modules/daily_back/config_file.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/flexpart_management/modules/flx_array.py" />
+        <option value="$PROJECT_DIR$/flexpart_management/modules/daily_back/ConfigDayRun.py" />
+        <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-06-03_23-39-12_/flex_input_templ" />
+        <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-06-03_23-39-12_/Untitled.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1680" />
-    <option name="height" value="1027" />
+    <option name="width" value="1920" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -195,7 +253,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -219,14 +276,7 @@
               <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
               <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="mk_available" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flexpart_management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
-              <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="run_hourly_backs" type="462c0819:PsiDirectoryNode" />
+              <item name="daily_back" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flexpart_management" type="b2602c69:ProjectViewProjectNode" />
@@ -238,37 +288,48 @@
               <item name="flexpart_management" type="b2602c69:ProjectViewProjectNode" />
               <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
               <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
-              <item name="papers" type="462c0819:PsiDirectoryNode" />
+              <item name="runs_config_dir" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flexpart_management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="flexpart_management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 (b36) &gt;" type="70bed36:NamedLibraryElementNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GenericSQL" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-06-03_23-39-12_" />
+      <recent name="$PROJECT_DIR$/flexpart_management/modules/daily_back" />
+      <recent name="$PROJECT_DIR$/flexpart_management/runs_config_dir" />
       <recent name="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs" />
       <recent name="$PROJECT_DIR$/flexpart_management/modules/mk_available" />
-      <recent name="$PROJECT_DIR$/flexpart_management/runs_config_dir" />
-      <recent name="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_19-50-42_" />
-      <recent name="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_19-44-48_" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-06-03_23-39-12_" />
+      <recent name="$PROJECT_DIR$/flexpart_management/modules/daily_back" />
       <recent name="$PROJECT_DIR$/flexpart_management/modules/funs" />
       <recent name="$PROJECT_DIR$/flexpart_management/runs_config_dir" />
       <recent name="$PROJECT_DIR$/flexpart_management/example/run_2019_04_03_1/data_out" />
-      <recent name="$PROJECT_DIR$/flexpart_management" />
-      <recent name="$PROJECT_DIR$/flexpart_management/source_code" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -283,7 +344,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Bash.local_run.sh">
+  <component name="RunManager" selected="Python.Untitled">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -312,9 +373,9 @@
       <option name="INTERPRETER_OPTIONS" value="bash" />
       <option name="INTERPRETER_PATH" value="/usr/bin/env" />
       <option name="PROJECT_INTERPRETER" value="false" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_22-01-13_" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_1" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_22-01-13_/local_run.sh" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_1/local_run.sh" />
       <option name="PARAMETERS" value="" />
       <method v="2" />
     </configuration>
@@ -323,9 +384,9 @@
       <option name="INTERPRETER_OPTIONS" value="bash" />
       <option name="INTERPRETER_PATH" value="/usr/bin/env" />
       <option name="PROJECT_INTERPRETER" value="false" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_22-09-13_" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_2" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_22-09-13_/local_run.sh" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_2/local_run.sh" />
       <option name="PARAMETERS" value="" />
       <method v="2" />
     </configuration>
@@ -334,20 +395,9 @@
       <option name="INTERPRETER_OPTIONS" value="bash" />
       <option name="INTERPRETER_PATH" value="/usr/bin/env" />
       <option name="PROJECT_INTERPRETER" value="false" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_23-58-16_" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_2" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_23-58-16_/local_run.sh" />
-      <option name="PARAMETERS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="local_run.sh (5)" type="BashConfigurationType" factoryName="Bash" temporary="true">
-      <module name="flexpart_management" />
-      <option name="INTERPRETER_OPTIONS" value="bash" />
-      <option name="INTERPRETER_PATH" value="/usr/bin/env" />
-      <option name="PROJECT_INTERPRETER" value="false" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_11-54-22_" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_11-54-22_/local_run.sh" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_2/local_run.sh" />
       <option name="PARAMETERS" value="" />
       <method v="2" />
     </configuration>
@@ -356,10 +406,51 @@
       <option name="INTERPRETER_OPTIONS" value="bash" />
       <option name="INTERPRETER_PATH" value="/usr/bin/env" />
       <option name="PROJECT_INTERPRETER" value="false" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_23-19-34_" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_17-28-37_" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_23-19-34_/local_run.sh" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_17-28-37_/local_run.sh" />
       <option name="PARAMETERS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Untitled" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="flexpart_management" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-06-03_23-39-12_" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-06-03_23-39-12_/Untitled.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="flexpart_management" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
@@ -372,19 +463,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Bash.local_run.sh (5)" />
       <item itemvalue="Bash.local_run.sh (1)" />
       <item itemvalue="Bash.local_run.sh (2)" />
-      <item itemvalue="Bash.local_run.sh" />
       <item itemvalue="Bash.local_run.sh (3)" />
+      <item itemvalue="Bash.local_run.sh" />
+      <item itemvalue="Python.Untitled" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Untitled" />
         <item itemvalue="Bash.local_run.sh" />
         <item itemvalue="Bash.local_run.sh (3)" />
         <item itemvalue="Bash.local_run.sh (2)" />
         <item itemvalue="Bash.local_run.sh (1)" />
-        <item itemvalue="Bash.local_run.sh (5)" />
       </list>
     </recent_temporary>
   </component>
@@ -404,33 +495,34 @@
       <workItem from="1558729428733" duration="18836000" />
       <workItem from="1558799615344" duration="22104000" />
       <workItem from="1559161678123" duration="21873000" />
-      <workItem from="1559217444887" duration="1161000" />
+      <workItem from="1559217444887" duration="104293000" />
+      <workItem from="1559618043165" duration="2562000" />
+      <workItem from="1559620703317" duration="990000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113281000" />
+    <option name="totallyTimeSpent" value="219965000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1920" height="1057" extended-state="0" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="DB Browser" order="2" />
       <window_info id="Favorites" order="3" sideWeight="0.51867664" side_tool="true" weight="0.26797387" />
-      <window_info id="Structure" order="4" sideWeight="0.49561402" side_tool="true" visible="true" weight="0.16300367" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.50438595" weight="0.16300367" />
+      <window_info id="Structure" order="4" sideWeight="0.49893844" side_tool="true" weight="0.14217253" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.50106156" visible="true" weight="0.14483494" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32785088" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32908705" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3269639" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32997987" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.16447368" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.33227175" />
       <window_info anchor="bottom" id="DB Execution Console" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
@@ -445,211 +537,14 @@
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="LuaJ" order="8" />
       <window_info anchor="right" id="Data View" order="9" />
-      <window_info anchor="right" id="SciView" order="10" />
+      <window_info anchor="right" id="SciView" order="10" sideWeight="0.4968153" visible="true" weight="0.19595315" />
+      <window_info anchor="right" x="0" y="0" width="370" height="827" id="Documentation" order="11" sideWeight="0.50318474" side_tool="true" visible="true" weight="0.19595315" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/flexpart_management/example/run_2019_04_03_1/get_files.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_17-45-51_/run_name.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" selection-start-column="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_17-45-51_/run_flex_test.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/flexwrf_v31_testcases/flexwrf_v31_testcases/flexwrf.input.backward1">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/flexwrf_v31_testcases/flexwrf_v31_testcases/flexwrf.input.backward2">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_17-45-51_/flex_input-e" />
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_19-50-42_/local_run.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_19-44-48_/local_run.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_17-45-51_/local_run.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_17-45-51_/run_flex.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_19-50-42_/flex_input">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="104" column="6" selection-start-line="104" selection-start-column="6" selection-end-line="104" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_19-44-48_/flex_input">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="104" column="3" selection-start-line="104" selection-start-column="3" selection-end-line="104" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_17-45-51_/flex_input">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1122" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_19-50-42_/flex_input_templ">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1122" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_21-02-34_/flex_input_templ">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_21-02-34_/local_run.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_21-02-34_/flex_input">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_01-45-04_/local_run.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_01-45-04_/flex_input_templ">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_01-45-04_/flex_input">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_17-45-51_/flex_input_templ">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="79" selection-start-line="1" selection-start-column="79" selection-end-line="1" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_11-54-22_/get_files.sh">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/example/run_2019_04_03_1/namelist.input">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_11-54-22_/flex_input">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="81" column="12" selection-start-line="81" selection-start-column="12" selection-end-line="81" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_11-54-22_/run_flex.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_11-54-22_/run_flex_test.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_11-54-22_/flex_input_templ">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_11-54-22_/local_run.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="15" lean-forward="true" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_22-01-13_/run_flex.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_22-09-13_/get_files.sh">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_22-09-13_/run_flex.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_22-09-13_/run_flex_test.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_22-09-13_/local_run.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -661,9 +556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-897" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_23-58-16_/flex_input_templ">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_23-58-16_/get_files.sh">
       <provider selected="true" editor-type-id="text-editor" />
@@ -699,13 +591,6 @@
     <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_23-19-34_/run_flex.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_23-58-16_/flex_input">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/funs.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
@@ -714,20 +599,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/input_template.py" />
-    <entry file="file://$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/launch_hour.py">
+    <entry file="file://$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/funs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="62" column="25" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
+        <state relative-caret-position="194">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
           <folding>
             <element signature="e#272#302#0" expanded="true" />
+            <element signature="e#427#489#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_23-58-16_/local_run.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
@@ -752,21 +631,272 @@
     <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_23-58-16_/run_flex.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/input_template.txt">
+    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_23-58-16_/local_run.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+        <state relative-caret-position="465">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/funs.py">
+    <entry file="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-05-30_01-38-03_/read_flex_cdf.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/launch_hour.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+        <state relative-caret-position="929">
+          <caret line="64" column="25" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
           <folding>
             <element signature="e#272#302#0" expanded="true" />
-            <element signature="e#427#489#0" expanded="true" />
+            <element signature="e#525#557#0" expanded="true" />
+            <element signature="e#857#915#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-24_17-45-51_/flex_input">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1575">
+          <caret line="105" column="9" selection-start-line="105" selection-start-column="9" selection-end-line="105" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_23-58-16_/flex_input_templ">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_23-58-16_/flex_input">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_12-30-30_/run_flex.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_12-30-30_/run_flex_test.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_12-30-30_/local_run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_12-30-30_/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="45">
+            <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_12-30-30_/flex_input_templ">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="77" column="69" lean-forward="true" selection-start-line="77" selection-start-column="69" selection-end-line="77" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_1/flex_input_templ">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_1/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="105">
+            <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_2/local_run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_1/local_run.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_1/flex_input_templ">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_1/local_run.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_2/local_run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_1_2/flex_input_templ">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_17-28-37_/local_run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_2/flex_input_templ">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_17-28-37_/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="60">
+            <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/modules/flx_input_temp.tsv" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_15.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="105" column="28" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/input_template.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-141">
+          <caret line="18" selection-start-line="18" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/modules/mk_available/Av01">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="3" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_17-28-37_/flex_input_templ">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1500">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/modules/daily_back/run_flex_templ.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/modules/daily_back/ConfigDayRun.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="279" column="32" selection-start-line="279" selection-start-column="32" selection-end-line="279" selection-end-column="32" />
+          <folding>
+            <element signature="e#91#112#0" expanded="true" />
+            <element signature="e#9032#9175#0" expanded="true" />
+            <element signature="e#9277#9406#0" expanded="true" />
+            <element signature="e#9515#9702#0" expanded="true" />
+            <element signature="e#9745#9812#0" expanded="true" />
+            <element signature="e#9880#10125#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_17-28-37_/flex_input">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/modules/daily_back/flex_input_templ">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/modules/daily_back/config_file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding>
+            <element signature="e#91#112#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-06-03_23-39-12_/flex_input_templ">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1410">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/modules/flx_array.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1665">
+          <caret line="275" column="33" selection-start-line="275" selection-start-column="33" selection-end-line="275" selection-end-column="33" />
+          <folding>
+            <element signature="e#91#135#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/modules/daily_back/daily_back.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="134" column="31" selection-start-line="134" selection-start-column="31" selection-end-line="134" selection-end-column="31" />
+          <folding>
+            <element signature="e#92#107#0" expanded="true" />
+            <element signature="e#2696#3560#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-06-03_23-39-12_/Untitled.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="95" />
         </state>
       </provider>
     </entry>

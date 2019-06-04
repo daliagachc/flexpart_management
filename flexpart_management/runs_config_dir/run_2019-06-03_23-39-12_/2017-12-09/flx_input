@@ -1,0 +1,389 @@
+=====================FORMER PATHNAMES FILE===================
+/homeappl/home/aliagadi/wrk/DONOTREMOVE/flexpart_management_data/runs/run_2019-06-03_23-39-12_/2017-12-09/
+/proj/atm/saltena/runs/run_2019_05_15/wrf/
+/homeappl/home/aliagadi/wrk/DONOTREMOVE/flexpart_management_data/runs/run_2019-06-03_23-39-12_/2017-12-09/AVAILABLE01
+/proj/atm/saltena/runs/run_2019_05_15/wrf/
+/homeappl/home/aliagadi/wrk/DONOTREMOVE/flexpart_management_data/runs/run_2019-06-03_23-39-12_/2017-12-09/AVAILABLE02
+/proj/atm/saltena/runs/run_2019_05_15/wrf/
+/homeappl/home/aliagadi/wrk/DONOTREMOVE/flexpart_management_data/runs/run_2019-06-03_23-39-12_/2017-12-09/AVAILABLE03
+/proj/atm/saltena/runs/run_2019_05_15/wrf/
+/homeappl/home/aliagadi/wrk/DONOTREMOVE/flexpart_management_data/runs/run_2019-06-03_23-39-12_/2017-12-09/AVAILABLE04
+=============================================================
+=====================FORMER COMMAND FILE=====================
+    -1               LDIRECT:          1 for forward simulation, -1 for backward simulation
+    20171205 000000  YYYYMMDD HHMISS   beginning date of simulation
+    20171210 000000  YYYYMMDD HHMISS   ending date of simulation
+    3600             SSSSS  (int)      output every SSSSS seconds
+    3600             SSSSS  (int)      time average of output (in SSSSS seconds)
+    180              SSSSS  (int)      sampling rate of output (in SSSSS seconds)
+    43200        SSSSS  (int)      time constant for particle splitting (in seconds)
+    180              SSSSS  (int)      synchronisation interval of flexpart (in seconds)
+    10.              CTL    (real)     factor by which time step must be smaller than tl
+    10               IFINE  (int)      decrease of time step for vertical motion by factor ifine
+    5                IOUT              1 concentration, 2 mixing ratio, 3 both, 4 plume traject, 5=1+4
+    1                IPOUT             particle dump: 0 no, 1 every output interval, 2 only at end
+    1                LSUBGRID          subgrid terrain effect parameterization: 1 yes, 0 no
+    0                LCONVECTION       convection: 3 yes, 0 no
+    3600.            DT_CONV  (real)   time interval to call convection, seconds
+    1                LAGESPECTRA       age spectra: 1 yes, 0 no
+    0                IPIN              continue simulation with dumped particle data: 1 yes, 0 no
+    1                IFLUX             calculate fluxes: 1 yes, 0 no
+    1                IOUTPUTFOREACHREL CREATE AN OUPUT FILE FOR EACH RELEASE LOCATION: 1 YES, 0 NO
+    0                MDOMAINFILL       domain-filling trajectory option: 1 yes, 0 no, 2 strat. o3 tracer
+    2                IND_SOURCE        1=mass unit , 2=mass mixing ratio unit
+    2                IND_RECEPTOR      1=mass unit , 2=mass mixing ratio unit
+    1                NESTED_OUTPUT     shall nested output be used? 1 yes, 0 no
+    0                LINIT_COND   INITIAL COND. FOR BW RUNS: 0=NO,1=MASS UNIT,2=MASS MIXING RATIO UNIT
+    1                TURB_OPTION       0=no turbulence; 1=diagnosed as in flexpart_ecmwf; 2 and 3=from tke.
+    1                LU_OPTION         0=old landuse (IGBP.dat); 1=landuse from WRF
+    0                CBL SCHEME        0=no, 1=yes. works if TURB_OPTION=1
+    1                SFC_OPTION        0=default computation of u*, hflux, pblh, 1=from wrf
+    0                WIND_OPTION       0=snapshot winds, 1=mean winds,2=snapshot eta-dot,-1=w based on divergence
+    0                TIME_OPTION       1=correction of time validity for time-average wind,  0=no need
+    0                OUTGRID_COORD     0=wrf grid(meters), 1=regular lat/lon grid
+    1                RELEASE_COORD     0=wrf grid(meters), 1=regular lat/lon grid
+    2                IOUTTYPE          0=default binary, 1=ascii (for particle dump only),2=netcdf
+    1               NCTIMEREC (int)   Time frames per output file, only used for netcdf
+    100                VERBOSE           VERBOSE MODE,0=minimum, 100=maximum
+=====================FORMER AGECLASESS FILE==================
+    1                NAGECLASS        number of age classes
+    345600           SSSSSS  (int)    age class in SSSSS seconds
+=====================FORMER OUTGRID FILE=====================
+    0.0000000        OUTLONLEFT      geograhical longitude of lower left corner of output grid
+    0.0000000         OUTLATLOWER     geographical latitude of lower left corner of output grid
+    468               NUMXGRID        number of grid points in x direction (= # of cells )
+    340               NUMYGRID        number of grid points in y direction (= # of cells )
+    0                OUTGRIDDEF      outgrid defined 0=using grid distance, 1=upperright corner coordinate
+    9500.0           DXOUTLON        grid distance in x direction or upper right corner of output grid
+    9500.0           DYOUTLON        grid distance in y direction or upper right corner of output grid
+    22               NUMZGRID        number of vertical levels
+    50               LEVEL           height of level (upper boundary)
+    100              LEVEL           height of level (upper boundary)
+    200              LEVEL           height of level (upper boundary)
+    300              LEVEL           height of level (upper boundary)
+    400              LEVEL           height of level (upper boundary)
+    500              LEVEL           height of level (upper boundary)
+    1000             LEVEL           height of level (upper boundary)
+    1500             LEVEL           height of level (upper boundary)
+    2000             LEVEL           height of level (upper boundary)
+    2500             LEVEL           height of level (upper boundary)
+    3000             LEVEL           height of level (upper boundary)
+    3500             LEVEL           height of level (upper boundary)
+    4000             LEVEL           height of level (upper boundary)
+    4500             LEVEL           height of level (upper boundary)
+    5000             LEVEL           height of level (upper boundary)
+    6000             LEVEL           height of level (upper boundary)
+    7000             LEVEL           height of level (upper boundary)
+    8000             LEVEL           height of level (upper boundary)
+    9000             LEVEL           height of level (upper boundary)
+    10000            LEVEL           height of level (upper boundary)
+    20000            LEVEL           height of level (upper boundary)
+    30000            LEVEL           height of level (upper boundary)
+================OUTGRID_NEST==========================
+    1946500.0            OUTLONLEFT      geograhical longitude of lower left corner of output grid
+    1588670.0              OUTLATLOWER     geographical latitude of lower left corner of output grid
+    153               NUMXGRID        number of grid points in x direction (= # of cells )
+    150               NUMYGRID        number of grid points in y direction (= # of cells )
+    0                OUTGRIDDEF      outgrid defined 0=using grid distance, 1=upperright corner coordinate
+    1055.5556           DXOUTLON        grid distance in x direction or upper right corner of output grid
+    1055.5556           DYOUTLON        grid distance in y direction or upper right corner of output grid
+=====================FORMER RECEPTOR FILE====================
+    0                NUMRECEPTOR     number of receptors
+=====================FORMER SPECIES FILE=====================
+     1               NUMTABLE        number of variable properties. The following lines are fixed format
+XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean|partsig|dryvelo|weight |
+    AIRTRACER     -999.9   -9.9E-09         -9.9                 -9.9E09                   -9.99   29.00
+=====================FORMER RELEEASES FILE===================
+    1                   NSPEC           total number of species emitted
+    0                   EMITVAR         1 for emission variation
+    1                   LINK            index of species in file SPECIES
+    24                   NUMPOINT        number of releases
+  20171209 000000       ID1, IT1        beginning date and time of release
+  20171209 010000       ID2, IT2        ending date and time of release
+  -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
+  -16.355000            YPOINT1 (real)  latitude [deg] of lower left corner
+  -68.118000            XPOINT2 (real)  longitude [deg] of upper right corner
+  -16.335000            YPOINT2 (real)  latitude [DEG] of upper right corner
+  1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
+  0.0                 ZPOINT1 (real)  lower z-level
+  10.0                ZPOINT2 (real)  upper z-level
+  1000000                 NPART (int)     total number of particles to be released
+  1.0                XMASS (real)    total mass emitted
+  chc20171209_00    NAME OF RELEASE LOCATION
+  20171209 010000       ID1, IT1        beginning date and time of release
+  20171209 020000       ID2, IT2        ending date and time of release
+  -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
+  -16.355000            YPOINT1 (real)  latitude [deg] of lower left corner
+  -68.118000            XPOINT2 (real)  longitude [deg] of upper right corner
+  -16.335000            YPOINT2 (real)  latitude [DEG] of upper right corner
+  1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
+  0.0                 ZPOINT1 (real)  lower z-level
+  10.0                ZPOINT2 (real)  upper z-level
+  1000000                 NPART (int)     total number of particles to be released
+  1.0                XMASS (real)    total mass emitted
+  chc20171209_01    NAME OF RELEASE LOCATION
+  20171209 020000       ID1, IT1        beginning date and time of release
+  20171209 030000       ID2, IT2        ending date and time of release
+  -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
+  -16.355000            YPOINT1 (real)  latitude [deg] of lower left corner
+  -68.118000            XPOINT2 (real)  longitude [deg] of upper right corner
+  -16.335000            YPOINT2 (real)  latitude [DEG] of upper right corner
+  1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
+  0.0                 ZPOINT1 (real)  lower z-level
+  10.0                ZPOINT2 (real)  upper z-level
+  1000000                 NPART (int)     total number of particles to be released
+  1.0                XMASS (real)    total mass emitted
+  chc20171209_02    NAME OF RELEASE LOCATION
+  20171209 030000       ID1, IT1        beginning date and time of release
+  20171209 040000       ID2, IT2        ending date and time of release
+  -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
+  -16.355000            YPOINT1 (real)  latitude [deg] of lower left corner
+  -68.118000            XPOINT2 (real)  longitude [deg] of upper right corner
+  -16.335000            YPOINT2 (real)  latitude [DEG] of upper right corner
+  1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
+  0.0                 ZPOINT1 (real)  lower z-level
+  10.0                ZPOINT2 (real)  upper z-level
+  1000000                 NPART (int)     total number of particles to be released
+  1.0                XMASS (real)    total mass emitted
+  chc20171209_03    NAME OF RELEASE LOCATION
+  20171209 040000       ID1, IT1        beginning date and time of release
+  20171209 050000       ID2, IT2        ending date and time of release
+  -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
+  -16.355000            YPOINT1 (real)  latitude [deg] of lower left corner
+  -68.118000            XPOINT2 (real)  longitude [deg] of upper right corner
+  -16.335000            YPOINT2 (real)  latitude [DEG] of upper right corner
+  1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
+  0.0                 ZPOINT1 (real)  lower z-level
+  10.0                ZPOINT2 (real)  upper z-level
+  1000000                 NPART (int)     total number of particles to be released
+  1.0                XMASS (real)    total mass emitted
+  chc20171209_04    NAME OF RELEASE LOCATION
+  20171209 050000       ID1, IT1        beginning date and time of release
+  20171209 060000       ID2, IT2        ending date and time of release
+  -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
+  -16.355000            YPOINT1 (real)  latitude [deg] of lower left corner
+  -68.118000            XPOINT2 (real)  longitude [deg] of upper right corner
+  -16.335000            YPOINT2 (real)  latitude [DEG] of upper right corner
+  1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
+  0.0                 ZPOINT1 (real)  lower z-level
+  10.0                ZPOINT2 (real)  upper z-level
+  1000000                 NPART (int)     total number of particles to be released
+  1.0                XMASS (real)    total mass emitted
+  chc20171209_05    NAME OF RELEASE LOCATION
+  20171209 060000       ID1, IT1        beginning date and time of release
+  20171209 070000       ID2, IT2        ending date and time of release
+  -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
+  -16.355000            YPOINT1 (real)  latitude [deg] of lower left corner
+  -68.118000            XPOINT2 (real)  longitude [deg] of upper right corner
+  -16.335000            YPOINT2 (real)  latitude [DEG] of upper right corner
+  1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
+  0.0                 ZPOINT1 (real)  lower z-level
+  10.0                ZPOINT2 (real)  upper z-level
+  1000000                 NPART (int)     total number of particles to be released
+  1.0                XMASS (real)    total mass emitted
+  chc20171209_06    NAME OF RELEASE LOCATION
+  20171209 070000       ID1, IT1        beginning date and time of release
+  20171209 080000       ID2, IT2        ending date and time of release
+  -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
+  -16.355000            YPOINT1 (real)  latitude [deg] of lower left corner
+  -68.118000            XPOINT2 (real)  longitude [deg] of upper right corner
+  -16.335000            YPOINT2 (real)  latitude [DEG] of upper right corner
+  1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
+  0.0                 ZPOINT1 (real)  lower z-level
+  10.0                ZPOINT2 (real)  upper z-level
+  1000000                 NPART (int)     total number of particles to be released
+  1.0                XMASS (real)    total mass emitted
+  chc20171209_07    NAME OF RELEASE LOCATION
+  20171209 080000       ID1, IT1        beginning date and time of release
+  20171209 090000       ID2, IT2        ending date and time of release
+  -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
+  -16.355000            YPOINT1 (real)  latitude [deg] of lower left corner
+  -68.118000            XPOINT2 (real)  longitude [deg] of upper right corner
+  -16.335000            YPOINT2 (real)  latitude [DEG] of upper right corner
+  1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
+  0.0                 ZPOINT1 (real)  lower z-level
+  10.0                ZPOINT2 (real)  upper z-level
+  1000000                 NPART (int)     total number of particles to be released
+  1.0                XMASS (real)    total mass emitted
+  chc20171209_08    NAME OF RELEASE LOCATION
+  20171209 090000       ID1, IT1        beginning date and time of release
+  20171209 100000       ID2, IT2        ending date and time of release
+  -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
+  -16.355000            YPOINT1 (real)  latitude [deg] of lower left corner
+  -68.118000            XPOINT2 (real)  longitude [deg] of upper right corner
+  -16.335000            YPOINT2 (real)  latitude [DEG] of upper right corner
+  1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
+  0.0                 ZPOINT1 (real)  lower z-level
+  10.0                ZPOINT2 (real)  upper z-level
+  1000000                 NPART (int)     total number of particles to be released
+  1.0                XMASS (real)    total mass emitted
+  chc20171209_09    NAME OF RELEASE LOCATION
+  20171209 100000       ID1, IT1        beginning date and time of release
+  20171209 110000       ID2, IT2        ending date and time of release
+  -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
+  -16.355000            YPOINT1 (real)  latitude [deg] of lower left corner
+  -68.118000            XPOINT2 (real)  longitude [deg] of upper right corner
+  -16.335000            YPOINT2 (real)  latitude [DEG] of upper right corner
+  1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
+  0.0                 ZPOINT1 (real)  lower z-level
+  10.0                ZPOINT2 (real)  upper z-level
+  1000000                 NPART (int)     total number of particles to be released
+  1.0                XMASS (real)    total mass emitted
+  chc20171209_10    NAME OF RELEASE LOCATION
+  20171209 110000       ID1, IT1        beginning date and time of release
+  20171209 120000       ID2, IT2        ending date and time of release
+  -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
+  -16.355000            YPOINT1 (real)  latitude [deg] of lower left corner
+  -68.118000            XPOINT2 (real)  longitude [deg] of upper right corner
+  -16.335000            YPOINT2 (real)  latitude [DEG] of upper right corner
+  1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
+  0.0                 ZPOINT1 (real)  lower z-level
+  10.0                ZPOINT2 (real)  upper z-level
+  1000000                 NPART (int)     total number of particles to be released
+  1.0                XMASS (real)    total mass emitted
+  chc20171209_11    NAME OF RELEASE LOCATION
+  20171209 120000       ID1, IT1        beginning date and time of release
+  20171209 130000       ID2, IT2        ending date and time of release
+  -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
+  -16.355000            YPOINT1 (real)  latitude [deg] of lower left corner
+  -68.118000            XPOINT2 (real)  longitude [deg] of upper right corner
+  -16.335000            YPOINT2 (real)  latitude [DEG] of upper right corner
+  1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
+  0.0                 ZPOINT1 (real)  lower z-level
+  10.0                ZPOINT2 (real)  upper z-level
+  1000000                 NPART (int)     total number of particles to be released
+  1.0                XMASS (real)    total mass emitted
+  chc20171209_12    NAME OF RELEASE LOCATION
+  20171209 130000       ID1, IT1        beginning date and time of release
+  20171209 140000       ID2, IT2        ending date and time of release
+  -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
+  -16.355000            YPOINT1 (real)  latitude [deg] of lower left corner
+  -68.118000            XPOINT2 (real)  longitude [deg] of upper right corner
+  -16.335000            YPOINT2 (real)  latitude [DEG] of upper right corner
+  1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
+  0.0                 ZPOINT1 (real)  lower z-level
+  10.0                ZPOINT2 (real)  upper z-level
+  1000000                 NPART (int)     total number of particles to be released
+  1.0                XMASS (real)    total mass emitted
+  chc20171209_13    NAME OF RELEASE LOCATION
+  20171209 140000       ID1, IT1        beginning date and time of release
+  20171209 150000       ID2, IT2        ending date and time of release
+  -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
+  -16.355000            YPOINT1 (real)  latitude [deg] of lower left corner
+  -68.118000            XPOINT2 (real)  longitude [deg] of upper right corner
+  -16.335000            YPOINT2 (real)  latitude [DEG] of upper right corner
+  1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
+  0.0                 ZPOINT1 (real)  lower z-level
+  10.0                ZPOINT2 (real)  upper z-level
+  1000000                 NPART (int)     total number of particles to be released
+  1.0                XMASS (real)    total mass emitted
+  chc20171209_14    NAME OF RELEASE LOCATION
+  20171209 150000       ID1, IT1        beginning date and time of release
+  20171209 160000       ID2, IT2        ending date and time of release
+  -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
+  -16.355000            YPOINT1 (real)  latitude [deg] of lower left corner
+  -68.118000            XPOINT2 (real)  longitude [deg] of upper right corner
+  -16.335000            YPOINT2 (real)  latitude [DEG] of upper right corner
+  1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
+  0.0                 ZPOINT1 (real)  lower z-level
+  10.0                ZPOINT2 (real)  upper z-level
+  1000000                 NPART (int)     total number of particles to be released
+  1.0                XMASS (real)    total mass emitted
+  chc20171209_15    NAME OF RELEASE LOCATION
+  20171209 160000       ID1, IT1        beginning date and time of release
+  20171209 170000       ID2, IT2        ending date and time of release
+  -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
+  -16.355000            YPOINT1 (real)  latitude [deg] of lower left corner
+  -68.118000            XPOINT2 (real)  longitude [deg] of upper right corner
+  -16.335000            YPOINT2 (real)  latitude [DEG] of upper right corner
+  1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
+  0.0                 ZPOINT1 (real)  lower z-level
+  10.0                ZPOINT2 (real)  upper z-level
+  1000000                 NPART (int)     total number of particles to be released
+  1.0                XMASS (real)    total mass emitted
+  chc20171209_16    NAME OF RELEASE LOCATION
+  20171209 170000       ID1, IT1        beginning date and time of release
+  20171209 180000       ID2, IT2        ending date and time of release
+  -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
+  -16.355000            YPOINT1 (real)  latitude [deg] of lower left corner
+  -68.118000            XPOINT2 (real)  longitude [deg] of upper right corner
+  -16.335000            YPOINT2 (real)  latitude [DEG] of upper right corner
+  1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
+  0.0                 ZPOINT1 (real)  lower z-level
+  10.0                ZPOINT2 (real)  upper z-level
+  1000000                 NPART (int)     total number of particles to be released
+  1.0                XMASS (real)    total mass emitted
+  chc20171209_17    NAME OF RELEASE LOCATION
+  20171209 180000       ID1, IT1        beginning date and time of release
+  20171209 190000       ID2, IT2        ending date and time of release
+  -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
+  -16.355000            YPOINT1 (real)  latitude [deg] of lower left corner
+  -68.118000            XPOINT2 (real)  longitude [deg] of upper right corner
+  -16.335000            YPOINT2 (real)  latitude [DEG] of upper right corner
+  1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
+  0.0                 ZPOINT1 (real)  lower z-level
+  10.0                ZPOINT2 (real)  upper z-level
+  1000000                 NPART (int)     total number of particles to be released
+  1.0                XMASS (real)    total mass emitted
+  chc20171209_18    NAME OF RELEASE LOCATION
+  20171209 190000       ID1, IT1        beginning date and time of release
+  20171209 200000       ID2, IT2        ending date and time of release
+  -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
+  -16.355000            YPOINT1 (real)  latitude [deg] of lower left corner
+  -68.118000            XPOINT2 (real)  longitude [deg] of upper right corner
+  -16.335000            YPOINT2 (real)  latitude [DEG] of upper right corner
+  1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
+  0.0                 ZPOINT1 (real)  lower z-level
+  10.0                ZPOINT2 (real)  upper z-level
+  1000000                 NPART (int)     total number of particles to be released
+  1.0                XMASS (real)    total mass emitted
+  chc20171209_19    NAME OF RELEASE LOCATION
+  20171209 200000       ID1, IT1        beginning date and time of release
+  20171209 210000       ID2, IT2        ending date and time of release
+  -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
+  -16.355000            YPOINT1 (real)  latitude [deg] of lower left corner
+  -68.118000            XPOINT2 (real)  longitude [deg] of upper right corner
+  -16.335000            YPOINT2 (real)  latitude [DEG] of upper right corner
+  1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
+  0.0                 ZPOINT1 (real)  lower z-level
+  10.0                ZPOINT2 (real)  upper z-level
+  1000000                 NPART (int)     total number of particles to be released
+  1.0                XMASS (real)    total mass emitted
+  chc20171209_20    NAME OF RELEASE LOCATION
+  20171209 210000       ID1, IT1        beginning date and time of release
+  20171209 220000       ID2, IT2        ending date and time of release
+  -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
+  -16.355000            YPOINT1 (real)  latitude [deg] of lower left corner
+  -68.118000            XPOINT2 (real)  longitude [deg] of upper right corner
+  -16.335000            YPOINT2 (real)  latitude [DEG] of upper right corner
+  1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
+  0.0                 ZPOINT1 (real)  lower z-level
+  10.0                ZPOINT2 (real)  upper z-level
+  1000000                 NPART (int)     total number of particles to be released
+  1.0                XMASS (real)    total mass emitted
+  chc20171209_21    NAME OF RELEASE LOCATION
+  20171209 220000       ID1, IT1        beginning date and time of release
+  20171209 230000       ID2, IT2        ending date and time of release
+  -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
+  -16.355000            YPOINT1 (real)  latitude [deg] of lower left corner
+  -68.118000            XPOINT2 (real)  longitude [deg] of upper right corner
+  -16.335000            YPOINT2 (real)  latitude [DEG] of upper right corner
+  1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
+  0.0                 ZPOINT1 (real)  lower z-level
+  10.0                ZPOINT2 (real)  upper z-level
+  1000000                 NPART (int)     total number of particles to be released
+  1.0                XMASS (real)    total mass emitted
+  chc20171209_22    NAME OF RELEASE LOCATION
+  20171209 230000       ID1, IT1        beginning date and time of release
+  20171210 000000       ID2, IT2        ending date and time of release
+  -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
+  -16.355000            YPOINT1 (real)  latitude [deg] of lower left corner
+  -68.118000            XPOINT2 (real)  longitude [deg] of upper right corner
+  -16.335000            YPOINT2 (real)  latitude [DEG] of upper right corner
+  1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
+  0.0                 ZPOINT1 (real)  lower z-level
+  10.0                ZPOINT2 (real)  upper z-level
+  1000000                 NPART (int)     total number of particles to be released
+  1.0                XMASS (real)    total mass emitted
+  chc20171209_23    NAME OF RELEASE LOCATION
+

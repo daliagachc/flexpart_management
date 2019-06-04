@@ -1,0 +1,13 @@
+- similar to run_2019-05-25_23-58-16_
+- zgrid changed  
+- merged with run  
+- increase number of releases  
+- time spliting changed 864000
+- one age class 1  9999000
+- 0                OUTGRID_COORD
+- update release location
+    - lat lot
+    - height 10
+-   10000          NPART (int)
+- change release name 
+    - chc_20171209_230000           NAME OF RELEASE LOCATION
