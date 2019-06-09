@@ -140,6 +140,7 @@ class FLEXOUT:
             try:
                 lp_ds = self.get_log_polar_coords(r[co.RL])
                 fa.compressed_netcdf_save(lp_ds,r[rp])
+                print('done saving',k)
             except:
                 print('error in',k)
 
