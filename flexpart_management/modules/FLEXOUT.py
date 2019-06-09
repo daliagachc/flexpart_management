@@ -126,8 +126,11 @@ class FLEXOUT:
         rel_df[rp]= rel_df[rn].apply(
             lambda n: os.path.join(out_path,n))
         for k,r in rel_df.iterrows():
-            lp_ds = self.get_log_polar_coords(r[co.RL])
-            fa.compressed_netcdf_save(lp_ds,r[rp])
+            try:
+                lp_ds = self.get_log_polar_coords(r[co.RL])
+                fa.compressed_netcdf_save(lp_ds,r[rp])
+            except:
+                print('error in',k)
 
         return rel_df
 
