@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/FLEXOUT.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/FLEXOUT.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/get_flx_log_pol_coords_taito.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/get_flx_log_pol_coords_taito.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/get_flx_log_pol_coords_taito.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/get_flx_log_pol_coords_taito.py" afterDir="false" />
-    </list>
+    <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +12,7 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/flexpart_management/modules/FLEXOUT.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="737">
@@ -30,6 +26,17 @@
                     <element signature="e#738#949#0" expanded="true" />
                     <element signature="e#996#1207#0" expanded="true" />
                     <element signature="e#3471#4021#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/flexpart_management/notebooks/get_flx_log_pol_coords_taito.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-39">
+                  <folding>
+                    <element signature="e#373#421#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -55,11 +62,6 @@
                   </folding>
                 </state>
               </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-05-30_01-38-03_/read_flex_cdf_funs.py">
-              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
@@ -236,20 +238,7 @@
               <item name="flexpart_management" type="b2602c69:ProjectViewProjectNode" />
               <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
               <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flexpart_management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
-              <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
               <item name="notebooks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flexpart_management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
-              <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
-              <item name="notebooks" type="462c0819:PsiDirectoryNode" />
-              <item name="run_2019-05-30_01-38-03_" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flexpart_management" type="b2602c69:ProjectViewProjectNode" />
@@ -493,16 +482,15 @@
       <workItem from="1559620703317" duration="27877000" />
       <workItem from="1559772755794" duration="9968000" />
       <workItem from="1560039159077" duration="1072000" />
-      <workItem from="1560040472526" duration="16084000" />
+      <workItem from="1560040472526" duration="17144000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="273976000" />
+    <option name="totallyTimeSpent" value="275036000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1057" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
@@ -542,13 +530,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-25_23-58-16_/flex_input">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_12-30-30_/run_flex.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -915,6 +896,15 @@
             <element signature="e#738#949#0" expanded="true" />
             <element signature="e#996#1207#0" expanded="true" />
             <element signature="e#3471#4021#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/notebooks/get_flx_log_pol_coords_taito.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-39">
+          <folding>
+            <element signature="e#373#421#0" expanded="true" />
           </folding>
         </state>
       </provider>
