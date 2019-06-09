@@ -47,7 +47,7 @@ class FLEXOUT:
         self.set_out_file_path_list()
 
         self.head_ds = xr.open_dataset(self.head_file_path)
-        self.out_dask_ds = xr.open_mfdataset(self.out_path_pat, concat_dim=co.TIME)
+        self.out_dask_ds = xr.open_mfdataset(self.out_file_list, concat_dim=co.TIME)
         self.out_dask_ds = fa.convert_ds_time_format(self.out_dask_ds)
         self.get_and_tune_flexout_ds()
 
@@ -89,6 +89,17 @@ class FLEXOUT:
         out_path.sort()
         self.out_file_list = out_path
         dp(self.out_file_list[:1])
+        self.check_files_are_not_corrupted()
+
+    def check_files_are_not_corrupted(self):
+        new_out_list = []
+        for f in self.out_file_list:
+            try:
+                nf = xr.open_dataset(f)
+                new_out_list.append(f)
+            except:
+                print('cant open', f)
+        self.out_file_list = new_out_list
 
     def get_log_polar_coords(self,
                              release: pd.Timestamp,
