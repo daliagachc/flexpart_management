@@ -13,6 +13,8 @@
 # ---
 
 # %%
+# this notebook was created to convert rectanfular coo
+
 # %load_ext autoreload
 # %autoreload 2
 
@@ -29,6 +31,7 @@ path_out = '/homeappl/home/aliagadi/wrk/DONOTREMOVE/flexpart_management_data/run
 
 run_name = 'run_2019-06-05_18-42-11_'
 paths = glob.glob(root_path)
+paths.sort()
 
 # %%
 fo_base_dic  = dict(
