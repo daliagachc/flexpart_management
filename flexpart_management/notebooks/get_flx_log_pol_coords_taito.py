@@ -27,12 +27,11 @@ from useful_scit.imps import *
 #os.environ['HDF5_USE_FILE_LOCKING'] = 'FALSE'
 doms = ['d01','d02']
 root_path = '/Volumes/mbProD/Downloads/flex_out/run_2019-06-02_20-42-05_/*-*-*'
-root_path = '/homeappl/home/aliagadi/wrk/DONOTREMOVE/flexpart_management_data/runs/run_2019-06-02_20-42-05_/2017-12-10*'
-path_out = '/homeappl/home/aliagadi/wrk/DONOTREMOVE/flexpart_management_data/runs/run_2019-06-02_20-42-05_/log_pol'
+root_path = '/homeappl/home/aliagadi/wrk/DONOTREMOVE/flexpart_management_data/runs/run_2019-06-05_18-42-11_/*-*-*'
+path_out = '/homeappl/home/aliagadi/wrk/DONOTREMOVE/flexpart_management_data/runs/run_2019-06-05_18-42-11_/log_pol'
 
-run_name = 'run_2019-06-02_20-42-05_'
+run_name = 'run_2019-06-05_18-42-11_'
 paths = glob.glob(root_path)
-paths.sort()
 
 # %%
 fo_base_dic  = dict(
@@ -48,5 +47,9 @@ for p in paths:
         new_dic = dict(dom=d,folder_path=p)
         fo_dic = {**fo_base_dic,**new_dic}
         fo = FO.FLEXOUT(**fo_dic)
-        fo.export_log_polar_coords()
+        try:
+            fo.export_log_polar_coords()
+            print('done',d,p)
+        except:
+            print('failed when',d,p)
         
