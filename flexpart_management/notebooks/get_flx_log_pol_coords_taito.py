@@ -26,10 +26,10 @@ from useful_scit.imps import *
 # %%
 doms = ['d01','d02']
 root_path = '/Volumes/mbProD/Downloads/flex_out/run_2019-06-02_20-42-05_/*-*-*'
-root_path = '/homeappl/home/aliagadi/wrk/DONOTREMOVE/flexpart_management_data/runs/run_2019-06-05_18-42-11_/*-*-*'
-path_out = '/homeappl/home/aliagadi/wrk/DONOTREMOVE/flexpart_management_data/runs/run_2019-06-05_18-42-11_/log_pol'
+root_path = '/homeappl/home/aliagadi/wrk/DONOTREMOVE/flexpart_management_data/runs/run_2019-06-02_20-42-05_/2017-12-10*'
+path_out = '/homeappl/home/aliagadi/wrk/DONOTREMOVE/flexpart_management_data/runs/run_2019-06-02_20-42-05_/log_pol'
 
-run_name = 'run_2019-06-05_18-42-11_'
+run_name = 'run_2019-06-02_20-42-05_'
 paths = glob.glob(root_path)
 paths.sort()
 
