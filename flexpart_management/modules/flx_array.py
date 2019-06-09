@@ -1,33 +1,15 @@
 # project name: flexpart_management
 # created by diego aliaga daliaga_at_chacaltaya.edu.bo
+from matplotlib.collections import PatchCollection
 from matplotlib.colors import ListedColormap
+from matplotlib.patches import Polygon
 from useful_scit.imps import *
 from typing import List
 import cartopy
+import area
+from flexpart_management.modules.constants import *
+from useful_scit.util.zarray import compressed_netcdf_save
 
-PROJ = cartopy.crs.PlateCarree()
-
-TIME = 'Time'
-WE = 'west_east'
-SN = 'south_north'
-TOPO = 'TOPOGRAPHY'
-ZM = 'ZMID'
-ALT = 'ALT'
-BT = 'bottom_top'
-RL = 'releases'
-VOL = 'VOL'
-GA = 'GRIDAREA'
-CONC = 'CONC'
-LAT = 'LAT'
-LON = 'LON'
-LL_DIS = 'LL_DIS'
-ACTUAL_TIME = 'ACTUAL_TIME'
-
-CHC_LAT = -16.350427
-CHC_LON = -68.131335
-
-LPB_LAT = -16.507125
-LPB_LON = -68.129299
 
 
 
@@ -100,9 +82,9 @@ def join_head(ds_flx: xr.Dataset, ds_head: xr.Dataset, ageclass=slice(0, None), 
     for v in vars2keep:
         new_ds[v] = ds_head[v]
     new_ds = new_ds.isel(ageclass=ageclass, releases=releases)
-    new_ds=new_ds.assign_attrs(ds_head.attrs)
+    new_ds = new_ds.assign_attrs(ds_head.attrs)
     release_start_times = get_releases_start_time(ds_head)
-    new_ds = new_ds.assign_coords(**{RL:release_start_times})
+    new_ds = new_ds.assign_coords(**{RL: release_start_times})
 
     return new_ds
 
@@ -117,16 +99,18 @@ def get_release_start_date(ds_head: xr.Dataset):
     release_start_date = start_datetime + pd.Timedelta(release_sec, unit='S')
     return release_start_date
 
-def get_releases_start_time(ds_head:xr.Dataset):
-    sim_start_dt = '{:08d}'.format(ds_head.SIMULATION_START_DATE) + ' ' +\
+
+def get_releases_start_time(ds_head: xr.Dataset):
+    sim_start_dt = '{:08d}'.format(ds_head.SIMULATION_START_DATE) + ' ' + \
                    '{0:06d}'.format(ds_head.SIMULATION_START_TIME)
     sim_start_dt = dt.datetime.strptime(sim_start_dt, '%Y%m%d %H%M%S')
-    start_deltas = ds_head.ReleaseTstart_end.values[:,0].round(-1)
+    start_deltas = ds_head.ReleaseTstart_end.values[:, 0].round(-1)
 
     rel_start = [sim_start_dt + dt.timedelta(seconds=float(s)) for s in start_deltas]
     start_times = pd.to_datetime(rel_start)
 
     return start_times
+
 
 def add_release_time_dim(ds_join, ds_head):
     ds_new = ds_join.copy()
@@ -174,7 +158,7 @@ def add_zmid(ds: xr.Dataset):
 
 
 def add_zbot(ds: xr.Dataset):
-    zl = list(ds.ZTOP.values)
+    zl = list(ds[ZT].values)
     zl.reverse()
     zl.append(0)
     zl.reverse()
@@ -183,14 +167,14 @@ def add_zbot(ds: xr.Dataset):
         zm.append((zl[i]))
     zmid = ds.ZTOP.copy()
     zmid.values = zm
-    zname = 'ZBOT'
+    zname = ZB
     zmid.name = zname
     new_ds = ds.assign_coords(**{zname: zmid})
     return new_ds
 
 
 def add_zlength_m(ds: xr.Dataset):
-    zl = list(ds.ZTOP.values)
+    zl = list(ds[ZT].values)
     zl.reverse()
     zl.append(0)
     zl.reverse()
@@ -199,7 +183,7 @@ def add_zlength_m(ds: xr.Dataset):
         zm.append((-zl[i] + zl[i + 1]))
     zmid = ds.ZTOP.copy()
     zmid.values = zm
-    zname = 'ZLEN_M'
+    zname = ZLM
     zmid.name = zname
     new_ds = ds.assign_coords(**{zname: zmid})
     return new_ds
@@ -208,6 +192,7 @@ def add_zlength_m(ds: xr.Dataset):
 def add_volume(ds: xr.Dataset):
     new_ds = ds.copy()
     new_ds[VOL] = new_ds[GA] * new_ds[ZM]
+    new_ds = new_ds.assign_coords(**{VOL:new_ds[VOL]})
     return new_ds
 
 
@@ -262,40 +247,41 @@ def ds_add_ll_dis(ds):
     ds2[LL_DIS] = ll_dis
     return ds2
 
+
 def fix_releases(ds, prnt=False):
-    ds2=ds
-    hours=96
-    rr= range(hours,-1,-1)
-    dsn = ds2.isel(**{TIME:slice(None,hours+1)}).copy()
+    ds2 = ds
+    hours = 96
+    rr = range(hours, -1, -1)
+    dsn = ds2.isel(**{TIME: slice(None, hours + 1)}).copy()
     dsn = dsn.assign_coords(Time=rr)
-    
-    actual_time = dsn[CONC].isel(**{LAT:0,LON:0,ZM:0}).copy()
+
+    actual_time = dsn[CONC].isel(**{LAT: 0, LON: 0, ZM: 0}).copy()
     vals = actual_time.values
-    actual_time.values = np.full_like(vals,np.NaN,dtype=np.datetime64)
+    actual_time.values = np.full_like(vals, np.NaN, dtype=np.datetime64)
     # ACTUAL_TIME = 'ACTUAL_TIME'
     actual_time.name = ACTUAL_TIME
-    
-    dsn[ACTUAL_TIME]=actual_time
+
+    dsn[ACTUAL_TIME] = actual_time
     for i in range(len(ds2[RL])):
         if prnt: print(i)
-        ds1 = ds2.isel(**{RL:i})
+        ds1 = ds2.isel(**{RL: i})
         rt = ds1[RL].values
 
-        rend = rt - pd.Timedelta(hours,'hours')
-    
-        ds1 = ds1.sel(**{TIME:slice(rend,rt)})
-    
+        rend = rt - pd.Timedelta(hours, 'hours')
+
+        ds1 = ds1.sel(**{TIME: slice(rend, rt)})
+
         old_times = ds1.Time.copy()
-    
+
         old_times.name = ACTUAL_TIME
-    
+
         ds1.Time.values = rr
         ds1[ACTUAL_TIME] = old_times
         ds1[ACTUAL_TIME].Time.values = rr
-    
+
         for v in list(ds1.data_vars):
             if RL in dsn[v].dims:
-                dsn[v][{RL:i}]=ds1[v]
+                dsn[v][{RL: i}] = ds1[v]
     return dsn
 
 
@@ -308,8 +294,8 @@ def get_ax_bolivia():
     ax.add_feature(cartopy.feature.BORDERS.with_scale('10m'))
     ax.add_feature(cartopy.feature.LAKES.with_scale('10m'), alpha=0.5, linestyle='-')
     ax.add_feature(cartopy.feature.STATES.with_scale('10m'), alpha=0.5, linestyle=':')
-    gl=ax.gridlines(crs=PROJ,alpha=0.5, linestyle='--',
-                 draw_labels=True)
+    gl = ax.gridlines(crs=PROJ, alpha=0.5, linestyle='--',
+                      draw_labels=True)
     gl.xlabels_top = False
     gl.ylabels_right = False
 
@@ -332,20 +318,212 @@ def get_ax_lapaz():
     ax.add_feature(cartopy.feature.BORDERS.with_scale('10m'))
     ax.add_feature(cartopy.feature.LAKES.with_scale('10m'), alpha=0.5, linestyle='-')
     ax.add_feature(cartopy.feature.STATES.with_scale('10m'), alpha=0.5, linestyle=':')
-    ax.gridlines(crs=PROJ,alpha=0.5, linestyle='--',
+    ax.gridlines(crs=PROJ, alpha=0.5, linestyle='--',
                  draw_labels=True)
 
     add_chc_lpb(ax)
 
     return ax
 
+
 def red_cmap():
     cmap = plt.get_cmap('Reds')
     my_cmap = cmap(np.arange(cmap.N))
 
     # Set alpha
-    my_cmap[:,-1] = np.linspace(.3, 1, cmap.N)
+    my_cmap[:, -1] = np.linspace(.3, 1, cmap.N)
 
     my_cmap = ListedColormap(my_cmap)
 
     return my_cmap
+
+
+def get_r_dis(ds, lat_center=CHC_LAT, lon_center=CHC_LON):
+    la = ds[LAT] - lat_center
+    lo = ds[LON] - lon_center
+    r = np.sqrt(la ** 2 + lo ** 2)
+    return r
+
+
+def get_th_ang(ds, lat_center=CHC_LAT, lon_center=CHC_LON):
+    th = np.arctan2(ds[LAT] - lat_center,
+                    ds[LON] - lon_center)
+    th = np.mod(-th + np.pi / 2, 2 * np.pi)
+
+    return th
+
+
+def data_array_to_logpolar(da: xr.DataArray,
+                           r_round_log: float,
+                           th_round_rad: float,
+                           lat_center=CHC_LAT,
+                           lon_center=CHC_LON,
+                           dim2keep = []
+                           ) -> xr.DataArray:
+    nda = da.copy()
+    nda[LL_DIS] = get_r_dis(nda, lat_center, lon_center)
+
+    nda[LL_ANG] = get_th_ang(nda, lat_center, lon_center)
+
+    r_log_round_center = (np.round(
+        np.log(nda[LL_DIS]) / r_round_log
+    ) * r_round_log)
+
+    nda[R_CENTER] = np.e ** r_log_round_center
+    # nda[R_FAR] = np.e ** (r_log_round_center + r_round_log/2)
+    # nda[R_CLOSE] = np.e ** (r_log_round_center - r_round_log/2)
+
+    th_round_center = np.floor(nda[LL_ANG] / th_round_rad) * th_round_rad
+    th_round_center = th_round_center + th_round_rad / 2
+    nda[TH_CENTER] = th_round_center
+
+    name = da.name
+
+    df = nda.to_dataframe().reset_index()
+    df = df[[R_CENTER, TH_CENTER, name,*dim2keep]]
+    df: pd.DataFrame = df.groupby([R_CENTER, TH_CENTER,*dim2keep]).sum()
+    r_th_da = df.to_xarray()[name]
+
+    r_th_da[LAT] = r_th_to_lat(lat_center, r_th_da[R_CENTER], r_th_da[TH_CENTER])
+    r_th_da[LON] = r_th_to_lat(lon_center, r_th_da[R_CENTER], r_th_da[TH_CENTER])
+
+    r_log = np.log(r_th_da[R_CENTER])
+    th_cen = r_th_da[TH_CENTER]
+
+    rM = np.e ** (r_log + r_round_log / 2)
+    rm = np.e ** (r_log - r_round_log / 2)
+    thM = th_cen + th_round_rad / 2
+    thm = th_cen - th_round_rad / 2
+
+    val_list = [
+        [LAT_00, LON_00, rm, thm],
+        [LAT_10, LON_10, rM, thm],
+        [LAT_11, LON_11, rM, thM],
+        [LAT_01, LON_01, rm, thM],
+    ]
+
+    for v in val_list:
+        r_th_da[v[0]] = r_th_to_lat(lat_center, v[2], v[3])
+        r_th_da[v[1]] = r_th_to_lon(lon_center, v[2], v[3])
+
+    r_th_da = r_th_da.where(~r_th_da.isnull(), 0)
+    r_th_da[GA] = get_pol_area(r_th_da)
+
+    return r_th_da
+
+
+def r_th_to_ll(center, rr, th, fun):
+    res = rr * fun(
+        th
+    ) + center
+    return res
+
+
+def r_th_to_lon(lon_center, rr, th):
+    return r_th_to_ll(lon_center, rr, th, np.sin)
+
+
+def r_th_to_lat(lat_center, rr, th):
+    return r_th_to_ll(lat_center, rr, th, np.cos)
+
+
+def polygon_from_row(r):
+    pol = Polygon([
+        [r[LON_00], r[LAT_00]],
+        [r[LON_10], r[LAT_10]],
+        [r[LON_11], r[LAT_11]],
+        [r[LON_01], r[LAT_01]],
+    ], True)
+    return pol
+
+
+def logpolar_plot(ds, ax,
+                  name='CONC',
+                  perM=.95,
+                  perm=0.0,
+                  colorbar=True,
+                  patch_args={},
+                  quantile = True
+                  ):
+    df = ds.to_dataframe()
+    pol_key = 'pol'
+    df[pol_key] = df.apply(lambda r: polygon_from_row(r), axis=1)
+    df = df.dropna()
+    if quantile:
+        maxc = df[name].quantile(perM)
+        minc = df[name].quantile(perm)
+    else:
+        maxc = perM
+        minc = perm
+    p = PatchCollection(
+        df[pol_key].values,
+        **{
+            'cmap'     : red_cmap(),
+            'transform': PROJ,
+            **patch_args
+        }
+    )
+    p.set_array(df[name].values)
+    p.set_clim(minc, maxc)
+    ax.add_collection(p)
+    fig = ax.figure
+    if colorbar:
+        cb = fig.colorbar(p)
+    return ax
+
+
+def get_pol_area(ds):
+    df = ds.reset_coords()[LL00].copy().to_dataframe()
+    df[GA] = df.apply(lambda r: get_area_from_row(r), axis=1)
+    nds = df[GA].to_xarray()
+
+    return nds
+
+
+def get_area_from_row(r):
+    coords = [
+        [r[LON_00], r[LAT_00]],
+        [r[LON_10], r[LAT_10]],
+        [r[LON_11], r[LAT_11]],
+        [r[LON_01], r[LAT_01]],
+        [r[LON_00], r[LAT_00]], ]
+    obj = {'type': 'Polygon', 'coordinates': [coords]}
+    ar = area.area(obj)
+    return ar
+
+
+def trim_swap_dim_coord(nds:xr.Dataset, hours:int):
+    rel_time = nds[RL].values
+    # hours = 96
+    rel_time_end = rel_time - pd.Timedelta(hours=hours)
+
+    nds1 = nds.sel(**{TIME:slice(rel_time_end,rel_time)})
+
+    # TH = 'Time_h'
+
+    lt = len(nds1[TIME])
+    tr = [i for i in range(-lt+1,1,1)]
+
+    time_h = nds1[TIME].copy()
+
+    time_h.values = tr
+
+    nds1[TH]=time_h
+
+    nds2=nds1.swap_dims({TIME:TH})
+    nds2=nds2.reset_coords(TIME)
+
+    return nds2
+
+def get_dims_complement(ds,keep):
+    coords = set(list(ds.dims))
+    if type(keep) is list:
+        co_keep = set(keep)
+    elif type(keep) is str:
+        co_keep = set([keep])
+    else:
+        print('invalid keep')
+
+    complement = list(coords-co_keep)
+    return complement
+    # return co_keep

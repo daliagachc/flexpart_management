@@ -16,6 +16,8 @@
 from useful_scit.imps import *
 
 # %%
+import flexpart_management.modules.constants
+
 path = '/Volumes/mbProD/Downloads/flex_out/run_2019-06-02_20-42-05_/2017-12-10'
 dom = 'd01'
 header = 'header_'
@@ -331,10 +333,12 @@ dis = np.sqrt((la-ds2.lat)**2+(lo-ds2.lon)**2)
 mi =dis.min()
 
 # %%
-min_loc = dis.where(dis==mi).dropna(fa.SN,'all').dropna(fa.WE,'all')
+min_loc = dis.where(dis==mi).dropna(flexpart_management.modules.constants.SN, 'all').dropna(
+    flexpart_management.modules.constants.WE, 'all')
 
 # %%
-dsll = ds2[fa.TOPO].swap_dims({fa.WE:'lon',fa.SN:'lat'})
+dsll = ds2[flexpart_management.modules.constants.TOPO].swap_dims({flexpart_management.modules.constants.WE: 'lon',
+                                                                  flexpart_management.modules.constants.SN: 'lat'})
 
 # %%
 dsll.interp(lat=la,lon=lo)

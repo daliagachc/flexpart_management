@@ -9,7 +9,7 @@
     3600             SSSSS  (int)      output every SSSSS seconds
     3600             SSSSS  (int)      time average of output (in SSSSS seconds)
     180              SSSSS  (int)      sampling rate of output (in SSSSS seconds)
-    43200        SSSSS  (int)      time constant for particle splitting (in seconds)
+    9999999        SSSSS  (int)      time constant for particle splitting (in seconds)
     180              SSSSS  (int)      synchronisation interval of flexpart (in seconds)
     10.              CTL    (real)     factor by which time step must be smaller than tl
     10               IFINE  (int)      decrease of time step for vertical motion by factor ifine

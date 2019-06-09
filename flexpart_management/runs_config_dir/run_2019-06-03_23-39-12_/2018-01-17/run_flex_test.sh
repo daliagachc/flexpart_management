@@ -2,7 +2,7 @@
 #SBATCH -e ./error%j.txt
 #SBATCH -o ./output%j.txt
 #SBATCH -J flex
-#SBATCH -n 4
+#SBATCH -n 8
 #SBATCH -t 00:30:00
 #SBATCH -p test
 #SBATCH --mem-per-cpu=8000

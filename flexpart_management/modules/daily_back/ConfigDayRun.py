@@ -259,6 +259,7 @@ class ConfigMultiDayRun:
     def set_dics_for_day_run(self):
         dics = []
         for d in self.DATE_RANGE:
+            print(d)
             dic = self.INIT_DIC.copy()
             dic['DATE_SIMULATION'] = d
             dics.append(dic)
@@ -271,9 +272,11 @@ class ConfigMultiDayRun:
 
     def __init__(self,
                  init_dic = {}):
+        print(init_dic)
         self.INIT_DIC = init_dic
         self.DATE_START = init_dic['DATE_START']
         self.DATE_END = init_dic['DATE_END']
+        print(self.DATE_END)
         self.set_date_range()
         self.pop_init_dic()
         self.set_dics_for_day_run()

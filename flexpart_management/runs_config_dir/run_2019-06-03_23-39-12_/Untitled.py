@@ -25,7 +25,7 @@ import datetime as dt
 # %%
 init_dic = dict(
     DATE_START=dt.date(2017, 12, 6),
-    DATE_END=dt.date(2018, 1, 17),
+    DATE_END=dt.date(2018, 1, 18),
     HOURS_BACK_IN_TIME=96,  # possitive,
     RUN_BASE_NAME='run_2019-06-03_23-39-12_',
     RUN_BASE_PATH='/Users/diego/flexpart_management/flexpart_management/runs_config_dir',
@@ -35,12 +35,12 @@ init_dic = dict(
     RUN_TEMPL_PATH='/Users/diego/flexpart_management/flexpart_management/runs_config_dir/run_2019-06-03_23-39-12_/run_flex_templ.sh',
     Z1_LEVEL=0.0,
     Z2_LEVEL=10.0,
-    N_PARTICLES=1000000,
+    N_PARTICLES=200000,
     MASS_EMMITTED=1.0,
     RELEASE_NAME='chc',  # release base nameo,
     FLX_EXE='flexwrf33_gnu_omp',
-    SBATCH_N=4,
-    SBATCH_T='05:00:00',
+    SBATCH_N=8,
+    SBATCH_T='20:00:00',
     SBATCH_P='parallel',
     SBATCH_M=8000,
 )

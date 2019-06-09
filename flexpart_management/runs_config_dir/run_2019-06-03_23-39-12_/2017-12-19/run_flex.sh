@@ -2,8 +2,8 @@
 #SBATCH -e ./error%j.txt
 #SBATCH -o ./output%j.txt
 #SBATCH -J flex
-#SBATCH -n 4
-#SBATCH -t 05:00:00
+#SBATCH -n 8
+#SBATCH -t 20:00:00
 #SBATCH -p parallel
 #SBATCH --mem-per-cpu=8000
 #SBATCH --mail-type=END

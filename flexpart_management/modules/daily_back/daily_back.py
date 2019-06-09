@@ -23,7 +23,7 @@ RELEASE_TEMP = '''  {start_dt_rel}       ID1, IT1        beginning date and time
   {z2_level:0.1f}                ZPOINT2 (real)  upper z-level
   {n_particles:0.0f}                 NPART (int)     total number of particles to be released
   {mass_emmitted:0.1f}                XMASS (real)    total mass emitted
-  {release_name}    NAME OF RELEASE LOCATION'''
+{release_name}    NAME OF RELEASE LOCATION'''
 
 # @formatter:off
 

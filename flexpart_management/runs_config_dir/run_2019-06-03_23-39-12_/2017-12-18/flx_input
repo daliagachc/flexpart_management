@@ -16,7 +16,7 @@
     3600             SSSSS  (int)      output every SSSSS seconds
     3600             SSSSS  (int)      time average of output (in SSSSS seconds)
     180              SSSSS  (int)      sampling rate of output (in SSSSS seconds)
-    43200        SSSSS  (int)      time constant for particle splitting (in seconds)
+    9999999        SSSSS  (int)      time constant for particle splitting (in seconds)
     180              SSSSS  (int)      synchronisation interval of flexpart (in seconds)
     10.              CTL    (real)     factor by which time step must be smaller than tl
     10               IFINE  (int)      decrease of time step for vertical motion by factor ifine
@@ -107,9 +107,9 @@ XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean
   1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
   0.0                 ZPOINT1 (real)  lower z-level
   10.0                ZPOINT2 (real)  upper z-level
-  1000000                 NPART (int)     total number of particles to be released
+  200000                 NPART (int)     total number of particles to be released
   1.0                XMASS (real)    total mass emitted
-  chc20171218_00    NAME OF RELEASE LOCATION
+chc20171218_00    NAME OF RELEASE LOCATION
   20171218 010000       ID1, IT1        beginning date and time of release
   20171218 020000       ID2, IT2        ending date and time of release
   -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
@@ -119,9 +119,9 @@ XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean
   1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
   0.0                 ZPOINT1 (real)  lower z-level
   10.0                ZPOINT2 (real)  upper z-level
-  1000000                 NPART (int)     total number of particles to be released
+  200000                 NPART (int)     total number of particles to be released
   1.0                XMASS (real)    total mass emitted
-  chc20171218_01    NAME OF RELEASE LOCATION
+chc20171218_01    NAME OF RELEASE LOCATION
   20171218 020000       ID1, IT1        beginning date and time of release
   20171218 030000       ID2, IT2        ending date and time of release
   -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
@@ -131,9 +131,9 @@ XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean
   1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
   0.0                 ZPOINT1 (real)  lower z-level
   10.0                ZPOINT2 (real)  upper z-level
-  1000000                 NPART (int)     total number of particles to be released
+  200000                 NPART (int)     total number of particles to be released
   1.0                XMASS (real)    total mass emitted
-  chc20171218_02    NAME OF RELEASE LOCATION
+chc20171218_02    NAME OF RELEASE LOCATION
   20171218 030000       ID1, IT1        beginning date and time of release
   20171218 040000       ID2, IT2        ending date and time of release
   -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
@@ -143,9 +143,9 @@ XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean
   1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
   0.0                 ZPOINT1 (real)  lower z-level
   10.0                ZPOINT2 (real)  upper z-level
-  1000000                 NPART (int)     total number of particles to be released
+  200000                 NPART (int)     total number of particles to be released
   1.0                XMASS (real)    total mass emitted
-  chc20171218_03    NAME OF RELEASE LOCATION
+chc20171218_03    NAME OF RELEASE LOCATION
   20171218 040000       ID1, IT1        beginning date and time of release
   20171218 050000       ID2, IT2        ending date and time of release
   -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
@@ -155,9 +155,9 @@ XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean
   1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
   0.0                 ZPOINT1 (real)  lower z-level
   10.0                ZPOINT2 (real)  upper z-level
-  1000000                 NPART (int)     total number of particles to be released
+  200000                 NPART (int)     total number of particles to be released
   1.0                XMASS (real)    total mass emitted
-  chc20171218_04    NAME OF RELEASE LOCATION
+chc20171218_04    NAME OF RELEASE LOCATION
   20171218 050000       ID1, IT1        beginning date and time of release
   20171218 060000       ID2, IT2        ending date and time of release
   -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
@@ -167,9 +167,9 @@ XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean
   1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
   0.0                 ZPOINT1 (real)  lower z-level
   10.0                ZPOINT2 (real)  upper z-level
-  1000000                 NPART (int)     total number of particles to be released
+  200000                 NPART (int)     total number of particles to be released
   1.0                XMASS (real)    total mass emitted
-  chc20171218_05    NAME OF RELEASE LOCATION
+chc20171218_05    NAME OF RELEASE LOCATION
   20171218 060000       ID1, IT1        beginning date and time of release
   20171218 070000       ID2, IT2        ending date and time of release
   -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
@@ -179,9 +179,9 @@ XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean
   1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
   0.0                 ZPOINT1 (real)  lower z-level
   10.0                ZPOINT2 (real)  upper z-level
-  1000000                 NPART (int)     total number of particles to be released
+  200000                 NPART (int)     total number of particles to be released
   1.0                XMASS (real)    total mass emitted
-  chc20171218_06    NAME OF RELEASE LOCATION
+chc20171218_06    NAME OF RELEASE LOCATION
   20171218 070000       ID1, IT1        beginning date and time of release
   20171218 080000       ID2, IT2        ending date and time of release
   -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
@@ -191,9 +191,9 @@ XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean
   1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
   0.0                 ZPOINT1 (real)  lower z-level
   10.0                ZPOINT2 (real)  upper z-level
-  1000000                 NPART (int)     total number of particles to be released
+  200000                 NPART (int)     total number of particles to be released
   1.0                XMASS (real)    total mass emitted
-  chc20171218_07    NAME OF RELEASE LOCATION
+chc20171218_07    NAME OF RELEASE LOCATION
   20171218 080000       ID1, IT1        beginning date and time of release
   20171218 090000       ID2, IT2        ending date and time of release
   -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
@@ -203,9 +203,9 @@ XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean
   1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
   0.0                 ZPOINT1 (real)  lower z-level
   10.0                ZPOINT2 (real)  upper z-level
-  1000000                 NPART (int)     total number of particles to be released
+  200000                 NPART (int)     total number of particles to be released
   1.0                XMASS (real)    total mass emitted
-  chc20171218_08    NAME OF RELEASE LOCATION
+chc20171218_08    NAME OF RELEASE LOCATION
   20171218 090000       ID1, IT1        beginning date and time of release
   20171218 100000       ID2, IT2        ending date and time of release
   -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
@@ -215,9 +215,9 @@ XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean
   1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
   0.0                 ZPOINT1 (real)  lower z-level
   10.0                ZPOINT2 (real)  upper z-level
-  1000000                 NPART (int)     total number of particles to be released
+  200000                 NPART (int)     total number of particles to be released
   1.0                XMASS (real)    total mass emitted
-  chc20171218_09    NAME OF RELEASE LOCATION
+chc20171218_09    NAME OF RELEASE LOCATION
   20171218 100000       ID1, IT1        beginning date and time of release
   20171218 110000       ID2, IT2        ending date and time of release
   -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
@@ -227,9 +227,9 @@ XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean
   1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
   0.0                 ZPOINT1 (real)  lower z-level
   10.0                ZPOINT2 (real)  upper z-level
-  1000000                 NPART (int)     total number of particles to be released
+  200000                 NPART (int)     total number of particles to be released
   1.0                XMASS (real)    total mass emitted
-  chc20171218_10    NAME OF RELEASE LOCATION
+chc20171218_10    NAME OF RELEASE LOCATION
   20171218 110000       ID1, IT1        beginning date and time of release
   20171218 120000       ID2, IT2        ending date and time of release
   -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
@@ -239,9 +239,9 @@ XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean
   1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
   0.0                 ZPOINT1 (real)  lower z-level
   10.0                ZPOINT2 (real)  upper z-level
-  1000000                 NPART (int)     total number of particles to be released
+  200000                 NPART (int)     total number of particles to be released
   1.0                XMASS (real)    total mass emitted
-  chc20171218_11    NAME OF RELEASE LOCATION
+chc20171218_11    NAME OF RELEASE LOCATION
   20171218 120000       ID1, IT1        beginning date and time of release
   20171218 130000       ID2, IT2        ending date and time of release
   -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
@@ -251,9 +251,9 @@ XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean
   1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
   0.0                 ZPOINT1 (real)  lower z-level
   10.0                ZPOINT2 (real)  upper z-level
-  1000000                 NPART (int)     total number of particles to be released
+  200000                 NPART (int)     total number of particles to be released
   1.0                XMASS (real)    total mass emitted
-  chc20171218_12    NAME OF RELEASE LOCATION
+chc20171218_12    NAME OF RELEASE LOCATION
   20171218 130000       ID1, IT1        beginning date and time of release
   20171218 140000       ID2, IT2        ending date and time of release
   -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
@@ -263,9 +263,9 @@ XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean
   1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
   0.0                 ZPOINT1 (real)  lower z-level
   10.0                ZPOINT2 (real)  upper z-level
-  1000000                 NPART (int)     total number of particles to be released
+  200000                 NPART (int)     total number of particles to be released
   1.0                XMASS (real)    total mass emitted
-  chc20171218_13    NAME OF RELEASE LOCATION
+chc20171218_13    NAME OF RELEASE LOCATION
   20171218 140000       ID1, IT1        beginning date and time of release
   20171218 150000       ID2, IT2        ending date and time of release
   -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
@@ -275,9 +275,9 @@ XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean
   1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
   0.0                 ZPOINT1 (real)  lower z-level
   10.0                ZPOINT2 (real)  upper z-level
-  1000000                 NPART (int)     total number of particles to be released
+  200000                 NPART (int)     total number of particles to be released
   1.0                XMASS (real)    total mass emitted
-  chc20171218_14    NAME OF RELEASE LOCATION
+chc20171218_14    NAME OF RELEASE LOCATION
   20171218 150000       ID1, IT1        beginning date and time of release
   20171218 160000       ID2, IT2        ending date and time of release
   -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
@@ -287,9 +287,9 @@ XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean
   1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
   0.0                 ZPOINT1 (real)  lower z-level
   10.0                ZPOINT2 (real)  upper z-level
-  1000000                 NPART (int)     total number of particles to be released
+  200000                 NPART (int)     total number of particles to be released
   1.0                XMASS (real)    total mass emitted
-  chc20171218_15    NAME OF RELEASE LOCATION
+chc20171218_15    NAME OF RELEASE LOCATION
   20171218 160000       ID1, IT1        beginning date and time of release
   20171218 170000       ID2, IT2        ending date and time of release
   -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
@@ -299,9 +299,9 @@ XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean
   1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
   0.0                 ZPOINT1 (real)  lower z-level
   10.0                ZPOINT2 (real)  upper z-level
-  1000000                 NPART (int)     total number of particles to be released
+  200000                 NPART (int)     total number of particles to be released
   1.0                XMASS (real)    total mass emitted
-  chc20171218_16    NAME OF RELEASE LOCATION
+chc20171218_16    NAME OF RELEASE LOCATION
   20171218 170000       ID1, IT1        beginning date and time of release
   20171218 180000       ID2, IT2        ending date and time of release
   -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
@@ -311,9 +311,9 @@ XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean
   1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
   0.0                 ZPOINT1 (real)  lower z-level
   10.0                ZPOINT2 (real)  upper z-level
-  1000000                 NPART (int)     total number of particles to be released
+  200000                 NPART (int)     total number of particles to be released
   1.0                XMASS (real)    total mass emitted
-  chc20171218_17    NAME OF RELEASE LOCATION
+chc20171218_17    NAME OF RELEASE LOCATION
   20171218 180000       ID1, IT1        beginning date and time of release
   20171218 190000       ID2, IT2        ending date and time of release
   -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
@@ -323,9 +323,9 @@ XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean
   1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
   0.0                 ZPOINT1 (real)  lower z-level
   10.0                ZPOINT2 (real)  upper z-level
-  1000000                 NPART (int)     total number of particles to be released
+  200000                 NPART (int)     total number of particles to be released
   1.0                XMASS (real)    total mass emitted
-  chc20171218_18    NAME OF RELEASE LOCATION
+chc20171218_18    NAME OF RELEASE LOCATION
   20171218 190000       ID1, IT1        beginning date and time of release
   20171218 200000       ID2, IT2        ending date and time of release
   -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
@@ -335,9 +335,9 @@ XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean
   1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
   0.0                 ZPOINT1 (real)  lower z-level
   10.0                ZPOINT2 (real)  upper z-level
-  1000000                 NPART (int)     total number of particles to be released
+  200000                 NPART (int)     total number of particles to be released
   1.0                XMASS (real)    total mass emitted
-  chc20171218_19    NAME OF RELEASE LOCATION
+chc20171218_19    NAME OF RELEASE LOCATION
   20171218 200000       ID1, IT1        beginning date and time of release
   20171218 210000       ID2, IT2        ending date and time of release
   -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
@@ -347,9 +347,9 @@ XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean
   1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
   0.0                 ZPOINT1 (real)  lower z-level
   10.0                ZPOINT2 (real)  upper z-level
-  1000000                 NPART (int)     total number of particles to be released
+  200000                 NPART (int)     total number of particles to be released
   1.0                XMASS (real)    total mass emitted
-  chc20171218_20    NAME OF RELEASE LOCATION
+chc20171218_20    NAME OF RELEASE LOCATION
   20171218 210000       ID1, IT1        beginning date and time of release
   20171218 220000       ID2, IT2        ending date and time of release
   -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
@@ -359,9 +359,9 @@ XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean
   1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
   0.0                 ZPOINT1 (real)  lower z-level
   10.0                ZPOINT2 (real)  upper z-level
-  1000000                 NPART (int)     total number of particles to be released
+  200000                 NPART (int)     total number of particles to be released
   1.0                XMASS (real)    total mass emitted
-  chc20171218_21    NAME OF RELEASE LOCATION
+chc20171218_21    NAME OF RELEASE LOCATION
   20171218 220000       ID1, IT1        beginning date and time of release
   20171218 230000       ID2, IT2        ending date and time of release
   -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
@@ -371,9 +371,9 @@ XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean
   1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
   0.0                 ZPOINT1 (real)  lower z-level
   10.0                ZPOINT2 (real)  upper z-level
-  1000000                 NPART (int)     total number of particles to be released
+  200000                 NPART (int)     total number of particles to be released
   1.0                XMASS (real)    total mass emitted
-  chc20171218_22    NAME OF RELEASE LOCATION
+chc20171218_22    NAME OF RELEASE LOCATION
   20171218 230000       ID1, IT1        beginning date and time of release
   20171219 000000       ID2, IT2        ending date and time of release
   -68.140000            XPOINT1 (real)  longitude [deg] of lower left corner
@@ -383,7 +383,7 @@ XXXX|NAME    |decaytime |wetscava  |wetsb|drydif|dryhenry|drya|partrho  |parmean
   1                     KINDZ  (int)  1 for m above ground, 2 for m above sea level, 3 pressure
   0.0                 ZPOINT1 (real)  lower z-level
   10.0                ZPOINT2 (real)  upper z-level
-  1000000                 NPART (int)     total number of particles to be released
+  200000                 NPART (int)     total number of particles to be released
   1.0                XMASS (real)    total mass emitted
-  chc20171218_23    NAME OF RELEASE LOCATION
+chc20171218_23    NAME OF RELEASE LOCATION
 
