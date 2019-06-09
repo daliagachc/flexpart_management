@@ -48,8 +48,9 @@ for p in paths:
         print('starting',d,p)
         new_dic = dict(dom=d,folder_path=p)
         fo_dic = {**fo_base_dic,**new_dic}
-        fo = FO.FLEXOUT(**fo_dic)
+        
         try:
+            fo = FO.FLEXOUT(**fo_dic)
             fo.export_log_polar_coords()
             print('done',d,p)
         except:
