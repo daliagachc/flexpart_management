@@ -104,10 +104,11 @@ class FLEXOUT:
     def get_log_polar_coords(self,
                              release: pd.Timestamp,
                              coords_to_keep=[co.WE, co.SN],
-                             rounding_vals=[co.ROUND_R_LOG, co.ROUND_TH_RAD]
+                             rounding_vals=[co.ROUND_R_LOG, co.ROUND_TH_RAD],
+                             keep_list = [co.RL]
                              ):
 
-        keep_list = [co.RL]
+
         keep_vars = [co.CONC]
         keep_coords = coords_to_keep
 
@@ -126,19 +127,33 @@ class FLEXOUT:
 
         return lp_ds
 
-    def export_log_polar_coords(self):
+    def export_log_polar_coords(self, keep_z = False):
+        rn = 'release_name'
+        rp = 'release_path'
+        coords_to_keep=[co.WE, co.SN]
+        rounding_vals=[co.ROUND_R_LOG, co.ROUND_TH_RAD]
+        keep_list = [co.RL]
+
+        if keep_z:
+            coords_to_keep=[co.WE,co.SN,co.BT]
+            keep_list = [co.RL,co.ZT]
+
+
         out_path = os.path.join(self.folder_path_out,self.run_name)
         os.makedirs(out_path,exist_ok=True)
         releases = self.flexout_hour_ds[co.RL]
         rel_df = releases.to_dataframe()
-        rn = 'release_name'
-        rp = 'release_path'
         rel_df[rn]= rel_df[co.RL].dt.strftime(self.dom+'_%Y-%m-%d_%H-%M-%S.nc')
         rel_df[rp]= rel_df[rn].apply(
             lambda n: os.path.join(out_path,n))
         for k,r in rel_df.iterrows():
             try:
-                lp_ds = self.get_log_polar_coords(r[co.RL])
+                lp_ds = self.get_log_polar_coords(
+                    release=r[co.RL],
+                    coords_to_keep=coords_to_keep,
+                    rounding_vals=rounding_vals,
+                    keep_list=keep_list
+                )
                 fa.compressed_netcdf_save(lp_ds,r[rp])
                 print('done saving',k)
             except:
