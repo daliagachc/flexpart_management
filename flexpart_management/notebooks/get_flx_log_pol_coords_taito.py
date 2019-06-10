@@ -24,6 +24,7 @@ import flexpart_management.modules.flx_array as fa
 from useful_scit.imps import *
 
 # %%
+#os.environ['HDF5_USE_FILE_LOCKING'] = 'FALSE'
 doms = ['d01','d02']
 root_path = '/Volumes/mbProD/Downloads/flex_out/run_2019-06-02_20-42-05_/*-*-*'
 root_path = '/homeappl/home/aliagadi/wrk/DONOTREMOVE/flexpart_management_data/runs/run_2019-06-05_18-42-11_/*-*-*'
