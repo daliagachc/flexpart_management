@@ -55,7 +55,7 @@ from useful_scit.imps import *
 #             print('done',d,p)
 #         except:
 #             print('failed when',d,p)
-        
+
 
 # %%
 fo_dic = dict(

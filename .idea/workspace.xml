@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-06-10_11-10-03_/get_flx_log_pol_coords_taito.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-06-10_11-10-03_/get_flx_log_pol_coords_taito.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-06-10_11-10-03_/get_flx_log_pol_coords_taito_srun.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-06-10_11-10-03_/get_flx_log_pol_coords_test.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-06-10_11-10-03_/srun_launcher.sh" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../useful-scit/useful_scit/util/list_manipulation.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../useful-scit/useful_scit/util/spyder_remote/connect_kernel.sh" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../useful-scit/useful_scit/util/spyder_remote/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flexpart_management/modules/FLEXOUT.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/FLEXOUT.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/FlexLogPol.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/FlexLogPol.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-06-10_11-10-03_/get_flx_log_pol_coords_taito_srun.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-06-10_11-10-03_/get_flx_log_pol_coords_taito_srun.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-06-10_11-10-03_/get_flx_log_pol_coords_test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-06-10_11-10-03_/get_flx_log_pol_coords_test.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-06-10_11-10-03_/get_flx_log_pol_coords_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-06-10_11-10-03_/get_flx_log_pol_coords_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +25,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/flexpart_management/modules/FLEXOUT.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="491">
-                  <caret line="154" column="39" selection-start-line="154" selection-start-column="39" selection-end-line="154" selection-end-column="39" />
+                <state relative-caret-position="700">
+                  <caret line="162" column="49" selection-start-line="162" selection-start-column="49" selection-end-line="162" selection-end-column="49" />
                   <folding>
                     <element signature="e#147#177#0" expanded="true" />
                     <element signature="e#349#379#0" expanded="true" />
@@ -38,18 +37,27 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/flexpart_management/modules/flx_array.py">
+            <entry file="file://$PROJECT_DIR$/flexpart_management/modules/FlexLogPol.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="283">
-                  <caret line="517" column="4" selection-start-line="517" selection-start-column="4" selection-end-line="517" selection-end-column="4" />
+                <state relative-caret-position="990">
+                  <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
                   <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                    <element signature="e#91#141#0" expanded="true" />
-                    <element signature="e#1888#1914#0" expanded="true" />
-                    <element signature="e#2667#3172#0" expanded="true" />
-                    <element signature="e#8795#9357#0" expanded="true" />
-                    <element signature="e#14209#14471#0" expanded="true" />
+                    <element signature="e#92#122#0" expanded="true" />
+                    <element signature="e#2399#2514#0" expanded="true" />
+                    <element signature="e#3647#3959#0" expanded="true" />
+                    <element signature="e#4291#4474#0" expanded="true" />
+                    <element signature="e#4509#4717#0" expanded="true" />
+                    <element signature="e#4956#5279#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-06-10_11-10-03_/get_flx_log_pol_coords_taito_srun.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="451">
+                  <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
                 </state>
               </provider>
             </entry>
@@ -73,7 +81,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-06-10_11-10-03_/get_flx_log_pol_coords_taito.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-78" />
+                <state relative-caret-position="-20" />
               </provider>
             </entry>
           </file>
@@ -111,6 +119,7 @@
       <find>rpy2</find>
       <find>flp.</find>
       <find>'flags'</find>
+      <find>fa.com</find>
     </findStrings>
     <replaceStrings>
       <replace>##</replace>
@@ -136,8 +145,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/input_hour_funs.py" />
-        <option value="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/run_flex_template.sh" />
         <option value="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/launch_hour.py" />
         <option value="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/input_template.txt" />
         <option value="$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/funs.py" />
@@ -183,9 +190,11 @@
         <option value="$PROJECT_DIR$/flexpart_management/modules/daily_back/ConfigDayRun.py" />
         <option value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-06-10_11-10-03_/run_me_to_create.py" />
         <option value="$PROJECT_DIR$/flexpart_management/modules/flx_array.py" />
-        <option value="$PROJECT_DIR$/flexpart_management/modules/FlexLogPol.py" />
         <option value="$PROJECT_DIR$/flexpart_management/modules/FlxOutCheckAlt.py" />
         <option value="$PROJECT_DIR$/flexpart_management/modules/flx_out_check_alt.py" />
+        <option value="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-06-10_11-10-03_/srun_launcher.sh" />
+        <option value="$PROJECT_DIR$/flexpart_management/modules/FlexLogPol.py" />
+        <option value="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-06-10_11-10-03_/get_flx_log_pol_coords_taito_srun.py" />
         <option value="$PROJECT_DIR$/flexpart_management/modules/FLEXOUT.py" />
       </list>
     </option>
@@ -219,13 +228,14 @@
               <item name="flexpart_management" type="b2602c69:ProjectViewProjectNode" />
               <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
               <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="notebooks" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flexpart_management" type="b2602c69:ProjectViewProjectNode" />
               <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
               <item name="flexpart_management" type="462c0819:PsiDirectoryNode" />
               <item name="notebooks" type="462c0819:PsiDirectoryNode" />
+              <item name="run_2019-06-10_11-10-03_" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flexpart_management" type="b2602c69:ProjectViewProjectNode" />
@@ -455,12 +465,12 @@
       <workItem from="1559620703317" duration="27877000" />
       <workItem from="1559772755794" duration="9968000" />
       <workItem from="1560039159077" duration="1072000" />
-      <workItem from="1560040472526" duration="52231000" />
+      <workItem from="1560040472526" duration="57269000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="310123000" />
+    <option name="totallyTimeSpent" value="315161000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1057" extended-state="0" />
@@ -470,8 +480,42 @@
       <window_info id="UI Designer" order="1" />
       <window_info id="DB Browser" order="2" />
       <window_info id="Favorites" order="3" sideWeight="0.51867664" side_tool="true" weight="0.26797387" />
-      <window_info active="true" id="Structure" order="4" side_tool="true" visible="true" weight="0.20713525" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.20713525" />
+      <window_info id="Structure" order="4" side_tool="true" weight="0.20713525" />
+      <window_info content_ui="combo" id="Project" order="5" weight="0.20713525" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32908705" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3269639" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32997987" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.33227175" />
+      <window_info anchor="bottom" id="DB Execution Console" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.3280255" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Remote Host" order="5" />
+      <window_info anchor="right" id="Mathematica REPL" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="LuaJ" order="8" />
+      <window_info anchor="right" id="Data View" order="9" />
+      <window_info anchor="right" id="SciView" order="10" sideWeight="0.4936306" weight="0.11608094" />
+      <window_info anchor="right" x="0" y="0" width="370" height="827" id="Documentation" order="11" sideWeight="0.5063694" side_tool="true" weight="0.11608094" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="0" />
+      <window_info id="UI Designer" order="1" />
+      <window_info id="DB Browser" order="2" />
+      <window_info id="Favorites" order="3" sideWeight="0.51867664" side_tool="true" weight="0.26797387" />
+      <window_info id="Structure" order="4" side_tool="true" visible="true" weight="0.20713525" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.20713525" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32908705" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3269639" />
@@ -498,19 +542,12 @@
       <window_info anchor="right" id="Data View" order="9" />
       <window_info anchor="right" id="SciView" order="10" sideWeight="0.4936306" visible="true" weight="0.11608094" />
       <window_info anchor="right" x="0" y="0" width="370" height="827" id="Documentation" order="11" sideWeight="0.5063694" side_tool="true" visible="true" weight="0.11608094" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_15.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="105" column="28" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flexpart_management/modules/run_hourly_backs/input_template.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-141">
@@ -851,35 +888,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/modules/FlexLogPol.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="182" column="18" selection-start-line="182" selection-start-column="18" selection-end-line="182" selection-end-column="18" />
-          <folding>
-            <element signature="e#92#122#0" expanded="true" />
-            <element signature="e#859#2180#0" expanded="true" />
-            <element signature="e#1830#2256#0" expanded="true" />
-            <element signature="e#2283#2398#0" expanded="true" />
-            <element signature="e#2479#3491#0" expanded="true" />
-            <element signature="e#1270#1582#0" expanded="true" />
-            <element signature="e#1169#1413#0" expanded="true" />
-            <element signature="e#1120#1303#0" expanded="true" />
-            <element signature="e#1096#1304#0" expanded="true" />
-            <element signature="e#1294#1454#0" expanded="true" />
-            <element signature="e#2123#2446#0" expanded="true" />
-            <element signature="e#1184#1384#0" expanded="true" />
-            <element signature="e#5582#6008#0" expanded="true" />
-            <element signature="e#6062#6493#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-06-10_11-10-03_/srun_launcher.sh">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-06-10_11-10-03_/get_flx_log_pol_coords_taito.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-78" />
+        <state relative-caret-position="-20" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/flexpart_management/notebooks/get_flx_log_pol_coords_taito_srun.py">
@@ -916,10 +927,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-06-10_11-10-03_/srun_launcher.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="105" selection-start-line="1" selection-start-column="105" selection-end-line="1" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-06-10_11-10-03_/get_flx_log_pol_coords_taito_srun.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flexpart_management/modules/FlexLogPol.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
+          <folding>
+            <element signature="e#92#122#0" expanded="true" />
+            <element signature="e#2399#2514#0" expanded="true" />
+            <element signature="e#3647#3959#0" expanded="true" />
+            <element signature="e#4291#4474#0" expanded="true" />
+            <element signature="e#4509#4717#0" expanded="true" />
+            <element signature="e#4956#5279#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/flexpart_management/modules/FLEXOUT.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="154" column="39" selection-start-line="154" selection-start-column="39" selection-end-line="154" selection-end-column="39" />
+        <state relative-caret-position="700">
+          <caret line="162" column="49" selection-start-line="162" selection-start-column="49" selection-end-line="162" selection-end-column="49" />
           <folding>
             <element signature="e#147#177#0" expanded="true" />
             <element signature="e#349#379#0" expanded="true" />

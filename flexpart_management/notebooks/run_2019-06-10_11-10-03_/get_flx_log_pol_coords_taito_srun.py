@@ -51,7 +51,7 @@ for p in paths:
 
     try:
         fo = FO.FLEXOUT(**fo_dic)
-        fo.export_log_polar_coords()
+        fo.export_log_polar_coords(keep_z=True)
         print('done', dom, p)
     except:
         print('failed when', dom, p)

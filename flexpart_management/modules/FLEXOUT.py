@@ -146,6 +146,7 @@ class FLEXOUT:
         rel_df[rn]= rel_df[co.RL].dt.strftime(self.dom+'_%Y-%m-%d_%H-%M-%S.nc')
         rel_df[rp]= rel_df[rn].apply(
             lambda n: os.path.join(out_path,n))
+        list_lp_ds = []
         for k,r in rel_df.iterrows():
             try:
                 lp_ds = self.get_log_polar_coords(
@@ -154,11 +155,15 @@ class FLEXOUT:
                     rounding_vals=rounding_vals,
                     keep_list=keep_list
                 )
-                fa.compressed_netcdf_save(lp_ds,r[rp])
+                # fa.compressed_netcdf_save(lp_ds,r[rp])
+                list_lp_ds.append(lp_ds)
                 print('done saving',k)
             except:
                 print('error in',k)
-
-        return rel_df
+        conc_ds = xr.concat(list_lp_ds,dim=co.RL)
+        conc_path = rel_df.iloc[0][rp]
+        print('save path', conc_path)
+        print('length arr',len(list_lp_ds))
+        fa.compressed_netcdf_save(conc_ds,conc_path)
 
 

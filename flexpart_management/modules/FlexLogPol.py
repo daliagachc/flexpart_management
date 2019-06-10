@@ -33,6 +33,8 @@ class FlexLogPol:
                  concat = False,
                  save_concat = True,
                  get_clusters = False,
+                 open_merged = False,
+                 clusters_avail = False,
                  ):
         self.save_concat = save_concat
         self.concat = concat
@@ -55,13 +57,16 @@ class FlexLogPol:
                 self.open_concat_files()
             except:
                 print('cant open')
+
         self.get_merged_ds()
+
         if get_clusters:
             self.get_clusters_r()
-        if get_clusters is not True:
+        if open_merged:
             self.merged_ds = xr.open_dataset(self.merged_path)
 
-        self.set_cluster_flags()
+        if clusters_avail:
+            self.set_cluster_flags()
 
         self.add_conc_vars()
 
