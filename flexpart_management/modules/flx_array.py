@@ -1,7 +1,7 @@
 # project name: flexpart_management
 # created by diego aliaga daliaga_at_chacaltaya.edu.bo
 from matplotlib.collections import PatchCollection
-from matplotlib.colors import ListedColormap
+from matplotlib.colors import ListedColormap, LinearSegmentedColormap
 from matplotlib.patches import Polygon
 from useful_scit.imps import *
 from typing import List
@@ -313,7 +313,7 @@ def get_ax_lapaz():
     fig = plt.figure(figsize=(15, 10))
     ax = fig.add_subplot(1, 1, 1, projection=PROJ, )
 
-    ax.set_extent([-69, -67, -17, -15], crs=PROJ)
+    ax.set_extent([-70, -66, -18, -14], crs=PROJ)
     ax.add_feature(cartopy.feature.COASTLINE.with_scale('10m'))
     ax.add_feature(cartopy.feature.BORDERS.with_scale('10m'))
     ax.add_feature(cartopy.feature.LAKES.with_scale('10m'), alpha=0.5, linestyle='-')
@@ -527,3 +527,21 @@ def get_dims_complement(ds,keep):
     complement = list(coords-co_keep)
     return complement
     # return co_keep
+
+def get_custom_cmap(to_rgb, from_rgb=[1,1,1]):
+
+    # from color r,g,b
+    r1,g1,b1 = from_rgb
+
+    # to color r,g,b
+    r2,g2,b2 = to_rgb
+
+    cdict = {'red': ((0, r1, r1),
+                     (1, r2, r2)),
+             'green': ((0, g1, g1),
+                       (1, g2, g2)),
+             'blue': ((0, b1, b1),
+                      (1, b2, b2))}
+
+    cmap = LinearSegmentedColormap('custom_cmap', cdict)
+    return cmap

@@ -52,5 +52,9 @@ LL00 = [LAT_00,
 ROUND_R_LOG = .18
 ROUND_TH_RAD = np.pi/18
 
+CPer = 'CONC_per'
+CC = 'CONC_conc'
+CCPer = 'CONC_conc_per'
+ClusFlag = 'flags'
 
 

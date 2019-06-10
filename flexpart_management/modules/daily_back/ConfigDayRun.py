@@ -4,6 +4,8 @@ import datetime as dt
 import os
 import flexpart_management.modules.daily_back.daily_back as db
 import pandas as pd
+import subprocess
+from pprint import pprint
 
 # @formatter:off
 class ConfigDayRun:
@@ -243,6 +245,8 @@ class ConfigMultiDayRun:
     EXCEPTS = ('DATE_START','DATE_END')
     INIT_DIC:dict = None
     DICS_FOR_DAY_RUN:list = []
+    RUN_PATH_LOCAL_RSYNC = ''
+    RUN_PATH_TAITO_RSYNC = ''
 
     def set_date_range(self):
         dr = pd.date_range(self.DATE_START,
@@ -269,6 +273,18 @@ class ConfigMultiDayRun:
         for d in self.DICS_FOR_DAY_RUN:
             ConfigDayRun(init_dic=d)
 
+    def rsync_to_taito(self):
+        list_cmds = [
+            '/usr/local/bin/rsync',
+            '-azv',
+            self.RUN_PATH_LOCAL_RSYNC,
+            'aliagadi@taito-login3.csc.fi:' + \
+            self.RUN_PATH_TAITO_RSYNC
+        ]
+        pprint(list_cmds)
+        subprocess.call(list_cmds)
+
+
 
     def __init__(self,
                  init_dic = {}):
@@ -281,3 +297,13 @@ class ConfigMultiDayRun:
         self.pop_init_dic()
         self.set_dics_for_day_run()
         self.create_daily_runs()
+        self.RUN_PATH_LOCAL_RSYNC = os.path.join(
+            self.INIT_DIC['RUN_BASE_PATH'],
+            self.INIT_DIC['RUN_BASE_NAME'],
+            '' # ensure trailing space
+        )
+        self.RUN_PATH_TAITO_RSYNC = os.path.join(
+            self.INIT_DIC['RUN_BASE_PATH_TAITO'],
+            self.INIT_DIC['RUN_BASE_NAME'],
+            '' # ensure trailing space
+        )
