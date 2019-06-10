@@ -46,7 +46,6 @@ self.save_z_sum_ds()
 # %%
 
 
-# %%
-dim2sum
+
 
 # %%
