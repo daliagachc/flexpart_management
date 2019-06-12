@@ -57,4 +57,22 @@ CC = 'CONC_conc'
 CCPer = 'CONC_conc_per'
 ClusFlag = 'flags'
 
+COL = 'CON_TIME/LEN'
+
+LALO_LAPAZ = [-70, -66, -18, -14]
+LALO_BOL = [-83, -43, -35, 2]
+
+
+print('reload')
+
+FLAGS = 'flags'
+H = 'H'
+
+PLOT_LABS = {
+        CPer: 'mass*res. time[%]',
+        H:'height [masl]',
+        ZM: 'height [mag]'
+}
+
+
 

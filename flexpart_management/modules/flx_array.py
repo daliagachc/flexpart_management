@@ -192,7 +192,7 @@ def add_zlength_m(ds: xr.Dataset):
 def add_volume(ds: xr.Dataset):
     new_ds = ds.copy()
     new_ds[VOL] = new_ds[GA] * new_ds[ZM]
-    new_ds = new_ds.assign_coords(**{VOL:new_ds[VOL]})
+    new_ds = new_ds.assign_coords(**{VOL: new_ds[VOL]})
     return new_ds
 
 
@@ -285,11 +285,23 @@ def fix_releases(ds, prnt=False):
     return dsn
 
 
-def get_ax_bolivia():
-    fig = plt.figure(figsize=(15, 10))
-    ax = fig.add_subplot(1, 1, 1, projection=PROJ, )
+def add_chc_lpb(ax):
+    ax.scatter(CHC_LON, CHC_LAT, marker='.', color='b', transform=PROJ)
+    ax.scatter(LPB_LON, LPB_LAT, marker='.', color='g', transform=PROJ)
 
-    ax.set_extent([-89.14205, -43.063545, -31.979277, -0.333519], crs=PROJ)
+
+def get_ax_bolivia(
+        ax=False,
+        fig_args={},
+        lalo_extent=LALO_BOL
+):
+    fig_ops = dict(figsize=(15, 10))
+    fig_ops = {**fig_ops, **fig_args}
+    if ax is False:
+        fig = plt.figure(**fig_ops)
+        ax = fig.add_subplot(1, 1, 1, projection=PROJ, )
+
+    ax.set_extent(lalo_extent, crs=PROJ)
     ax.add_feature(cartopy.feature.COASTLINE.with_scale('10m'))
     ax.add_feature(cartopy.feature.BORDERS.with_scale('10m'))
     ax.add_feature(cartopy.feature.LAKES.with_scale('10m'), alpha=0.5, linestyle='-')
@@ -301,19 +313,16 @@ def get_ax_bolivia():
 
     add_chc_lpb(ax)
 
+
+
     return ax
 
 
-def add_chc_lpb(ax):
-    ax.scatter(CHC_LON, CHC_LAT, marker='.', color='b', transform=PROJ)
-    ax.scatter(LPB_LON, LPB_LAT, marker='.', color='g', transform=PROJ)
-
-
-def get_ax_lapaz():
+def get_ax_lapaz(lalo_extent=LALO_LAPAZ):
     fig = plt.figure(figsize=(15, 10))
     ax = fig.add_subplot(1, 1, 1, projection=PROJ, )
 
-    ax.set_extent([-70, -66, -18, -14], crs=PROJ)
+    ax.set_extent(lalo_extent, crs=PROJ)
     ax.add_feature(cartopy.feature.COASTLINE.with_scale('10m'))
     ax.add_feature(cartopy.feature.BORDERS.with_scale('10m'))
     ax.add_feature(cartopy.feature.LAKES.with_scale('10m'), alpha=0.5, linestyle='-')
@@ -358,7 +367,8 @@ def data_array_to_logpolar(da: xr.DataArray,
                            th_round_rad: float,
                            lat_center=CHC_LAT,
                            lon_center=CHC_LON,
-                           dim2keep = []
+                           dim2keep=[],
+                           fun = 'sum'
                            ) -> xr.DataArray:
     nda = da.copy()
     nda[LL_DIS] = get_r_dis(nda, lat_center, lon_center)
@@ -380,8 +390,9 @@ def data_array_to_logpolar(da: xr.DataArray,
     name = da.name
 
     df = nda.to_dataframe().reset_index()
-    df = df[[R_CENTER, TH_CENTER, name,*dim2keep]]
-    df: pd.DataFrame = df.groupby([R_CENTER, TH_CENTER,*dim2keep]).sum()
+    df = df[[R_CENTER, TH_CENTER, name, *dim2keep]]
+    df: pd.DataFrame = getattr(df.groupby([R_CENTER, TH_CENTER, *dim2keep]),
+                               fun)()
     r_th_da = df.to_xarray()[name]
 
     r_th_da[LAT] = r_th_to_lat(lat_center, r_th_da[R_CENTER], r_th_da[TH_CENTER])
@@ -437,18 +448,27 @@ def polygon_from_row(r):
     return pol
 
 
-def logpolar_plot(ds, ax,
+def logpolar_plot(ds,
+                  ax=False,
                   name='CONC',
                   perM=.95,
                   perm=0.0,
                   colorbar=True,
                   patch_args={},
-                  quantile = True
+                  quantile=True,
+                  fig_ops = {},
+                  drop_zeros = True,
                   ):
+    if ax is False:
+        fig = plt.figure(**fig_ops)
+        ax = fig.add_subplot(1, 1, 1, projection=PROJ, )
     df = ds.to_dataframe()
+    if drop_zeros:
+        df = df[df[name]>0]
     pol_key = 'pol'
     df[pol_key] = df.apply(lambda r: polygon_from_row(r), axis=1)
     df = df.dropna()
+
     if quantile:
         maxc = df[name].quantile(perM)
         minc = df[name].quantile(perm)
@@ -469,6 +489,7 @@ def logpolar_plot(ds, ax,
     fig = ax.figure
     if colorbar:
         cb = fig.colorbar(p)
+        cb.ax.set_ylabel(PLOT_LABS[name], rotation=90)
     return ax
 
 
@@ -492,30 +513,31 @@ def get_area_from_row(r):
     return ar
 
 
-def trim_swap_dim_coord(nds:xr.Dataset, hours:int):
+def trim_swap_dim_coord(nds: xr.Dataset, hours: int):
     rel_time = nds[RL].values
     # hours = 96
     rel_time_end = rel_time - pd.Timedelta(hours=hours)
 
-    nds1 = nds.sel(**{TIME:slice(rel_time_end,rel_time)})
+    nds1 = nds.sel(**{TIME: slice(rel_time_end, rel_time)})
 
     # TH = 'Time_h'
 
     lt = len(nds1[TIME])
-    tr = [i for i in range(-lt+1,1,1)]
+    tr = [i for i in range(-lt + 1, 1, 1)]
 
     time_h = nds1[TIME].copy()
 
     time_h.values = tr
 
-    nds1[TH]=time_h
+    nds1[TH] = time_h
 
-    nds2=nds1.swap_dims({TIME:TH})
-    nds2=nds2.reset_coords(TIME)
+    nds2 = nds1.swap_dims({TIME: TH})
+    nds2 = nds2.reset_coords(TIME)
 
     return nds2
 
-def get_dims_complement(ds,keep):
+
+def get_dims_complement(ds, keep):
     coords = set(list(ds.dims))
     if type(keep) is list:
         co_keep = set(keep)
@@ -524,24 +546,26 @@ def get_dims_complement(ds,keep):
     else:
         print('invalid keep')
 
-    complement = list(coords-co_keep)
+    complement = list(coords - co_keep)
     return complement
     # return co_keep
 
-def get_custom_cmap(to_rgb, from_rgb=[1,1,1]):
 
+def get_custom_cmap(to_rgb, from_rgb=[1, 1, 1]):
     # from color r,g,b
-    r1,g1,b1 = from_rgb
+    r1, g1, b1 = from_rgb
 
     # to color r,g,b
-    r2,g2,b2 = to_rgb
+    r2, g2, b2 = to_rgb
 
-    cdict = {'red': ((0, r1, r1),
-                     (1, r2, r2)),
+    cdict = {'red'  : ((0, r1, r1),
+                       (1, r2, r2)),
              'green': ((0, g1, g1),
                        (1, g2, g2)),
-             'blue': ((0, b1, b1),
-                      (1, b2, b2))}
+             'blue' : ((0, b1, b1),
+                       (1, b2, b2))}
 
     cmap = LinearSegmentedColormap('custom_cmap', cdict)
     return cmap
+
+
