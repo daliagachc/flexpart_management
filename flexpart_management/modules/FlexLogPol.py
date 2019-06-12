@@ -627,6 +627,41 @@ class FlexLogPol:
         ax.grid(True, 'both', axis='x')
         ax.set_ylabel(co.PLOT_LABS[co.H])
 
+    def plot_hout_influence(self,i):
+        # %%
+        lt = 'Local Time'
+        ds = self.merged_ds
+        ds[lt]=np.mod(ds[co.RL].dt.hour-3.5,24)
+        ds = ds.assign_coords(**{lt:ds[lt]})
+        dsLP = ds.where(self.merged_ds[co.FLAGS]==i)
+        dp = dsLP[co.CPer]
+
+        # %%
+        dp1 = dp.reset_coords()[[co.CPer,lt]]
+
+        # %%
+        df = dp1.swap_dims({co.RL:lt}).reset_coords()[[co.CPer,lt]].to_dataframe()
+
+        # %%
+        gb=df.dropna().groupby(lt)
+
+        # %%
+        desc = gb.describe()[co.CPer]
+
+        # %%
+        labs = ['25%','50%','75%','mean']
+
+        # %%
+        fig,ax=plt.subplots()
+        c = self.colors[i]
+        ax.plot(desc.index,desc[labs[1]],color=c,label=labs[1])
+        ax.plot(desc.index,desc[labs[3]],color='k',label=labs[3])
+        ax.fill_between(desc.index,desc[labs[0]],desc[labs[2]],color=c,alpha=.2,label=labs[0]+'-'+labs[2])
+        ax.legend(loc='upper left')
+        ax.set_xlabel(lt)
+        ax.set_ylabel(co.PLOT_LABS[co.CPer])
+        ax.grid(True)
+
 
 def get_log_polar_coords_topo(
         head_ds,
