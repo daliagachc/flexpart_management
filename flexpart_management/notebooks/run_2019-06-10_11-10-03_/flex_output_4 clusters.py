@@ -38,34 +38,7 @@ self = FLP.FlexLogPol(
 )
 
 # %%
-
-# %%
-com=fa.get_dims_complement(self.merged_ds,[co.R_CENTER,co.TH_CENTER])
-sds = self.merged_ds.sum(com)
-ax = fa.get_ax_bolivia()
-fa.logpolar_plot(sds[co.CONC],name=co.CONC,ax= ax, drop_zeros=False)
-
-# %%
-ax = fa.get_ax_bolivia()
-fa.logpolar_plot(self.merged_ds[co.TOPO],name=co.TOPO,ax= ax, drop_zeros=False)
-
-# %%
 self.reset_z_levels()
-
-# %%
-com=fa.get_dims_complement(self.merged_ds,[co.R_CENTER,co.TH_CENTER])
-sds = self.merged_ds.sum(com)
-ax = fa.get_ax_bolivia()
-fa.logpolar_plot(sds[co.CONC],name=co.CONC,ax= ax, drop_zeros=False)
-
-# %%
-self.python_cluster(n_cluster=15)
-
-# %%
-com=fa.get_dims_complement(self.merged_ds,[co.R_CENTER,co.TH_CENTER])
-sds = self.merged_ds.sum(com)
-ax = fa.get_ax_bolivia()
-fa.logpolar_plot(sds[co.CONC],name=co.CONC,ax= ax, drop_zeros=False)
 
 # %%
 self.python_cluster(n_cluster=4)
@@ -79,18 +52,3 @@ for i in range(len(self.cluster_flags)):
 
 # %%
 self.plot_clusters_inlfuence(cols=1)
-
-# %%
-self.python_cluster(n_cluster=15)
-
-# %%
-
-for i in range(len(self.cluster_flags)):
-# for i in range(1):
-    fig = self.plot_cluster_grid(i,co.CPer)
-
-
-# %%
-self.plot_clusters_inlfuence(cols=3)
-
-# %%
