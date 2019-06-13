@@ -44,12 +44,6 @@ self.reset_z_levels()
 self.python_cluster(n_cluster=15)
 
 # %%
-self.python_cluster(n_cluster=4)
-
-# %%
-self.python_cluster(n_cluster=15)
-
-# %%
 
 for i in range(len(self.cluster_flags)):
 # for i in range(1):
@@ -58,5 +52,11 @@ for i in range(len(self.cluster_flags)):
 
 # %%
 self.plot_clusters_inlfuence(cols=3)
+
+# %%
+# i = 5 
+for i in range(len(self.cluster_flags)):
+# for i in [i]:
+    ax = self.plot_hout_influence(i,log=True)
 
 # %%

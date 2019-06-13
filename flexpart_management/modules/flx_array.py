@@ -1,5 +1,6 @@
 # project name: flexpart_management
 # created by diego aliaga daliaga_at_chacaltaya.edu.bo
+import matplotlib
 from matplotlib.collections import PatchCollection
 from matplotlib.colors import ListedColormap, LinearSegmentedColormap
 from matplotlib.patches import Polygon
@@ -9,8 +10,6 @@ import cartopy
 import area
 from flexpart_management.modules.constants import *
 from useful_scit.util.zarray import compressed_netcdf_save
-
-
 
 
 def import_flex_file(path_file: str):
@@ -313,22 +312,26 @@ def get_ax_bolivia(
 
     add_chc_lpb(ax)
 
-
-
     return ax
 
 
-def get_ax_lapaz(lalo_extent=LALO_LAPAZ):
-    fig = plt.figure(figsize=(15, 10))
-    ax = fig.add_subplot(1, 1, 1, projection=PROJ, )
+def get_ax_lapaz(ax=False,
+                 fig_args={},
+                 lalo_extent=LALO_LAPAZ):
+    if ax is False:
+        fig = plt.figure(figsize=(15, 10))
+        ax = fig.add_subplot(1, 1, 1, projection=PROJ, )
 
     ax.set_extent(lalo_extent, crs=PROJ)
     ax.add_feature(cartopy.feature.COASTLINE.with_scale('10m'))
     ax.add_feature(cartopy.feature.BORDERS.with_scale('10m'))
     ax.add_feature(cartopy.feature.LAKES.with_scale('10m'), alpha=0.5, linestyle='-')
     ax.add_feature(cartopy.feature.STATES.with_scale('10m'), alpha=0.5, linestyle=':')
-    ax.gridlines(crs=PROJ, alpha=0.5, linestyle='--',
-                 draw_labels=True)
+    gl = ax.gridlines(crs=PROJ, alpha=0.5, linestyle='--',
+                      draw_labels=True)
+
+    gl.xlabels_top = False
+    gl.ylabels_right = False
 
     add_chc_lpb(ax)
 
@@ -368,7 +371,7 @@ def data_array_to_logpolar(da: xr.DataArray,
                            lat_center=CHC_LAT,
                            lon_center=CHC_LON,
                            dim2keep=[],
-                           fun = 'sum'
+                           fun='sum'
                            ) -> xr.DataArray:
     nda = da.copy()
     nda[LL_DIS] = get_r_dis(nda, lat_center, lon_center)
@@ -456,15 +459,15 @@ def logpolar_plot(ds,
                   colorbar=True,
                   patch_args={},
                   quantile=True,
-                  fig_ops = {},
-                  drop_zeros = True,
+                  fig_ops={},
+                  drop_zeros=True,
                   ):
     if ax is False:
         fig = plt.figure(**fig_ops)
         ax = fig.add_subplot(1, 1, 1, projection=PROJ, )
     df = ds.to_dataframe()
     if drop_zeros:
-        df = df[df[name]>0]
+        df = df[df[name] > 0]
     pol_key = 'pol'
     df[pol_key] = df.apply(lambda r: polygon_from_row(r), axis=1)
     df = df.dropna()
@@ -569,3 +572,154 @@ def get_custom_cmap(to_rgb, from_rgb=[1, 1, 1]):
     return cmap
 
 
+def plot_lapaz_rect(ax):
+    bl = LALO_LAPAZ[0], LALO_LAPAZ[2]
+    w = LALO_LAPAZ[1] - LALO_LAPAZ[0]
+    h = LALO_LAPAZ[3] - LALO_LAPAZ[2]
+    rect = matplotlib.patches.Rectangle(bl, w, h, linewidth=1, edgecolor='k', facecolor='none')
+    ax.add_patch(rect)
+
+
+def plot_clust_height(ds,
+                      ax: plt.Axes,
+                      perM,
+                      quantile=True,
+                      drop_zero=True,
+                      par_to_plot=COL):
+    ar = ds.copy()
+    com = get_dims_complement(ar, [R_CENTER, ZM])
+
+    ar = ar.sum(dim=com)
+    if drop_zero:
+        ar = ar.where(ar > 0)
+    if quantile:
+        q = ar.quantile(perM)
+    else:
+        q = perM
+    lab = "km from CHC"
+    ar[lab] = ar[R_CENTER] * 100
+    ar = ar.swap_dims({R_CENTER: lab})
+    try:
+        ar.name = PLOT_LABS[par_to_plot]
+    except:
+        pass
+    ar.plot(
+        cmap=red_cmap(),
+        vmin=0,
+        vmax=q,
+        ax=ax,
+        x=lab,
+    )
+    ax.set_yscale('log')
+    ax.set_ylim(100, 20000)
+    ax.set_xscale('log')
+    ax.set_xlim(.05 * 100, 30 * 100)
+    ax.grid(True, 'major', axis='y')
+    ax.grid(True, 'both', axis='x')
+    ax.set_ylabel(PLOT_LABS[ZM])
+
+
+def plot_absolute_height(ds,
+                        
+                         ax=None,
+                         perM=.95,
+                         drop_zero=True,
+                         par_to_plit=COL
+                         ):
+
+
+    mer = ds.copy()
+    # i = 6
+
+
+    fla = FLAGS
+    HC = 'H*CONC'
+
+    ver_area = 'VER_AREA'
+    log_center = np.log(mer[R_CENTER])
+    dis = log_center - \
+          log_center.shift({R_CENTER: 1})
+    dis = dis.median()
+    l1 = log_center - dis / 2
+    l2 = log_center + dis / 2
+    l1 = np.e ** l1
+    l2 = np.e ** l2
+    r_dis = (l2 - l1) * 100000
+    zlen = 500
+    ar = np.arange(zlen / 2, 20000, zlen)
+
+    mer = mer[[CONC, fla, TOPO]]
+
+    # return merged_ds
+
+
+
+    mer['c/v'] = mer[CONC] / mer[VOL]
+
+    mer = mer.interp(**{ZM: ar})
+
+    mer[VOL] = mer[GA] * zlen
+    mer[CONC] = mer['c/v'] * mer[VOL]
+
+    mer[H] = mer[TOPO] + mer[ZM]
+
+    mer[HC] = mer[H] * mer[CONC]
+
+    var = [CONC, HC]
+    com = get_dims_complement(mer, [R_CENTER, ZM])
+    ms = mer[var].sum(com)
+
+    ms[ver_area] = ms[ZLM] * r_dis
+
+    # ms:xr.DataArray = ms/ms[ver_area]
+
+    ms[CONC] = ms[CONC].where(ms[CONC] > 0, 0)
+
+    # ms = ms*zlen*r_dis
+
+    ms[H] = ms[HC] / ms[CONC]
+
+
+    def find_nearest(value):
+
+
+        # ar = self.get_zlin()
+        array = np.asarray(ar)
+        idx = (np.abs(array - value)).argmin()
+        return array[idx]
+
+    ms[H] = xr.apply_ufunc(find_nearest, ms[H], vectorize=True)
+
+    hs = ms.to_dataframe().groupby([H, R_CENTER]).sum()[CONC].to_xarray()
+
+    lab = "km from CHC"
+    hs[lab] = hs[R_CENTER] * 100
+    hs = hs.swap_dims({R_CENTER: lab})
+
+    hs1 = hs.interp(**{H: ar})
+    hs1 = hs1.combine_first(hs)
+
+    if drop_zero:
+        hs1 = hs1.where(hs1 > 0)
+
+    if ax is None:
+        fig, ax = plt.subplots(figsize=(10, 5))
+
+
+    q = hs1.quantile(perM)
+
+    hs1.name = PLOT_LABS[CONC]
+
+    hs1.plot(
+        cmap=red_cmap(),
+        vmin=0,
+        vmax=q,
+        ax=ax,
+        x=lab,
+    )
+    ax.set_ylim(100, 20000)
+    ax.set_xscale('log')
+    ax.set_xlim(.05 * 100, 30 * 100)
+    ax.grid(True, 'major', axis='y')
+    ax.grid(True, 'both', axis='x')
+    ax.set_ylabel(PLOT_LABS[H])

@@ -49,6 +49,7 @@ class FlexLogPol:
     h1_ds = None
     h2_ds = None
 
+
     l2M = 24
     l2m = 10
     l1M = None
@@ -225,11 +226,9 @@ class FlexLogPol:
         ax.set_ylabel(co.PLOT_LABS[co.ZM])
 
     def plot_lapaz_rect(self, ax):
-        bl = co.LALO_LAPAZ[0], co.LALO_LAPAZ[2]
-        w = co.LALO_LAPAZ[1] - co.LALO_LAPAZ[0]
-        h = co.LALO_LAPAZ[3] - co.LALO_LAPAZ[2]
-        rect = matplotlib.patches.Rectangle(bl, w, h, linewidth=1, edgecolor='k', facecolor='none')
-        ax.add_patch(rect)
+        fa.plot_lapaz_rect(ax)
+
+
 
     def add_conc_vars(self):
         CPer = co.CPer
@@ -627,29 +626,41 @@ class FlexLogPol:
         ax.grid(True, 'both', axis='x')
         ax.set_ylabel(co.PLOT_LABS[co.H])
 
-    def plot_hout_influence(self,i):
+    def plot_hout_influence(self, i,
+                            log='False',
+                            pM=None
+                            ):
         # %%
         lt = 'Local Time'
-        ds = self.merged_ds
+        ds = self.merged_ds.copy()
+
         ds[lt]=np.mod(ds[co.RL].dt.hour-3.5,24)
         ds = ds.assign_coords(**{lt:ds[lt]})
         dsLP = ds.where(self.merged_ds[co.FLAGS]==i)
-        dp = dsLP[co.CPer]
+        com = fa.get_dims_complement(dsLP,co.RL)
+        conLP = dsLP[co.CONC].sum(com)
+        conTot = ds[co.CONC].sum(com)
+        conLP = conLP/conTot * 100
+        cl = 'clog'
+        conLP = conLP.where(conLP>0)
+        conLP = np.log(conLP)
+        conLP.name = cl
 
-        # %%
-        dp1 = dp.reset_coords()[[co.CPer,lt]]
-
-        # %%
-        df = dp1.swap_dims({co.RL:lt}).reset_coords()[[co.CPer,lt]].to_dataframe()
-
-        # %%
-        gb=df.dropna().groupby(lt)
-
-        # %%
-        desc = gb.describe()[co.CPer]
+        df = conLP.to_dataframe()
+        gp = df.groupby(lt)
+        desc = gp.describe()[cl]
 
         # %%
         labs = ['25%','50%','75%','mean']
+
+        desc = desc[labs]
+
+        desc = np.e**desc
+        if pM is None:
+            yM = None
+        else:
+            yM = desc.quantile(pM).max()
+
 
         # %%
         fig,ax=plt.subplots()
@@ -661,6 +672,13 @@ class FlexLogPol:
         ax.set_xlabel(lt)
         ax.set_ylabel(co.PLOT_LABS[co.CPer])
         ax.grid(True)
+        tickrange = np.arange(0,25,3)
+        ax.set_xticks(tickrange)
+        ax.set_title('cluster {}'.format(i))
+        if log:
+            ax.set_yscale('log')
+        ax.set_ylim(None, yM)
+        return ax
 
 
 def get_log_polar_coords_topo(

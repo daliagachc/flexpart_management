@@ -71,8 +71,13 @@ H = 'H'
 PLOT_LABS = {
         CPer: 'mass*res. time[%]',
         H:'height [masl]',
-        ZM: 'height [mag]'
+        ZM: 'height [mag]',
+        CONC: 'mass/mass * res. time [s]'
 }
+
+
+
+
 
 
 

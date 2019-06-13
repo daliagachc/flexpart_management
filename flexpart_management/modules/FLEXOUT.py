@@ -49,6 +49,8 @@ class FLEXOUT:
         self.head_ds = xr.open_dataset(self.head_file_path)
         self.out_dask_ds = xr.open_mfdataset(self.out_file_list, concat_dim=co.TIME)
         self.out_dask_ds = fa.convert_ds_time_format(self.out_dask_ds)
+
+        # add lat lot z vol alt etc
         self.get_and_tune_flexout_ds()
 
         self.get_flx_hour_ds_list()
