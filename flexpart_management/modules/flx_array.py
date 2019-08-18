@@ -620,7 +620,7 @@ def plot_clust_height(ds,
 
 
 def plot_absolute_height(ds,
-                        
+
                          ax=None,
                          perM=.95,
                          drop_zero=True,

@@ -1,0 +1,6 @@
+- based on run_2019-06-10_11-10-03_
+- goal
+    - check if zipped wrfout files are readable by flexpart 
+- date
+    - dec 8 
+- change source file to wrf_compressed
