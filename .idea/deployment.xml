@@ -1,39 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData">
+  <component name="PublishConfigData" autoUpload="Always" serverName="taito" createEmptyFolders="true" showDialogOnRemoteDnD="false">
     <serverData>
-      <paths name="lfaServeRoot">
+      <paths name="taito">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$/../useful-scit" web="/" />
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="lfaServer">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$/../useful-scit" web="/" />
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="lfaserverLocal">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$/../useful-scit" web="/" />
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="mac_linux">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$/../useful-scit" web="/" />
-            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="saltena_2018/flexpart_management" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="useful-scit" local="$PROJECT_DIR$/../useful-scit/useful_scit" web="/" />
           </mappings>
         </serverdata>
       </paths>
     </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>

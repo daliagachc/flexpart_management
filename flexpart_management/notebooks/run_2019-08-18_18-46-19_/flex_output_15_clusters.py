@@ -26,14 +26,15 @@ import flexpart_management.modules.flx_array as fa
 # %%
 path = '/Volumes/mbProD/Downloads/flx_log_coor/run_2019-06-05_18-42-11_'
 path = '/Volumes/mbProD/Downloads/flx_log_coor/run_2019-06-10_11-10-03_'
-
+path = '/Volumes/mbProD/Downloads/flx_log_coor/run_2019-08-18_18-46-19_'
 # flp = FLP.FlexLogPol(path,concat=True)
 # self = FLP.FlexLogPol(path,concat=False)
 self = FLP.FlexLogPol(
     path,
-#     concat=True,
+    #concat=True,
     concat=False,
     get_clusters=False,
+    #open_merged=False,
     open_merged=True,
     clusters_avail=False
 )

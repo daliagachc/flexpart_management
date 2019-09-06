@@ -294,6 +294,7 @@ def get_ax_bolivia(
         fig_args={},
         lalo_extent=LALO_BOL
 ):
+    import matplotlib.ticker as mticker
     fig_ops = dict(figsize=(15, 10))
     fig_ops = {**fig_ops, **fig_args}
     if ax is False:
@@ -309,6 +310,8 @@ def get_ax_bolivia(
                       draw_labels=True)
     gl.xlabels_top = False
     gl.ylabels_right = False
+    gl.xlocator = mticker.FixedLocator(np.arange(-76,-50,2))
+    gl.ylocator = mticker.FixedLocator(np.arange(-34,-0,2))
 
     add_chc_lpb(ax)
 

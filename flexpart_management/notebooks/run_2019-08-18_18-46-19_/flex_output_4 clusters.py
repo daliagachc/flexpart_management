@@ -26,7 +26,7 @@ import flexpart_management.modules.flx_array as fa
 # %%
 path = '/Volumes/mbProD/Downloads/flx_log_coor/run_2019-06-05_18-42-11_'
 path = '/Volumes/mbProD/Downloads/flx_log_coor/run_2019-06-10_11-10-03_'
-
+path = '/Volumes/mbProD/Downloads/flx_log_coor/run_2019-08-18_18-46-19_'
 # flp = FLP.FlexLogPol(path,concat=True)
 # self = FLP.FlexLogPol(path,concat=False)
 self = FLP.FlexLogPol(
@@ -42,7 +42,7 @@ self = FLP.FlexLogPol(
 self.reset_z_levels()
 
 # %%
-self.python_cluster(n_cluster=15)
+self.python_cluster(n_cluster=6)
 
 # %%
 
@@ -52,12 +52,4 @@ for i in range(len(self.cluster_flags)):
 
 
 # %%
-self.plot_clusters_inlfuence(cols=3)
-
-# %%
-# i = 5 
-for i in range(len(self.cluster_flags)):
-# for i in [i]:
-    ax = self.plot_hout_influence(i,log=True)
-
-# %%
+self.plot_clusters_inlfuence(cols=1)

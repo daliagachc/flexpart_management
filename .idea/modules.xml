@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/flexpart_management.iml" filepath="$PROJECT_DIR$/.idea/flexpart_management.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../useful-scit/useful_scit/useful_scit.iml" filepath="$PROJECT_DIR$/../useful-scit/useful_scit/useful_scit.iml" />
     </modules>
   </component>
 </project>

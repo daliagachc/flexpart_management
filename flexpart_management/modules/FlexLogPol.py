@@ -10,6 +10,7 @@ import rpy2.robjects.packages as rpackages
 from pprint import pprint
 from sklearn.cluster import KMeans
 import warnings
+from scipy.ndimage import gaussian_filter
 import matplotlib
 
 ZN = 6
@@ -22,6 +23,8 @@ COLORS = [*sns.color_palette('Set1', n_colors=9, desat=.5),
           sns.color_palette('Dark2', n_colors=6, desat=.8)[-1],
           *sns.color_palette('Dark2', n_colors=6, desat=.8)[:-1]
           ]
+
+CON_COLS = [co.CONC,co.CPer,co.CC,co.CCPer]
 
 
 class FlexLogPol:
@@ -275,9 +278,10 @@ class FlexLogPol:
             fa.compressed_netcdf_save(self.merged_ds, self.merged_path)
         return trim_df
 
-    def get_vector_df_for_clustering(self, coarsen_time):
-        ar = self.merged_ds[co.CONC].copy()
-        ar.load()
+    def get_vector_df_for_clustering(self, coarsen_time, ar=False):
+        if ar is False:
+            ar:xr.Dataset = self.merged_ds[co.CONC].copy()
+            ar.load()
         ar = ar.coarsen(**{co.RL: coarsen_time}).sum()
         ar.name = co.CONC
         ar1 = ar.dropna(dim=co.RL)
@@ -302,8 +306,12 @@ class FlexLogPol:
 
     def python_cluster(self,
                        n_cluster=8,
+                       df=False,
+                       return_df=False,
+                       random_state=1234
                        ):
-        df = self.get_vector_df_for_clustering(self.coarsen_par)
+        if df is False:
+            df = self.get_vector_df_for_clustering(self.coarsen_par)
         nor = np.linalg.norm(df, axis=1)
         thre = np.quantile(nor, .5) * .01
         new_df = df[nor > thre].copy()
@@ -311,13 +319,15 @@ class FlexLogPol:
 
         kmeansO = KMeans(
             n_clusters=n_cluster,
-            random_state=0,
+            random_state=random_state,
             max_iter=500,
             n_init=20
         )
 
         kmeans = kmeansO.fit(new_df[co.CONC])
         df[co.ClusFlag] = kmeans.predict(df[co.CONC])
+        if return_df:
+            return df
         self.merged_ds[co.ClusFlag] = df[co.ClusFlag].to_xarray()
         self.set_cluster_flags()
 
@@ -626,6 +636,7 @@ class FlexLogPol:
         ax.grid(True, 'both', axis='x')
         ax.set_ylabel(co.PLOT_LABS[co.H])
 
+
     def plot_hout_influence(self, i,
                             log='False',
                             pM=None
@@ -679,6 +690,62 @@ class FlexLogPol:
             ax.set_yscale('log')
         ax.set_ylim(None, yM)
         return ax
+
+    def filter_hours_with_few_mea(
+            self,
+            threshold=2e5,
+    ):
+        diag_dic = {}
+        sum_coords = [co.ZM, co.R_CENTER, co.TH_CENTER]
+        sum_ds = self.merged_ds[co.CONC].sum(sum_coords)
+        bool_thre = sum_ds[sum_ds>threshold]
+
+        filtered_merged_ds:xr.Dataset = self.merged_ds.where(bool_thre)
+        diag_dic['rel 0st filt'] = self.merged_ds.dims[co.RL]
+        diag_dic['rel 1st filt'] = filtered_merged_ds.dims[co.RL]
+
+        filtered_merged_ds1 = filtered_merged_ds.resample(
+            **{co.RL:'1H'}
+        ).mean()
+
+        diag_dic['rel 2st filt'] = filtered_merged_ds1.dims[co.RL]
+
+        filtered_merged_ds2 = filtered_merged_ds1.interpolate_na(dim=co.RL)
+
+        # return filtered_merged_ds1,diag_dic
+
+        return filtered_merged_ds2
+
+
+
+
+
+
+#------------------------------------------------------------------------------------------
+
+def smooth_merged_ds(
+        ds
+):
+    '''
+    Returns
+    -------
+    '''
+    for col in CON_COLS:
+        ds[col] = smooth_col(ds[col])
+    return ds
+
+def smooth_col(da, t=3,z=.5,r=1,th=1):
+    # da = ds[col]
+    dag = da.isel(**{co.R_CENTER: slice(1, None)})
+    vals = dag.values
+    print(vals.shape)
+    n_vals = gaussian_filter(
+        vals,
+        sigma=[t, z, r, th],
+        mode=['nearest', 'nearest', 'nearest', 'wrap']
+    )
+    dag.values = n_vals
+    return dag
 
 
 def get_log_polar_coords_topo(
