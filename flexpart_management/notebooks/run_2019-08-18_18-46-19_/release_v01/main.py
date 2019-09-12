@@ -211,7 +211,11 @@ mdsc = selfFLP.merged_ds.copy()
 # %%
 _dscc = dscc.drop([co.KMEAN_OBJ,co.CONC,co.CONC_NORMALIZED,co.RL])
 _dscc=xr.merge([mdsc,_dscc])
+_dscc[co.CONC] = _dscc[co.CONC].where(_dscc[co.CONC].sum([co.R_CENTER,co.TH_CENTER,co.ZM])>2e5)
+_dscc[co.CONC] = _dscc[[co.CONC]].resample(releases='H').mean()[co.CONC]
 
+
+# %%
 _n = 18
 funs.plot_influences(_n, _dscc)
 
@@ -224,12 +228,12 @@ height_less_than = 1000
 funs.plot_target_distance_height_influence(_n, _dscc, height_less_than,
                                            less_than, more_than)
 
-
+# %%
 _ns = [0,2,8,9,11,14]
 
 for _nn in _ns:
 
-    funs.plot_hour_influence_targeted(_n, _nn, dscc, height_less_than,
+    funs.plot_hour_influence_targeted(_n, _nn, _dscc, height_less_than,
                                       less_than, more_than)
 
 # %%

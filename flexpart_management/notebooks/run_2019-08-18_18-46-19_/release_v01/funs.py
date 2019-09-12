@@ -431,7 +431,9 @@ def add_lat_lon_to_dscc(dscc, selfFLP):
 
 def plot_hour_influence_targeted(_n, _nn, dscc, height_less_than,
                                  less_than, more_than):
-    _ds = dscc.loc[{co.CLUS_LENGTH_DIM: _n}].drop(co.KMEAN_OBJ)
+    _ds = dscc.loc[{co.CLUS_LENGTH_DIM: _n}]
+    try: _ds = _ds.drop(co.KMEAN_OBJ)
+    except: pass
     _dss = _ds.copy()
     _ds[co.CONC] = _ds[co.CONC].where(dscc[co.R_CENTER] < less_than,
                                       0).where(
@@ -464,7 +466,10 @@ def plot_hour_influence_targeted(_n, _nn, dscc, height_less_than,
 
 def plot_target_distance_height_influence(_n, dscc, height_less_than,
                                           less_than, more_than):
-    _ds = dscc.loc[{co.CLUS_LENGTH_DIM: _n}].drop(co.KMEAN_OBJ)
+    _ds = dscc.loc[{co.CLUS_LENGTH_DIM: _n}]
+    try: _ds = _ds.drop(co.KMEAN_OBJ)
+    except: pass
+
     _dss = _ds.copy()
     _ds[co.CONC] = _ds[co.CONC].where(dscc[co.R_CENTER] < less_than,
                                       0).where(
@@ -495,8 +500,7 @@ def plot_influences(_n, dscc):
     try: _ds = _ds.drop(co.KMEAN_OBJ)
     except: pass
     _dss = _ds.copy()
-    _ds[co.CONC] = _ds[
-        co.CONC]  # .where(dscc[co.R_CENTER]<.3,0).where(dscc[co.R_CENTER]>.15,0).where(dscc[co.ZM]<1000,0)
+    _ds[co.CONC] = _ds[co.CONC]
     _ds1 = _ds[[co.CONC, co.FLAG]]
     _dss1 = _dss[[co.CONC, co.FLAG]]
     _ds2 = _ds1.to_dataframe()
