@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.2'
-#       jupytext_version: 1.1.3
+#       jupytext_version: 1.2.3
 #   kernelspec:
 #     display_name: Python 3
 #     language: python
@@ -30,7 +30,7 @@ path = '/Volumes/mbProD/Downloads/flx_log_coor/run_2019-08-18_18-46-19_'
 # self = FLP.FlexLogPol(path,concat=False)
 self = FLP.FlexLogPol(
     path,
-#     concat=True,
+    #concat=True,
     concat=False,
     get_clusters=False,
     open_merged=True,

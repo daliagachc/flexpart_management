@@ -24,7 +24,7 @@ COLORS = [*sns.color_palette('Set1', n_colors=9, desat=.5),
           *sns.color_palette('Dark2', n_colors=6, desat=.8)[:-1]
           ]
 
-CON_COLS = [co.CONC,co.CPer,co.CC,co.CCPer]
+CON_COLS = [co.CONC, co.CPer, co.CC, co.CCPer]
 
 
 class FlexLogPol:
@@ -52,7 +52,6 @@ class FlexLogPol:
     h1_ds = None
     h2_ds = None
 
-
     l2M = 24
     l2m = 10
     l1M = None
@@ -68,6 +67,8 @@ class FlexLogPol:
                  clusters_avail=False,
                  coarsen_par=4
                  ):
+
+        # SET CONSTANT ATTRIBUTES
         self.coarsen_par = coarsen_par
         self.save_concat = save_concat
         self.concat = concat
@@ -81,6 +82,8 @@ class FlexLogPol:
         )
         self.set_concat_paths()
 
+        ###
+
         if self.concat:
             self.concat_ds()
             if save_concat:
@@ -91,6 +94,7 @@ class FlexLogPol:
             except:
                 print('cant open')
 
+        # def ret(self):pass
         if open_merged:
             self.merged_ds = xr.open_dataset(self.merged_path)
         else:
@@ -137,7 +141,7 @@ class FlexLogPol:
                           i,
                           par_to_plot=co.COL
                           ):
-        fs = np.array([11,13]) * .7
+        fs = np.array([11, 13]) * .7
         fig_ops = dict(figsize=fs)
         fig: plt.Figure = plt.figure(**fig_ops)
         rows = 4
@@ -192,7 +196,7 @@ class FlexLogPol:
 
         return fig
 
-    def plot_clust_height(self, ax:plt.Axes, i,
+    def plot_clust_height(self, ax: plt.Axes, i,
                           perM,
                           drop_zero=True,
                           par_to_plot=co.COL):
@@ -231,8 +235,6 @@ class FlexLogPol:
     def plot_lapaz_rect(self, ax):
         fa.plot_lapaz_rect(ax)
 
-
-
     def add_conc_vars(self):
         CPer = co.CPer
         dim_complement = fa.get_dims_complement(self.merged_ds, co.RL)
@@ -241,7 +243,8 @@ class FlexLogPol:
         CC = co.CC
         CCPer = co.CCPer
         if co.VOL in list(self.merged_ds.coords):
-            self.merged_ds[CC] = self.merged_ds[co.CONC] / self.merged_ds[co.VOL]
+            self.merged_ds[CC] = self.merged_ds[co.CONC] / self.merged_ds[
+                co.VOL]
             pprint('using vol for conc')
         else:
             pprint('using area for conc')
@@ -280,7 +283,7 @@ class FlexLogPol:
 
     def get_vector_df_for_clustering(self, coarsen_time, ar=False):
         if ar is False:
-            ar:xr.Dataset = self.merged_ds[co.CONC].copy()
+            ar: xr.Dataset = self.merged_ds[co.CONC].copy()
             ar.load()
         ar = ar.coarsen(**{co.RL: coarsen_time}).sum()
         ar.name = co.CONC
@@ -349,7 +352,8 @@ class FlexLogPol:
             dasks_dic[d] = xr.open_mfdataset(
                 self.concat_paths[d],
                 concat_dim=co.RL,
-                chunks={co.RL: 48}
+                chunks={co.RL: 48},
+                combine='by_coords'
             )
         self.dasks_dic = dasks_dic
 
@@ -387,9 +391,10 @@ class FlexLogPol:
         ds = self.dasks_dic[dom]
         ds[dat] = ds[co.RL].dt.round('D')
         fd = ds[[dat]]
-        fd.swap_dims({co.RL: dat}).reset_coords(co.RL).groupby(dat).count()[co.RL].plot()
+        fd.swap_dims({co.RL: dat}).reset_coords(co.RL).groupby(dat).count()[
+            co.RL].plot()
 
-    def plot_clusters_inlfuence(self, ylab=False,cols=2):
+    def plot_clusters_inlfuence(self, ylab=False, cols=2):
         len_clus = len(self.cluster_flags)
         colors = self.colors
         # cols = 2
@@ -484,7 +489,8 @@ class FlexLogPol:
 
     def setCOL(self):
         COL = co.COL
-        self.merged_ds[COL] = self.merged_ds[co.CONC] / np.sqrt(self.merged_ds[co.GA])
+        self.merged_ds[COL] = self.merged_ds[co.CONC] / np.sqrt(
+            self.merged_ds[co.GA])
 
     def plot_cluster_map(self,
                          i,
@@ -498,7 +504,6 @@ class FlexLogPol:
         ax = fa.get_ax_bolivia(**map_dic)
         #     fig,ax = plt.subplots()
         warnings.simplefilter('ignore')
-
 
         ar = self.merged_ds.where(boo)[par_to_plot]
         com = fa.get_dims_complement(ar, [co.R_CENTER, co.TH_CENTER])
@@ -547,29 +552,29 @@ class FlexLogPol:
 
         ver_area = 'VER_AREA'
         log_center = np.log(mer[co.R_CENTER])
-        dis= log_center - \
-             log_center.shift({co.R_CENTER:1})
+        dis = log_center - \
+              log_center.shift({co.R_CENTER: 1})
         dis = dis.median()
-        l1 = log_center - dis/2
-        l2 = log_center + dis/2
-        l1 = np.e**l1
-        l2 = np.e**l2
-        r_dis = (l2-l1)*100000
+        l1 = log_center - dis / 2
+        l2 = log_center + dis / 2
+        l1 = np.e ** l1
+        l2 = np.e ** l2
+        r_dis = (l2 - l1) * 100000
         zlen = 500
-        ar = np.arange(zlen/2, 20000, zlen)
+        ar = np.arange(zlen / 2, 20000, zlen)
 
-        mer = mer[[co.CONC,fla,co.TOPO]]
+        mer = mer[[co.CONC, fla, co.TOPO]]
 
         # return merged_ds
 
-        mer = mer.where(mer[fla] == clus,0)
+        mer = mer.where(mer[fla] == clus, 0)
 
-        mer['c/v'] = mer[co.CONC]/mer[co.VOL]
+        mer['c/v'] = mer[co.CONC] / mer[co.VOL]
 
-        mer = mer.interp(**{co.ZM:ar})
+        mer = mer.interp(**{co.ZM: ar})
 
-        mer[co.VOL] = mer[co.GA]*zlen
-        mer[co.CONC] = mer['c/v']*mer[co.VOL]
+        mer[co.VOL] = mer[co.GA] * zlen
+        mer[co.CONC] = mer['c/v'] * mer[co.VOL]
 
         mer[H] = mer[co.TOPO] + mer[co.ZM]
 
@@ -583,13 +588,11 @@ class FlexLogPol:
 
         # ms:xr.DataArray = ms/ms[ver_area]
 
-        ms[co.CONC]=ms[co.CONC].where(ms[co.CONC]>0,0)
-
+        ms[co.CONC] = ms[co.CONC].where(ms[co.CONC] > 0, 0)
 
         # ms = ms*zlen*r_dis
 
         ms[H] = ms[HC] / ms[co.CONC]
-
 
         def find_nearest(value):
             #     ar = self.get_zlin()
@@ -599,7 +602,8 @@ class FlexLogPol:
 
         ms[H] = xr.apply_ufunc(find_nearest, ms[H], vectorize=True)
 
-        hs = ms.to_dataframe().groupby([H, co.R_CENTER]).sum()[co.CONC].to_xarray()
+        hs = ms.to_dataframe().groupby([H, co.R_CENTER]).sum()[
+            co.CONC].to_xarray()
 
         lab = "km from CHC"
         hs[lab] = hs[co.R_CENTER] * 100
@@ -609,14 +613,12 @@ class FlexLogPol:
         hs1 = hs1.combine_first(hs)
 
         if drop_zero:
-            hs1 = hs1.where(hs1>0)
-
-
+            hs1 = hs1.where(hs1 > 0)
 
         if ax is None:
-            fig, ax = plt.subplots(figsize=(10,5))
+            fig, ax = plt.subplots(figsize=(10, 5))
 
-        hs1 = hs1/self.merged_ds[co.CONC].sum()*100
+        hs1 = hs1 / self.merged_ds[co.CONC].sum() * 100
         hs1.name = co.CPer
         q = hs1.quantile(perM)
 
@@ -636,7 +638,6 @@ class FlexLogPol:
         ax.grid(True, 'both', axis='x')
         ax.set_ylabel(co.PLOT_LABS[co.H])
 
-
     def plot_hout_influence(self, i,
                             log='False',
                             pM=None
@@ -645,15 +646,15 @@ class FlexLogPol:
         lt = 'Local Time'
         ds = self.merged_ds.copy()
 
-        ds[lt]=np.mod(ds[co.RL].dt.hour-3.5,24)
-        ds = ds.assign_coords(**{lt:ds[lt]})
-        dsLP = ds.where(self.merged_ds[co.FLAGS]==i)
-        com = fa.get_dims_complement(dsLP,co.RL)
+        ds[lt] = np.mod(ds[co.RL].dt.hour - 3.5, 24)
+        ds = ds.assign_coords(**{lt: ds[lt]})
+        dsLP = ds.where(self.merged_ds[co.FLAGS] == i)
+        com = fa.get_dims_complement(dsLP, co.RL)
         conLP = dsLP[co.CONC].sum(com)
         conTot = ds[co.CONC].sum(com)
-        conLP = conLP/conTot * 100
+        conLP = conLP / conTot * 100
         cl = 'clog'
-        conLP = conLP.where(conLP>0)
+        conLP = conLP.where(conLP > 0)
         conLP = np.log(conLP)
         conLP.name = cl
 
@@ -662,28 +663,28 @@ class FlexLogPol:
         desc = gp.describe()[cl]
 
         # %%
-        labs = ['25%','50%','75%','mean']
+        labs = ['25%', '50%', '75%', 'mean']
 
         desc = desc[labs]
 
-        desc = np.e**desc
+        desc = np.e ** desc
         if pM is None:
             yM = None
         else:
             yM = desc.quantile(pM).max()
 
-
         # %%
-        fig,ax=plt.subplots()
+        fig, ax = plt.subplots()
         c = self.colors[i]
-        ax.plot(desc.index,desc[labs[1]],color=c,label=labs[1])
-        ax.plot(desc.index,desc[labs[3]],color='k',label=labs[3])
-        ax.fill_between(desc.index,desc[labs[0]],desc[labs[2]],color=c,alpha=.2,label=labs[0]+'-'+labs[2])
+        ax.plot(desc.index, desc[labs[1]], color=c, label=labs[1])
+        ax.plot(desc.index, desc[labs[3]], color='k', label=labs[3])
+        ax.fill_between(desc.index, desc[labs[0]], desc[labs[2]], color=c,
+                        alpha=.2, label=labs[0] + '-' + labs[2])
         ax.legend(loc='upper left')
         ax.set_xlabel(lt)
         ax.set_ylabel(co.PLOT_LABS[co.CPer])
         ax.grid(True)
-        tickrange = np.arange(0,25,3)
+        tickrange = np.arange(0, 25, 3)
         ax.set_xticks(tickrange)
         ax.set_title('cluster {}'.format(i))
         if log:
@@ -694,34 +695,36 @@ class FlexLogPol:
     def filter_hours_with_few_mea(
             self,
             threshold=2e5,
+            interpolate = True
     ):
         diag_dic = {}
         sum_coords = [co.ZM, co.R_CENTER, co.TH_CENTER]
         sum_ds = self.merged_ds[co.CONC].sum(sum_coords)
-        bool_thre = sum_ds[sum_ds>threshold]
+        bool_thre = sum_ds[sum_ds > threshold]
 
-        filtered_merged_ds:xr.Dataset = self.merged_ds.where(bool_thre)
+        filtered_merged_ds: xr.Dataset = self.merged_ds.where(bool_thre)
         diag_dic['rel 0st filt'] = self.merged_ds.dims[co.RL]
         diag_dic['rel 1st filt'] = filtered_merged_ds.dims[co.RL]
 
-        filtered_merged_ds1 = filtered_merged_ds.resample(
-            **{co.RL:'1H'}
+        filtered_merged_ds1:xr.Dataset = filtered_merged_ds.resample(
+            **{co.RL: '1H'}
         ).mean()
 
         diag_dic['rel 2st filt'] = filtered_merged_ds1.dims[co.RL]
+        # print(1)
 
-        filtered_merged_ds2 = filtered_merged_ds1.interpolate_na(dim=co.RL)
+        if interpolate:
+
+            filtered_merged_ds1:xr.Dataset = filtered_merged_ds1.interpolate_na(
+                dim=co.RL,
+            )
 
         # return filtered_merged_ds1,diag_dic
 
-        return filtered_merged_ds2
+        return filtered_merged_ds1
 
 
-
-
-
-
-#------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------
 
 def smooth_merged_ds(
         ds
@@ -734,7 +737,8 @@ def smooth_merged_ds(
         ds[col] = smooth_col(ds[col])
     return ds
 
-def smooth_col(da, t=3,z=.5,r=1,th=1):
+
+def smooth_col(da, t=3, z=.5, r=1, th=1):
     # da = ds[col]
     dag = da.isel(**{co.R_CENTER: slice(1, None)})
     vals = dag.values

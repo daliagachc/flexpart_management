@@ -304,7 +304,8 @@ def get_ax_bolivia(
     ax.set_extent(lalo_extent, crs=PROJ)
     ax.add_feature(cartopy.feature.COASTLINE.with_scale('10m'))
     ax.add_feature(cartopy.feature.BORDERS.with_scale('10m'))
-    ax.add_feature(cartopy.feature.LAKES.with_scale('10m'), alpha=0.5, linestyle='-')
+    ax.add_feature(
+        cartopy.feature.LAKES.with_scale('10m'), alpha=1, linestyle='-')
     ax.add_feature(cartopy.feature.STATES.with_scale('10m'), alpha=0.5, linestyle=':')
     gl = ax.gridlines(crs=PROJ, alpha=0.5, linestyle='--',
                       draw_labels=True)
@@ -321,14 +322,20 @@ def get_ax_bolivia(
 def get_ax_lapaz(ax=False,
                  fig_args={},
                  lalo_extent=LALO_LAPAZ):
+    import matplotlib.ticker as mticker
+    fig_ops = dict(figsize=(15, 10))
+    fig_ops = {**fig_ops, **fig_args}
     if ax is False:
-        fig = plt.figure(figsize=(15, 10))
+        fig = plt.figure(**fig_ops)
         ax = fig.add_subplot(1, 1, 1, projection=PROJ, )
 
     ax.set_extent(lalo_extent, crs=PROJ)
     ax.add_feature(cartopy.feature.COASTLINE.with_scale('10m'))
     ax.add_feature(cartopy.feature.BORDERS.with_scale('10m'))
-    ax.add_feature(cartopy.feature.LAKES.with_scale('10m'), alpha=0.5, linestyle='-')
+    ax.add_feature(
+        cartopy.feature.LAKES.with_scale('10m'),
+        facecolor='none',edgecolor='b'
+    )
     ax.add_feature(cartopy.feature.STATES.with_scale('10m'), alpha=0.5, linestyle=':')
     gl = ax.gridlines(crs=PROJ, alpha=0.5, linestyle='--',
                       draw_labels=True)
