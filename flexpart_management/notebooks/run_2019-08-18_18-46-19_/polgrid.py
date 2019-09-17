@@ -23,6 +23,8 @@ import flexpart_management.modules.FlexLogPol as FLP
 import flexpart_management.modules.constants as co
 import flexpart_management.modules.flx_array as fa
 
+
+# def main():
 # %%
 path = '/Volumes/mbProD/Downloads/flx_log_coor/run_2019-08-18_18-46-19_'
 # flp = FLP.FlexLogPol(path,concat=True)
@@ -120,6 +122,7 @@ axs = df2.plot.area(
     legend=False
               )
 
+bc = 'bc'
 dd = df[bc]['2017-12':'2018-05']*10
 
 dd.plot(
@@ -243,7 +246,7 @@ def polygon_from_row(r,kml:simplekml.Kml, max_col,low_thr):
         (r[co.LON_11], r[co.LAT_11],_z),
         (r[co.LON_01], r[co.LAT_01],_z),
         (r[co.LON_00], r[co.LAT_00],_z),
-    ]    
+    ]
     def make_pol(points):
         pol = kml.newpolygon(
             name = str(r.name),
@@ -259,31 +262,35 @@ def polygon_from_row(r,kml:simplekml.Kml, max_col,low_thr):
 #         pol.style.polystyle.color = simplekml.Color.rgb(*col,alpha)
         pol.style.polystyle.color = simplekml.Color.white
         pol.style.polystyle.outline = 1
-        pol.style.polystyle.fill = 0 
+        pol.style.polystyle.fill = 0
 #     if r[co.CPer]>low_thr:
     if True:
         make_pol(points1)
 #         make_pol(points2)
-    
-   
-    
+
+
+
     return col
 
 # %%
 
 # %%
-kmlT = simplekml.Kml()
-for ii in range(1):
-#     _df = dfM[dfM[co.ClusFlag]==ii]
-    _df = dfM[dfM.ZMID == 250]
-    kml = simplekml.Kml()
-    sr =dfM[co.CPer]
-    max_col=sr[sr>0].quantile(.95)
-    res = _df.iloc[:].apply(lambda x: polygon_from_row(x,kml,max_col,low_thr),axis = 1)
-    res = _df.iloc[:].apply(lambda x: polygon_from_row(x,kmlT,max_col,low_thr),axis = 1)
-    kml.save('/tmp/clus'+'lines'+'.kml')
-# kmlT.save('/tmp/clusT.kml')
 
+def export_kml_clusters(dfM):
+    kmlT = simplekml.Kml()
+    for ii in range(1):
+        #     _df = dfM[dfM[co.ClusFlag]==ii]
+        _df = dfM[dfM.ZMID == 250]
+        kml = simplekml.Kml()
+        sr = dfM[co.CPer]
+        max_col = sr[sr > 0].quantile(.95)
+        res = _df.iloc[:].apply(
+            lambda x: polygon_from_row(x, kml, max_col, low_thr), axis=1)
+        res = _df.iloc[:].apply(
+            lambda x: polygon_from_row(x, kmlT, max_col, low_thr), axis=1)
+        kml.save('/tmp/clus' + 'lines' + '.kml')
+    # kmlT.save('/tmp/clusT.kml')
+export_kml_clusters(dfM)
 
 # %%
 
@@ -293,7 +300,7 @@ dd = []
 ll = []
 for l,ds in dg:
     dd.append(ds.unstack().drop(co.ClusFlag))
-    ll.append(l) 
+    ll.append(l)
 dc = xr.concat(dd,pd.Index(ll,name=co.ClusFlag))
 
 # %%
@@ -533,3 +540,6 @@ r2=(res2[co.CPer]*r1)
 r2.unstack()
 
 # %%
+
+
+

@@ -117,10 +117,25 @@ class FlexLogPol:
         #
 
     def add_topo_to_merge_ds(self):
+        '''
+        adds topography to the input ds from the merged head ds.
+        :return:
+        '''
+        print('starting')
+        log.ger.debug('starting')
         self.get_all_head_ds()
+        log.ger.debug('heads got')
         self.merge_log_pol_heads()
-        self.merged_ds[co.TOPO] = self.merged_head_ds[co.TOPO]
-        self.merged_ds[co.TOPO].values = self.merged_head_ds[co.TOPO].values
+        log.ger.debug('merge pol heads got')
+        try:
+            topo_ = self.merged_head_ds[co.TOPO].mean(co.ZMID)
+            log.ger.debug('manage to add mean zmid')
+        except:
+            topo_ = self.merged_head_ds[co.TOPO]
+        mds_: xr.Dataset = self.merged_ds
+        mds_[co.TOPO] = topo_
+        mds_[co.TOPO].values = topo_.values
+        self.merged_ds = mds_.assign_coords(**{co.TOPO: mds_[co.TOPO]})
 
     def get_all_head_ds(self):
         head_path = os.path.join(self.source_path, self.head_rel_path)
@@ -236,6 +251,10 @@ class FlexLogPol:
         fa.plot_lapaz_rect(ax)
 
     def add_conc_vars(self):
+        '''
+        adds extra CON variables derived from original co.CONC
+        :return:
+        '''
         CPer = co.CPer
         dim_complement = fa.get_dims_complement(self.merged_ds, co.RL)
         tot = self.merged_ds[co.CONC].sum(dim=dim_complement)
@@ -445,11 +464,19 @@ class FlexLogPol:
         return ax
 
     def set_z_vols(self):
-        self.merged_ds: xr.Dataset = fa.add_zbot(self.merged_ds)
+        '''
+        adds z parameters to the ds.
+            - also icludes volume
+        :return:
+        '''
+        self.merged_ds = fa.add_zbot(self.merged_ds)
         self.merged_ds = fa.add_zmid(self.merged_ds)
         self.merged_ds = fa.add_zlength_m(self.merged_ds)
-        self.merged_ds: xr.Dataset = fa.add_volume(self.merged_ds)
-        self.merged_ds: xr.Dataset = self.merged_ds.swap_dims({co.ZT: co.ZM})
+        self.merged_ds = fa.add_volume(self.merged_ds)
+        # sets the dim to be co.ZM rather than origianl co.ZT
+        self.merged_ds = self.merged_ds.swap_dims({co.ZT: co.ZM})
+
+        self.merged_ds: xr.Dataset
 
     def reset_z_levels(self):
 
