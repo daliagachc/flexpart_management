@@ -31,7 +31,8 @@ files.sort()
 ff = []
 for f in files:
     try: ff.append(xr.open_dataset(f))
-    except: pass
+            except AssertionError as error:
+            log.ger.error(error) pass
 
 # %%
 ds = xr.concat(ff,dim='Time')

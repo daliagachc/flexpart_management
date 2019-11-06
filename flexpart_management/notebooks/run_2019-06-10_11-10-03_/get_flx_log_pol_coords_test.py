@@ -48,12 +48,13 @@ from useful_scit.imps import *
 #         print('starting',d,p)
 #         new_dic = dict(dom=d,folder_path=p)
 #         fo_dic = {**fo_base_dic,**new_dic}
-        
+
 #         try:
 #             fo = FO.FLEXOUT(**fo_dic)
 #             fo.export_log_polar_coords()
 #             print('done',d,p)
-#         except:
+#                 except AssertionError as error:
+            log.ger.error(error)
 #             print('failed when',d,p)
 
 

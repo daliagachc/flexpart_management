@@ -51,5 +51,5 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" default="false" project-jdk-name="Python 3.6 (b36)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" default="false" project-jdk-name="Remote Python 3.6.9 (sftp://aliagadi@taito-login4.csc.fi:22/homeappl/home/aliagadi/appl_taito/miniconda3/envs/b36backup/bin/python)" project-jdk-type="Python SDK" />
 </project>

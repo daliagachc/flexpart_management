@@ -10,715 +10,743 @@ import netCDF4
 import matplotlib
 import numpy
 from matplotlib.collections import PatchCollection
-from matplotlib.colors import ListedColormap, LinearSegmentedColormap
+from matplotlib.colors import ListedColormap , LinearSegmentedColormap
 from matplotlib.patches import Polygon
 from useful_scit.imps import *
 from typing import List
 import cartopy
 import area
 import flexpart_management.modules.constants as co
+from useful_scit.util.zarray import compressed_netcdf_save
 
-def import_flex_file(path_file: str):
-    ds = xr.open_dataset(path_file)
+
+def import_flex_file( path_file: str ) :
+    ds = xr.open_dataset( path_file )
     return ds
 
 
-def import_flex_head_file(path_file: str):
-    ds = xr.open_dataset(path_file)
+def import_flex_head_file( path_file: str ) :
+    ds = xr.open_dataset( path_file )
     return ds
 
 
-def get_head_file_from_path(path: str, dom: str = 'd01'):
-    pat = os.path.join(path, 'head*' + dom + '*')
-    file_list = glob.glob(pat)
-    file = file_list[0]
+def get_head_file_from_path( path: str , dom: str = 'd01' ) :
+    pat = os.path.join( path , 'head*' + dom + '*' )
+    file_list = glob.glob( pat )
+    file = file_list[ 0 ]
     return file
 
 
-def import_head_ds(path: str, dom: str) -> xr.Dataset:
-    file_path = get_head_file_from_path(path, dom)
+def import_head_ds( path: str , dom: str ) -> xr.Dataset :
+    file_path = get_head_file_from_path( path , dom )
     # print(file_path)
-    head_ds = import_flex_head_file(file_path)
+    head_ds = import_flex_head_file( file_path )
     return head_ds
 
 
-def convert_ds_time_format(ds: xr.Dataset, var='Times') -> xr.Dataset:
-    time_str_sr: pd.Series = ds[[var]].to_dataframe()[var].str.decode('UTF8')
-    ts = pd.to_datetime(time_str_sr, format='%Y%m%d_%H%M%S')
-    n_ds = ds.copy()
-    n_ds[var] = ts
-    n_ds = n_ds.assign_coords(Time=n_ds.Times)
-    n_ds = n_ds.drop('Times')
+def convert_ds_time_format( ds: xr.Dataset , var='Times' ) -> xr.Dataset :
+    time_str_sr: pd.Series = ds[ [ var ] ].to_dataframe()[ var ].str.decode(
+        'UTF8' )
+    ts = pd.to_datetime( time_str_sr , format='%Y%m%d_%H%M%S' )
+    # n_ds = ds.copy()
+    n_ds = ds
+    n_ds[ var ] = ts
+    n_ds = n_ds.assign_coords( Time=n_ds.Times )
+    n_ds = n_ds.drop( 'Times' )
     return n_ds
 
 
-def import_file_ds_list(file_path: str, dom: str) -> List[xr.Dataset]:
-    file_list = get_flx_ds_list(dom, file_path)
-    ds_list = create_ds_list_from_files_list(file_list)
+def import_file_ds_list( file_path: str , dom: str ) -> List[ xr.Dataset ] :
+    file_list = get_flx_ds_list( dom , file_path )
+    ds_list = create_ds_list_from_files_list( file_list )
     return ds_list
 
 
-def get_flx_ds_list(dom, file_path):
-    pat = os.path.join(file_path, 'flxout*' + dom + '*')
-    file_list = glob.glob(pat)
+def get_flx_ds_list( dom , file_path ) :
+    pat = os.path.join( file_path , 'flxout*' + dom + '*' )
+    file_list = glob.glob( pat )
     file_list.sort()
     return file_list
 
 
-def create_ds_list_from_files_list(file_list) -> List[xr.Dataset]:
-    ds_list = []
-    for f in file_list:
-        try:
-            ds = import_flex_file(f)
-            ds = convert_ds_time_format(ds)
-            ds_list.append(ds)
-        except:
-            log.ger.error('error when opening: %s', f)
+def create_ds_list_from_files_list( file_list ) -> List[ xr.Dataset ] :
+    ds_list = [ ]
+    for f in file_list :
+        try :
+            ds = import_flex_file( f )
+            ds = convert_ds_time_format( ds )
+            ds_list.append( ds )
+        except :
+            log.ger.error( 'error when opening: %s' , f )
     return ds_list
 
-def trim_flx_ds_list(file_list) -> List[str]:
+
+def trim_flx_ds_list( file_list ) -> List[ str ] :
     '''
     cheks if the files in the list can be opened and return a list with only
     openable files
     :param file_list: List[str]
     :return: List[str]
     '''
-    new_list = []
-    for f in file_list:
-        try:
-            log.ger.debug('opening:%s',f)
-            with netCDF4.Dataset(f,'r') as ds:
+    new_list = [ ]
+    for f in file_list :
+        try :
+            log.ger.debug( 'opening:%s' , f )
+            with netCDF4.Dataset( f , 'r' ) as ds :
                 ds.file_format
                 ds.dimensions.keys()
                 # ds.close()
                 # del ds
             # ds = convert_ds_time_format(ds)
-            new_list.append(f)
-        except:
-            log.ger.error('error when opening: %s', f)
+            new_list.append( f )
+        except :
+            log.ger.error( 'error when opening: %s' , f )
     return new_list
 
 
-def concat_file_ds_list(ds_list: List[xr.Dataset]):
-    ds_con = xr.concat(ds_list, dim=co.TIME)
+def concat_file_ds_list( ds_list: List[ xr.Dataset ] ) :
+    ds_con = xr.concat( ds_list , dim=co.TIME )
     return ds_con
 
 
 # we might not need this function anymore
-def decode_bstr(bstr: bytes):
-    return bstr.decode('UTF8')
+def decode_bstr( bstr: bytes ) :
+    return bstr.decode( 'UTF8' )
 
 
 # we might not need this function anymore
-def flx_time_to_ts(bstr: bytes):
-    flx_time_str = decode_bstr(bstr)
-    ts = pd.to_datetime(flx_time_str, format='%Y%m%d_%H%M%S')
+def flx_time_to_ts( bstr: bytes ) :
+    flx_time_str = decode_bstr( bstr )
+    ts = pd.to_datetime( flx_time_str , format='%Y%m%d_%H%M%S' )
     return ts
 
 
-def join_head(ds_flx: xr.Dataset,
-              ds_head: xr.Dataset,
-              ageclass=slice(0, None),
-              releases=slice(0, None)
-              ) -> xr.Dataset:
+def join_head( ds_flx: xr.Dataset ,
+               ds_head: xr.Dataset ,
+               ageclass=slice( 0 , None ) ,
+               releases=slice( 0 , None )
+               ) -> xr.Dataset :
     new_ds = ds_flx.copy()
-    vars2keep = [co.TOPO, co.GRIDAREA, co.ZT]
-    for v in vars2keep:
-        new_ds[v] = ds_head[v]
-    new_ds = new_ds.isel(ageclass=ageclass, releases=releases)
-    new_ds = new_ds.assign_attrs(ds_head.attrs)
-    release_start_times = get_releases_start_time(ds_head)
-    new_ds = new_ds.assign_coords(**{co.RL: release_start_times})
+    vars2keep = [ co.TOPO , co.GRIDAREA , co.ZT ]
+    for v in vars2keep :
+        new_ds[ v ] = ds_head[ v ]
+    new_ds = new_ds.isel( ageclass=ageclass , releases=releases )
+    new_ds = new_ds.assign_attrs( ds_head.attrs )
+    release_start_times = get_releases_start_time( ds_head )
+    new_ds = new_ds.assign_coords( **{ co.RL : release_start_times } )
 
     return new_ds
 
 
-def get_release_start_date(ds_head: xr.Dataset):
+def get_release_start_date( ds_head: xr.Dataset ) :
     # todo: warning this only works if there is 1 release
-    log.ger.warning('this only works if the is 1 release')
+    log.ger.warning( 'this only works if the is 1 release' )
     sim_start_date = ds_head.SIMULATION_START_DATE
     sim_start_time = ds_head.SIMULATION_START_TIME
-    start_datetime_str = '{0:08d}_{1:06d}'.format(sim_start_date, sim_start_time)
-    start_datetime = pd.to_datetime(start_datetime_str, format='%Y%m%d_%H%M%S')
-    release_sec = round(int(ds_head.ReleaseTstart_end.isel(releases=0)[0]), -1)
-    release_start_date = start_datetime + pd.Timedelta(release_sec, unit='S')
+    start_datetime_str = '{0:08d}_{1:06d}'.format( sim_start_date ,
+                                                   sim_start_time )
+    start_datetime = pd.to_datetime( start_datetime_str ,
+                                     format='%Y%m%d_%H%M%S' )
+    release_sec = round(
+        int( ds_head.ReleaseTstart_end.isel( releases=0 )[ 0 ] ) , -1 )
+    release_start_date = start_datetime + pd.Timedelta( release_sec , unit='S' )
     return release_start_date
 
 
-def get_releases_start_time(ds_head: xr.Dataset)->pd.DatetimeIndex:
-    sim_start_dt = '{:08d}'.format(ds_head.SIMULATION_START_DATE) + ' ' + \
-                   '{0:06d}'.format(ds_head.SIMULATION_START_TIME)
-    sim_start_dt = dt.datetime.strptime(sim_start_dt, '%Y%m%d %H%M%S')
-    start_deltas = ds_head.ReleaseTstart_end.values[:, 0].round(-1)
+def get_releases_start_time( ds_head: xr.Dataset ) -> pd.DatetimeIndex :
+    sim_start_dt = '{:08d}'.format( ds_head.SIMULATION_START_DATE ) + ' ' + \
+                   '{0:06d}'.format( ds_head.SIMULATION_START_TIME )
+    sim_start_dt = dt.datetime.strptime( sim_start_dt , '%Y%m%d %H%M%S' )
+    start_deltas = ds_head.ReleaseTstart_end.values[ : , 0 ].round( -1 )
 
-    rel_start = [sim_start_dt + dt.timedelta(seconds=float(s)) for s in start_deltas]
-    start_times = pd.to_datetime(rel_start)
+    rel_start = [ sim_start_dt + dt.timedelta( seconds=float( s ) ) for s in
+                  start_deltas ]
+    start_times = pd.to_datetime( rel_start )
 
     return start_times
 
 
-def add_release_time_dim(ds_join, ds_head):
+def add_release_time_dim( ds_join , ds_head ) :
     ds_new = ds_join.copy()
-    vars_to_add_dim = ['CONC']
+    vars_to_add_dim = [ 'CONC' ]
     dim_name = 'arrival_time'
-    for v in vars_to_add_dim:
-        dd = ds_new[v]
-        dd = xr.concat([dd], dim_name)
-        ds_new[v] = dd
-    ts = get_release_start_date(ds_head)
-    ds_new = ds_new.assign_coords(release_time=[ts])
+    for v in vars_to_add_dim :
+        dd = ds_new[ v ]
+        dd = xr.concat( [ dd ] , dim_name )
+        ds_new[ v ] = dd
+    ts = get_release_start_date( ds_head )
+    ds_new = ds_new.assign_coords( release_time=[ ts ] )
     return ds_new
 
 
-def assign_vars_to_cords(ds_join):
+def assign_vars_to_cords( ds_join ) :
     new_ds = ds_join.copy()
-    vars_to_assign = ['ZTOP', 'GRIDAREA', 'TOPOGRAPHY']
-    for v in vars_to_assign:
-        new_ds = new_ds.assign_coords(**{v: new_ds[v]})
+    vars_to_assign = [ 'ZTOP' , 'GRIDAREA' , 'TOPOGRAPHY' ]
+    for v in vars_to_assign :
+        new_ds = new_ds.assign_coords( **{ v : new_ds[ v ] } )
     return new_ds
 
 
-def add_lat_lot(ds: xr.Dataset):
+def add_lat_lot( ds: xr.Dataset ) :
     ds_new = ds.copy()
-    lat = ds_new.XLAT.mean(dim='west_east')
-    lon = ds_new.XLONG.mean(dim='south_north')
-    ds_new = ds_new.assign_coords(**{co.LAT: lat, co.LON: lon})
+    lat = ds_new.XLAT.mean( dim='west_east' )
+    lon = ds_new.XLONG.mean( dim='south_north' )
+    ds_new = ds_new.assign_coords( **{ co.LAT : lat , co.LON : lon } )
     return ds_new
 
 
-def add_zmid(ds: xr.Dataset):
+def add_zmid( ds: xr.Dataset ) :
     '''
     add z mid to the input dataset
     :param ds: input dataset
     :return: the dataset with zmid parameter
     '''
-    zl = list(ds.ZTOP.values)
+    zl = list( ds.ZTOP.values )
     zl.reverse()
-    zl.append(0)
+    zl.append( 0 )
     zl.reverse()
-    zm = []
-    for i in range(len(zl) - 1):
-        zm.append((zl[i] + zl[i + 1]) / 2)
-    zmid:xr.DataArray = ds.ZTOP.copy()
+    zm = [ ]
+    for i in range( len( zl ) - 1 ) :
+        zm.append( (zl[ i ] + zl[ i + 1 ]) / 2 )
+    zmid: xr.DataArray = ds.ZTOP.copy()
     zmid.values = zm
     zname = 'ZMID'
     zmid.name = zname
-    zmid = zmid.assign_attrs(description='MIDDLE OF MODEL LAYER')
-    new_ds = ds.assign_coords(**{zname: zmid})
+    zmid = zmid.assign_attrs( description='MIDDLE OF MODEL LAYER' )
+    new_ds = ds.assign_coords( **{ zname : zmid } )
     return new_ds
 
 
-def add_zbot(ds: xr.Dataset):
+def add_zbot( ds: xr.Dataset ) :
     '''
     add z bottom to the input dataset
     :param ds: input dataset
     :return: the dataset with zbottom parameter
     '''
-    zl = list(ds[co.ZT].values)
+    zl = list( ds[ co.ZT ].values )
     zl.reverse()
-    zl.append(0)
+    zl.append( 0 )
     zl.reverse()
-    zm = []
-    for i in range(len(zl) - 1):
-        zm.append((zl[i]))
+    zm = [ ]
+    for i in range( len( zl ) - 1 ) :
+        zm.append( (zl[ i ]) )
     zmid = ds.ZTOP.copy()
     zmid.values = zm
     zname = co.ZB
     zmid.name = zname
-    new_ds = ds.assign_coords(**{zname: zmid})
+    new_ds = ds.assign_coords( **{ zname : zmid } )
     return new_ds
 
 
-def add_zlength_m(ds: xr.Dataset):
+def add_zlength_m( ds: xr.Dataset ) :
     '''
     add z length (m) to the input dataset.
     needs to be run after add_zbot and add_zmid
     :param ds: input dataset
     :return: the dataset with zlength (m) parameter
     '''
-    zl = list(ds[co.ZT].values)
+    zl = list( ds[ co.ZT ].values )
     zl.reverse()
-    zl.append(0)
+    zl.append( 0 )
     zl.reverse()
-    zm = []
-    for i in range(len(zl) - 1):
-        zm.append((-zl[i] + zl[i + 1]))
+    zm = [ ]
+    for i in range( len( zl ) - 1 ) :
+        zm.append( (-zl[ i ] + zl[ i + 1 ]) )
     zmid = ds.ZTOP.copy()
     zmid.values = zm
     zname = co.ZLM
     zmid.name = zname
-    new_ds = ds.assign_coords(**{zname: zmid})
+    new_ds = ds.assign_coords( **{ zname : zmid } )
     return new_ds
 
 
-def add_volume(ds: xr.Dataset):
-
+def add_volume( ds: xr.Dataset ) :
     '''
     add volume to the input dataset
     :param ds: input dataset
     :return: the dataset with volume parameter
     '''
     new_ds = ds.copy()
-    new_ds[co.VOL] = new_ds[co.GA] * new_ds[co.ZM]
-    new_ds = new_ds.assign_coords(**{co.VOL: new_ds[co.VOL]})
+    new_ds[ co.VOL ] = new_ds[ co.GA ] * new_ds[ co.ZM ]
+    new_ds = new_ds.assign_coords( **{ co.VOL : new_ds[ co.VOL ] } )
     return new_ds
 
 
-def add_alt_m(ds: xr.Dataset) -> xr.Dataset:
+def add_alt_m( ds: xr.Dataset ) -> xr.Dataset :
     new_ds = ds.copy()
-    new_ds[co.ALT] = new_ds[co.TOPO] + new_ds[co.ZM]
-    new_ds = new_ds.assign_coords(**{co.ALT: new_ds[co.ALT]})
+    new_ds[ co.ALT ] = new_ds[ co.TOPO ] + new_ds[ co.ZM ]
+    new_ds = new_ds.assign_coords( **{ co.ALT : new_ds[ co.ALT ] } )
     return new_ds
 
 
-def get_concat_array_values(file_ds_list: list, pnt=False) -> co.np.ndarray:
-    f1 = file_ds_list[0]
-    llen = len(file_ds_list)
-    vals = np.zeros((llen, *(f1.CONC.shape[1:])), dtype=float)
-    for i in range(llen):
-        if pnt: print(i)
-        ds = file_ds_list[i]
-        v = ds['CONC'][0].values
-        vals[i] = v
+def get_concat_array_values( file_ds_list: list , pnt=False ) -> co.np.ndarray :
+    f1 = file_ds_list[ 0 ]
+    llen = len( file_ds_list )
+    vals = np.zeros( (llen , *(f1.CONC.shape[ 1 : ])) , dtype=float )
+    for i in range( llen ) :
+        if pnt : print( i )
+        ds = file_ds_list[ i ]
+        v = ds[ 'CONC' ][ 0 ].values
+        vals[ i ] = v
     return vals
 
 
-def create_concat_ds(file_ds_list, vals):
-    dims = list(file_ds_list[0].dims.mapping.mapping.keys())
-    time_dim = [ds[co.TIME] for ds in file_ds_list]
-    time_dim = xr.concat(time_dim, dim=co.TIME)
-    ds = xr.Dataset({
-        'CONC': (
-            dims,
+def create_concat_ds( file_ds_list , vals ) :
+    dims = list( file_ds_list[ 0 ].dims.mapping.mapping.keys() )
+    time_dim = [ ds[ co.TIME ] for ds in file_ds_list ]
+    time_dim = xr.concat( time_dim , dim=co.TIME )
+    ds = xr.Dataset( {
+        'CONC' : (
+            dims ,
             vals
-        )
-    })
+            )
+        } )
 
-    ds = ds.assign_coords(**{co.TIME: time_dim})
+    ds = ds.assign_coords( **{ co.TIME : time_dim } )
     return ds
 
 
-def ds_swap_dims(ds):
+def ds_swap_dims( ds ) :
     ds2 = ds
-    ds2 = ds2.swap_dims({co.SN: co.LAT})
-    ds2 = ds2.swap_dims({co.WE: co.LON})
-    ds2 = ds2.swap_dims({co.BT: co.ZM})
+    ds2 = ds2.swap_dims( { co.SN : co.LAT } )
+    ds2 = ds2.swap_dims( { co.WE : co.LON } )
+    ds2 = ds2.swap_dims( { co.BT : co.ZM } )
     return ds2
 
 
-def ds_add_ll_dis(ds):
+def ds_add_ll_dis( ds ) :
     ds2 = ds
-    la_dis = (ds2[co.LAT] - co.CHC_LAT)
-    lo_dis = (ds2[co.LON] - co.CHC_LON)
+    la_dis = (ds2[ co.LAT ] - co.CHC_LAT)
+    lo_dis = (ds2[ co.LON ] - co.CHC_LON)
 
-    ll_dis = np.sqrt(la_dis ** 2 + lo_dis ** 2)
-    ds2[co.LL_DIS] = ll_dis
+    ll_dis = np.sqrt( la_dis ** 2 + lo_dis ** 2 )
+    ds2[ co.LL_DIS ] = ll_dis
     return ds2
 
 
-def fix_releases(ds, prnt=False):
-    #todo: not clear what this function does
+def fix_releases( ds , prnt=False ) :
+    # todo: not clear what this function does
     ds2 = ds
     hours = 96
-    rr = range(hours, -1, -1)
-    dsn = ds2.isel(**{co.TIME: slice(None, hours + 1)}).copy()
-    dsn = dsn.assign_coords(Time=rr)
+    rr = range( hours , -1 , -1 )
+    dsn = ds2.isel( **{ co.TIME : slice( None , hours + 1 ) } ).copy()
+    dsn = dsn.assign_coords( Time=rr )
 
-    actual_time = dsn[co.CONC].isel(**{co.LAT: 0, co.LON: 0, co.ZM: 0}).copy()
+    actual_time = dsn[ co.CONC ].isel(
+        **{ co.LAT : 0 , co.LON : 0 , co.ZM : 0 } ).copy()
     vals = actual_time.values
-    actual_time.values = np.full_like(vals, np.NaN, dtype=np.datetime64)
+    actual_time.values = np.full_like( vals , np.NaN , dtype=np.datetime64 )
     # ACTUAL_TIME = 'ACTUAL_TIME'
     actual_time.name = co.ACTUAL_TIME
 
-    dsn[co.ACTUAL_TIME] = actual_time
-    for i in range(len(ds2[co.RL])):
-        if prnt: print(i)
-        ds1 = ds2.isel(**{co.RL: i})
-        rt = ds1[co.RL].values
+    dsn[ co.ACTUAL_TIME ] = actual_time
+    for i in range( len( ds2[ co.RL ] ) ) :
+        if prnt : print( i )
+        ds1 = ds2.isel( **{ co.RL : i } )
+        rt = ds1[ co.RL ].values
 
-        rend = rt - pd.Timedelta(hours, 'hours')
+        rend = rt - pd.Timedelta( hours , 'hours' )
 
-        ds1 = ds1.sel(**{co.TIME: slice(rend, rt)})
+        ds1 = ds1.sel( **{ co.TIME : slice( rend , rt ) } )
 
         old_times = ds1.Time.copy()
 
         old_times.name = co.ACTUAL_TIME
 
         ds1.Time.values = rr
-        ds1[co.ACTUAL_TIME] = old_times
-        ds1[co.ACTUAL_TIME].Time.values = rr
+        ds1[ co.ACTUAL_TIME ] = old_times
+        ds1[ co.ACTUAL_TIME ].Time.values = rr
 
-        for v in list(ds1.data_vars):
-            if co.RL in dsn[v].dims:
-                dsn[v][{co.RL: i}] = ds1[v]
+        for v in list( ds1.data_vars ) :
+            if co.RL in dsn[ v ].dims :
+                dsn[ v ][ { co.RL : i } ] = ds1[ v ]
     return dsn
 
 
-def add_chc_lpb(ax):
-    ax.scatter(co.CHC_LON, co.CHC_LAT, marker='.', color='b', transform=co.PROJ)
-    ax.scatter(co.LPB_LON, co.LPB_LAT, marker='.', color='g', transform=co.PROJ)
+def add_chc_lpb( ax ) :
+    ax.scatter( co.CHC_LON , co.CHC_LAT , marker='.' , color='b' ,
+                transform=co.PROJ )
+    ax.scatter( co.LPB_LON , co.LPB_LAT , marker='.' , color='g' ,
+                transform=co.PROJ )
 
 
 def get_ax_bolivia(
-        ax=False,
-        fig_args={},
+        ax=False ,
+        fig_args={ } ,
         lalo_extent=co.LALO_BOL
-):
+        ) :
     import matplotlib.ticker as mticker
-    fig_ops = dict(figsize=(15, 10))
-    fig_ops = {**fig_ops, **fig_args}
-    if ax is False:
-        fig = plt.figure(**fig_ops)
-        ax = fig.add_subplot(1, 1, 1, projection=co.PROJ, )
+    fig_ops = dict( figsize=(15 , 10) )
+    fig_ops = { **fig_ops , **fig_args }
+    if ax is False :
+        fig = plt.figure( **fig_ops )
+        ax = fig.add_subplot( 1 , 1 , 1 , projection=co.PROJ , )
 
-    ax.set_extent(lalo_extent, crs=co.PROJ)
-    ax.add_feature(cartopy.feature.COASTLINE.with_scale('10m'))
-    ax.add_feature(cartopy.feature.BORDERS.with_scale('10m'))
+    ax.set_extent( lalo_extent , crs=co.PROJ )
+    ax.add_feature( cartopy.feature.COASTLINE.with_scale( '10m' ) )
+    ax.add_feature( cartopy.feature.BORDERS.with_scale( '10m' ) )
     ax.add_feature(
-        cartopy.feature.LAKES.with_scale('10m'), alpha=1, linestyle='-')
-    ax.add_feature(cartopy.feature.STATES.with_scale('10m'), alpha=0.5, linestyle=':')
-    gl = ax.gridlines(crs=co.PROJ, alpha=0.5, linestyle='--',
-                      draw_labels=True)
+        cartopy.feature.LAKES.with_scale( '10m' ) , alpha=1 , linestyle='-' )
+    ax.add_feature( cartopy.feature.STATES.with_scale( '10m' ) , alpha=0.5 ,
+                    linestyle=':' )
+    gl = ax.gridlines( crs=co.PROJ , alpha=0.5 , linestyle='--' ,
+                       draw_labels=True )
     gl.xlabels_top = False
     gl.ylabels_right = False
-    gl.xlocator = mticker.FixedLocator(np.arange(-76, -50, 2))
-    gl.ylocator = mticker.FixedLocator(np.arange(-34, -0, 2))
+    gl.xlocator = mticker.FixedLocator( np.arange( -76 , -50 , 2 ) )
+    gl.ylocator = mticker.FixedLocator( np.arange( -34 , -0 , 2 ) )
 
-    add_chc_lpb(ax)
+    add_chc_lpb( ax )
 
     return ax
 
 
-def get_ax_lapaz(ax=False,
-                 fig_args={},
-                 lalo_extent=co.LALO_LAPAZ):
+def get_ax_lapaz( ax=False ,
+                  fig_args={ } ,
+                  lalo_extent=co.LALO_LAPAZ ) :
     import matplotlib.ticker as mticker
-    fig_ops = dict(figsize=(15, 10))
-    fig_ops = {**fig_ops, **fig_args}
-    if ax is False:
-        fig = plt.figure(**fig_ops)
-        ax = fig.add_subplot(1, 1, 1, projection=co.PROJ, )
+    fig_ops = dict( figsize=(15 , 10) )
+    fig_ops = { **fig_ops , **fig_args }
+    if ax is False :
+        fig = plt.figure( **fig_ops )
+        ax = fig.add_subplot( 1 , 1 , 1 , projection=co.PROJ , )
 
-    ax.set_extent(lalo_extent, crs=co.PROJ)
-    ax.add_feature(cartopy.feature.COASTLINE.with_scale('10m'))
-    ax.add_feature(cartopy.feature.BORDERS.with_scale('10m'))
+    ax.set_extent( lalo_extent , crs=co.PROJ )
+    ax.add_feature( cartopy.feature.COASTLINE.with_scale( '10m' ) )
+    ax.add_feature( cartopy.feature.BORDERS.with_scale( '10m' ) )
     ax.add_feature(
-        cartopy.feature.LAKES.with_scale('10m'),
-        facecolor='none',edgecolor='b'
-    )
-    ax.add_feature(cartopy.feature.STATES.with_scale('10m'), alpha=0.5, linestyle=':')
-    gl = ax.gridlines(crs=co.PROJ, alpha=0.5, linestyle='--',
-                      draw_labels=True)
+        cartopy.feature.LAKES.with_scale( '10m' ) ,
+        facecolor='none' , edgecolor='b'
+        )
+    ax.add_feature( cartopy.feature.STATES.with_scale( '10m' ) , alpha=0.5 ,
+                    linestyle=':' )
+    gl = ax.gridlines( crs=co.PROJ , alpha=0.5 , linestyle='--' ,
+                       draw_labels=True )
 
     gl.xlabels_top = False
     gl.ylabels_right = False
 
-    add_chc_lpb(ax)
+    add_chc_lpb( ax )
 
     return ax
 
 
-def red_cmap():
-    cmap = plt.get_cmap('Reds')
-    my_cmap = cmap(np.arange(cmap.N))
+def red_cmap() :
+    cmap = plt.get_cmap( 'Reds' )
+    my_cmap = cmap( np.arange( cmap.N ) )
 
     # Set alpha
-    my_cmap[:, -1] = np.linspace(.3, 1, cmap.N)
+    my_cmap[ : , -1 ] = np.linspace( .3 , 1 , cmap.N )
 
-    my_cmap = ListedColormap(my_cmap)
+    my_cmap = ListedColormap( my_cmap )
 
     return my_cmap
 
 
-def get_r_dis(ds, lat_center=co.CHC_LAT, lon_center=co.CHC_LON):
-    la = ds[co.LAT] - lat_center
-    lo = ds[co.LON] - lon_center
-    r = np.sqrt(la ** 2 + lo ** 2)
+def get_r_dis( ds , lat_center=co.CHC_LAT , lon_center=co.CHC_LON ) :
+    la = ds[ co.LAT ] - lat_center
+    lo = ds[ co.LON ] - lon_center
+    r = np.sqrt( la ** 2 + lo ** 2 )
     return r
 
 
-def get_th_ang(ds, lat_center=co.CHC_LAT, lon_center=co.CHC_LON):
-    th = np.arctan2(ds[co.LAT] - lat_center,
-                                                             ds[co.LON] - lon_center)
-    th = np.mod(-th + np.pi / 2, 2 * np.pi)
+def get_th_ang( ds , lat_center=co.CHC_LAT , lon_center=co.CHC_LON ) :
+    th = np.arctan2( ds[ co.LAT ] - lat_center ,
+                     ds[ co.LON ] - lon_center )
+    th = np.mod( -th + np.pi / 2 , 2 * np.pi )
 
     return th
 
 
-def data_array_to_logpolar(da: xr.DataArray,
-                           r_round_log: float,
-                           th_round_rad: float,
-                           lat_center=co.CHC_LAT,
-                           lon_center=co.CHC_LON,
-                           dim2keep=[],
-                           fun='sum'
-                           ) -> xr.DataArray:
-    nda = da.copy()
-    nda[co.LL_DIS] = get_r_dis(nda, lat_center, lon_center)
+def data_array_to_logpolar( da: xr.DataArray ,
+                            r_round_log: float ,
+                            th_round_rad: float ,
+                            lat_center=co.CHC_LAT ,
+                            lon_center=co.CHC_LON ,
+                            dim2keep=[ ] ,
+                            fun='sum'
+                            ) -> xr.DataArray :
+    da_array_copy = da.copy()
+    da_array_copy[ co.LL_DIS ] = get_r_dis( da_array_copy , lat_center ,
+                                            lon_center )
 
-    nda[co.LL_ANG] = get_th_ang(nda, lat_center, lon_center)
+    da_array_copy[ co.LL_ANG ] = get_th_ang( da_array_copy , lat_center ,
+                                             lon_center )
 
     r_log_round_center = (np.round(
-        np.log(nda[co.LL_DIS]) / r_round_log
-    ) * r_round_log)
+        np.log( da_array_copy[ co.LL_DIS ] ) / r_round_log
+        ) * r_round_log)
 
-    nda[co.R_CENTER] = np.e ** r_log_round_center
-    # nda[R_FAR] = np.e ** (r_log_round_center + r_round_log/2)
-    # nda[R_CLOSE] = np.e ** (r_log_round_center - r_round_log/2)
+    da_array_copy[ co.R_CENTER ] = np.e ** r_log_round_center
+    # da_array_copy[R_FAR] = np.e ** (r_log_round_center + r_round_log/2)
+    # da_array_copy[R_CLOSE] = np.e ** (r_log_round_center - r_round_log/2)
 
-    th_round_center = np.floor(nda[co.LL_ANG] / th_round_rad) * th_round_rad
+    th_round_center = np.floor(
+        da_array_copy[ co.LL_ANG ] / th_round_rad ) * th_round_rad
     th_round_center = th_round_center + th_round_rad / 2
-    nda[co.TH_CENTER] = th_round_center
+    da_array_copy[ co.TH_CENTER ] = th_round_center
 
     name = da.name
 
-    df = nda.to_dataframe().reset_index()
-    df = df[[co.R_CENTER, co.TH_CENTER, name, *dim2keep]]
-    df: pd.DataFrame = getattr(df.groupby([co.R_CENTER, co.TH_CENTER, *dim2keep]),
-                               fun)()
-    r_th_da = df.to_xarray()[name]
+    df: pd.DataFrame = da_array_copy.to_dataframe().reset_index()
 
-    r_th_da[co.LAT] = r_th_to_lat(lat_center, r_th_da[co.R_CENTER], r_th_da[co.TH_CENTER])
-    r_th_da[co.LON] = r_th_to_lat(lon_center, r_th_da[co.R_CENTER], r_th_da[co.TH_CENTER])
+    log.ger.debug( df.columns )
 
-    r_log = np.log(r_th_da[co.R_CENTER])
-    th_cen = r_th_da[co.TH_CENTER]
+    df = df[ [ co.R_CENTER , co.TH_CENTER , name , *dim2keep ] ]
+
+    df: pd.DataFrame = getattr(
+        df.groupby( [ co.R_CENTER , co.TH_CENTER , *dim2keep ] ) ,
+        fun
+        )()
+
+    r_th_da = df.to_xarray()[ name ]
+
+    r_th_da[ co.LAT ] = r_th_to_lat( lat_center , r_th_da[ co.R_CENTER ] ,
+                                     r_th_da[ co.TH_CENTER ] )
+
+    r_th_da[ co.LON ] = r_th_to_lat( lon_center , r_th_da[ co.R_CENTER ] ,
+                                     r_th_da[ co.TH_CENTER ] )
+
+    r_log = np.log( r_th_da[ co.R_CENTER ] )
+
+    th_cen = r_th_da[ co.TH_CENTER ]
 
     rM = np.e ** (r_log + r_round_log / 2)
     rm = np.e ** (r_log - r_round_log / 2)
+
     thM = th_cen + th_round_rad / 2
     thm = th_cen - th_round_rad / 2
 
     val_list = [
-        [co.LAT_00, co.LON_00, rm, thm],
-        [co.LAT_10, co.LON_10, rM, thm],
-        [co.LAT_11, co.LON_11, rM, thM],
-        [co.LAT_01, co.LON_01, rm, thM],
-    ]
+        [ co.LAT_00 , co.LON_00 , rm , thm ] ,
+        [ co.LAT_10 , co.LON_10 , rM , thm ] ,
+        [ co.LAT_11 , co.LON_11 , rM , thM ] ,
+        [ co.LAT_01 , co.LON_01 , rm , thM ] ,
+        ]
 
-    for v in val_list:
-        r_th_da[v[0]] = r_th_to_lat(lat_center, v[2], v[3])
-        r_th_da[v[1]] = r_th_to_lon(lon_center, v[2], v[3])
+    for v in val_list :
+        r_th_da[ v[ 0 ] ] = r_th_to_lat( lat_center , v[ 2 ] , v[ 3 ] )
+        r_th_da[ v[ 1 ] ] = r_th_to_lon( lon_center , v[ 2 ] , v[ 3 ] )
 
-    r_th_da = r_th_da.where(~r_th_da.isnull(), 0)
-    r_th_da[co.GA] = get_pol_area(r_th_da)
+    r_th_da = r_th_da.where( ~r_th_da.isnull() , 0 )
+    r_th_da[ co.GA ] = get_pol_area( r_th_da )
 
     return r_th_da
 
 
-def r_th_to_ll(center, rr, th, fun):
+def r_th_to_ll( center , rr , th , fun ) :
     res = rr * fun(
         th
-    ) + center
+        ) + center
     return res
 
 
-def r_th_to_lon(lon_center, rr, th):
-    return r_th_to_ll(lon_center, rr, th, np.sin)
+def r_th_to_lon( lon_center , rr , th ) :
+    return r_th_to_ll( lon_center , rr , th , np.sin )
 
 
-def r_th_to_lat(lat_center, rr, th):
-    return r_th_to_ll(lat_center, rr, th, np.cos)
+def r_th_to_lat( lat_center , rr , th ) :
+    return r_th_to_ll( lat_center , rr , th , np.cos )
 
 
-def polygon_from_row(r):
-    pol = Polygon([
-        [r[co.LON_00], r[co.LAT_00]],
-        [r[co.LON_10], r[co.LAT_10]],
-        [r[co.LON_11], r[co.LAT_11]],
-        [r[co.LON_01], r[co.LAT_01]],
-    ], True)
+def polygon_from_row( r ) :
+    pol = Polygon( [
+        [ r[ co.LON_00 ] , r[ co.LAT_00 ] ] ,
+        [ r[ co.LON_10 ] , r[ co.LAT_10 ] ] ,
+        [ r[ co.LON_11 ] , r[ co.LAT_11 ] ] ,
+        [ r[ co.LON_01 ] , r[ co.LAT_01 ] ] ,
+        ] , True )
     return pol
 
 
-def logpolar_plot(ds,
-                  ax=False,
-                  name='CONC',
-                  perM=.95,
-                  perm=0.0,
-                  colorbar=True,
-                  patch_args={},
-                  quantile=True,
-                  fig_ops={},
-                  drop_zeros=True,
-                  ):
-    if ax is False:
-        fig = plt.figure(**fig_ops)
-        ax = fig.add_subplot(1, 1, 1, projection=co.PROJ, )
+def logpolar_plot( ds ,
+                   ax=False ,
+                   name='CONC' ,
+                   perM=.95 ,
+                   perm=0.0 ,
+                   colorbar=True ,
+                   patch_args={ } ,
+                   quantile=True ,
+                   fig_ops={ } ,
+                   drop_zeros=True ,
+                   ) :
+    if ax is False :
+        fig = plt.figure( **fig_ops )
+        ax = fig.add_subplot( 1 , 1 , 1 , projection=co.PROJ , )
     df = ds.to_dataframe()
-    if drop_zeros:
-        df = df[df[name] > 0]
+    if drop_zeros :
+        df = df[ df[ name ] > 0 ]
     pol_key = 'pol'
-    df[pol_key] = df.apply(lambda r: polygon_from_row(r), axis=1)
+    df[ pol_key ] = df.apply( lambda r : polygon_from_row( r ) , axis=1 )
     df = df.dropna()
 
-    if quantile:
-        maxc = df[name].quantile(perM)
-        minc = df[name].quantile(perm)
-    else:
+    if quantile :
+        maxc = df[ name ].quantile( perM )
+        minc = df[ name ].quantile( perm )
+    else :
         maxc = perM
         minc = perm
     p = PatchCollection(
-        df[pol_key].values,
+        df[ pol_key ].values ,
         **{
-            'cmap'     : red_cmap(),
-            'transform': co.PROJ,
+            'cmap'      : red_cmap() ,
+            'transform' : co.PROJ ,
             **patch_args
-        }
-    )
-    p.set_array(df[name].values)
-    p.set_clim(minc, maxc)
-    ax.add_collection(p)
+            }
+        )
+    p.set_array( df[ name ].values )
+    p.set_clim( minc , maxc )
+    ax.add_collection( p )
     fig = ax.figure
-    if colorbar:
-        cb = fig.colorbar(p)
-        cb.ax.set_ylabel(co.PLOT_LABS[name], rotation=90)
+    if colorbar :
+        cb = fig.colorbar( p )
+        cb.ax.set_ylabel( co.PLOT_LABS[ name ] , rotation=90 )
     return ax
 
 
-def get_pol_area(ds):
-    df = ds.reset_coords()[co.LL00].copy().to_dataframe()
-    df[co.GA] = df.apply(lambda r: get_area_from_row(r), axis=1)
-    nds = df[co.GA].to_xarray()
+def get_pol_area( ds ) :
+    df = ds.reset_coords()[ co.LL00 ].copy().to_dataframe()
+    df[ co.GA ] = df.apply( lambda r : get_area_from_row( r ) , axis=1 )
+    nds = df[ co.GA ].to_xarray()
 
     return nds
 
 
-def get_area_from_row(r):
+def get_area_from_row( r ) :
     coords = [
-        [r[co.LON_00], r[co.LAT_00]],
-        [r[co.LON_10], r[co.LAT_10]],
-        [r[co.LON_11], r[co.LAT_11]],
-        [r[co.LON_01], r[co.LAT_01]],
-        [r[co.LON_00], r[co.LAT_00]], ]
-    obj = {'type': 'Polygon', 'coordinates': [coords]}
-    ar = area.area(obj)
+        [ r[ co.LON_00 ] , r[ co.LAT_00 ] ] ,
+        [ r[ co.LON_10 ] , r[ co.LAT_10 ] ] ,
+        [ r[ co.LON_11 ] , r[ co.LAT_11 ] ] ,
+        [ r[ co.LON_01 ] , r[ co.LAT_01 ] ] ,
+        [ r[ co.LON_00 ] , r[ co.LAT_00 ] ] , ]
+    obj = { 'type' : 'Polygon' , 'coordinates' : [ coords ] }
+    ar = area.area( obj )
     return ar
 
 
-def trim_swap_dim_coord(nds: xr.Dataset, hours: int):
-    rel_time = nds[co.RL].values
+def trim_swap_dim_coord( nds: xr.Dataset , hours: int ) :
+    rel_time = nds[ co.RL ].values
     # hours = 96
-    rel_time_end = rel_time - pd.Timedelta(hours=hours)
+    rel_time_end = rel_time - pd.Timedelta( hours=hours )
 
-    nds1 = nds.sel(**{co.TIME: slice(rel_time_end, rel_time)})
+    nds1 = nds.sel( **{ co.TIME : slice( rel_time_end , rel_time ) } )
 
     # TH = 'Time_h'
 
-    lt = len(nds1[co.TIME])
-    tr = [i for i in range(-lt + 1, 1, 1)]
+    lt = len( nds1[ co.TIME ] )
+    tr = [ i for i in range( -lt + 1 , 1 , 1 ) ]
 
-    time_h = nds1[co.TIME].copy()
+    time_h = nds1[ co.TIME ].copy()
 
     time_h.values = tr
 
-    nds1[co.TH] = time_h
+    nds1[ co.TH ] = time_h
 
-    nds2 = nds1.swap_dims({co.TIME: co.TH})
-    nds2 = nds2.reset_coords(co.TIME)
+    nds2 = nds1.swap_dims( { co.TIME : co.TH } )
+    nds2 = nds2.reset_coords( co.TIME )
 
     return nds2
 
 
-def get_dims_complement(ds, keep):
-    coords = set(list(ds.dims))
-    if type(keep) is list:
-        co_keep = set(keep)
-    elif type(keep) is str:
-        co_keep = set([keep])
-    else:
-        print('invalid keep')
+def get_dims_complement( ds , keep ) :
+    coords = set( list( ds.dims ) )
+    if type( keep ) is list :
+        co_keep = set( keep )
+    elif type( keep ) is str :
+        co_keep = set( [ keep ] )
+    else :
+        print( 'invalid keep' )
 
-    complement = list(coords - co_keep)
+    complement = list( coords - co_keep )
     return complement
     # return co_keep
 
 
-def get_custom_cmap(to_rgb, from_rgb=[1, 1, 1]):
+def get_custom_cmap( to_rgb , from_rgb=[ 1 , 1 , 1 ] ) :
     # from color r,g,b
-    r1, g1, b1 = from_rgb
+    r1 , g1 , b1 = from_rgb
 
     # to color r,g,b
-    r2, g2, b2 = to_rgb
+    r2 , g2 , b2 = to_rgb
 
-    cdict = {'red'  : ((0, r1, r1),
-                       (1, r2, r2)),
-             'green': ((0, g1, g1),
-                       (1, g2, g2)),
-             'blue' : ((0, b1, b1),
-                       (1, b2, b2))}
+    cdict = {
+        'red'   : ((0 , r1 , r1) ,
+                   (1 , r2 , r2)) ,
+        'green' : ((0 , g1 , g1) ,
+                   (1 , g2 , g2)) ,
+        'blue'  : ((0 , b1 , b1) ,
+                   (1 , b2 , b2))
+        }
 
-    cmap = LinearSegmentedColormap('custom_cmap', cdict)
+    cmap = LinearSegmentedColormap( 'custom_cmap' , cdict )
     return cmap
 
 
-def plot_lapaz_rect(ax):
-    bl = co.LALO_LAPAZ[0], co.LALO_LAPAZ[2]
-    w = co.LALO_LAPAZ[1] - co.LALO_LAPAZ[0]
-    h = co.LALO_LAPAZ[3] - co.LALO_LAPAZ[2]
-    rect = matplotlib.patches.Rectangle(bl, w, h, linewidth=1, edgecolor='k', facecolor='none')
-    ax.add_patch(rect)
+def plot_lapaz_rect( ax ) :
+    bl = co.LALO_LAPAZ[ 0 ] , co.LALO_LAPAZ[ 2 ]
+    w = co.LALO_LAPAZ[ 1 ] - co.LALO_LAPAZ[ 0 ]
+    h = co.LALO_LAPAZ[ 3 ] - co.LALO_LAPAZ[ 2 ]
+    rect = matplotlib.patches.Rectangle( bl , w , h , linewidth=1 ,
+                                         edgecolor='k' , facecolor='none' )
+    ax.add_patch( rect )
 
 
-def plot_clust_height(ds,
-                      ax: plt.Axes,
-                      perM,
-                      quantile=True,
-                      drop_zero=True,
-                      par_to_plot=co.COL):
+def plot_clust_height( ds ,
+                       ax: plt.Axes ,
+                       perM ,
+                       quantile=True ,
+                       drop_zero=True ,
+                       par_to_plot=co.COL ) :
     ar = ds.copy()
-    com = get_dims_complement(ar, [co.R_CENTER, co.ZM])
+    com = get_dims_complement( ar , [ co.R_CENTER , co.ZM ] )
 
-    ar = ar.sum(dim=com)
-    if drop_zero:
-        ar = ar.where(ar > 0)
-    if quantile:
-        q = ar.quantile(perM)
-    else:
+    ar = ar.sum( dim=com )
+    if drop_zero :
+        ar = ar.where( ar > 0 )
+    if quantile :
+        q = ar.quantile( perM )
+    else :
         q = perM
     lab = "km from CHC"
-    ar[lab] = ar[co.R_CENTER] * 100
-    ar = ar.swap_dims({co.R_CENTER: lab})
-    try:
-        ar.name = co.PLOT_LABS[par_to_plot]
-    except:
+    ar[ lab ] = ar[ co.R_CENTER ] * 100
+    ar = ar.swap_dims( { co.R_CENTER : lab } )
+    try :
+        ar.name = co.PLOT_LABS[ par_to_plot ]
+    except :
         pass
     ar.plot(
-        cmap=red_cmap(),
-        vmin=0,
-        vmax=q,
-        ax=ax,
-        x=lab,
-    )
-    ax.set_yscale('log')
-    ax.set_ylim(100, 20000)
-    ax.set_xscale('log')
-    ax.set_xlim(.05 * 100, 30 * 100)
-    ax.grid(True, 'major', axis='y')
-    ax.grid(True, 'both', axis='x')
-    ax.set_ylabel(co.PLOT_LABS[co.ZM])
+        cmap=red_cmap() ,
+        vmin=0 ,
+        vmax=q ,
+        ax=ax ,
+        x=lab ,
+        )
+    ax.set_yscale( 'log' )
+    ax.set_ylim( 100 , 20000 )
+    ax.set_xscale( 'log' )
+    ax.set_xlim( .05 * 100 , 30 * 100 )
+    ax.grid( True , 'major' , axis='y' )
+    ax.grid( True , 'both' , axis='x' )
+    ax.set_ylabel( co.PLOT_LABS[ co.ZM ] )
 
 
-def plot_absolute_height(ds,
+def plot_absolute_height( ds ,
 
-                         ax=None,
-                         perM=.95,
-                         drop_zero=True,
-                         par_to_plit=co.COL
-                         ):
-
-
+                          ax=None ,
+                          perM=.95 ,
+                          drop_zero=True ,
+                          par_to_plit=co.COL
+                          ) :
     mer = ds.copy()
     # i = 6
-
 
     fla = co.FLAGS
     HC = 'H*CONC'
 
     ver_area = 'VER_AREA'
-    log_center = np.log(mer[co.R_CENTER])
+    log_center = np.log( mer[ co.R_CENTER ] )
     dis = log_center - \
-          log_center.shift({co.R_CENTER: 1})
+          log_center.shift( { co.R_CENTER : 1 } )
     dis = dis.median()
     l1 = log_center - dis / 2
     l2 = log_center + dis / 2
@@ -726,92 +754,87 @@ def plot_absolute_height(ds,
     l2 = np.e ** l2
     r_dis = (l2 - l1) * 100000
     zlen = 500
-    ar = np.arange(zlen / 2, 20000, zlen)
+    ar = np.arange( zlen / 2 , 20000 , zlen )
 
-    mer = mer[[co.CONC, fla, co.TOPO]]
+    mer = mer[ [ co.CONC , fla , co.TOPO ] ]
 
     # return merged_ds
 
+    mer[ 'c/v' ] = mer[ co.CONC ] / mer[ co.VOL ]
 
+    mer = mer.interp( **{ co.ZM : ar } )
 
-    mer['c/v'] = mer[co.CONC] / mer[co.VOL]
+    mer[ co.VOL ] = mer[ co.GA ] * zlen
+    mer[ co.CONC ] = mer[ 'c/v' ] * mer[ co.VOL ]
 
-    mer = mer.interp(**{co.ZM: ar})
+    mer[ co.H ] = mer[ co.TOPO ] + mer[ co.ZM ]
 
-    mer[co.VOL] = mer[co.GA] * zlen
-    mer[co.CONC] = mer['c/v'] * mer[co.VOL]
+    mer[ HC ] = mer[ co.H ] * mer[ co.CONC ]
 
-    mer[co.H] = mer[co.TOPO] + mer[co.ZM]
+    var = [ co.CONC , HC ]
+    com = get_dims_complement( mer , [ co.R_CENTER , co.ZM ] )
+    ms = mer[ var ].sum( com )
 
-    mer[HC] = mer[co.H] * mer[co.CONC]
-
-    var = [co.CONC, HC]
-    com = get_dims_complement(mer, [co.R_CENTER, co.ZM])
-    ms = mer[var].sum(com)
-
-    ms[ver_area] = ms[co.ZLM] * r_dis
+    ms[ ver_area ] = ms[ co.ZLM ] * r_dis
 
     # ms:xr.DataArray = ms/ms[ver_area]
 
-    ms[co.CONC] = ms[co.CONC].where(ms[co.CONC] > 0, 0)
+    ms[ co.CONC ] = ms[ co.CONC ].where( ms[ co.CONC ] > 0 , 0 )
 
     # ms = ms*zlen*r_dis
 
-    ms[co.H] = ms[HC] / ms[co.CONC]
+    ms[ co.H ] = ms[ HC ] / ms[ co.CONC ]
 
-
-    def find_nearest(value):
-
-
+    def find_nearest( value ) :
         # ar = self.get_zlin()
-        array = np.asarray(ar)
-        idx = (np.abs(array - value)).argmin()
-        return array[idx]
+        array = np.asarray( ar )
+        idx = (np.abs( array - value )).argmin()
+        return array[ idx ]
 
-    ms[co.H] = xr.apply_ufunc(find_nearest, ms[co.H], vectorize=True)
+    ms[ co.H ] = xr.apply_ufunc( find_nearest , ms[ co.H ] , vectorize=True )
 
-    hs = ms.to_dataframe().groupby([co.H, co.R_CENTER]).sum()[co.CONC].to_xarray()
+    hs = ms.to_dataframe().groupby( [ co.H , co.R_CENTER ] ).sum()[
+        co.CONC ].to_xarray()
 
     lab = "km from CHC"
-    hs[lab] = hs[co.R_CENTER] * 100
-    hs = hs.swap_dims({co.R_CENTER: lab})
+    hs[ lab ] = hs[ co.R_CENTER ] * 100
+    hs = hs.swap_dims( { co.R_CENTER : lab } )
 
-    hs1 = hs.interp(**{co.H: ar})
-    hs1 = hs1.combine_first(hs)
+    hs1 = hs.interp( **{ co.H : ar } )
+    hs1 = hs1.combine_first( hs )
 
-    if drop_zero:
-        hs1 = hs1.where(hs1 > 0)
+    if drop_zero :
+        hs1 = hs1.where( hs1 > 0 )
 
-    if ax is None:
-        fig, ax = plt.subplots(figsize=(10, 5))
+    if ax is None :
+        fig , ax = plt.subplots( figsize=(10 , 5) )
 
+    q = hs1.quantile( perM )
 
-    q = hs1.quantile(perM)
-
-    hs1.name = co.PLOT_LABS[co.CONC]
+    hs1.name = co.PLOT_LABS[ co.CONC ]
 
     hs1.plot(
-        cmap=red_cmap(),
-        vmin=0,
-        vmax=q,
-        ax=ax,
-        x=lab,
-    )
-    ax.set_ylim(100, 20000)
-    ax.set_xscale('log')
-    ax.set_xlim(.05 * 100, 30 * 100)
-    ax.grid(True, 'major', axis='y')
-    ax.grid(True, 'both', axis='x')
-    ax.set_ylabel(co.PLOT_LABS[co.H])
+        cmap=red_cmap() ,
+        vmin=0 ,
+        vmax=q ,
+        ax=ax ,
+        x=lab ,
+        )
+    ax.set_ylim( 100 , 20000 )
+    ax.set_xscale( 'log' )
+    ax.set_xlim( .05 * 100 , 30 * 100 )
+    ax.grid( True , 'major' , axis='y' )
+    ax.grid( True , 'both' , axis='x' )
+    ax.set_ylabel( co.PLOT_LABS[ co.H ] )
 
 
-def remove_ageclass(ds:xr.Dataset):
-    _ds = ds[{co.AGECLASS:0}]
+def remove_ageclass( ds: xr.Dataset ) :
+    _ds = ds[ { co.AGECLASS : 0 } ]
     return _ds
 
 
-def weighted_quantile(quantiles, values, sample_weight=None,
-                      values_sorted=False, old_style=False):
+def weighted_quantile( quantiles , values , sample_weight=None ,
+                       values_sorted=False , old_style=False ) :
     """ Very close to numpy.percentile, but supports weights.
     NOTE: quantiles should be in [0, 1]!
     :param values: numpy.array with data
@@ -823,81 +846,82 @@ def weighted_quantile(quantiles, values, sample_weight=None,
         with numpy.percentile.
     :return: numpy.array with computed quantiles.
     """
-    values = np.array(values)
-    quantiles = np.array(quantiles)
-    if sample_weight is None:
-        sample_weight = np.ones(len(values))
-    sample_weight = np.array(sample_weight)
-    assert np.all(quantiles >= 0) and np.all(quantiles <= 1), \
+    values = np.array( values )
+    quantiles = np.array( quantiles )
+    if sample_weight is None :
+        sample_weight = np.ones( len( values ) )
+    sample_weight = np.array( sample_weight )
+    assert np.all( quantiles >= 0 ) and np.all( quantiles <= 1 ) , \
         'quantiles should be in [0, 1]'
 
-    if not values_sorted:
-        sorter = np.argsort(values)
-        values = values[sorter]
-        sample_weight = sample_weight[sorter]
+    if not values_sorted :
+        sorter = np.argsort( values )
+        values = values[ sorter ]
+        sample_weight = sample_weight[ sorter ]
 
-    weighted_quantiles = np.cumsum(sample_weight) - 0.5 * sample_weight
-    if old_style:
+    weighted_quantiles = np.cumsum( sample_weight ) - 0.5 * sample_weight
+    if old_style :
         # To be convenient with numpy.percentile
-        weighted_quantiles -= weighted_quantiles[0]
-        weighted_quantiles /= weighted_quantiles[-1]
-    else:
-        weighted_quantiles /= np.sum(sample_weight)
-    return np.interp(quantiles, weighted_quantiles, values)
+        weighted_quantiles -= weighted_quantiles[ 0 ]
+        weighted_quantiles /= weighted_quantiles[ -1 ]
+    else :
+        weighted_quantiles /= np.sum( sample_weight )
+    return np.interp( quantiles , weighted_quantiles , values )
 
-def swap_xy2lon_lat(nds):
-    _boo1 = (nds[co.XLONG].max(co.SOUTH_NORTH) - nds[co.XLONG].min(
-        co.SOUTH_NORTH)).sum().item() == 0
+
+def swap_xy2lon_lat( nds ) :
+    _boo1 = (nds[ co.XLONG ].max( co.SOUTH_NORTH ) - nds[ co.XLONG ].min(
+        co.SOUTH_NORTH )).sum().item() == 0
     # %% {"jupyter": {"outputs_hidden": true}}
-    _boo2 = (nds[co.XLAT].max(co.WEST_EAST) - nds[co.XLAT].min(
-        co.WEST_EAST)).sum().item() == 0
+    _boo2 = (nds[ co.XLAT ].max( co.WEST_EAST ) - nds[ co.XLAT ].min(
+        co.WEST_EAST )).sum().item() == 0
 
-    log.ger.debug('_boo1 is %s',_boo1)
+    log.ger.debug( '_boo1 is %s' , _boo1 )
 
-    if _boo1 and _boo2:
-        log.ger.debug('inside loop')
-        xx = [co.XLAT, co.XLONG]
-        ww = [co.WEST_EAST, co.SOUTH_NORTH]
-        vv = [co.VLAT, co.VLONG]
-        rr = [co.VLONG, co.VLAT]
+    if _boo1 and _boo2 :
+        log.ger.debug( 'inside loop' )
+        xx = [ co.XLAT , co.XLONG ]
+        ww = [ co.WEST_EAST , co.SOUTH_NORTH ]
+        vv = [ co.VLAT , co.VLONG ]
+        rr = [ co.VLONG , co.VLAT ]
         # %% {"jupyter": {"outputs_hidden": true}}
-        for i in range(2):
-            ff = nds[xx[i]].mean(ww[i])
-            ff.name = vv[i]
-            nds = nds.assign_coords(**{vv[i]: ff})
-        for i in range(2):
-            nds = nds.swap_dims({ww[i]: rr[i]})
+        for i in range( 2 ) :
+            ff = nds[ xx[ i ] ].mean( ww[ i ] )
+            ff.name = vv[ i ]
+            nds = nds.assign_coords( **{ vv[ i ] : ff } )
+        for i in range( 2 ) :
+            nds = nds.swap_dims( { ww[ i ] : rr[ i ] } )
     return nds
 
 
-def get_combined_flx_ds(DD, dir_path,chop_list=None):
-    _ds_list = get_flx_ds_list(DD, dir_path)
-    _ds_list = _ds_list[:chop_list]
+def get_combined_flx_ds( DD , dir_path , chop_list=None ) :
+    _ds_list = get_flx_ds_list( DD , dir_path )
+    _ds_list = _ds_list[ :chop_list ]
     # %% {"jupyter": {"outputs_hidden": true}}
-    ds_list = trim_flx_ds_list(_ds_list)
+    ds_list = trim_flx_ds_list( _ds_list )
     # %% {"jupyter": {"outputs_hidden": true}}
-    dsm = xr.open_mfdataset(ds_list, concat_dim=co.TIME, combine='nested')
-    dsm = convert_ds_time_format(dsm)
-    dsm = remove_ageclass(dsm)
+    dsm = xr.open_mfdataset( ds_list , concat_dim=co.TIME , combine='nested' )
+    dsm = convert_ds_time_format( dsm )
+    dsm = remove_ageclass( dsm )
     # %% {"jupyter": {"outputs_hidden": true}}
-    hds = import_head_ds(dir_path, DD)
-    hds = hds.drop_dims([co.SPECIES, co.RECEPTORS, co.TIME, co.AGECLASS])
+    hds = import_head_ds( dir_path , DD )
+    hds = hds.drop_dims( [ co.SPECIES , co.RECEPTORS , co.TIME , co.AGECLASS ] )
     # %% {"jupyter": {"outputs_hidden": true}}
-    nds = xr.merge([hds, dsm])
+    nds = xr.merge( [ hds , dsm ] )
     nds.attrs = hds.attrs.copy()
-    nds = add_zmid(nds)
-    for v in (set(co.HEAD_VARS) & set(hds.variables)):
-        nds = nds.assign_coords(**{v: nds[v]})
+    nds = add_zmid( nds )
+    for v in (set( co.HEAD_VARS ) & set( hds.variables )) :
+        nds = nds.assign_coords( **{ v : nds[ v ] } )
     _cr = co.RELEASENAME
-    _df = nds[_cr].to_pandas().str.decode("utf-8")
-    _df = pd.to_datetime(_df, format='chc%Y%m%d_%H')
-    nds = nds.assign_coords(**{co.RELEASE_TIME: _df.to_xarray()})
-    nds = nds.swap_dims({co.BT:co.ZM})
-
+    _df = nds[ _cr ].to_pandas().str.decode( "utf-8" )
+    _df = pd.to_datetime( _df , format='chc%Y%m%d_%H' )
+    nds = nds.assign_coords( **{ co.RELEASE_TIME : _df.to_xarray() } )
+    nds = nds.swap_dims( { co.BT : co.ZM } )
 
     return nds
 
-def euristic_import_flexpart(dir_path, dd = co.D2) -> xr.Dataset:
+
+def euristic_import_flexpart( dir_path , dd=co.D2 ) -> xr.Dataset :
     '''
     directly imports a path into a dataset
     Parameters
@@ -910,7 +934,21 @@ def euristic_import_flexpart(dir_path, dd = co.D2) -> xr.Dataset:
     -------
         dataset
     '''
-    nds = get_combined_flx_ds(dd, dir_path)
-    nds = swap_xy2lon_lat(nds)
+    nds = get_combined_flx_ds( dd , dir_path )
+    nds = swap_xy2lon_lat( nds )
     return nds
     # nds = nds[{co.RL:-1}]
+
+
+def get_and_tune_flexout_from_ds_and_head( out_dask_ds , head_ds ) :
+    flexout_ds = join_head( out_dask_ds , head_ds )
+    # flexout_ds = add_release_time_dim(flexout_ds, self.head_ds)
+    # noinspection DuplicatedCode
+    flexout_ds = assign_vars_to_cords( flexout_ds )
+    flexout_ds = add_lat_lot( flexout_ds )
+    flexout_ds = add_zmid( flexout_ds )
+    flexout_ds = add_zbot( flexout_ds )
+    flexout_ds = add_zlength_m( flexout_ds )
+    flexout_ds = add_alt_m( flexout_ds )
+    flexout_ds = add_volume( flexout_ds )
+    return flexout_ds

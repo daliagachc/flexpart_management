@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="taito" createEmptyFolders="true" showDialogOnRemoteDnD="false">
+  <component name="PublishConfigData" autoUpload="Always" serverName="aliagadi@taito-login4.csc.fi:22" createEmptyFolders="true" showDialogOnRemoteDnD="false">
     <serverData>
+      <paths name="aliagadi@taito-login4.csc.fi:22">
+        <serverdata>
+          <mappings>
+            <mapping deploy="saltena_2018/flexpart_management" local="$PROJECT_DIR$" web="" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="taito">
         <serverdata>
           <mappings>

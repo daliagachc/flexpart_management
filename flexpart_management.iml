@@ -5,6 +5,7 @@
     <WolframLanguageLevel version="11.3" />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/flexpart_management/notebooks/run_2019-08-18_18-46-19_/release_v01" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/flexpart_management/notebooks/run_2019-09-14_08-43-03_" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/flexpart_management/source_code" />
     </content>
     <orderEntry type="inheritedJdk" />

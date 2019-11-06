@@ -1,24 +1,4 @@
 ```python
-
-
-# -*- coding: utf-8 -*-
-# ---
-# jupyter:
-#   jupytext:
-#     text_representation:
-#       extension: .py
-#       format_name: percent
-#       format_version: '1.2'
-#       jupytext_version: 1.2.3
-#   kernelspec:
-#     display_name: Python 3
-#     language: python
-#     name: python3
-# ---
-```
-
-
-```python
 from useful_scit.imps import *
 import flexpart_management.modules.FlexLogPol as FlexLogPol
 import flexpart_management.modules.constants as co
@@ -76,7 +56,7 @@ funs.plot_general(ds1)
 
 
 
-![png](main_files/main_5_1.png)
+![png](main_files/main_4_1.png)
 
 
 
@@ -92,7 +72,7 @@ funs.plot_general_lapaz(ds1)
 
 
 
-![png](main_files/main_6_1.png)
+![png](main_files/main_5_1.png)
 
 
 
@@ -109,7 +89,7 @@ funs.plot_hist_values(dfcc)
 ```
 
 
-![png](main_files/main_8_0.png)
+![png](main_files/main_7_0.png)
 
 
 
@@ -154,7 +134,7 @@ funs.plot_hist_all_log(dscc[co.CONC_NORMS])
 ```
 
 
-![png](main_files/main_15_0.png)
+![png](main_files/main_14_0.png)
 
 
 
@@ -163,7 +143,7 @@ funs.plot_hist_all_log(dscc[co.CONC_NORMS].where(dscc[co.LAB_CLUSTER_THRESHOLD])
 ```
 
 
-![png](main_files/main_16_0.png)
+![png](main_files/main_15_0.png)
 
 
 
@@ -178,7 +158,7 @@ funs.plot_bar_charts_for_each_cluster_set(dscc)
 ```
 
 
-![png](main_files/main_18_0.png)
+![png](main_files/main_17_0.png)
 
 
 
@@ -226,7 +206,7 @@ dscc[co.SIL_SC].plot()
 
 
 
-![png](main_files/main_20_2.png)
+![png](main_files/main_19_2.png)
 
 
 
@@ -245,7 +225,7 @@ funs.plot_sil_score_grid(dscc)
 ```
 
 
-![png](main_files/main_23_0.png)
+![png](main_files/main_22_0.png)
 
 
 
@@ -256,11 +236,11 @@ _ss1 = funs.get_df_for_plot(_n, dscc)
 ```
 
 
-![png](main_files/main_24_0.png)
+![png](main_files/main_23_0.png)
 
 
 
-![png](main_files/main_24_1.png)
+![png](main_files/main_23_1.png)
 
 
 
@@ -269,7 +249,7 @@ _ss1.plot(sharex=True,sharey=True, layout=(2, -1),subplots=True,figsize=(10,5),c
 ```
 
 
-![png](main_files/main_25_0.png)
+![png](main_files/main_24_0.png)
 
 
 
@@ -285,7 +265,7 @@ _ss1.plot.area(legend=True, figsize=(12,6),color=ucp.cc)
 
 
 
-![png](main_files/main_26_1.png)
+![png](main_files/main_25_1.png)
 
 
 
@@ -304,13 +284,92 @@ funs.plot_clust_in_bolivia(_n, dscc)
 ```
 
 
-![png](main_files/main_29_0.png)
+![png](main_files/main_28_0.png)
 
 
 
 ```python
 _n = 18
 funs.plot_clust_in_lapaz(_n, dscc)
+```
+
+
+![png](main_files/main_29_0.png)
+
+
+
+![png](main_files/main_29_1.png)
+
+
+
+![png](main_files/main_29_2.png)
+
+
+
+![png](main_files/main_29_3.png)
+
+
+
+![png](main_files/main_29_4.png)
+
+
+
+![png](main_files/main_29_5.png)
+
+
+
+![png](main_files/main_29_6.png)
+
+
+
+![png](main_files/main_29_7.png)
+
+
+
+![png](main_files/main_29_8.png)
+
+
+
+![png](main_files/main_29_9.png)
+
+
+
+![png](main_files/main_29_10.png)
+
+
+
+![png](main_files/main_29_11.png)
+
+
+
+![png](main_files/main_29_12.png)
+
+
+
+![png](main_files/main_29_13.png)
+
+
+
+![png](main_files/main_29_14.png)
+
+
+
+![png](main_files/main_29_15.png)
+
+
+
+![png](main_files/main_29_16.png)
+
+
+
+![png](main_files/main_29_17.png)
+
+
+
+```python
+
+_n = 18
+funs.plot_clust_bolivia_individual(_n, dscc)
 ```
 
 
@@ -387,9 +446,9 @@ funs.plot_clust_in_lapaz(_n, dscc)
 
 
 ```python
-
+_f = 2
 _n = 18
-funs.plot_clust_bolivia_individual(_n, dscc)
+funs.plot_distance_height_chc(_n, dscc)
 ```
 
 
@@ -462,85 +521,6 @@ funs.plot_clust_bolivia_individual(_n, dscc)
 
 
 ![png](main_files/main_31_17.png)
-
-
-
-```python
-_f = 2
-_n = 18
-funs.plot_distance_height_chc(_n, dscc)
-```
-
-
-![png](main_files/main_32_0.png)
-
-
-
-![png](main_files/main_32_1.png)
-
-
-
-![png](main_files/main_32_2.png)
-
-
-
-![png](main_files/main_32_3.png)
-
-
-
-![png](main_files/main_32_4.png)
-
-
-
-![png](main_files/main_32_5.png)
-
-
-
-![png](main_files/main_32_6.png)
-
-
-
-![png](main_files/main_32_7.png)
-
-
-
-![png](main_files/main_32_8.png)
-
-
-
-![png](main_files/main_32_9.png)
-
-
-
-![png](main_files/main_32_10.png)
-
-
-
-![png](main_files/main_32_11.png)
-
-
-
-![png](main_files/main_32_12.png)
-
-
-
-![png](main_files/main_32_13.png)
-
-
-
-![png](main_files/main_32_14.png)
-
-
-
-![png](main_files/main_32_15.png)
-
-
-
-![png](main_files/main_32_16.png)
-
-
-
-![png](main_files/main_32_17.png)
 
 
 
@@ -638,7 +618,7 @@ funs.plot_dis_height_quantiles_chc(_n, dsF, dscc,axs=axsf)
 
 
 
-![png](main_files/main_35_1.png)
+![png](main_files/main_34_1.png)
 
 
 
@@ -654,7 +634,7 @@ dscc[co.CONC].sum([co.TH_CENTER,co.ZM,co.RL]).plot()
 
 
 
-![png](main_files/main_36_1.png)
+![png](main_files/main_35_1.png)
 
 
 
@@ -663,7 +643,7 @@ dscc[co.CONC].sum([co.TH_CENTER,co.RL]).plot.line(x=co.R_CENTER);
 ```
 
 
-![png](main_files/main_37_0.png)
+![png](main_files/main_36_0.png)
 
 
 
@@ -673,7 +653,7 @@ funs.plot_influences(_n, dscc)
 ```
 
 
-![png](main_files/main_38_0.png)
+![png](main_files/main_37_0.png)
 
 
 
@@ -688,7 +668,7 @@ funs.plot_target_distance_height_influence(_n, dscc, height_less_than,
 ```
 
 
-![png](main_files/main_39_0.png)
+![png](main_files/main_38_0.png)
 
 
 
@@ -708,7 +688,6 @@ _dscc = dscc.drop([co.KMEAN_OBJ,co.CONC,co.CONC_NORMALIZED,co.RL])
 _dscc=xr.merge([mdsc,_dscc])
 _dscc[co.CONC] = _dscc[co.CONC].where(_dscc[co.CONC].sum([co.R_CENTER,co.TH_CENTER,co.ZM])>2e5)
 _dscc[co.CONC] = _dscc[[co.CONC]].resample(releases='H').mean()[co.CONC]
-
 ```
 
     /Users/diego/miniconda3/envs/b36/lib/python3.6/site-packages/xarray/core/nanops.py:160: RuntimeWarning: Mean of empty slice
@@ -722,7 +701,7 @@ funs.plot_influences(_n, _dscc)
 ```
 
 
-![png](main_files/main_43_0.png)
+![png](main_files/main_42_0.png)
 
 
 
@@ -737,7 +716,7 @@ funs.plot_target_distance_height_influence(_n, _dscc, height_less_than,
 ```
 
 
-![png](main_files/main_44_0.png)
+![png](main_files/main_43_0.png)
 
 
 
@@ -751,27 +730,27 @@ for _nn in _ns:
 ```
 
 
-![png](main_files/main_45_0.png)
+![png](main_files/main_44_0.png)
 
 
 
-![png](main_files/main_45_1.png)
+![png](main_files/main_44_1.png)
 
 
 
-![png](main_files/main_45_2.png)
+![png](main_files/main_44_2.png)
 
 
 
-![png](main_files/main_45_3.png)
+![png](main_files/main_44_3.png)
 
 
 
-![png](main_files/main_45_4.png)
+![png](main_files/main_44_4.png)
 
 
 
-![png](main_files/main_45_5.png)
+![png](main_files/main_44_5.png)
 
 
 
@@ -897,7 +876,7 @@ ax.figure.savefig('/tmp/sulf_weights.pdf')
 ```
 
 
-![png](main_files/main_62_0.png)
+![png](main_files/main_61_0.png)
 
 
 
@@ -930,11 +909,11 @@ ax.figure.savefig('/tmp/abs_mea_cal1.pdf')
 ```
 
 
-![png](main_files/main_63_0.png)
+![png](main_files/main_62_0.png)
 
 
 
-![png](main_files/main_63_1.png)
+![png](main_files/main_62_1.png)
 
 
 
@@ -966,7 +945,7 @@ ax=res.plot()
 ```
 
 
-![png](main_files/main_65_0.png)
+![png](main_files/main_64_0.png)
 
 
 
@@ -1036,7 +1015,7 @@ ax.set_ylim(.1,5)
 
 
 
-![png](main_files/main_74_1.png)
+![png](main_files/main_73_1.png)
 
 
 
@@ -1052,7 +1031,7 @@ ax.figure.savefig('/tmp/meas_bar_abs.pdf')
 ```
 
 
-![png](main_files/main_75_0.png)
+![png](main_files/main_74_0.png)
 
 
 

@@ -205,7 +205,8 @@ class ConfigDayRun:
                 if not inspect.ismethod(getattr(self, i)):
                     if i[:1] is not '_':
                         variables.append(i)
-            except:
+            except AssertionError as error:
+                log.ger.error(error)
                 pass
         dic = {}
         for v in variables:

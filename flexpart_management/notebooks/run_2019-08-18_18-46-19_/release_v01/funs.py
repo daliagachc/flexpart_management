@@ -204,7 +204,8 @@ def calc_silhouette_scores(dscc):
     # %%
     try:
         dscc = dscc.drop(co.SIL_SC)
-    except:
+    except AssertionError as error:
+        log.ger.error(error)
         pass
     dscc = xr.merge([dscc, _sil_sc])
     # %%

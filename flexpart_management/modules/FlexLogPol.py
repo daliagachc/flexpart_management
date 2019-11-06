@@ -1,12 +1,17 @@
 # project name: flexpart_management
 # created by diego aliaga daliaga_at_chacaltaya.edu.bo
 
-from useful_scit.imps import *
+from useful_scit.imps import (pd,np,xr,za,mpl,plt,sns, pjoin, os,glob,dt,
+                              sys,ucp,log, splot, crt,axsplot)
 import flexpart_management.modules.constants as co
 import flexpart_management.modules.flx_array as fa
 from sklearn.preprocessing import normalize
-import rpy2.robjects as robjects
-import rpy2.robjects.packages as rpackages
+try:
+    import rpy2.robjects as robjects
+    import rpy2.robjects.packages as rpackages
+except AssertionError as error:
+    log.ger.error(error)
+    log.ger.warning('rpy2 not installed. Everything works except functions requiring r')
 from pprint import pprint
 from sklearn.cluster import KMeans
 import warnings
@@ -85,20 +90,26 @@ class FlexLogPol:
         ###
 
         if self.concat:
+            log.ger.debug('concatenating the ds')
             self.concat_ds()
             if save_concat:
+                log.ger.debug('saving concat ds')
                 self.save_concat_to_disk()
         else:
             try:
+                log.ger.debug('opening the concat files from disk')
                 self.open_concat_files()
-            except:
-                print('cant open')
+            except AssertionError as error:
+                log.ger.error(error)
+                log.ger.error('cant open')
 
         # def ret(self):pass
         if open_merged:
+            log.ger.debug('opening the merged ds')
             self.merged_ds = xr.open_dataset(self.merged_path)
         else:
-            self.get_merged_ds()
+            log.ger.debug('merging the dss')
+            self.merged_ds = self.get_merged_ds()
 
         if get_clusters:
             self.get_clusters_r(coarsen_time=self.coarsen_par)
@@ -130,7 +141,8 @@ class FlexLogPol:
         try:
             topo_ = self.merged_head_ds[co.TOPO].mean(co.ZMID)
             log.ger.debug('manage to add mean zmid')
-        except:
+        except AssertionError as error:
+            log.ger.error(error)
             topo_ = self.merged_head_ds[co.TOPO]
         mds_: xr.Dataset = self.merged_ds
         mds_[co.TOPO] = topo_
@@ -139,6 +151,7 @@ class FlexLogPol:
 
     def get_all_head_ds(self):
         head_path = os.path.join(self.source_path, self.head_rel_path)
+        log.ger.debug('head path is %s', head_path)
         self.get_head_ds(self.d1, head_path, self.h1)
         self.get_head_ds(self.d2, head_path, self.h2)
         self.h1_ds = self.head_dic_ds[self.h1]
@@ -230,7 +243,8 @@ class FlexLogPol:
         ar = ar.swap_dims({co.R_CENTER: lab})
         try:
             ar.name = co.PLOT_LABS[par_to_plot]
-        except:
+        except AssertionError as error:
+            log.ger.error(error)
             pass
         ar.plot(
             cmap=fa.get_custom_cmap(self.colors[i]),
@@ -362,8 +376,8 @@ class FlexLogPol:
         d1 = self.dasks_dic[self.d1][{co.RL: i}][{co.R_CENTER: slice(l1m, l1M)}]
         d2 = self.dasks_dic[self.d2][{co.RL: i}][{co.R_CENTER: slice(l2m, l2M)}]
         mer = xr.merge([d1, d2])
-        self.merged_ds = mer
-        fa.compressed_netcdf_save(self.merged_ds, self.merged_path)
+        fa.compressed_netcdf_save(mer, self.merged_path)
+        return mer
 
     def open_concat_files(self):
         dasks_dic = {}
@@ -397,8 +411,10 @@ class FlexLogPol:
         self.concat_paths = concat_paths
 
     def get_dask_ds(self):
-        self.dask_ds_01 = xr.open_mfdataset(self.list_d1, concat_dim=co.RL)
-        self.dask_ds_02 = xr.open_mfdataset(self.list_d2, concat_dim=co.RL)
+        self.dask_ds_01 = xr.open_mfdataset(self.list_d1, concat_dim=co.RL,
+                                            combine='nested')
+        self.dask_ds_02 = xr.open_mfdataset(self.list_d2, concat_dim=co.RL,
+                                            combine='nested')
         dasks = [self.dask_ds_01, self.dask_ds_02]
         dask_dic = {}
         for d, ds in zip(self.doms, dasks):
@@ -483,7 +499,8 @@ class FlexLogPol:
         zlin = self.get_zlin()
         try:
             self.merged_ds = self.merged_ds.swap_dims({co.ZM: co.ZT})
-        except:
+        except AssertionError as error:
+            log.ger.error(error)
             pass
         new_ds = []
         for z in range(len(zlin) - 1):
