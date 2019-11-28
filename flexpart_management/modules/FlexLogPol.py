@@ -1,16 +1,21 @@
 # project name: flexpart_management
 # created by diego aliaga daliaga_at_chacaltaya.edu.bo
 
-from useful_scit.imps import (pd,np,xr,za,mpl,plt,sns, pjoin, os,glob,dt,
-                              sys,ucp,log, splot, crt,axsplot)
+# from useful_scit.imps import (pd,np,xr,za,mpl,plt,sns, pjoin, os,glob,dt,
+#                               sys,ucp,log, splot, crt,axsplot)
+from typing import Dict , Union
+
+from useful_scit.imps import *
+
 import flexpart_management.modules.constants as co
 import flexpart_management.modules.flx_array as fa
 from sklearn.preprocessing import normalize
 try:
     import rpy2.robjects as robjects
     import rpy2.robjects.packages as rpackages
-except AssertionError as error:
-    log.ger.error(error)
+# except AssertionError as error:
+except:
+    # log.ger.error(error)
     log.ger.warning('rpy2 not installed. Everything works except functions requiring r')
 from pprint import pprint
 from sklearn.cluster import KMeans
@@ -33,6 +38,7 @@ CON_COLS = [co.CONC, co.CPer, co.CC, co.CCPer]
 
 
 class FlexLogPol:
+    concat_paths: Dict[ str , str ]
     source_path: str = None
     d1 = 'd01'
     d2 = 'd02'
@@ -392,10 +398,12 @@ class FlexLogPol:
 
     def save_concat_to_disk(self):
         os.makedirs(self.combined_path, exist_ok=True)
+        log.ger.info(f'saving concat files to {self.concat_paths}')
         for d in self.doms:
             fa.compressed_netcdf_save(
                 self.dasks_dic[d], self.concat_paths[d]
             )
+        log.ger.debug('saving concat done')
 
     def concat_ds(self):
         self.list_d1 = glob.glob(self.source_path + self.d1 + '*')

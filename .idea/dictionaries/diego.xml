@@ -6,12 +6,16 @@
       <w>axsplot</w>
       <w>chacaltaya</w>
       <w>cmap</w>
+      <w>colorbar</w>
+      <w>conc</w>
       <w>daliaga</w>
       <w>dask</w>
+      <w>dasks</w>
       <w>flexout</w>
       <w>ggplot</w>
       <w>matplotlib</w>
       <w>pjoin</w>
+      <w>quantile</w>
       <w>scit</w>
       <w>splot</w>
       <w>taito</w>

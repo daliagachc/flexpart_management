@@ -155,14 +155,20 @@ class FLEXOUT :
                 log.ger.error( f'file {f} is corrupted' )
         return new_out_list
 
-    # noinspection PyDefaultArgument
     def get_log_polar_coords( self ,
                               release: pd.Timestamp ,
-                              coords_to_keep=[ co.WE , co.SN ] ,
-                              rounding_vals=[ co.ROUND_R_LOG ,
-                                              co.ROUND_TH_RAD ] ,
-                              keep_list=[ co.RL ]
+                              coords_to_keep=None ,
+                              rounding_vals=None ,
+                              keep_list=None
                               ) :
+        if keep_list is None :
+            keep_list = [ co.RL ]
+        if coords_to_keep is None :
+            coords_to_keep = [ co.WE , co.SN ]
+        if rounding_vals is None :
+            rounding_vals = [ co.ROUND_R_LOG ,
+                              co.ROUND_TH_RAD ]
+
         keep_vars = [ co.CONC ]
         keep_coords = coords_to_keep
 
@@ -175,13 +181,14 @@ class FLEXOUT :
         # log.ger.debug(sum_ds)
 
         val = rounding_vals
-        lp_ds = xr.Dataset()
+        log_pol_ds = xr.Dataset()
         for v in keep_vars :
-            lp_ds[ v ] = fa.data_array_to_logpolar( sum_ds[ v ] ,
-                                                    *val ,
-                                                    dim2keep=keep_list )
+            log_pol_ds[ v ] = fa.data_array_to_logpolar( da=sum_ds[ v ] ,
+                                                    dim2keep=keep_list ,
+                                                    r_round_log=val[ 0 ] ,
+                                                    th_round_rad=val[ 1 ] )
 
-        return lp_ds
+        return log_pol_ds
 
     def export_log_polar_coords( self , keep_z=False ) -> None :
         """
@@ -195,7 +202,7 @@ class FLEXOUT :
         -------
 
         """
-        releas_name = 'release_name'
+        release_name = 'release_name'
         release_path = 'release_path'
         coords_to_keep = [ co.WE , co.SN ]
         rounding_vals = [ co.ROUND_R_LOG , co.ROUND_TH_RAD ]
@@ -209,46 +216,50 @@ class FLEXOUT :
         os.makedirs( out_path , exist_ok=True )
 
         releases = self.flexout_hour_ds[ co.RL ]
-        release_df = self.get_release_df( releas_name , release_path ,
+        release_df = self.get_release_df( release_name , release_path ,
                                           releases , out_path )
         conc_path_out = release_df.iloc[ 0 ][ release_path ]
 
         # noinspection PyBroadException
+        log_pol_exists = self._check_log_pol_file_exists( conc_path_out )
+
+        if log_pol_exists is False :
+            list_log_polar_ds = [ ]
+            for key , row in release_df[ : ].iterrows() :
+                # noinspection PyBroadException
+                try :
+                    log_pol_ds = self.get_log_polar_coords(
+                        release=row[ co.RL ] ,
+                        coords_to_keep=coords_to_keep ,
+                        rounding_vals=rounding_vals ,
+                        keep_list=keep_list
+                        )
+                    # fa.compressed_netcdf_save(log_pol_ds,row[release_path])
+                    list_log_polar_ds.append( log_pol_ds )
+                    # print('done getting polar coords',k)
+                    log.ger.debug( f'done getting coords' )
+                except :
+                    # print('error in',k)
+                    log.ger.error( f'error in {key}' )
+
+            conc_ds = xr.concat( list_log_polar_ds , dim=co.RL )
+            log.ger.debug( 'save path %s' , conc_path_out )
+            log.ger.debug( 'length arr %s' , len( list_log_polar_ds ) )
+            fa.compressed_netcdf_save( conc_ds , conc_path_out )
+
+    def _check_log_pol_file_exists( self , conc_path_out ) :
         try :
-        # lets try to see if the file exists and can be opened
+            # lets try to see if the file exists and can be opened
             log_pol_ds = xr.open_dataset( conc_path_out )
             log_pol_ds.close()
             log.ger.debug( f'log_pol_file exists' )
             log_pol_exists = True
         except :
             log.ger.debug( f'''
-            log pol file doesnt exis. creating a new one. 
+            log pol file doesnt exist. creating a new one. 
             ''' )
             log_pol_exists = False
-
-        if log_pol_exists is False :
-            list_log_polar_ds = [ ]
-            for k , r in release_df[ : ].iterrows() :
-                # noinspection PyBroadException
-                try :
-                    lp_ds = self.get_log_polar_coords(
-                        release=r[ co.RL ] ,
-                        coords_to_keep=coords_to_keep ,
-                        rounding_vals=rounding_vals ,
-                        keep_list=keep_list
-                        )
-                    # fa.compressed_netcdf_save(lp_ds,r[release_path])
-                    list_log_polar_ds.append( lp_ds )
-                    # print('done getting polar coords',k)
-                    log.ger.debug( f'done getting coords' )
-                except :
-                    # print('error in',k)
-                    log.ger.error( f'error in {k}' )
-
-            conc_ds = xr.concat( list_log_polar_ds , dim=co.RL )
-            log.ger.debug( 'save path %s' , conc_path_out )
-            log.ger.debug( 'length arr %s' , len( list_log_polar_ds ) )
-            fa.compressed_netcdf_save( conc_ds , conc_path_out )
+        return log_pol_exists
 
     def get_release_df( self , releas_name , release_path , releases ,
                         out_path ) :

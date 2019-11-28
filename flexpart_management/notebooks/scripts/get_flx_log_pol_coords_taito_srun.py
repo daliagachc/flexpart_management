@@ -22,6 +22,7 @@ import flexpart_management.modules.FLEXOUT as FO
 import flexpart_management.modules.flx_array as fa
 from useful_scit.imps import *
 # %%
+# we need this so that the output goes to stdout when usin srun
 handler = log.log.StreamHandler(sys.stdout)
 formatter = log.log.Formatter(
     '%(asctime)s %(name)-12s %(levelname)-8s %(message)s')

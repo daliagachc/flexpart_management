@@ -225,7 +225,7 @@ __da2.plot(**{
     'add_colorbar':True,
     'cmap': plt.get_cmap('Reds'),
     'norm':mpl.colors.Normalize(),
-    'vmax':80,
+    v_max:80,
     'col':co.TIME,
     'col_wrap':4,
     'ylim':(0,2e3),

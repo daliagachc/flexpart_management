@@ -15,6 +15,7 @@ from matplotlib.patches import Polygon
 from useful_scit.imps import *
 from typing import List
 import cartopy
+import cartopy.mpl.geoaxes
 import area
 import flexpart_management.modules.constants as co
 from useful_scit.util.zarray import compressed_netcdf_save
@@ -370,11 +371,35 @@ def add_chc_lpb( ax ) :
                 transform=co.PROJ )
 
 
+GeoAxes = cartopy.mpl.geoaxes.GeoAxes
+
+
 def get_ax_bolivia(
-        ax=False ,
-        fig_args={ } ,
-        lalo_extent=co.LALO_BOL
-        ) :
+        ax: GeoAxes = False ,
+        fig_args:dict=None ,
+        lalo_extent: List[ float ] = co.LALO_BOL
+        ) -> GeoAxes :
+    """
+    returns a geo ax object with the area of bolivia
+
+    Parameters
+    ----------
+    ax
+        ax to use. if false create a new one
+    fig_args
+        args passed to the figure
+    lalo_extent
+        extent of the lalo
+
+    Returns
+    -------
+    cartopy.mpl.geoaxes.GeoAxes
+        returns a cartopy geoax
+        #todo check this
+
+    """
+    if fig_args is None :
+        fig_args = { }
     import matplotlib.ticker as mticker
     fig_ops = dict( figsize=(15 , 10) )
     fig_ops = { **fig_ops , **fig_args }
@@ -402,8 +427,10 @@ def get_ax_bolivia(
 
 
 def get_ax_lapaz( ax=False ,
-                  fig_args={ } ,
+                  fig_args=None ,
                   lalo_extent=co.LALO_LAPAZ ) :
+    if fig_args is None :
+        fig_args = { }
     import matplotlib.ticker as mticker
     fig_ops = dict( figsize=(15 , 10) )
     fig_ops = { **fig_ops , **fig_args }
@@ -461,11 +488,38 @@ def get_th_ang( ds , lat_center=co.CHC_LAT , lon_center=co.CHC_LON ) :
 def data_array_to_logpolar( da: xr.DataArray ,
                             r_round_log: float ,
                             th_round_rad: float ,
-                            lat_center=co.CHC_LAT ,
-                            lon_center=co.CHC_LON ,
-                            dim2keep=[ ] ,
-                            fun='sum'
+                            lat_center: float = co.CHC_LAT ,
+                            lon_center: float = co.CHC_LON ,
+                            dim2keep: List[str] = None ,
+                            fun: str = 'sum'
                             ) -> xr.DataArray :
+    """
+    converts a data array to log polar coordinates
+
+    Parameters
+    ----------
+    da
+        dataset in rectangular coords
+    r_round_log
+        value to round in log
+    th_round_rad
+        value to round in radian units
+    lat_center
+        lat center of the arrival point
+    lon_center
+        lon center of the arrival point
+    dim2keep
+        dimensions that should be kept
+    fun
+        function to join the cells
+
+    Returns
+    -------
+    DataArray
+        the data array in log pol coords
+    """
+    if dim2keep is None :
+        dim2keep = [ ]
     da_array_copy = da.copy()
     da_array_copy[ co.LL_DIS ] = get_r_dis( da_array_copy , lat_center ,
                                             lon_center )
@@ -560,17 +614,58 @@ def polygon_from_row( r ) :
 
 
 def logpolar_plot( ds ,
-                   ax=False ,
+                   ax=None ,
                    name='CONC' ,
                    perM=.95 ,
                    perm=0.0 ,
                    colorbar=True ,
-                   patch_args={ } ,
+                   patch_args=None ,
                    quantile=True ,
-                   fig_ops={ } ,
+                   fig_ops=None ,
                    drop_zeros=True ,
-                   ) :
-    if ax is False :
+                   cb_kwargs=None ,
+                   ) -> plt.Axes :
+    """
+    plots a log polar plot from a dataset that contains the following fields:
+    ___.
+
+    Parameters
+    ----------
+    cb_kwargs
+        kwargs for the colorbar
+    ds
+        dataset to get the information from
+    ax
+        GeoAxes to plot
+    name
+        name of the variable to plot
+    perM
+        quantile max for the colorbar
+    perm
+        quantile min for the colorbar
+    colorbar
+        weatherr the colorbar should be added
+    patch_args
+    quantile
+        weather quantiles should be used for the colorbar limits
+    fig_ops
+        options to be passed to the figure creation
+    drop_zeros
+        either to drop zero values
+
+    Returns
+    -------
+    an axes where the plot is drawn
+    """
+
+    if cb_kwargs is None :
+        cb_kwargs = { }
+    if fig_ops is None :
+        fig_ops = { }
+    if patch_args is None :
+        patch_args = { }
+
+    if ax is None :
         fig = plt.figure( **fig_ops )
         ax = fig.add_subplot( 1 , 1 , 1 , projection=co.PROJ , )
     df = ds.to_dataframe()
@@ -586,20 +681,20 @@ def logpolar_plot( ds ,
     else :
         maxc = perM
         minc = perm
-    p = PatchCollection(
-        df[ pol_key ].values ,
-        **{
-            'cmap'      : red_cmap() ,
-            'transform' : co.PROJ ,
-            **patch_args
-            }
-        )
+
+    args_ = {
+        'cmap'      : red_cmap() ,
+        'transform' : co.PROJ ,
+        **patch_args
+        }
+
+    p = PatchCollection( df[ pol_key ].values , **args_ )
     p.set_array( df[ name ].values )
     p.set_clim( minc , maxc )
     ax.add_collection( p )
     fig = ax.figure
     if colorbar :
-        cb = fig.colorbar( p )
+        cb = fig.colorbar( p , **cb_kwargs )
         cb.ax.set_ylabel( co.PLOT_LABS[ name ] , rotation=90 )
     return ax
 
@@ -662,8 +757,10 @@ def get_dims_complement( ds , keep ) :
     # return co_keep
 
 
-def get_custom_cmap( to_rgb , from_rgb=[ 1 , 1 , 1 ] ) :
+def get_custom_cmap( to_rgb , from_rgb=None ) :
     # from color r,g,b
+    if from_rgb is None :
+        from_rgb = [ 1 , 1 , 1 ]
     r1 , g1 , b1 = from_rgb
 
     # to color r,g,b
@@ -895,6 +992,7 @@ def swap_xy2lon_lat( nds ) :
 
 
 def get_combined_flx_ds( DD , dir_path , chop_list=None ) :
+    # todo where is the docstring for this functions
     _ds_list = get_flx_ds_list( DD , dir_path )
     _ds_list = _ds_list[ :chop_list ]
     # %% {"jupyter": {"outputs_hidden": true}}

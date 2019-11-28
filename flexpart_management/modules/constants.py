@@ -130,3 +130,5 @@ HEAD_VARS = [
     TOPOGRAPHY,
     GRIDAREA,
 ]
+
+CSUM = 'CONC_SUM'
