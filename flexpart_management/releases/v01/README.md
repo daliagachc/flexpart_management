@@ -7,3 +7,5 @@ for the Bolivia Campaign 12.2017~05.2018
 
 [figures diurnal variation](/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability.md)
 
+
+[figures cluster properties](/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties.md)

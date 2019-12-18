@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/flexpart_management/releases/v01/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/releases/v01/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/releases/v01/releasev01.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/releases/v01/releasev01.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../useful-scit/useful_scit/useful_scit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../useful-scit/useful_scit/useful_scit.iml" afterDir="false" />
     </list>
@@ -570,7 +569,7 @@
       <workItem from="1576595160919" duration="8587000" />
       <workItem from="1576607623335" duration="17812000" />
       <workItem from="1576637379537" duration="21884000" />
-      <workItem from="1576662445537" duration="6974000" />
+      <workItem from="1576662445537" duration="7060000" />
     </task>
     <servers />
   </component>
