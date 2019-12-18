@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../useful-scit/useful_scit/useful_scit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../useful-scit/useful_scit/useful_scit.iml" afterDir="false" />
     </list>
@@ -101,19 +100,19 @@
     <option name="mySaveCallSignatures" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering" />
-      <recent name="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/chect_rect_grid" />
-      <recent name="$PROJECT_DIR$/flexpart_management/runs_config_dir" />
-      <recent name="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-06-03_23-39-12_" />
-      <recent name="$PROJECT_DIR$/flexpart_management/modules/daily_back" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/flexpart_management/presentations" />
       <recent name="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering" />
       <recent name="$PROJECT_DIR$/flexpart_management" />
       <recent name="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_" />
       <recent name="$PROJECT_DIR$/flexpart_management/modules" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/flexpart_management/releases/v01" />
+      <recent name="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering" />
+      <recent name="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/chect_rect_grid" />
+      <recent name="$PROJECT_DIR$/flexpart_management/runs_config_dir" />
+      <recent name="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-06-03_23-39-12_" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -570,7 +569,7 @@
       <workItem from="1576595160919" duration="8587000" />
       <workItem from="1576607623335" duration="17812000" />
       <workItem from="1576637379537" duration="21884000" />
-      <workItem from="1576662445537" duration="3599000" />
+      <workItem from="1576662445537" duration="4203000" />
     </task>
     <servers />
   </component>
