@@ -2,21 +2,161 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flexpart_management/modules/clustering_funs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/main.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/features_analog_v02.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion_files/02_check_log_pol_conversion_11_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion_files/02_check_log_pol_conversion_12_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion_files/02_check_log_pol_conversion_8_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion_files/02_check_log_pol_conversion_9_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/check_convert_zet_levels.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/check_convert_zet_levels.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/check_convert_zet_levels.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/check_convert_zet_levels_files/check_convert_zet_levels_13_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/check_convert_zet_levels_files/check_convert_zet_levels_13_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/check_rect_grid.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/chect_rect_grid/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/chect_rect_grid/check_rect_grid.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/chect_rect_grid/check_rect_grid.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/chect_rect_grid/funs_check.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/07_export_ds.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/07_export_ds.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/test_03_diurnal_variability.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/reduce_cell_number.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/reduce_cell_number.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/reduce_cell_number.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/reduce_cell_number_files/reduce_cell_number_10_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/reduce_cell_number_files/reduce_cell_number_11_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/reduce_cell_number_files/reduce_cell_number_12_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/reduce_cell_number_files/reduce_cell_number_13_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/reduce_cell_number_files/reduce_cell_number_9_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/sum_rect_d2.nc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_29.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_35.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_38.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_41.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_44.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_47.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_53.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_29.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_35.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_38.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_41.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_44.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_47.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_53.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_56.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_59.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/06_cluster_properties/06_cluster_properties_12_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/06_cluster_properties/06_cluster_properties_12_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/06_cluster_properties/06_cluster_properties_26_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/06_cluster_properties/06_cluster_properties_27_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/06_cluster_properties/06_cluster_properties_28_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/06_cluster_properties/06_cluster_properties_29_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/06_cluster_properties/06_cluster_properties_30_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/conc_smooth_p.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/conc_smooth_p_t.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/meta_info_clusters.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/releasev01.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/~$releasev01.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/scripts/print_plot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/diego.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/diego.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/flexpart_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flexpart_management.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/FLEXOUT.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/FLEXOUT.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flexpart_management/modules/FlexLogPol.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/FlexLogPol.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/clustering_funs.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/clustering_funs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flexpart_management/modules/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/constants.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flexpart_management/modules/flx_array.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/flx_array.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/srun_launcher.sh" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/srun_launcher.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/scripts/get_flx_log_pol_coords_taito_srun.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/scripts/get_flx_log_pol_coords_taito_srun.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/main.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../useful-scit/useful_scit/useful_scit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../useful-scit/useful_scit/useful_scit.iml" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +176,9 @@
     <expand />
     <select />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="flexpart_management" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -46,6 +189,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-08-30_11-47-04_/README.md" root0="FORCE_HIGHLIGHTING" />
@@ -56,9 +200,15 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
+  <component name="JupyterTrust" id="eb5f1465-adbc-40ac-a492-5f2603a913fd" />
   <component name="ProjectId" id="1TCRQPIdPvCYV9oPDRIids3MfhP" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
@@ -69,36 +219,51 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python&#10;GenericSQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/flexpart_management/presentations" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.jscs" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
-      <console-settings>
-        <option name="useSoftWraps" value="true" />
+      <console-settings module-name="flexpart_management" sdk-home="$PROJECT_DIR$/../miniconda3/envs/b36/bin/python">
+        <option name="mySdkHome" value="$PROJECT_DIR$/../miniconda3/envs/b36/bin/python" />
+        <option name="myModuleName" value="flexpart_management" />
       </console-settings>
     </option>
+    <option name="myShowDebugConsoleByDefault" value="true" />
+    <option name="myShowVariablesByDefault" value="false" />
+  </component>
+  <component name="PyDebuggerOptionsProvider">
+    <option name="mySaveCallSignatures" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_" />
-      <recent name="$PROJECT_DIR$/flexpart_management/modules" />
-      <recent name="$PROJECT_DIR$/flexpart_management/notebooks/scripts" />
-      <recent name="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-08-30_11-47-04_" />
-      <recent name="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-08-18_18-46-19_" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering" />
+      <recent name="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/chect_rect_grid" />
       <recent name="$PROJECT_DIR$/flexpart_management/runs_config_dir" />
       <recent name="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-06-03_23-39-12_" />
       <recent name="$PROJECT_DIR$/flexpart_management/modules/daily_back" />
-      <recent name="$PROJECT_DIR$/flexpart_management/modules/funs" />
-      <recent name="$PROJECT_DIR$/flexpart_management/example/run_2019_04_03_1/data_out" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/flexpart_management/presentations" />
+      <recent name="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering" />
+      <recent name="$PROJECT_DIR$/flexpart_management" />
+      <recent name="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_" />
+      <recent name="$PROJECT_DIR$/flexpart_management/modules" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -106,30 +271,7 @@
       <command value="python" />
     </option>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python.main">
-    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="INTERPRETER_PATH" value="" />
-      <option name="PROJECT_INTERPRETER" value="false" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <module name="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.scratch_27">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -142,6 +284,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="PROJECT_INTERPRETER" value="false" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <method v="2" />
+    </configuration>
     <configuration name="local_run.sh (3)" type="BashConfigurationType" factoryName="Bash" temporary="true">
       <module name="flexpart_management" />
       <option name="INTERPRETER_OPTIONS" value="bash" />
@@ -150,17 +303,6 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_2" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_16-01-17_2_2/local_run.sh" />
-      <option name="PARAMETERS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="local_run.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
-      <module name="flexpart_management" />
-      <option name="INTERPRETER_OPTIONS" value="bash" />
-      <option name="INTERPRETER_PATH" value="/usr/bin/env" />
-      <option name="PROJECT_INTERPRETER" value="false" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_17-28-37_" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2019-05-31_17-28-37_/local_run.sh" />
       <option name="PARAMETERS" value="" />
       <method v="2" />
     </configuration>
@@ -257,6 +399,28 @@
       <option name="ADDITIONAL_ARGS" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="01_post_clustering" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="flexpart_management" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="02_check_log_pol_conversion" type="PythonConfigurationType" factoryName="Python">
       <module name="flexpart_management" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -327,6 +491,9 @@
       <module name="flexpart_management" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -334,6 +501,50 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="print_plot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="flexpart_management" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://aliagadi@taito-login4.csc.fi:22/homeappl/home/aliagadi/appl_taito/miniconda3/envs/b36backup/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flexpart_management/scripts" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flexpart_management/scripts/print_plot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch_27" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="flexpart_management" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_27.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -396,19 +607,38 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Bash.local_run.sh (3)" />
       <item itemvalue="Python.02_check_log_pol_conversion" />
       <item itemvalue="Python.main last run" />
       <item itemvalue="Python.main" />
+      <item itemvalue="Python.print_plot" />
+      <item itemvalue="Python.01_post_clustering" />
+      <item itemvalue="Python.scratch_27" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.scratch_27" />
+        <item itemvalue="Python.print_plot" />
+        <item itemvalue="Python.01_post_clustering" />
         <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="StructureViewFactory">
-    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
-    <option name="ACTIVE_ACTIONS" value=",SHOW_INHERITED" />
+    <option name="AUTOSCROLL_MODE" value="false" />
+    <option name="ACTIVE_ACTIONS" value=",SHOW_FIELDS,SHOW_INHERITED" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -460,7 +690,37 @@
       <workItem from="1574779146262" duration="5273000" />
       <workItem from="1574848105339" duration="6032000" />
       <workItem from="1574855647561" duration="2813000" />
-      <workItem from="1574865342547" duration="16076000" />
+      <workItem from="1574865342547" duration="18919000" />
+      <workItem from="1574940903930" duration="4940000" />
+      <workItem from="1574951457402" duration="14820000" />
+      <workItem from="1575015721339" duration="7739000" />
+      <workItem from="1575025822162" duration="7766000" />
+      <workItem from="1575040311181" duration="11294000" />
+      <workItem from="1575459459257" duration="3910000" />
+      <workItem from="1575466232630" duration="9899000" />
+      <workItem from="1575878341098" duration="8374000" />
+      <workItem from="1575895298585" duration="12329000" />
+      <workItem from="1575918655673" duration="7210000" />
+      <workItem from="1575970102752" duration="42035000" />
+      <workItem from="1576054762117" duration="9475000" />
+      <workItem from="1576066999154" duration="4920000" />
+      <workItem from="1576073871284" duration="16214000" />
+      <workItem from="1576096081058" duration="9391000" />
+      <workItem from="1576143246237" duration="17011000" />
+      <workItem from="1576164503169" duration="10199000" />
+      <workItem from="1576227383573" duration="4664000" />
+      <workItem from="1576232252972" duration="22883000" />
+      <workItem from="1576263226310" duration="15254000" />
+      <workItem from="1576311258682" duration="2131000" />
+      <workItem from="1576314688199" duration="739000" />
+      <workItem from="1576316016116" duration="284000" />
+      <workItem from="1576316504534" duration="585000" />
+      <workItem from="1576317615012" duration="145000" />
+      <workItem from="1576317805556" duration="27199000" />
+      <workItem from="1576595160919" duration="8587000" />
+      <workItem from="1576607623335" duration="17812000" />
+      <workItem from="1576637379537" duration="21884000" />
+      <workItem from="1576662445537" duration="1943000" />
     </task>
     <servers />
   </component>
@@ -483,8 +743,118 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
+  <component name="WindowStateProjectService">
+    <state x="560" y="217" key="#Deployment" timestamp="1576316574272">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="560" y="217" key="#Deployment/427.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1576316574272" />
+    <state x="560" y="217" key="#Plugins" timestamp="1576316047154">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="560" y="217" key="#Plugins/427.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1576316047154" />
+    <state x="440" y="202" key="#Vim_Emulation" timestamp="1576440989651">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="440" y="202" key="#Vim_Emulation/0.23.1680.1027@0.23.1680.1027" timestamp="1576440989651" />
+    <state x="440" y="202" key="#com.intellij.ide.actionMacro.EditMacrosDialog" timestamp="1576442538494">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="440" y="202" key="#com.intellij.ide.actionMacro.EditMacrosDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576442538494" />
+    <state x="622" y="276" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1576640417701">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="622" y="276" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576640417701" />
+    <state x="100" y="123" width="1480" height="827" key="DiffContextDialog" timestamp="1576599732875">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="100" y="123" width="1480" height="827" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576599732875" />
+    <state width="709" height="248" key="GridCell.Tab.0.bottom" timestamp="1576651346253">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="709" height="248" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1576651346253" />
+    <state width="1240" height="359" key="GridCell.Tab.0.bottom/427.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1576317866253" />
+    <state width="709" height="248" key="GridCell.Tab.0.center" timestamp="1576651346250">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="709" height="248" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1576651346250" />
+    <state width="1240" height="359" key="GridCell.Tab.0.center/427.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1576317866251" />
+    <state width="709" height="248" key="GridCell.Tab.0.left" timestamp="1576651346249">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="709" height="248" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1576651346249" />
+    <state width="1240" height="359" key="GridCell.Tab.0.left/427.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1576317866250" />
+    <state width="709" height="248" key="GridCell.Tab.0.right" timestamp="1576651346252">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="709" height="248" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1576651346252" />
+    <state width="1240" height="359" key="GridCell.Tab.0.right/427.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1576317866252" />
+    <state width="831" height="343" key="GridCell.Tab.1.bottom" timestamp="1576603972169">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="831" height="343" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1576603972169" />
+    <state width="831" height="343" key="GridCell.Tab.1.center" timestamp="1576603972168">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="831" height="343" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1576603972168" />
+    <state width="831" height="343" key="GridCell.Tab.1.left" timestamp="1576603972167">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="831" height="343" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1576603972167" />
+    <state width="831" height="343" key="GridCell.Tab.1.right" timestamp="1576603972168">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="831" height="343" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1576603972168" />
+    <state x="548" y="293" key="IDE.errors.dialog" timestamp="1576315254863">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="548" y="293" key="IDE.errors.dialog/427.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1576315254863" />
+    <state x="410" y="185" key="SettingsEditor" timestamp="1576602716793">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="410" y="185" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1576602716793" />
+    <state x="469" y="190" key="SettingsEditor/427.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1576318287325" />
+    <state x="100" y="123" width="1480" height="827" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1576638778343">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="100" y="123" width="1480" height="827" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576638778343" />
+    <state x="629" y="460" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576438032003">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="629" y="460" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1680.1027@0.23.1680.1027" timestamp="1576438032003" />
+    <state x="165" y="269" width="855" height="655" key="dock-window-1" timestamp="1576595172636">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="165" y="269" width="855" height="655" key="dock-window-1/0.23.1680.1027@0.23.1680.1027" timestamp="1576595172636" />
+    <state x="592" y="1199" width="855" height="655" key="dock-window-1/427.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1576359650525" />
+    <state x="506" y="298" width="943" height="476" key="find.popup" timestamp="1576657065399">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="506" y="298" width="943" height="476" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576657065399" />
+    <state x="489" y="259" width="700" height="530" key="recent.locations.popup" timestamp="1576637843047">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="489" y="259" width="700" height="530" key="recent.locations.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576637843047" />
+    <state x="547" y="251" width="670" height="657" key="search.everywhere.popup" timestamp="1576651279957">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="547" y="251" width="670" height="657" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576651279957" />
+    <state x="625" y="258" width="670" height="676" key="search.everywhere.popup/427.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1576316716321" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$APPLICATION_CONFIG_DIR$/scratches/scratch_27.py</url>
+          <line>4</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/flexpart_management$02_check_log_pol_conversion.coverage" NAME="02_check_log_pol_conversion Coverage Results" MODIFIED="1574933649541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_" />
+    <SUITE FILE_PATH="coverage/flexpart_management$print_plot.coverage" NAME="print_plot Coverage Results" MODIFIED="1576602600691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flexpart_management/scripts" />
     <SUITE FILE_PATH="coverage/flexpart_management$main_last_run.coverage" NAME="main last run Coverage Results" MODIFIED="1574933742878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_" />
+    <SUITE FILE_PATH="coverage/flexpart_management$02_check_log_pol_conversion.coverage" NAME="02_check_log_pol_conversion Coverage Results" MODIFIED="1575015785572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_" />
+    <SUITE FILE_PATH="coverage/flexpart_management$scratch_27.coverage" NAME="scratch_27 Coverage Results" MODIFIED="1576603404509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
   </component>
 </project>

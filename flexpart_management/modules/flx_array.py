@@ -9,6 +9,7 @@ import netCDF4
 
 import matplotlib
 import numpy
+import xarray
 from matplotlib.collections import PatchCollection
 from matplotlib.colors import ListedColormap , LinearSegmentedColormap
 from matplotlib.patches import Polygon
@@ -19,6 +20,8 @@ import cartopy.mpl.geoaxes
 import area
 import flexpart_management.modules.constants as co
 from useful_scit.util.zarray import compressed_netcdf_save
+
+from flexpart_management.modules import constants as co
 
 
 def import_flex_file( path_file: str ) :
@@ -366,9 +369,10 @@ def fix_releases( ds , prnt=False ) :
 
 def add_chc_lpb( ax ) :
     ax.scatter( co.CHC_LON , co.CHC_LAT , marker='.' , color='b' ,
-                transform=co.PROJ )
+                transform=co.PROJ , label = 'CHC')
     ax.scatter( co.LPB_LON , co.LPB_LAT , marker='.' , color='g' ,
-                transform=co.PROJ )
+                transform=co.PROJ , label = 'La Paz')
+    ax.legend()
 
 
 GeoAxes = cartopy.mpl.geoaxes.GeoAxes
@@ -377,18 +381,20 @@ GeoAxes = cartopy.mpl.geoaxes.GeoAxes
 def get_ax_bolivia(
         ax: GeoAxes = False ,
         fig_args:dict=None ,
-        lalo_extent: List[ float ] = co.LALO_BOL
-        ) -> GeoAxes :
+        lola_extent: List[ float ] = co.LOLA_BOL
+        , proj=co.PROJ) -> GeoAxes :
     """
     returns a geo ax object with the area of bolivia
 
     Parameters
     ----------
+    proj
+        projection to use
     ax
         ax to use. if false create a new one
     fig_args
         args passed to the figure
-    lalo_extent
+    lola_extent
         extent of the lalo
 
     Returns
@@ -400,35 +406,43 @@ def get_ax_bolivia(
     """
     if fig_args is None :
         fig_args = { }
-    import matplotlib.ticker as mticker
+    import matplotlib.ticker as m_ticker
     fig_ops = dict( figsize=(15 , 10) )
     fig_ops = { **fig_ops , **fig_args }
     if ax is False :
         fig = plt.figure( **fig_ops )
-        ax = fig.add_subplot( 1 , 1 , 1 , projection=co.PROJ , )
+        ax = fig.add_subplot( 1 , 1 , 1 , projection=proj , )
 
-    ax.set_extent( lalo_extent , crs=co.PROJ )
+    ax.set_extent( lola_extent , crs=proj )
     ax.add_feature( cartopy.feature.COASTLINE.with_scale( '10m' ) )
     ax.add_feature( cartopy.feature.BORDERS.with_scale( '10m' ) )
     ax.add_feature(
         cartopy.feature.LAKES.with_scale( '10m' ) , alpha=1 , linestyle='-' )
     ax.add_feature( cartopy.feature.STATES.with_scale( '10m' ) , alpha=0.5 ,
                     linestyle=':' )
-    gl = ax.gridlines( crs=co.PROJ , alpha=0.5 , linestyle='--' ,
+    gl = ax.gridlines( crs=proj , alpha=0.5 , linestyle='--' ,
                        draw_labels=True )
     gl.xlabels_top = False
     gl.ylabels_right = False
-    gl.xlocator = mticker.FixedLocator( np.arange( -76 , -50 , 2 ) )
-    gl.ylocator = mticker.FixedLocator( np.arange( -34 , -0 , 2 ) )
+    lo1 = np.round(lola_extent[0]/5)*5 - 5
+    print(lo1)
+    lo2 = lola_extent[1] + 5
+    la1 = np.round(lola_extent[2]/5)*5 - 5
+    la2 = lola_extent[3] + 5
+    gl.xlocator = m_ticker.FixedLocator( np.arange( *(lo1 , lo2 , 5 ) ) )
+    gl.ylocator = m_ticker.FixedLocator( np.arange( *(la1 , la2 , 5) ) )
 
     add_chc_lpb( ax )
+
+    # ax.set_xlabel('Longitude')
+    # ax.set_ylabel('Latitude')
 
     return ax
 
 
 def get_ax_lapaz( ax=False ,
                   fig_args=None ,
-                  lalo_extent=co.LALO_LAPAZ ) :
+                  lalo_extent=co.LOLA_LAPAZ ) :
     if fig_args is None :
         fig_args = { }
     import matplotlib.ticker as mticker
@@ -454,6 +468,10 @@ def get_ax_lapaz( ax=False ,
     gl.ylabels_right = False
 
     add_chc_lpb( ax )
+    # ax.set_xlabel('Longitude')
+    # ax.set_ylabel('Latitude')
+    # ax:plt.Axes
+    # ax.text(-.1,-)
 
     return ax
 
@@ -695,7 +713,12 @@ def logpolar_plot( ds ,
     fig = ax.figure
     if colorbar :
         cb = fig.colorbar( p , **cb_kwargs )
-        cb.ax.set_ylabel( co.PLOT_LABS[ name ] , rotation=90 )
+        if name in co.PLOT_LABS:
+            cb_lab = co.PLOT_LABS[ name ]
+        else:
+            import xarray.plot.utils
+            cb_lab = xarray.plot.utils.label_from_attrs(ds)
+        cb.ax.set_ylabel( cb_lab , rotation=90 )
     return ax
 
 
@@ -780,9 +803,9 @@ def get_custom_cmap( to_rgb , from_rgb=None ) :
 
 
 def plot_lapaz_rect( ax ) :
-    bl = co.LALO_LAPAZ[ 0 ] , co.LALO_LAPAZ[ 2 ]
-    w = co.LALO_LAPAZ[ 1 ] - co.LALO_LAPAZ[ 0 ]
-    h = co.LALO_LAPAZ[ 3 ] - co.LALO_LAPAZ[ 2 ]
+    bl = co.LOLA_LAPAZ[ 0 ] , co.LOLA_LAPAZ[ 2 ]
+    w = co.LOLA_LAPAZ[ 1 ] - co.LOLA_LAPAZ[ 0 ]
+    h = co.LOLA_LAPAZ[ 3 ] - co.LOLA_LAPAZ[ 2 ]
     rect = matplotlib.patches.Rectangle( bl , w , h , linewidth=1 ,
                                          edgecolor='k' , facecolor='none' )
     ax.add_patch( rect )
@@ -883,7 +906,7 @@ def plot_absolute_height( ds ,
     ms[ co.H ] = ms[ HC ] / ms[ co.CONC ]
 
     def find_nearest( value ) :
-        # ar = self.get_zlin()
+        # ar = self.get_z_lin()
         array = np.asarray( ar )
         idx = (np.abs( array - value )).argmin()
         return array[ idx ]
@@ -1050,3 +1073,38 @@ def get_and_tune_flexout_from_ds_and_head( out_dask_ds , head_ds ) :
     flexout_ds = add_alt_m( flexout_ds )
     flexout_ds = add_volume( flexout_ds )
     return flexout_ds
+
+
+def join_log_pol_dom_ds( ds01: xr.Dataset ,
+                         ds02: xr.Dataset ,
+                         threshold: float = 2.5
+                         ) -> xr.Dataset :
+    """
+    combines low res `ds01` and high res `ds02` `xr.Dataset`
+    based on the `threshold`
+
+    Parameters
+    ----------
+    ds01
+        low res dataset
+    ds02
+        high res dataset
+    threshold
+        limit for the combination in degree radian units (distance from center)
+    Returns
+    -------
+    xr.Dataset
+        the combined dataset
+    """
+    r_vector = ds01[ co.R_CENTER ]
+    r_is_big_mask = r_vector >= threshold
+    ds01_trimmed = ds01.where( r_is_big_mask , drop=True )
+
+    r_vector = ds02[ co.R_CENTER ]
+    r_is_small_mask = (r_vector < threshold) & (r_vector > .01)
+    ds02_trimmed = ds02.where( r_is_small_mask , drop=True )
+
+    # noinspection PyTypeChecker
+    ds_combined: xr.Dataset = xr.concat( [ ds02_trimmed , ds01_trimmed ] ,
+                                         dim=co.R_CENTER )
+    return ds_combined

@@ -4,3 +4,4 @@ __pycache__
 .DS_Store/
 /flexpart_management/sym_links
 .idea
+/flexpart_management/tmp_data

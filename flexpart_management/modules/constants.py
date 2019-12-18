@@ -56,11 +56,12 @@ CPer = 'CONC_per'
 CC = 'CONC_conc'
 CCPer = 'CONC_conc_per'
 ClusFlag = 'flags'
+LAB = 'lab'
 
 COL = 'CON_TIME/LEN'
 
-LALO_LAPAZ = [-70, -66, -18, -14]
-LALO_BOL = [-83, -43, -35, 2]
+LOLA_LAPAZ = [ -70, -66, -18, -14 ]
+LOLA_BOL = [ -83, -43, -35, 2 ]
 
 print('reload')
 
@@ -71,7 +72,8 @@ PLOT_LABS = {
     CPer: 'mass*res. time[%]',
     H   : 'height [masl]',
     ZM  : 'height [mag]',
-    CONC: 'mass/mass * res. time [s]'
+    CONC: 'mass/mass * res. time [s]',
+    CC  : 'mass/(mass * res. time * vol) [s/m3]',
 }
 
 CLUS_LENGTH_DIM = 'CLUS_LENGTH_DIM'
@@ -83,7 +85,7 @@ KMEAN_OBJ = 'KMEAN_LAB'
 LAB_CLUSTER_THRESHOLD = 'LAB_CLUSTER_THRESHOLD'
 SIL_SC = "SIL_SCORE"
 SIL_SAMPLE = "SIL_SAMPLE"
-DIS = 'Distance [km]'
+DIS = 'Distance CHC [km]'
 AGECLASS = 'ageclass'
 SPECIES = 'species'
 RECEPTORS = 'receptors'
@@ -91,7 +93,7 @@ RECEPTORS = 'receptors'
 XLONG_CORNER = 'XLONG_CORNER'
 XLAT_CORNER = 'XLAT_CORNER'
 ZTOP = 'ZTOP'
-AGECLASS = 'ageclass'
+# AGECLASS = 'ageclass'
 RELEASENAME = 'ReleaseName'
 RELEASETSTART_END = 'ReleaseTstart_end'
 RELEASEXSTART_END = 'ReleaseXstart_end'
@@ -113,8 +115,6 @@ D1 = 'd01'
 
 D2 = 'd02'
 
-DIS = 'Distance CHC'
-
 
 HEAD_VARS = [
     XLONG_CORNER,
@@ -132,3 +132,11 @@ HEAD_VARS = [
 ]
 
 CSUM = 'CONC_SUM'
+
+RAD_MIN = 00.07
+"""minimum radial distance to consider in the algorithm"""
+RAD_MAX = 20.00
+"""maximum radial distance to consider in the algorithm """
+
+above_thre_label = 'above_thre'
+CONC_SMOOTH_NORM = 'conc_smooth_norm'

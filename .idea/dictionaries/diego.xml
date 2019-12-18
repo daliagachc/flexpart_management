@@ -1,25 +1,91 @@
 <component name="ProjectDictionaryState">
   <dictionary name="diego">
     <words>
+      <w>ageclass</w>
       <w>aliaga</w>
       <w>autoreload</w>
       <w>axsplot</w>
+      <w>axvline</w>
+      <w>cfuns</w>
       <w>chacaltaya</w>
+      <w>clus</w>
+      <w>clust</w>
       <w>cmap</w>
       <w>colorbar</w>
       <w>conc</w>
+      <w>csum</w>
       <w>daliaga</w>
       <w>dask</w>
       <w>dasks</w>
+      <w>datasets</w>
+      <w>dfcc</w>
+      <w>distplot</w>
+      <w>dscc</w>
+      <w>facecolor</w>
+      <w>figsize</w>
       <w>flexout</w>
+      <w>flexpart</w>
       <w>ggplot</w>
+      <w>gridarea</w>
+      <w>ipynb</w>
+      <w>isel</w>
+      <w>jupytext</w>
+      <w>kernelspec</w>
+      <w>kmean</w>
+      <w>kmeans</w>
+      <w>lapaz</w>
+      <w>lcols</w>
+      <w>linestyle</w>
+      <w>linspace</w>
+      <w>lmax</w>
+      <w>lmin</w>
+      <w>logpolar</w>
+      <w>masl</w>
       <w>matplotlib</w>
+      <w>nbins</w>
+      <w>netcdf</w>
       <w>pjoin</w>
+      <w>proj</w>
       <w>quantile</w>
+      <w>quantiles</w>
+      <w>reinterp</w>
+      <w>releasename</w>
+      <w>releasenp</w>
+      <w>releasetstart</w>
+      <w>releasexstart</w>
+      <w>releaseystart</w>
+      <w>releasezstart</w>
+      <w>resampling</w>
+      <w>scaler</w>
       <w>scit</w>
       <w>splot</w>
+      <w>symlog</w>
       <w>taito</w>
+      <w>thre</w>
+      <w>topo</w>
+      <w>tstart</w>
       <w>vals</w>
+      <w>vlat</w>
+      <w>vlong</w>
+      <w>vmax</w>
+      <w>xlat</w>
+      <w>xlim</w>
+      <w>xlong</w>
+      <w>xscale</w>
+      <w>xstart</w>
+      <w>xticks</w>
+      <w>yaxis</w>
+      <w>ylim</w>
+      <w>yscale</w>
+      <w>ystart</w>
+      <w>zbot</w>
+      <w>zlen</w>
+      <w>zmax</w>
+      <w>zmid</w>
+      <w>zmin</w>
+      <w>zreal</w>
+      <w>zstart</w>
+      <w>ztop</w>
     </words>
   </dictionary>
 </component>

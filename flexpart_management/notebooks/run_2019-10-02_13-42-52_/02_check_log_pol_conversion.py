@@ -13,7 +13,7 @@
 #     name: python3
 # ---
 
-# %%
+# %% {"pycharm": {"is_executing": false}}
 from useful_scit.imps import *
 # noinspection PyUnresolvedReferences
 import flexpart_management.modules.FLEXOUT as FO
@@ -24,7 +24,7 @@ import matplotlib.colors as mpl_colors
 
 # %% [markdown]
 # # Functions
-# %%
+# %% {"pycharm": {"name": "#%%\n", "is_executing": false}}
 # noinspection PyShadowingNames
 def plot_combined_log_pol_coords( ds01 , ds02 , r_distance_limit=2.5 ) :
     f , ax = plt.subplots()
@@ -117,7 +117,7 @@ def plot_qmesh( ds , ax ,
     return qmesh
 
 
-# %%
+# %% {"pycharm": {"is_executing": false}}
 
 # noinspection PyShadowingNames
 def get_ds_dom_file( dom01_pat , path , i_file=10 ) :
@@ -163,7 +163,7 @@ def get_df_file_list( path , dom='*d01*' ) :
 
 
 # noinspection PyShadowingNames
-def get_merged_file_df( path: str )  -> pd.DataFrame:
+def get_merged_file_df( path ) :
     df_file_list_1 = get_df_file_list( path , dom='*d01*' )
     df_file_list_2 = get_df_file_list( path , dom='*d02*' )
     df_d1_d2 = pd.merge( df_file_list_1 ,
@@ -189,7 +189,7 @@ def join_log_pol_dom_ds( ds01: xr.Dataset ,
                          threshold: float
                          ) -> xr.Dataset :
     """
-    combines low res `ds01` and high res `ds02` `xr.Dataset`
+    comines low res `ds01` and high res `ds02` `xr.Datasets`
     based on the `threshold`
 
     Parameters
@@ -199,7 +199,7 @@ def join_log_pol_dom_ds( ds01: xr.Dataset ,
     ds02
         high res dataset
     threshold
-        limit for the combination in degree radian units (distance from center)
+        limit for the combination in degree radian units
     Returns
     -------
     xr.Dataset
@@ -214,29 +214,29 @@ def join_log_pol_dom_ds( ds01: xr.Dataset ,
     ds02_trimmed = ds02.where( r_is_small_mask , drop=True )
 
     # noinspection PyTypeChecker
-    ds_combined: xr.Dataset = xr.concat( [ ds02_trimmed , ds01_trimmed ] ,
+    ds_trimmed: xr.Dataset = xr.concat( [ ds02_trimmed , ds01_trimmed ] ,
                                         dim=co.R_CENTER )
-    return ds_combined
+    return ds_trimmed
 
-# %%
-def plot_log_custom( d_sum , v_max , v_min , map_fun=fa.get_ax_bolivia ) :
+# %% {"pycharm": {"is_executing": false}}
+def plot_log_custom( dsum , vmax , vmin , map_fun=fa.get_ax_bolivia ) :
     ax = map_fun( fig_args={ 'figsize' : (10 , 8) } )
-    pargs_ = { 'norm' : mpl_colors.LogNorm( vmin=v_min ) }
-    fa.logpolar_plot( d_sum , ax=ax , perM=v_max , perm=v_min ,
+    pargs_ = { 'norm' : mpl_colors.LogNorm( vmin=vmin ) }
+    fa.logpolar_plot( dsum , ax=ax , perM=vmax , perm=vmin ,
                       quantile=False ,
                       patch_args=pargs_ ,
                       drop_zeros=False ,
                       )
 
-# %%
+# %% {"pycharm": {"is_executing": false}}
 # def main(  ) :
-# %%
+# %% {"pycharm": {"is_executing": false}}
 path = '/homeappl/home/aliagadi/wrk/' \
    'DONOTREMOVE/flexpart_management_data' \
    '/runs/run_2019-10-02_13-42-52_/log_pol' \
    '/run_2019-10-02_13-42-52_/'
-# %%
-df_d1_d2: xr.Dataset = get_merged_file_df( path )
+# %% {"pycharm": {"is_executing": false}}
+df_d1_d2 = get_merged_file_df( path )
 print( len( df_d1_d2 ) )
 loc = 23
 row = df_d1_d2.iloc[ loc ]
@@ -244,7 +244,7 @@ ds01 = open_ds_from_row_dom( row , 'd01' )
 ds02 = open_ds_from_row_dom( row , 'd02' )
 
 
-# %%
+# %% {"pycharm": {"is_executing": false}}
 threshold = 2.5
 ucp.set_dpi( 150 )
 ax = plot_combined_log_pol_coords(
@@ -253,17 +253,17 @@ ax = plot_combined_log_pol_coords(
     )
 
 plt.show()
-# %%
+# %% {"pycharm": {"is_executing": false}}
 # noinspection PyRedeclaration
 ax = plot_r_z_combined_log_pol_coords(
     ds01 , ds02 ,
     r_distance_limit=threshold )
 plt.show()
-# %%
+# %% {"pycharm": {"is_executing": false}}
 # fa.get_ax_bolivia()
 # fa.get_combined_flx_ds()
 # plt.show()
-# %%
+# %% {"pycharm": {"is_executing": false}}
 ds12 = join_log_pol_dom_ds( ds01=ds01 , ds02=ds02 , threshold=threshold )
 dsum = ds12.sum( [ co.RL , co.ZTOP ] )
 
@@ -272,13 +272,13 @@ vmax = 1e5
 # noinspection PyRedeclaration
 plot_log_custom( dsum , vmax , vmin, map_fun=fa.get_ax_bolivia )
 plt.show()
-# %%
+# %% {"pycharm": {"is_executing": false}}
 
 plot_log_custom( dsum , vmax , vmin, map_fun=fa.get_ax_lapaz )
-plt.show()
+# plt.show()
 
-# %%
-df_d1_d2
+# %% {"pycharm": {"is_executing": false}}
+pass
 
 
 
