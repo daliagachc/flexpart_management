@@ -2,158 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flexpart_management/features_analog_v02.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion_files/02_check_log_pol_conversion_11_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion_files/02_check_log_pol_conversion_12_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion_files/02_check_log_pol_conversion_8_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion_files/02_check_log_pol_conversion_9_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/check_convert_zet_levels.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/check_convert_zet_levels.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/check_convert_zet_levels.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/check_convert_zet_levels_files/check_convert_zet_levels_13_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/check_convert_zet_levels_files/check_convert_zet_levels_13_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/check_rect_grid.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/chect_rect_grid/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/chect_rect_grid/check_rect_grid.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/chect_rect_grid/check_rect_grid.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/chect_rect_grid/funs_check.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/07_export_ds.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/07_export_ds.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/test_03_diurnal_variability.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/reduce_cell_number.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/reduce_cell_number.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/reduce_cell_number.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/reduce_cell_number_files/reduce_cell_number_10_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/reduce_cell_number_files/reduce_cell_number_11_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/reduce_cell_number_files/reduce_cell_number_12_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/reduce_cell_number_files/reduce_cell_number_13_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/reduce_cell_number_files/reduce_cell_number_9_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/sum_rect_d2.nc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_13_9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/03_diurnal_variability/03_diurnal_variability_14_9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_29.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_35.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_38.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_41.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_44.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_47.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_50.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_53.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/04_the_eighteen_clusters/04_conc_percentage_calc_12_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_29.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_35.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_38.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_41.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_44.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_47.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_50.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_53.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_56.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_59.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/05_simplified_pathways/05_analyze_clusters_new_31_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/06_cluster_properties/06_cluster_properties_12_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/06_cluster_properties/06_cluster_properties_12_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/06_cluster_properties/06_cluster_properties_26_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/06_cluster_properties/06_cluster_properties_27_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/06_cluster_properties/06_cluster_properties_28_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/06_cluster_properties/06_cluster_properties_29_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/06_cluster_properties/06_cluster_properties_30_0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/conc_smooth_p.xls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/conc_smooth_p_t.xls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/meta_info_clusters.xls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/releasev01.pptx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/presentations/~$releasev01.pptx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/scripts/print_plot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/diego.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/diego.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/flexpart_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flexpart_management.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/FlexLogPol.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/FlexLogPol.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/clustering_funs.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/clustering_funs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/flx_array.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/flx_array.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/main.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../useful-scit/useful_scit/useful_scit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../useful-scit/useful_scit/useful_scit.iml" afterDir="false" />
     </list>
@@ -720,7 +570,7 @@
       <workItem from="1576595160919" duration="8587000" />
       <workItem from="1576607623335" duration="17812000" />
       <workItem from="1576637379537" duration="21884000" />
-      <workItem from="1576662445537" duration="1943000" />
+      <workItem from="1576662445537" duration="3599000" />
     </task>
     <servers />
   </component>
