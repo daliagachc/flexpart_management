@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/flexpart_management/releases/v01/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/releases/v01/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/08_short_range_influence.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/08_short_range_influence.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/constants.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../useful-scit/useful_scit/useful_scit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../useful-scit/useful_scit/useful_scit.iml" afterDir="false" />
     </list>
@@ -569,7 +572,7 @@
       <workItem from="1576595160919" duration="8587000" />
       <workItem from="1576607623335" duration="17812000" />
       <workItem from="1576637379537" duration="21884000" />
-      <workItem from="1576662445537" duration="7167000" />
+      <workItem from="1576662445537" duration="14022000" />
     </task>
     <servers />
   </component>
@@ -609,10 +612,14 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="440" y="202" key="#com.intellij.ide.actionMacro.EditMacrosDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576442538494" />
-    <state x="622" y="276" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1576640417701">
+    <state x="528" y="279" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1576882179286">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="622" y="276" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576640417701" />
+    <state x="528" y="279" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576882179286" />
+    <state x="622" y="276" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1576734988173">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="622" y="276" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576734988173" />
     <state x="100" y="123" width="1480" height="827" key="DiffContextDialog" timestamp="1576599732875">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -683,10 +690,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="489" y="259" width="700" height="530" key="recent.locations.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576637843047" />
-    <state x="547" y="251" width="670" height="657" key="search.everywhere.popup" timestamp="1576671471221">
+    <state x="547" y="251" width="670" height="657" key="search.everywhere.popup" timestamp="1576738518276">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="547" y="251" width="670" height="657" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576671471221" />
+    <state x="547" y="251" width="670" height="657" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576738518276" />
     <state x="625" y="258" width="670" height="676" key="search.everywhere.popup/427.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1576316716321" />
   </component>
   <component name="XDebuggerManager">

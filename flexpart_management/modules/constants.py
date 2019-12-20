@@ -140,3 +140,13 @@ RAD_MAX = 20.00
 
 above_thre_label = 'above_thre'
 CONC_SMOOTH_NORM = 'conc_smooth_norm'
+short_range_clusters = [13,17,3,2,11,16]
+short_range_clusters.sort()
+mid_short_range_clusters = [5,10,6,12]
+mid_short_range_clusters.sort()
+mid_range_clusters = [15,1,14,7,8]
+mid_range_clusters.sort()
+long_range_clusters = [9,0,4]
+long_range_clusters.sort()
+latest_ds_mac = '/Users/diego/flexpart_management/flexpart_management/tmp_data' \
+     '/ds_clustered_18_conc_smooth.nc'
