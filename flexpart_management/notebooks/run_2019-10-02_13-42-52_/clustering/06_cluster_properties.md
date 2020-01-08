@@ -26,6 +26,19 @@ from mpl_toolkits.axes_grid1.inset_locator import inset_axes
 ```
 
 
+
+<div class="bk-root">
+    <a href="https://bokeh.pydata.org" target="_blank" class="bk-logo bk-logo-small bk-logo-notebook"></a>
+    <span id="1001">Loading BokehJS ...</span>
+</div>
+
+
+
+
+    reload
+
+
+
 ```python
 from sklearn.cluster import KMeans
 
@@ -142,16 +155,34 @@ def open_if_taito() :
 
 ```python
 # selfFLP,ds = open_if_taito()
-path = '/Users/diego/flexpart_management/flexpart_management/tmp_data' \
-       '/ds_clustered_18.nc'
-ds = xr.open_dataset( path )
+# path = '/Users/diego/flexpart_management/flexpart_management/tmp_data' \
+#        '/ds_clustered_18.nc'
+ds = xr.open_mfdataset(co.latest_ds_mac)
+# ds = xr.open_dataset( path )
 
 conc_lab = 'CONC_smooth_t_300_z_25_r_100_th_50'
 new_lab_p = 'conc_smooth_p'
 new_lab_p_t = 'conc_smooth_p_t'
-cfuns.add_total_per_row( ds , conc_lab , new_lab_p )
-cfuns.add_time_per_row( ds , conc_lab , new_lab_p_t )
+# cfuns.add_total_per_row( ds , conc_lab , new_lab_p )
+# cfuns.add_time_per_row( ds , conc_lab , new_lab_p_t )
 ```
+
+    /Users/diego/miniconda3/envs/b36/lib/python3.6/site-packages/ipykernel_launcher.py:4: FutureWarning: In xarray version 0.15 the default behaviour of `open_mfdataset`
+    will change. To retain the existing behavior, pass
+    combine='nested'. To use future default behavior, pass
+    combine='by_coords'. See
+    http://xarray.pydata.org/en/stable/combining.html#combining-multi
+    
+      after removing the cwd from sys.path.
+    /Users/diego/miniconda3/envs/b36/lib/python3.6/site-packages/xarray/backends/api.py:931: FutureWarning: The datasets supplied have global dimension coordinates. You may want
+    to use the new `combine_by_coords` function (or the
+    `combine='by_coords'` option to `open_mfdataset`) to order the datasets
+    before concatenation. Alternatively, to continue concatenating based
+    on the order the datasets are supplied in future, please use the new
+    `combine_nested` function (or the `combine='nested'` option to
+    open_mfdataset).
+      from_openmfds=True,
+
 
 
 ```python
@@ -166,22 +197,14 @@ for ci in range( N_CLUSTERS ) :
 ```python
 x = np.sin( ds[ co.TH_CENTER ] )
 x.name = 'X'
-x.plot()
-plt.show()
+# x.plot()
+# plt.show()
 
 y = np.cos( -ds[ co.TH_CENTER ] )
 y.name = 'Y'
-y.plot()
-plt.show()
+# y.plot()
+# plt.show()
 ```
-
-
-![png](06_cluster_properties_files/06_cluster_properties_12_0.png)
-
-
-
-![png](06_cluster_properties_files/06_cluster_properties_12_1.png)
-
 
 
 ```python
@@ -210,22 +233,6 @@ df_prop = df_prop.set_index( 'cluster_i' )
 ```
 
 
-
-
-    <xarray.DataArray 'ZMID' (ZMID: 30)>
-    array([  250.,   750.,  1250.,  1750.,  2250.,  2750.,  3250.,  3750.,  4250.,
-            4750.,  5250.,  5750.,  6250.,  6750.,  7250.,  7750.,  8250.,  8750.,
-            9250.,  9750., 10250., 10750., 11250., 11750., 12250., 12750., 13250.,
-           13750., 14250., 14750.])
-    Coordinates:
-        ZTOP     (ZMID) float64 500.0 1e+03 1.5e+03 ... 1.4e+04 1.45e+04 1.5e+04
-        ZBOT     (ZMID) float64 0.0 500.0 1e+03 ... 1.35e+04 1.4e+04 1.45e+04
-      * ZMID     (ZMID) float64 250.0 750.0 1.25e+03 ... 1.425e+04 1.475e+04
-        ZLEN_M   (ZMID) float64 500.0 500.0 500.0 500.0 ... 500.0 500.0 500.0 500.0
-
-
-
-
 ```python
 surface_limit = 1500
 ratio_surf_tot_lab = 'ratio_surf_tot'
@@ -240,44 +247,6 @@ for ci in range( N_CLUSTERS ) :
 #     print(ratio_surf_tot)
     df_prop.loc[ ci , ratio_surf_tot_lab ] = ratio_surf_tot
 ```
-
-    <xarray.DataArray 'conc_smooth_p' ()>
-    array(2.60336956e-11)
-    <xarray.DataArray 'conc_smooth_p' ()>
-    array(0.18388963)
-    <xarray.DataArray 'conc_smooth_p' ()>
-    array(0.74363795)
-    <xarray.DataArray 'conc_smooth_p' ()>
-    array(0.80574903)
-    <xarray.DataArray 'conc_smooth_p' ()>
-    array(0.)
-    <xarray.DataArray 'conc_smooth_p' ()>
-    array(0.40486933)
-    <xarray.DataArray 'conc_smooth_p' ()>
-    array(0.33044079)
-    <xarray.DataArray 'conc_smooth_p' ()>
-    array(0.07280417)
-    <xarray.DataArray 'conc_smooth_p' ()>
-    array(0.13018838)
-    <xarray.DataArray 'conc_smooth_p' ()>
-    array(0.02082501)
-    <xarray.DataArray 'conc_smooth_p' ()>
-    array(0.35167177)
-    <xarray.DataArray 'conc_smooth_p' ()>
-    array(0.6772466)
-    <xarray.DataArray 'conc_smooth_p' ()>
-    array(0.36129905)
-    <xarray.DataArray 'conc_smooth_p' ()>
-    array(0.97446949)
-    <xarray.DataArray 'conc_smooth_p' ()>
-    array(0.23382825)
-    <xarray.DataArray 'conc_smooth_p' ()>
-    array(0.27489493)
-    <xarray.DataArray 'conc_smooth_p' ()>
-    array(0.58169557)
-    <xarray.DataArray 'conc_smooth_p' ()>
-    array(0.85220883)
-
 
 
 ```python
@@ -330,6 +299,23 @@ x = df_prop[ 'X' ]
 y = df_prop[ 'Y' ]
 th = np.arctan2( x , y )
 df_prop[ co.TH_CENTER ] = th
+```
+
+
+```python
+clock = 'clock'
+cl = df_prop[co.TH_CENTER]*12/(2 *np.pi)
+cl:pd.DataFrame = cl.round()
+cl = cl.astype(int)
+df_prop[clock] = cl
+
+
+```
+
+
+```python
+df_path = '/Users/diego/flexpart_management/flexpart_management/tmp_data/prop_df.nc'
+df_prop.to_hdf(df_path,key='v01')
 ```
 
 
@@ -390,7 +376,7 @@ number_marker_plot( df_prop , xl , yl , ax )
 axin = inset_axes(ax,'80%','20%', loc=4)
 
 
-xmin = 0 
+xmin = 0
 xmax = 70
 ymin = 100
 ymax = 1800
@@ -414,7 +400,7 @@ plt.show()
 ```
 
 
-![png](06_cluster_properties_files/06_cluster_properties_26_0.png)
+![png](06_cluster_properties_files/06_cluster_properties_28_0.png)
 
 
 
@@ -431,7 +417,7 @@ number_marker_plot( df_prop , xl , yl , ax )
 axin = inset_axes(ax,'60%','40%', loc=4)
 
 
-xmin = 0 
+xmin = 0
 xmax = 150
 ymin = 4000
 ymax = 5500
@@ -458,7 +444,7 @@ plt.show()
 ```
 
 
-![png](06_cluster_properties_files/06_cluster_properties_27_0.png)
+![png](06_cluster_properties_files/06_cluster_properties_29_0.png)
 
 
 
@@ -482,7 +468,7 @@ number_marker_plot( df_prop , xl , yl , ax )
 # axin = inset_axes(ax,'60%','40%', loc=4)
 
 
-# xmin = 0 
+# xmin = 0
 # xmax = 150
 # ymin = -1
 # ymax = 1
@@ -506,11 +492,10 @@ number_marker_plot( df_prop , xl , yl , ax )
 # axin.set_yticks( visible=False )
 
 # plt.show()
-
 ```
 
 
-![png](06_cluster_properties_files/06_cluster_properties_28_0.png)
+![png](06_cluster_properties_files/06_cluster_properties_30_0.png)
 
 
 
@@ -543,19 +528,14 @@ def _plot(ax):
             )
         t.set_bbox(dict(facecolor='white', alpha=0.5, edgecolor='white'))
 _plot(ax)
-        
 
-    
+
+
+
+
 
 
 ```
-
-    -90.0
-
-
-
-![png](06_cluster_properties_files/06_cluster_properties_29_1.png)
-
 
 
 ```python
@@ -570,7 +550,7 @@ ax=fa.get_ax_lapaz(
 xl = 'lon_chc'
 yl = 'lat_chc'
 
-xmin = -70 
+xmin = -70
 xmax = -66
 ymin = -18
 ymax = -13.5
@@ -600,8 +580,14 @@ _plot(ax)
 ```
 
 
-![png](06_cluster_properties_files/06_cluster_properties_30_0.png)
+```python
+df_prop.to_excel('/tmp/excel.xls')
+```
 
+
+```python
+
+```
 
 
 ```python

@@ -2,7 +2,7 @@
 
 - changing x-y nested resolution
 - changing z resolution
-- reduced number of particles: 40000 
+- reduced number of particles: 20000 
 - runned 
 
 
