@@ -452,6 +452,17 @@ def main():
 
     )
 
+    # %%
+
+    plot_cluster_summary_figure(
+        df_prop,
+        ratio_lab,
+        km_,
+        save_fig=True,
+        fig_save_name='dis_vs_surface_influence.pdf',
+        xy_locs= ([100, 80], [180, 50], [500, 30], [950, 10])
+
+    )
 
     # %%
     # km_ = 'distance from CHC [km]'
