@@ -46,147 +46,153 @@ DF_PATH = '/Users/diego/flexpart_management/' \
 
 N_CLUSTERS = 18
 
+
 # %%
 
 
-def get_weighted_mean( ds_lab , new_lab_p , weighted_lab ) :
-    dims = list( ds_lab[ weighted_lab ].dims )
-    if len( dims ) is not 1 :
+def get_weighted_mean(ds_lab, new_lab_p, weighted_lab):
+    dims = list(ds_lab[weighted_lab].dims)
+    if len(dims) is not 1:
         raise AttributeError
-    dim = dims[ 0 ]
+    dim = dims[0]
     ds_lab: xr.DataArray
-    ds_lab = ds_lab.swap_dims( { dim : weighted_lab } )
-    complement = fa.get_dims_complement( ds_lab , weighted_lab )
-    da = ds_lab[ new_lab_p ].sum(
-        complement )
-    da_sum = (da * da[ weighted_lab ]).sum()
+    ds_lab = ds_lab.swap_dims({dim: weighted_lab})
+    complement = fa.get_dims_complement(ds_lab, weighted_lab)
+    da = ds_lab[new_lab_p].sum(
+        complement)
+    da_sum = (da * da[weighted_lab]).sum()
     da_tot = da.sum()
     res = da_sum / da_tot
     return res
 
-# %%
-
-def weightin_over_dic( df_prop , ds_lab_dic , new_lab_p , weighted_lab ) :
-    df_prop[ weighted_lab ] = np.nan
-    for ci in range( 18 ) :
-        ds_lab = ds_lab_dic[ ci ]
-        res = get_weighted_mean( ds_lab , new_lab_p , weighted_lab )
-        df_prop.loc[ ci , weighted_lab ] = res
 
 # %%
 
+def weightin_over_dic(df_prop, ds_lab_dic, new_lab_p, weighted_lab):
+    df_prop[weighted_lab] = np.nan
+    for ci in range(18):
+        ds_lab = ds_lab_dic[ci]
+        res = get_weighted_mean(ds_lab, new_lab_p, weighted_lab)
+        df_prop.loc[ci, weighted_lab] = res
 
-def number_marker_plot( df_prop , x_column ,
-                        y_column , ax=None , color='red' ) :
-    if ax is None :
-        f , ax = plt.subplots()
-    df_prop.plot.scatter( x=x_column , y=y_column , alpha=0 , ax=ax )
-    for i , r in df_prop.iterrows() :
+
+# %%
+
+
+def number_marker_plot(df_prop, x_column,
+                       y_column, ax=None, color='red'):
+    if ax is None:
+        f, ax = plt.subplots()
+    df_prop.plot.scatter(x=x_column, y=y_column, alpha=0, ax=ax)
+    for i, r in df_prop.iterrows():
         # print( i )
         # r_km = r[ co.R_CENTER ]
         # ratio_per = r[ y_column ]
         ax.text(
-            x=r[ x_column ] ,
-            y=r[ y_column ] ,
-            s=i , color=color ,
-            horizontalalignment='center' ,
-            verticalalignment='center' ,
+            x=r[x_column],
+            y=r[y_column],
+            s=i, color=color,
+            horizontalalignment='center',
+            verticalalignment='center',
 
-            )
+        )
+
 
 # %%
 
 
-def get_and_save_df_prop( ds , new_lab_p ,
-                          zm_topo='Z_AG' ,
-                          ratio_surf_tot_lab='ratio_surf_tot' ,
-                          df_path=DF_PATH ,
-                          key='v01' ,
-                          ) :
-    ds_lab_dic = { }
-    for ci in range( N_CLUSTERS ) :
-        ds_lab = ds[ [ new_lab_p ] ].where( ds[ co.LAB ] == ci ).copy()
-        ds_lab_dic[ ci ] = ds_lab.copy()
+def get_and_save_df_prop(ds, new_lab_p,
+                         zm_topo='Z_AG',
+                         ratio_surf_tot_lab='ratio_surf_tot',
+                         df_path=DF_PATH,
+                         key='v01',
+                         ):
+    ds_lab_dic = {}
+    for ci in range(N_CLUSTERS):
+        ds_lab = ds[[new_lab_p]].where(ds[co.LAB] == ci).copy()
+        ds_lab_dic[ci] = ds_lab.copy()
     # %%
-    x = np.sin( ds[ co.TH_CENTER ] )
+    x = np.sin(ds[co.TH_CENTER])
     x.name = 'X'
     # x.plot()
     # plt.show()
-    y = np.cos( -ds[ co.TH_CENTER ] )
+    y = np.cos(-ds[co.TH_CENTER])
     y.name = 'Y'
     # y.plot()
     # plt.show()
     # %%
     # ds_lab_dic = { }
-    for ci in range( N_CLUSTERS ) :
+    for ci in range(N_CLUSTERS):
         # ds_lab = ds[ [ new_lab_p ] ].where( ds[ co.LAB ] == ci ).copy()
-        ds_lab = ds_lab_dic[ ci ].copy()
-        ds_lab_dic[ ci ] = ds_lab.assign_coords( **{ 'X' : x , 'Y' : y } )
+        ds_lab = ds_lab_dic[ci].copy()
+        ds_lab_dic[ci] = ds_lab.assign_coords(**{'X': x, 'Y': y})
     # %%
     # %%
-    df_prop = pd.DataFrame( range( N_CLUSTERS ) , columns=[ 'cluster_i' ] )
-    df_prop = df_prop.set_index( 'cluster_i' )
+    df_prop = pd.DataFrame(range(N_CLUSTERS), columns=['cluster_i'])
+    df_prop = df_prop.set_index('cluster_i')
     # %%
     # %%
     surface_limit = 1500
     # ratio_surf_tot_lab = ratio_surf_tot_lab
-    df_prop[ ratio_surf_tot_lab ] = np.nan
-    for ci in range( N_CLUSTERS ) :
-        ds_lab = ds_lab_dic[ ci ]
-        _boo = (ds_lab[ co.ZM ] - ds_lab[ co.TOPO ]) < surface_limit
-        ds_surf = ds_lab.where( _boo )
-        ds_surf_sum = ds_surf[ new_lab_p ].sum()
-        ds_tot_sum = ds_lab[ new_lab_p ].sum()
+    df_prop[ratio_surf_tot_lab] = np.nan
+    for ci in range(N_CLUSTERS):
+        ds_lab = ds_lab_dic[ci]
+        _boo = (ds_lab[co.ZM] - ds_lab[co.TOPO]) < surface_limit
+        ds_surf = ds_lab.where(_boo)
+        ds_surf_sum = ds_surf[new_lab_p].sum()
+        ds_tot_sum = ds_lab[new_lab_p].sum()
         ratio_surf_tot = ds_surf_sum / ds_tot_sum
         #     print(ratio_surf_tot)
-        df_prop.loc[ ci , ratio_surf_tot_lab ] = ratio_surf_tot
+        df_prop.loc[ci, ratio_surf_tot_lab] = ratio_surf_tot
     # %%
     weighted_lab = co.R_CENTER
-    weightin_over_dic( df_prop , ds_lab_dic , new_lab_p , weighted_lab )
+    weightin_over_dic(df_prop, ds_lab_dic, new_lab_p, weighted_lab)
     # %%
     weighted_lab = 'X'
-    weightin_over_dic( df_prop , ds_lab_dic , new_lab_p , weighted_lab )
+    weightin_over_dic(df_prop, ds_lab_dic, new_lab_p, weighted_lab)
     weighted_lab = 'Y'
-    weightin_over_dic( df_prop , ds_lab_dic , new_lab_p , weighted_lab )
+    weightin_over_dic(df_prop, ds_lab_dic, new_lab_p, weighted_lab)
     # %%
     weighted_lab = co.ZM
-    df_prop[ weighted_lab ] = np.nan
-    for ci in range( N_CLUSTERS ) :
+    df_prop[weighted_lab] = np.nan
+    for ci in range(N_CLUSTERS):
         # print(ci)
-        ds_lab = ds_lab_dic[ ci ].copy()
-        res = get_weighted_mean( ds_lab , new_lab_p , weighted_lab )
+        ds_lab = ds_lab_dic[ci].copy()
+        res = get_weighted_mean(ds_lab, new_lab_p, weighted_lab)
         # print(res)
-        df_prop.loc[ ci , weighted_lab ] = res
+        df_prop.loc[ci, weighted_lab] = res
     # %%
     # zm_topo = zm_toppo
     weighted_lab = zm_topo
-    ds_zm_topo = ds[ co.ZM ] - ds[ co.TOPO ]
-    df_prop[ weighted_lab ] = np.nan
-    for ci in range( N_CLUSTERS ) :
+    ds_zm_topo = ds[co.ZM] - ds[co.TOPO]
+    df_prop[weighted_lab] = np.nan
+    for ci in range(N_CLUSTERS):
         #     print( ci )
-        ds_lab = ds_lab_dic[ ci ].copy()
-        ds_lab = ds_lab.assign_coords( **{ weighted_lab : ds_zm_topo } )
-        da = ds_lab[ new_lab_p ].sum( co.RL )
-        da_sum = (da * da[ weighted_lab ]).sum()
+        ds_lab = ds_lab_dic[ci].copy()
+        ds_lab = ds_lab.assign_coords(**{weighted_lab: ds_zm_topo})
+        da = ds_lab[new_lab_p].sum(co.RL)
+        da_sum = (da * da[weighted_lab]).sum()
         da_tot = da.sum()
         res = da_sum / da_tot
         #     print( res )
-        df_prop.loc[ ci , weighted_lab ] = res
+        df_prop.loc[ci, weighted_lab] = res
     # %%
-    x = df_prop[ 'X' ]
-    y = df_prop[ 'Y' ]
-    th = np.arctan2( x , y )
-    df_prop[ co.TH_CENTER ] = th
+    x = df_prop['X']
+    y = df_prop['Y']
+    th = np.arctan2(x, y)
+    df_prop[co.TH_CENTER] = th
     # %%
     clock = 'clock'
-    cl = df_prop[ co.TH_CENTER ] * 12 / (2 * np.pi)
+    cl = df_prop[co.TH_CENTER] * 12 / (2 * np.pi)
     cl: pd.DataFrame = cl.round()
-    cl = cl.astype( int )
-    df_prop[ clock ] = cl
+    cl = cl.astype(int)
+    df_prop[clock] = cl
     # %%
     # df_path = df_path
-    df_prop.to_hdf( df_path , key=key )
+    df_prop.to_hdf(df_path, key=key)
     return df_prop
+
+
 # %%
 def add_zoom_plot(ax, df_prop, xl, yl):
     axin = inset_axes(ax, '80%', '20%', loc=4)
@@ -205,9 +211,52 @@ def add_zoom_plot(ax, df_prop, xl, yl):
     axin.set_xlabel(None)
     axin.set_ylabel(None)
     mark_inset(ax, axin, loc1=2, loc2=3, fc="none", ec="0.5")
+
+
+# %%
+def plot_cluster_summary_figure(
+        df_prop, y_var, x_var,
+        xy_locs=([150, .5], [0, 4], [400, 6], [950, 5]),
+        range_name='range',
+        figsize=(4, 3),
+        save_fig=False,
+        fig_save_name='dis_vs_hag.pdf',
+        fig_save_dir='/Users/diego/flexpart_management/flexpart_management/victoria_trento/figures/'
+):
+    f, ax = plt.subplots(figsize=figsize)
+    ax: plt.Axes
+    xl = x_var
+    yl = y_var
+    # number_marker_plot( df_prop , xl , yl , ax )
+    # df_prop.plot.scatter(x=xl,y=yl, ax=ax)
+    # sns.scatterplot(x=xl,y=yl,data=df_prop,style=range_name, hue=range_name)
+    # add_zoom_plot(ax, df_prop, xl, yl)
+    ranges = ['SR', 'SM', 'MR', 'LR']
+    shapes = ['o', 's', '^', 'D']
+    texts = ['short\nrange', 'short-medium\nrange',
+             'medium\nrange', 'long\nrange']
+    xys = xy_locs
+    i_range = range(4)
+    for i, r, s, t, xy in zip(i_range, ranges, shapes, texts, xys):
+        _df: pd.DataFrame = df_prop[df_prop[range_name] == r]
+        _df.plot.scatter(
+            x=xl, y=yl, ax=ax, marker=s, c=[ucp.cc[i]],
+            edgecolor='w', s=30, linewidths=.2
+        )
+        ax.annotate(
+            t, xy, xycoords='data', c=ucp.cc[i])
+    ax.grid(False)
+    plt.tight_layout()
+    f: plt.Figure
+    fig_dir = fig_save_dir
+    if save_fig:
+        f.savefig(os.path.join(fig_dir, fig_save_name))
+    plt.show()
+
+
 # %%
 
-def main() :
+def main():
     # %%
 
     co.LAB = 'lab'
@@ -216,12 +265,11 @@ def main() :
 
     # %%
 
-
-    log.ger.setLevel( log.log.DEBUG )
+    log.ger.setLevel(log.log.DEBUG)
 
     # %%
     # noinspection PyUnusedLocal,PyShadowingNames
-    def open_if_taito() :
+    def open_if_taito():
         # noinspection SpellCheckingInspection
         path = \
             '/homeappl/home/aliagadi/wrk/DONOTREMOVE' \
@@ -231,35 +279,35 @@ def main() :
         # flp = FLP.FlexLogPol(path,concat=True)
         # flp_instance = FLP.FlexLogPol(path,concat=False)
         selfFLP = FlexLogPol.FlexLogPol(
-            path ,
+            path,
             # concat=True,
-            concat=False ,
-            get_clusters=False ,
+            concat=False,
+            get_clusters=False,
             # open_merged=False,
-            open_merged=True ,
+            open_merged=True,
             # merge_ds=False ,
             # merge_ds=True ,
-            clusters_avail=False ,
+            clusters_avail=False,
 
             # postprocess set to false since we are opening the re interpolated
             # version
-            postprocess=False ,
+            postprocess=False,
 
-            use_new_merge_fun=True ,
+            use_new_merge_fun=True,
 
             # set to false bc already done in the saved version
-            filter_r_min_max=False ,
-            )
+            filter_r_min_max=False,
+        )
         selfFLP.get_list_datasets_saved()
         # noinspection PyUnresolvedReferences
-        ds = selfFLP.open_ds_version( 'ds_clustered_18.nc' )
-        return selfFLP , ds
+        ds = selfFLP.open_ds_version('ds_clustered_18.nc')
+        return selfFLP, ds
 
     # %%
     # selfFLP,ds = open_if_taito()
     # path = '/Users/diego/flexpart_management/flexpart_management/tmp_data' \
     #        '/ds_clustered_18.nc'
-    ds = xr.open_mfdataset( co.latest_ds_mac )
+    ds = xr.open_mfdataset(co.latest_ds_mac)
     # ds = xr.open_dataset( path )
 
     conc_lab = 'CONC_smooth_t_300_z_25_r_100_th_50'
@@ -277,77 +325,72 @@ def main() :
     #     zm_topo=zm_topo , ratio_surf_tot_lab=ratio_surf_tot_lab ,
     #     key=key , df_path=DF_PATH
     #     )
-    df_prop = pd.read_hdf(DF_PATH,key=key)
-    clock_ = (np.mod( df_prop[ 'clock' ] - 1 , 12 ) + 1)
-    df_prop['clock'] = clock_.astype( int )
+    df_prop = pd.read_hdf(DF_PATH, key=key)
+    clock_ = (np.mod(df_prop['clock'] - 1, 12) + 1)
+    df_prop['clock'] = clock_.astype(int)
     km_ = 'distance from CHC [km]'
     hg_ = 'height above ground [m]'
     hgk_ = 'height above ground [km]'
-    df_prop[ km_ ] = df_prop[ co.R_CENTER ] * 100
-    df_prop[ hg_ ] = df_prop[ zm_topo ]
-    df_prop[ hgk_] = df_prop[hg_]/1000
+    df_prop[km_] = df_prop[co.R_CENTER] * 100
+    df_prop[hg_] = df_prop[zm_topo]
+    df_prop[hgk_] = df_prop[hg_] / 1000
     ha_ = 'height above sea level [m]'
     hak_ = 'height above sea level [km]'
     # df_prop[ km_ ] = df_prop[co.R_CENTER] * 100
-    df_prop[ ha_ ] = df_prop[ co.ZM ]
-    df_prop[ hak_] = df_prop[ ha_]/1000
+    df_prop[ha_] = df_prop[co.ZM]
+    df_prop[hak_] = df_prop[ha_] / 1000
     ratio_lab = 'ratio surface (<1500m) to total [%]'
-    df_prop[ ratio_lab ] = df_prop[ ratio_surf_tot_lab ] * 100
-
+    df_prop[ratio_lab] = df_prop[ratio_surf_tot_lab] * 100
 
     # %%
     def _get_lab(r):
-        cl = int( r[ "clock" ] )
+        cl = int(r["clock"])
         clus_num = r.name
-        rn = get_range( clus_num )
+        rn = get_range(clus_num)
         st = f'{cl :0>2d}_{rn}'
         return st
 
-    def get_range( clus_num ) :
-        if clus_num in co.short_range_clusters :
+    def get_range(clus_num):
+        if clus_num in co.short_range_clusters:
             rn = 'SR'
-        if clus_num in co.mid_short_range_clusters :
+        if clus_num in co.mid_short_range_clusters:
             rn = 'SM'
-        if clus_num in co.mid_range_clusters :
+        if clus_num in co.mid_range_clusters:
             rn = 'MR'
-        if clus_num in co.long_range_clusters :
+        if clus_num in co.long_range_clusters:
             rn = 'LR'
         return rn
 
     short_name = 'short_name'
-    df_prop[ short_name ]=\
-        df_prop.apply( lambda r:_get_lab( r ) , axis=1 )
+    df_prop[short_name] = \
+        df_prop.apply(lambda r: _get_lab(r), axis=1)
 
     range_name = 'range'
-    df_prop[ range_name ]= \
-        df_prop.apply( lambda r:get_range( r.name ) , axis=1 )
+    df_prop[range_name] = \
+        df_prop.apply(lambda r: get_range(r.name), axis=1)
 
     # %%
     dss = ds[new_lab_p].sum(co.RL).load()
     clus_num = 2
+
     # %%
-    def get_inf_per(ds,dss,clus_num):
+    def get_inf_per(ds, dss, clus_num):
         _boo = ds[co.LAB] == clus_num
         res = dss.where(_boo).sum().load().item()
         return res
-    df_prop['inf_per']= \
-        df_prop.apply(lambda r: get_inf_per(ds,dss,r.name), axis=1)
+
+    df_prop['inf_per'] = \
+        df_prop.apply(lambda r: get_inf_per(ds, dss, r.name), axis=1)
     # %%
 
-
-    df_prop:pd.DataFrame
+    df_prop: pd.DataFrame
     df_prop = df_prop.sort_values(co.R_CENTER)
     csv_path = '/Users/diego/flexpart_management/' \
-          'flexpart_management/tmp_data/prop_df_.csv'
+               'flexpart_management/tmp_data/prop_df_.csv'
     path = csv_path
     df_prop.to_csv(path)
     # %%
     df_prop.to_dict()
-
-
-
-
-
 
     # %%
 
@@ -381,82 +424,65 @@ def main() :
     # number_marker_plot( df_prop , co.R_CENTER , co.ZM , ax )
     # plt.show()
     # %%
-    ucp.set_dpi( 300 )
+    ucp.set_dpi(300)
     # plt.style.use( 'seaborn-whitegrid' )
     # plt.rcParams[ "legend.frameon" ] = True
     # plt.rcParams[ "legend.fancybox" ] = True
 
     # %%
 
-    f , ax = plt.subplots( figsize=(4 , 3) )
-    ax: plt.Axes
-    xl = km_
-    yl = hgk_
-    # number_marker_plot( df_prop , xl , yl , ax )
-    # df_prop.plot.scatter(x=xl,y=yl, ax=ax)
-    # sns.scatterplot(x=xl,y=yl,data=df_prop,style=range_name, hue=range_name)
-    # add_zoom_plot(ax, df_prop, xl, yl)
-    ranges = ['SR','SM','MR','LR']
-    shapes = ['o','s','^','D']
-    texts = ['short\nrange','short-medium\nrange',
-             'medium\nrange','long\nrange']
+    plot_cluster_summary_figure(
+        df_prop,
+        hgk_,
+        km_,
+        save_fig=True,
+        fig_save_name='dis_vs_hag.pdf',
+        xy_locs= ([150, .5], [0, 4], [400, 6], [950, 5])
+    )
 
-    xys = [[150,.5],[0,4],[400,6],[950,5]]
+    # %%
 
-    i_range = range(4)
-    for i,r,s,t,xy in zip(i_range,ranges,shapes,texts,xys):
-        _df:pd.DataFrame = df_prop[df_prop[range_name]==r]
-        _df.plot.scatter(
-            x=xl,y=yl,ax=ax,marker=s,c=[ucp.cc[i]],
-            edgecolor='w',s=30,linewidths=.2
-        )
-        ax.annotate(
-            t,xy, xycoords='data',c=ucp.cc[i])
+    plot_cluster_summary_figure(
+        df_prop,
+        hak_,
+        km_,
+        save_fig=True,
+        fig_save_name='dis_vs_hsl.pdf',
+        xy_locs= ([-10, 5.5], [200, 5.1], [450, 7.5], [950, 7])
 
+    )
 
-
-    ax.grid(False)
-
-    plt.tight_layout()
-    f:plt.Figure
-
-    fig_dir = '/Users/diego/flexpart_management/flexpart_management/victoria_trento/figures/'
-    f.savefig(os.path.join(fig_dir,'dis_vs_hag.pdf'))
-
-
-
-    plt.show()
 
     # %%
     # km_ = 'distance from CHC [km]'
 
-    f , ax = plt.subplots( figsize=(10 , 6) )
+    f, ax = plt.subplots(figsize=(10, 6))
     ax: plt.Axes
     xl = km_
     yl = ha_
-    number_marker_plot( df_prop , xl , yl , ax )
-    axin = inset_axes( ax , '60%' , '40%' , loc=4 )
+    number_marker_plot(df_prop, xl, yl, ax)
+    axin = inset_axes(ax, '60%', '40%', loc=4)
 
     xmin = 0
     xmax = 150
     ymin = 4000
     ymax = 5500
 
-    _boo = (df_prop[ yl ] > ymin) & (df_prop[ yl ] < ymax) \
-           & (df_prop[ xl ] > xmin) & (df_prop[ xl ] < xmax)
+    _boo = (df_prop[yl] > ymin) & (df_prop[yl] < ymax) \
+           & (df_prop[xl] > xmin) & (df_prop[xl] < xmax)
 
-    number_marker_plot( df_prop[ _boo ] , xl , yl , axin )
-    axin.set( xlim=(xmin , xmax) , ylim=(ymin , ymax) )
+    number_marker_plot(df_prop[_boo], xl, yl, axin)
+    axin.set(xlim=(xmin, xmax), ylim=(ymin, ymax))
 
     # number_marker_plot( df_prop , xl , yl , axin )
     # axin.set(xlim=(0,150),ylim=(4000,5500))
-    axin.xaxis.set_visible( 'False' )
-    axin.yaxis.set_visible( 'False' )
-    plt.yticks( visible=False )
-    plt.xticks( visible=False )
-    axin.set_xlabel( None )
-    axin.set_ylabel( None )
-    mark_inset( ax , axin , loc1=1 , loc2=3 , fc="none" , ec="0.5" )
+    axin.xaxis.set_visible('False')
+    axin.yaxis.set_visible('False')
+    plt.yticks(visible=False)
+    plt.xticks(visible=False)
+    axin.set_xlabel(None)
+    axin.set_ylabel(None)
+    mark_inset(ax, axin, loc1=1, loc2=3, fc="none", ec="0.5")
     # axin.set_xticks( visible=False )
     # axin.set_yticks( visible=False )
 
@@ -468,16 +494,15 @@ def main() :
 
     ax: plt.Axes
 
-
     # km_ = 'distance from CHC [km]'
     ha_ = 'height above sea level [m]'
     # df_prop[ km_ ] = df_prop[co.R_CENTER] * 100
     # df_prop[ha_] = df_prop[co.ZM]
-    f , ax = plt.subplots( figsize=(10 , 6) )
+    f, ax = plt.subplots(figsize=(10, 6))
     ax: plt.Axes
     xl = km_
     yl = ratio_lab
-    number_marker_plot( df_prop , xl , yl , ax )
+    number_marker_plot(df_prop, xl, yl, ax)
     # axin = inset_axes(ax,'60%','40%', loc=4)
 
     # xmin = 0
@@ -506,49 +531,49 @@ def main() :
     # plt.show()
 
     # %%
-    df_prop[ 'lat_chc' ] = (df_prop[ co.R_CENTER ] * df_prop[
-        'Y' ]) + co.CHC_LAT
-    df_prop[ 'lon_chc' ] = (df_prop[ co.R_CENTER ] * df_prop[
-        'X' ]) + co.CHC_LON
+    df_prop['lat_chc'] = (df_prop[co.R_CENTER] * df_prop[
+        'Y']) + co.CHC_LAT
+    df_prop['lon_chc'] = (df_prop[co.R_CENTER] * df_prop[
+        'X']) + co.CHC_LON
 
     ax = fa.get_ax_bolivia(
         #     fig_args={'figsize':(8,8)}
-        )
+    )
     # ax.legend()
     xl = 'lon_chc'
     yl = 'lat_chc'
 
-    def _plot( ax ) :
-        df_prop.plot.scatter( x=xl , y=yl , alpha=1 , ax=ax , c='white' ,
-                              s=100 )
-        for i , r in df_prop.iterrows() :
+    def _plot(ax):
+        df_prop.plot.scatter(x=xl, y=yl, alpha=1, ax=ax, c='white',
+                             s=100)
+        for i, r in df_prop.iterrows():
             # print( i )
             # r_km = r[ co.R_CENTER ]
             # ratio_per = r[ y_column ]
             t = ax.text(
-                x=r[ xl ] ,
-                y=r[ yl ] ,
-                s=i , color='red' ,
-                horizontalalignment='center' ,
-                verticalalignment='center' ,
-                fontdict={ 'size' : 13 , 'weight' : 'bold' } ,
+                x=r[xl],
+                y=r[yl],
+                s=i, color='red',
+                horizontalalignment='center',
+                verticalalignment='center',
+                fontdict={'size': 13, 'weight': 'bold'},
                 #         backgroundcolor='white', alpha=.5
 
-                )
+            )
             t.set_bbox(
-                dict( facecolor='white' , alpha=0.5 , edgecolor='white' ) )
+                dict(facecolor='white', alpha=0.5, edgecolor='white'))
 
-    _plot( ax )
+    _plot(ax)
 
     # %%
-    df_prop[ 'lat_chc' ] = (df_prop[ co.R_CENTER ] * df_prop[
-        'Y' ]) + co.CHC_LAT
-    df_prop[ 'lon_chc' ] = (df_prop[ co.R_CENTER ] * df_prop[
-        'X' ]) + co.CHC_LON
+    df_prop['lat_chc'] = (df_prop[co.R_CENTER] * df_prop[
+        'Y']) + co.CHC_LAT
+    df_prop['lon_chc'] = (df_prop[co.R_CENTER] * df_prop[
+        'X']) + co.CHC_LON
 
     ax = fa.get_ax_lapaz(
         #     fig_args={'figsize':(8,8)}
-        )
+    )
     # ax.legend()
     xl = 'lon_chc'
     yl = 'lat_chc'
@@ -558,39 +583,34 @@ def main() :
     ymin = -18
     ymax = -13.5
 
-    _boo = (df_prop[ yl ] > ymin) & (df_prop[ yl ] < ymax) \
-           & (df_prop[ xl ] > xmin) & (df_prop[ xl ] < xmax)
+    _boo = (df_prop[yl] > ymin) & (df_prop[yl] < ymax) \
+           & (df_prop[xl] > xmin) & (df_prop[xl] < xmax)
 
-    def _plot( ax ) :
-        df_prop.plot.scatter( x=xl , y=yl , alpha=1 , ax=ax , c='white' ,
-                              s=100 )
-        for i , r in df_prop[ _boo ].iterrows() :
+    def _plot(ax):
+        df_prop.plot.scatter(x=xl, y=yl, alpha=1, ax=ax, c='white',
+                             s=100)
+        for i, r in df_prop[_boo].iterrows():
             # print( i )
             # r_km = r[ co.R_CENTER ]
             # ratio_per = r[ y_column ]
             t = ax.text(
-                x=r[ xl ] ,
-                y=r[ yl ] ,
-                s=i , color='red' ,
-                horizontalalignment='center' ,
-                verticalalignment='center' ,
-                fontdict={ 'size' : 13 , 'weight' : 'bold' } ,
+                x=r[xl],
+                y=r[yl],
+                s=i, color='red',
+                horizontalalignment='center',
+                verticalalignment='center',
+                fontdict={'size': 13, 'weight': 'bold'},
                 #         backgroundcolor='white', alpha=.5
 
-                )
+            )
             t.set_bbox(
-                dict( facecolor='white' , alpha=0.5 , edgecolor='white' ) )
+                dict(facecolor='white', alpha=0.5, edgecolor='white'))
 
-    _plot( ax )
-
-    # %%
-    df_prop.to_excel( '/tmp/excel.xls' )
+    _plot(ax)
 
     # %%
-
+    df_prop.to_excel('/tmp/excel.xls')
 
     # %%
 
-
-
-
+    # %%
