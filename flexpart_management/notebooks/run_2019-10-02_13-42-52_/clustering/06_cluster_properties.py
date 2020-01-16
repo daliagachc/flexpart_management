@@ -223,7 +223,8 @@ def plot_cluster_summary_figure(
         save_fig=False,
         fig_save_name='dis_vs_hag.pdf',
         fig_save_dir='/Users/diego/flexpart_management/flexpart_management/victoria_trento/figures/',
-        ax = None
+        ax = None,
+        y_label = None,
 ):
     if ax is None:
         f, ax = plt.subplots(figsize=figsize)
@@ -254,6 +255,8 @@ def plot_cluster_summary_figure(
     ax.grid(False)
     if y_range is not None:
         ax.set_ylim(y_range)
+    if y_label is not None:
+        ax.set_ylabel(y_label)
 
     plt.tight_layout()
     f: plt.Figure
@@ -350,7 +353,7 @@ def main():
     # df_prop[ km_ ] = df_prop[co.R_CENTER] * 100
     df_prop[ha_] = df_prop[co.ZM]
     df_prop[hak_] = df_prop[ha_] / 1000
-    ratio_lab = 'ratio surface (<1500m) to total [%]'
+    ratio_lab = 'ratio_lab'
     df_prop[ratio_lab] = df_prop[ratio_surf_tot_lab] * 100
 
     # %%
@@ -475,7 +478,8 @@ def main():
         km_,
         save_fig=True,
         fig_save_name='dis_vs_surface_influence.pdf',
-        xy_locs= ([100, 80], [180, 50], [500, 30], [950, 10])
+        xy_locs= ([100, 80], [180, 50], [500, 30], [950, 10]),
+        y_label=r'$\frac{SRR_{<1.5km}}{SSR_{\mathrm{total}}}\ [\%]$'
 
     )
 
@@ -488,7 +492,7 @@ def main():
         save_fig=True,
         fig_save_name='dis_vs_srr_influence.pdf',
         xy_locs= ([100, 1], [0, 9], [500, 11], [950, 9]),
-        y_range=(0,13)
+        y_range=(0,13),
 
     )
 
