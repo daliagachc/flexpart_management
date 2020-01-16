@@ -46,6 +46,8 @@ DF_PATH = '/Users/diego/flexpart_management/' \
 
 N_CLUSTERS = 18
 
+# %%
+
 
 def get_weighted_mean( ds_lab , new_lab_p , weighted_lab ) :
     dims = list( ds_lab[ weighted_lab ].dims )
@@ -62,6 +64,7 @@ def get_weighted_mean( ds_lab , new_lab_p , weighted_lab ) :
     res = da_sum / da_tot
     return res
 
+# %%
 
 def weightin_over_dic( df_prop , ds_lab_dic , new_lab_p , weighted_lab ) :
     df_prop[ weighted_lab ] = np.nan
@@ -69,6 +72,8 @@ def weightin_over_dic( df_prop , ds_lab_dic , new_lab_p , weighted_lab ) :
         ds_lab = ds_lab_dic[ ci ]
         res = get_weighted_mean( ds_lab , new_lab_p , weighted_lab )
         df_prop.loc[ ci , weighted_lab ] = res
+
+# %%
 
 
 def number_marker_plot( df_prop , x_column ,
@@ -88,6 +93,8 @@ def number_marker_plot( df_prop , x_column ,
             verticalalignment='center' ,
 
             )
+
+# %%
 
 
 def get_and_save_df_prop( ds , new_lab_p ,
@@ -181,16 +188,34 @@ def get_and_save_df_prop( ds , new_lab_p ,
     df_prop.to_hdf( df_path , key=key )
     return df_prop
 # %%
+def add_zoom_plot(ax, df_prop, xl, yl):
+    axin = inset_axes(ax, '80%', '20%', loc=4)
+    xmin = 0
+    xmax = 70
+    ymin = 100
+    ymax = 1800
+    _boo = (df_prop[yl] > ymin) & (df_prop[yl] < ymax) \
+           & (df_prop[xl] > xmin) & (df_prop[xl] < xmax)
+    number_marker_plot(df_prop[_boo], xl, yl, axin)
+    axin.set(xlim=(xmin, xmax), ylim=(ymin, ymax))
+    axin.xaxis.set_visible('False')
+    axin.yaxis.set_visible('False')
+    plt.yticks(visible=False)
+    plt.xticks(visible=False)
+    axin.set_xlabel(None)
+    axin.set_ylabel(None)
+    mark_inset(ax, axin, loc1=2, loc2=3, fc="none", ec="0.5")
+# %%
 
 def main() :
+    # %%
+
     co.LAB = 'lab'
 
-    plt.rcParams[ 'figure.facecolor' ] = 'white'
+    # plt.rcParams[ 'figure.facecolor' ] = 'white'
 
     # %%
 
-    # %%
-    # %%
 
     log.ger.setLevel( log.log.DEBUG )
 
@@ -257,11 +282,15 @@ def main() :
     df_prop['clock'] = clock_.astype( int )
     km_ = 'distance from CHC [km]'
     hg_ = 'height above ground [m]'
+    hgk_ = 'height above ground [km]'
     df_prop[ km_ ] = df_prop[ co.R_CENTER ] * 100
     df_prop[ hg_ ] = df_prop[ zm_topo ]
+    df_prop[ hgk_] = df_prop[hg_]/1000
     ha_ = 'height above sea level [m]'
+    hak_ = 'height above sea level [km]'
     # df_prop[ km_ ] = df_prop[co.R_CENTER] * 100
     df_prop[ ha_ ] = df_prop[ co.ZM ]
+    df_prop[ hak_] = df_prop[ ha_]/1000
     ratio_lab = 'ratio surface (<1500m) to total [%]'
     df_prop[ ratio_lab ] = df_prop[ ratio_surf_tot_lab ] * 100
 
@@ -353,36 +382,48 @@ def main() :
     # plt.show()
     # %%
     ucp.set_dpi( 300 )
-    plt.style.use( 'seaborn-whitegrid' )
-    plt.rcParams[ "legend.frameon" ] = True
-    plt.rcParams[ "legend.fancybox" ] = True
+    # plt.style.use( 'seaborn-whitegrid' )
+    # plt.rcParams[ "legend.frameon" ] = True
+    # plt.rcParams[ "legend.fancybox" ] = True
 
     # %%
 
-    f , ax = plt.subplots( figsize=(10 , 6) )
+    f , ax = plt.subplots( figsize=(4 , 3) )
     ax: plt.Axes
     xl = km_
-    yl = hg_
-    number_marker_plot( df_prop , xl , yl , ax )
-    axin = inset_axes( ax , '80%' , '20%' , loc=4 )
+    yl = hgk_
+    # number_marker_plot( df_prop , xl , yl , ax )
+    # df_prop.plot.scatter(x=xl,y=yl, ax=ax)
+    # sns.scatterplot(x=xl,y=yl,data=df_prop,style=range_name, hue=range_name)
+    # add_zoom_plot(ax, df_prop, xl, yl)
+    ranges = ['SR','SM','MR','LR']
+    shapes = ['o','s','^','D']
+    texts = ['short\nrange','short-medium\nrange',
+             'medium\nrange','long\nrange']
 
-    xmin = 0
-    xmax = 70
-    ymin = 100
-    ymax = 1800
+    xys = [[150,.5],[0,4],[400,6],[950,5]]
 
-    _boo = (df_prop[ yl ] > ymin) & (df_prop[ yl ] < ymax) \
-           & (df_prop[ xl ] > xmin) & (df_prop[ xl ] < xmax)
+    i_range = range(4)
+    for i,r,s,t,xy in zip(i_range,ranges,shapes,texts,xys):
+        _df:pd.DataFrame = df_prop[df_prop[range_name]==r]
+        _df.plot.scatter(
+            x=xl,y=yl,ax=ax,marker=s,c=[ucp.cc[i]],
+            edgecolor='w',s=30,linewidths=.2
+        )
+        ax.annotate(
+            t,xy, xycoords='data',c=ucp.cc[i])
 
-    number_marker_plot( df_prop[ _boo ] , xl , yl , axin )
-    axin.set( xlim=(xmin , xmax) , ylim=(ymin , ymax) )
-    axin.xaxis.set_visible( 'False' )
-    axin.yaxis.set_visible( 'False' )
-    plt.yticks( visible=False )
-    plt.xticks( visible=False )
-    axin.set_xlabel( None )
-    axin.set_ylabel( None )
-    mark_inset( ax , axin , loc1=2 , loc2=3 , fc="none" , ec="0.5" )
+
+
+    ax.grid(False)
+
+    plt.tight_layout()
+    f:plt.Figure
+
+    fig_dir = '/Users/diego/flexpart_management/flexpart_management/victoria_trento/figures/'
+    f.savefig(os.path.join(fig_dir,'dis_vs_hag.pdf'))
+
+
 
     plt.show()
 
@@ -549,5 +590,7 @@ def main() :
 
 
     # %%
+
+
 
 

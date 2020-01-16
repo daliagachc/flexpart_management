@@ -5,8 +5,11 @@
       <paths name="aliagadi@taito-login4.csc.fi:22">
         <serverdata>
           <mappings>
-            <mapping deploy="saltena_2018/flexpart_management" local="$PROJECT_DIR$" web="" />
+            <mapping deploy="saltena_2018/flexpart_management" local="$PROJECT_DIR$" />
           </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/flexpart_management/tmp_data" />
+          </excludedPaths>
         </serverdata>
       </paths>
       <paths name="taito">

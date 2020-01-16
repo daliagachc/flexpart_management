@@ -749,6 +749,7 @@ def get_con_norm_r_with_mask_over_threshold(
     conc_cum_per = 'conc_cum_per'
     da_conc_df_sorted[ conc_cum_per ] = rl_.cumsum() / conc_tot
     per_bool_ = da_conc_df_sorted[ conc_cum_per ] > 1 - mask_threshold
+    print(per_bool_.value_counts())
     above_thre = co.above_thre_label
     da_conc_df_sorted[ above_thre ] = per_bool_
     len_da = len( da_conc_df_sorted )

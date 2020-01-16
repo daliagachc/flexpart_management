@@ -16,6 +16,7 @@ import flexpart_management.modules.constants as co
 from sklearn import preprocessing
 from sklearn.cluster import KMeans
 import sklearn
+import sklearn.metrics
 # from main import dfcc
 from flexpart_management.modules.flx_array import weighted_quantile
 

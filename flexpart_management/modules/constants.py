@@ -2,6 +2,7 @@
 # created by diego aliaga daliaga_at_chacaltaya.edu.bo
 import cartopy
 import numpy as np
+import os
 
 PROJ = cartopy.crs.PlateCarree()
 TIME = 'Time'
@@ -150,3 +151,15 @@ long_range_clusters = [9,0,4]
 long_range_clusters.sort()
 latest_ds_mac = '/Users/diego/flexpart_management/flexpart_management/tmp_data' \
      '/ds_clustered_18_conc_smooth.nc'
+
+silhouette_path = '/Users/diego/flexpart_management/flexpart_management/tmp_data' \
+                '/silhouette_scores.pickle'
+# %%
+
+import flexpart_management
+fm_path = flexpart_management.__file__
+fm_path = os.path.dirname(fm_path)
+
+# %%
+
+# %%

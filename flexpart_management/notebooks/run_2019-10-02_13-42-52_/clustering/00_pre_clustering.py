@@ -7,7 +7,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.2'
-#       jupytext_version: 1.2.3
+#       jupytext_version: 1.2.4
 #   kernelspec:
 #     display_name: Python 3
 #     language: python
@@ -31,10 +31,13 @@ import flexpart_management.modules.constants as co
 # noinspection PyUnresolvedReferences
 import flexpart_management.modules.flx_array as fa
 # %%
-from sklearn.preprocessing import RobustScaler , QuantileTransformer
+from sklearn.preprocessing import QuantileTransformer
 from sklearn.cluster import KMeans
 
 # def main() :
+from cluster_input_parameters import MASK_THRESHOLD_FILTER_CELL, \
+    TRUNCATE_SMOOTH, T_VAR_SMOOTH, Z_VAR_SMOOTH, TH_VAR_SMOOTH, R_VAR_SMOOTH, \
+    CLUSTERING_RANDOM_STATE
 from flexpart_management.modules.clustering_funs import \
     (
     get_con_norm_r_with_mask_over_threshold , plot_conc_norm_r ,
@@ -104,12 +107,12 @@ da:xr.DataArray = ds['CONC']
 ds['CONC'] = da.where(~da.isnull(),0)
 # %%
 # lets smooth the dataset and define its name for later calling
-var_dict = dict( r_var=[ 1 ] ,
-                 th_var=[ .5 ] ,
-                 z_var=[ .25 ] ,
-                 t_var=[ 3 ] )
+var_dict = dict(r_var=[R_VAR_SMOOTH],
+                th_var=[TH_VAR_SMOOTH],
+                z_var=[Z_VAR_SMOOTH],
+                t_var=[T_VAR_SMOOTH])
 df_ , ds_smooth = \
-    multi_smoothing( ds , **var_dict , con_var=co.CONC , truncate=3 )
+    multi_smoothing(ds, **var_dict, con_var=co.CONC, truncate=TRUNCATE_SMOOTH)
 
 conc_smooth_name = df_[ 'name_col' ][ 0 ]
 
@@ -157,7 +160,8 @@ plt.show()
 # %%
 ds = get_con_norm_r_with_mask_over_threshold(
     ds ,
-    conc_label=conc_smooth_norm
+    conc_label=conc_smooth_norm,
+    mask_threshold=MASK_THRESHOLD_FILTER_CELL
     )
 # %%
 ds[ conc_smooth_norm ]
@@ -195,8 +199,8 @@ log.ger.debug( len( _df ) )
 _df1 = _df.dropna( axis=0 , how='all' )
 log.ger.debug( len( _df1 ) )
 # %%
-scaler = RobustScaler(
-    with_centering=False , quantile_range=(0 , 95) )
+# scaler = RobustScaler(
+    # with_centering=False , quantile_range=(0 , 95) )
 scaler = QuantileTransformer()
 _dft = scaler.fit_transform( _df1.T ).T
 # %%
@@ -226,7 +230,7 @@ df__sum = plot_sum_hist_df( _df1 )
 n_clusters = 18
 
 k_means = KMeans(
-    n_clusters=n_clusters , random_state=0 )
+    n_clusters=n_clusters , random_state=CLUSTERING_RANDOM_STATE)
 
 k_means = k_means.fit( _dft , sample_weight=df__sum )
 labels_ = k_means.labels_
