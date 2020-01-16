@@ -219,11 +219,17 @@ def plot_cluster_summary_figure(
         xy_locs=([150, .5], [0, 4], [400, 6], [950, 5]),
         range_name='range',
         figsize=(4, 3),
+        y_range = None,
         save_fig=False,
         fig_save_name='dis_vs_hag.pdf',
-        fig_save_dir='/Users/diego/flexpart_management/flexpart_management/victoria_trento/figures/'
+        fig_save_dir='/Users/diego/flexpart_management/flexpart_management/victoria_trento/figures/',
+        ax = None
 ):
-    f, ax = plt.subplots(figsize=figsize)
+    if ax is None:
+        f, ax = plt.subplots(figsize=figsize)
+    else:
+        ax = ax
+        f = ax.figure
     ax: plt.Axes
     xl = x_var
     yl = y_var
@@ -246,12 +252,17 @@ def plot_cluster_summary_figure(
         ax.annotate(
             t, xy, xycoords='data', c=ucp.cc[i])
     ax.grid(False)
+    if y_range is not None:
+        ax.set_ylim(y_range)
+
     plt.tight_layout()
     f: plt.Figure
+
     fig_dir = fig_save_dir
+    plt.show()
     if save_fig:
         f.savefig(os.path.join(fig_dir, fig_save_name))
-    plt.show()
+    return ax
 
 
 # %%
@@ -379,8 +390,12 @@ def main():
         res = dss.where(_boo).sum().load().item()
         return res
 
-    df_prop['inf_per'] = \
+    inf_per_name = 'inf_per'
+    df_prop[inf_per_name] = \
         df_prop.apply(lambda r: get_inf_per(ds, dss, r.name), axis=1)
+    srr_inf_name = 'SRR [%]'
+    df_prop[srr_inf_name] = df_prop[inf_per_name]
+
     # %%
 
     df_prop: pd.DataFrame
@@ -463,6 +478,21 @@ def main():
         xy_locs= ([100, 80], [180, 50], [500, 30], [950, 10])
 
     )
+
+    # %%
+
+    plot_cluster_summary_figure(
+        df_prop,
+        srr_inf_name,
+        km_,
+        save_fig=True,
+        fig_save_name='dis_vs_srr_influence.pdf',
+        xy_locs= ([100, 1], [0, 9], [500, 11], [950, 9]),
+        y_range=(0,13)
+
+    )
+
+
 
     # %%
     # km_ = 'distance from CHC [km]'
