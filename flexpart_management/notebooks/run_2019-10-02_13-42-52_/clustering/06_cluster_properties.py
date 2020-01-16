@@ -479,7 +479,7 @@ def main():
         save_fig=True,
         fig_save_name='dis_vs_surface_influence.pdf',
         xy_locs= ([100, 80], [180, 50], [500, 30], [950, 10]),
-        y_label=r'$\frac{SRR_{<1.5km}}{SSR_{\mathrm{total}}}\ [\%]$'
+        y_label=r'$\frac{\mathrm{SRR}_{<1.5\mathrm{km}}}{\mathrm{SSR}_{\mathrm{total}}}\ [\%]$'
 
     )
 
