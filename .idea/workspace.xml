@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_hag.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_hag.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_hsl.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_hsl.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_surface_influence.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_surface_influence.pdf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -1067,7 +1063,7 @@
       <workItem from="1579087647935" duration="1285000" />
       <workItem from="1579176322595" duration="129000" />
       <workItem from="1579176481599" duration="426000" />
-      <workItem from="1579180156503" duration="17541000" />
+      <workItem from="1579180156503" duration="18653000" />
     </task>
     <servers />
   </component>
