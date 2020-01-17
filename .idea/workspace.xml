@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="" />
+    <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/example_srr_pc_n3.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_z_01_lab_timeseries.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_z_01_lab_timeseries.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1061,7 +1065,7 @@
       <workItem from="1579087647935" duration="1285000" />
       <workItem from="1579176322595" duration="129000" />
       <workItem from="1579176481599" duration="426000" />
-      <workItem from="1579180156503" duration="35582000" />
+      <workItem from="1579180156503" duration="41828000" />
     </task>
     <servers />
   </component>

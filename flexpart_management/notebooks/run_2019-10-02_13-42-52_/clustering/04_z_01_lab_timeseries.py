@@ -128,14 +128,48 @@ def main():
 
     # %%
     # %%
+    ddf = pd.DataFrame([])
+    for l,r in prop_df.iterrows():
+        i = r['cluster_i']
+        da_lab = ds['CONC'].where(ds['lab'] == i).sum(
+            dim_complement_rl) / da_tot_ts
+        ddf[r['short_name']]=da_lab.reset_coords(drop=True).to_dataframe()['CONC']
 
+    # %%
+    pdf_example_name = 'example_srr_pc_n3.pdf'
+    i = 3
+    plot_example(ddf, i, pdf_example_name)
 
+    # pdf_example_name = 'example_srr_pc_n3.pdf'
+    # i = 18
+    # plot_example(ddf, i, pdf_example_name)
 
     # %%
 
     # %%
 
-    # %%
+
+def plot_example(ddf, i, pdf_example_name):
+    f, ax = plt.subplots(1, 1, figsize=(4, 2.5))
+    new_df = ddf.iloc[::50, -i:].copy() + 1
+    new_df.columns = ['cluster 1', 'cluster 2', 'cluster 3']
+    new_df: pd.DataFrame
+    new_df = new_df.rolling(10, min_periods=1, center=True,
+                            win_type='gaussian').mean(std=3)
+    df_sum = new_df.sum(axis=1)
+    new_dfn = (new_df.T / df_sum).T * 100
+    new_dfn.plot.area(ax=ax)
+    ax.legend(ncol=len(new_df.columns), bbox_to_anchor=(0, 1),
+              loc='lower left', fontsize='small')
+    ax.set_ylim(0, 100)
+    ax.set_xlabel('arrival time')
+    ax.set_ylabel(r'${SRR}_{pc}$')
+    ax.set_title('Example of ${SRR}_{pc}$ for $n=3$ clusters \n\n')
+    f.tight_layout()
+    plt.show()
+    path = '/Users/diego/flexpart_management/flexpart_management/victoria_trento/figures'
+    f.savefig(os.path.join(path, pdf_example_name))
+
 
 # %%
 
