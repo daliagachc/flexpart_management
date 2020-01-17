@@ -656,6 +656,9 @@ def main():
     # %%
     df_prop.to_excel('/tmp/excel.xls')
 
+    df_prop.to_csv(co.prop_df_path)
+    df_prop.to_hdf(os.path.join(co.tmp_data_path,'prop_df_.nc'),key='v01')
+
     # %%
 
     # %%

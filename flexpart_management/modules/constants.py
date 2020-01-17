@@ -149,11 +149,11 @@ mid_range_clusters = [15,1,14,7,8]
 mid_range_clusters.sort()
 long_range_clusters = [9,0,4]
 long_range_clusters.sort()
-latest_ds_mac = '/Users/diego/flexpart_management/flexpart_management/tmp_data' \
-     '/ds_clustered_18_conc_smooth.nc'
+tmp_data_path = '/Users/diego/flexpart_management/flexpart_management/tmp_data'
+latest_ds_mac = os.path.join(tmp_data_path,'/ds_clustered_18_conc_smooth.nc')
+prop_df_path = os.path.join(tmp_data_path, 'prop_df_.csv')
 
-silhouette_path = '/Users/diego/flexpart_management/flexpart_management/tmp_data' \
-                '/silhouette_scores.pickle'
+silhouette_path = os.path.join(tmp_data_path,'/silhouette_scores.pickle')
 # %%
 
 import flexpart_management
