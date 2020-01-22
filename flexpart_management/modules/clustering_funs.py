@@ -1190,29 +1190,31 @@ def plot_concentration_influence_div_by_cluster(
     # return mean
 
 
-def add_total_per_row( ds , conc_lab , new_lab ) :
+def add_total_per_row( ds , conc_lab , new_lab ,
+                       long_name = "source receptor relationships (SRR)" ,
+                       ) :
     da = ds[ conc_lab ]
     da_tot = da.sum()
     da_per = da / da_tot * 100
     da_per.name = new_lab
-    long_name = "source receptor relationships (SRR)"
     attr_dict = {
         'long_name' : long_name ,
-        'total'     : da_tot.item() ,
+        'total'     : da_tot.load().item() ,
         'units'     : '% of total'
         }
     da_per = da_per.assign_attrs( attr_dict )
     ds[ new_lab ] = da_per
 
 
-def add_time_per_row( ds , conc_lab , new_lab ) :
+def add_time_per_row( ds , conc_lab , new_lab ,
+                      long_name = "source receptor relationships (SRR)",
+                      ) :
 
     da = ds[ conc_lab ]
     da_tot = da.sum(fa.get_dims_complement(da,co.RL))
     da_per = da / da_tot * 100
     # return da_tot
     da_per.name = new_lab
-    long_name = "source receptor relationships (SRR)"
     attr_dict = {
         'long_name' : long_name ,
         # 'total'     : da_tot.item() ,

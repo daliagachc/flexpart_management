@@ -136,9 +136,16 @@ def main():
         ddf[r['short_name']]=da_lab.reset_coords(drop=True).to_dataframe()['CONC']
 
     # %%
+
     pdf_example_name = 'example_srr_pc_n3.pdf'
     i = 3
     plot_example(ddf, i, pdf_example_name)
+    # %%
+
+    with plt.xkcd():
+        pdf_example_name = 'example_srr_pc_n3_handwritten.pdf'
+        i = 3
+        plot_example(ddf, i, pdf_example_name,figsize=(6,4))
 
     # pdf_example_name = 'example_srr_pc_n3.pdf'
     # i = 18
@@ -149,8 +156,10 @@ def main():
     # %%
 
 
-def plot_example(ddf, i, pdf_example_name):
-    f, ax = plt.subplots(1, 1, figsize=(4, 2.5))
+def plot_example(ddf, i, pdf_example_name, figsize=(4, 2.5)):
+    # %%
+
+    f, ax = plt.subplots(1, 1, figsize=figsize)
     new_df = ddf.iloc[::50, -i:].copy() + 1
     new_df.columns = ['cluster 1', 'cluster 2', 'cluster 3']
     new_df: pd.DataFrame
@@ -159,12 +168,17 @@ def plot_example(ddf, i, pdf_example_name):
     df_sum = new_df.sum(axis=1)
     new_dfn = (new_df.T / df_sum).T * 100
     new_dfn.plot.area(ax=ax)
-    ax.legend(ncol=len(new_df.columns), bbox_to_anchor=(0, 1),
-              loc='lower left', fontsize='small')
+    # %%
+
+    # ax.legend(ncol=len(new_df.columns), bbox_to_anchor=(0, 1),
+    #           loc='lower left', fontsize='small')
+    ax.legend(ncol=1, bbox_to_anchor=(1, 1),
+              loc='upper right', fontsize='small')
+
     ax.set_ylim(0, 100)
     ax.set_xlabel('arrival time')
     ax.set_ylabel(r'${SRR}_{pc}$')
-    ax.set_title('Example of ${SRR}_{pc}$ for $n=3$ clusters \n\n')
+    ax.set_title('Example of ${SRR}_{pc}$ for $n=3$ clusters')
     f.tight_layout()
     plt.show()
     path = '/Users/diego/flexpart_management/flexpart_management/victoria_trento/figures'
@@ -205,7 +219,7 @@ def plot_multi_time_series(da_tot_ts, dim_complement_rl, ds, prop_df, ranges,
     f.tight_layout()
     # f.suptitle(range_names[ri])
     #
-    ax.annotate('SSR [%]',(0.03,.5),rotation=90,xycoords='figure fraction',
+    ax.annotate('SRR [%]',(0.03,.5),rotation=90,xycoords='figure fraction',
                 horizontalalignment = 'left',
                 verticalalignment='center'
                 )
@@ -234,3 +248,7 @@ def plot_multi_time_series(da_tot_ts, dim_complement_rl, ds, prop_df, ranges,
         f.savefig(os.path.join(path,name))
 
 # plot_multi_time_series(da_tot_ts, dim_complement_rl, ds, prop_df, ranges,range_names, 3)
+
+# %%
+
+main()

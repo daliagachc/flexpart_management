@@ -40,7 +40,7 @@ plt.style.use( 'seaborn-whitegrid' )
 plt.rcParams[ 'figure.facecolor' ] = 'white'
 
 Q_ATTR = 'unit quantile normalized SRR'
-CONC_DET_ATTR = 'Diurnal variation of SSR [%]'
+CONC_DET_ATTR = 'Diurnal variation of SRR [%]'
 
 
 # %%
