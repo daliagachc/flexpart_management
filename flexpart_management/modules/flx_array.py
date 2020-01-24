@@ -491,11 +491,11 @@ def get_ax_lapaz(ax=False,
     gl.xlabels_top = False
     gl.ylabels_right = False
     if lola_ticks is None:
-        lo1 = np.round(lola_extent[0] / 5) * 5 - 5
+        lo1 = np.round(lalo_extent[0] / 5) * 5 - 5
         # print(lo1)
-        lo2 = lola_extent[1] + 5
-        la1 = np.round(lola_extent[2] / 5) * 5 - 5
-        la2 = lola_extent[3] + 5
+        lo2 = lalo_extent[1] + 5
+        la1 = np.round(lalo_extent[2] / 5) * 5 - 5
+        la2 = lalo_extent[3] + 5
         lolo = np.arange(*(lo1, lo2, 5))
         lala = np.arange(*(la1, la2, 5))
     else:

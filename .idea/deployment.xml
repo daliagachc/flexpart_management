@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="aliagadi@taito-login4.csc.fi:22" createEmptyFolders="true" showDialogOnRemoteDnD="false">
+  <component name="PublishConfigData" serverName="aliagadi@taito-login4.csc.fi:22" overwriteAll="false" createEmptyFolders="true" showDialogOnRemoteDnD="false">
     <serverData>
       <paths name="aliagadi@taito-login4.csc.fi:22">
         <serverdata>
@@ -21,6 +21,5 @@
         </serverdata>
       </paths>
     </serverData>
-    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>

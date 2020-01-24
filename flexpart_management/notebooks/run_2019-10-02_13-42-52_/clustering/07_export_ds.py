@@ -22,6 +22,7 @@
 # %% [markdown]
 # imports
 # %%
+from itertools import cycle
 
 from useful_scit.imps import *
 # noinspection PyUnresolvedReferences
@@ -116,6 +117,8 @@ def main():
     new_lab_p = 'conc_smooth_p'
     new_lab_p_t = 'conc_smooth_p_t'
     conc = co.CONC
+    # %%
+
     add_total_per_row( ds , conc_lab , new_lab_p )
     add_time_per_row( ds , conc_lab , new_lab_p_t )
     # print( da_tot )
@@ -126,6 +129,10 @@ def main():
 
     # %%
     df_ = get_time_series(conc,ds)
+    # %%
+    dfu = df_.unstack('lab')
+    dfu_sum = dfu.sum(axis=1)
+    (dfu.T/dfu_sum*100).T
 
 
     # %%
@@ -135,12 +142,26 @@ def main():
     df1_tot = df1.sum(axis=1)
     dfn = (df1.T/df1_tot).T * 100
     # %%
+    df_prop = pd.read_csv(co.prop_df_path)
+    dfn_cols = dfn['CONC'].columns
+    short_name = df_prop.set_index(
+        'cluster_i').loc[dfn_cols, 'short_name']
+    dfn_c = dfn['CONC']
+    dfn_c.columns = short_name
+    order_sn = df_prop.sort_values(co.R_CENTER)['short_name'].values
+    dfn_c = dfn_c[order_sn]
+
+    # %%
+    path_out = os.path.join(co.tmp_data_path,'conc_ts_cluster.csv')
+    dfn_c.to_csv(path_out)
     # %%
 
 
-    # %%
-    import pandas as pd
 
+
+    # %%
+
+    # noinspection PyUnresolvedReferences
     from bokeh.palettes import Category20_18
     from bokeh.models import Legend
     from bokeh.plotting import figure, output_file, show
@@ -152,28 +173,28 @@ def main():
     # for data, name, color in zip([AAPL, IBM, MSFT, GOOG],
     #                              ["AAPL", "IBM", "MSFT", "GOOG"], Spectral4):
     legends = []
-    for i in range(18):
+    for i,sn in enumerate(dfn_c.columns):
         # df = pd.DataFrame(data)
         # df['date'] = pd.to_datetime(df['date'])
-        res = p.line(dfn.index,dfn['CONC'][i],
+        res = p.line(dfn.index,dfn_c[sn],
                      # legend_label=str(i),
                line_width=2, alpha=0.8,
                color = Category20_18[i]
                )
-        legends.append((str(i),[res]))
+        legends.append((sn,[res]))
 
     leg1 = Legend(items=legends[:6],click_policy='hide')
     leg2 = Legend(items=legends[6:12],click_policy='hide')
     leg3 = Legend(items=legends[12:18],click_policy='hide')
 
     # p.legend.location = "right"
-    p.add_layout(leg1,'left')
-    p.add_layout(leg2, 'left')
     p.add_layout(leg3, 'left')
+    p.add_layout(leg2, 'left')
+    p.add_layout(leg1,'left')
 
     # p.legend.click_policy = "hide"
 
-    output_file("interactive_legend.html",
+    output_file("/tmp/interactive_legend.html",
                 title="interactive_legend.py example",
                 mode='inline')
 

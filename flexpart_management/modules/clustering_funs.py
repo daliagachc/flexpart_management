@@ -9,12 +9,17 @@
 # ---
 
 # %%
+import os
 
+import pandas
 import sklearn.metrics
-from matplotlib import colors as mpl_colors
+import cartopy.mpl.geoaxes
+from matplotlib import colors as mpl_colors, pyplot
 from sklearn import preprocessing
 from sklearn.cluster import KMeans
+# from useful_scit import plot
 from useful_scit.imps import *
+
 
 # from main import dfcc
 from flexpart_management.modules import (
@@ -1017,7 +1022,8 @@ def clus_plot(
         figure_size=15 ,
         dpi=400 ,
         fig_title: str = None,
-        conc_lab_ts = None
+        conc_lab_ts = None,
+        df_prop = None
         ) :
     if conc_lab is None :
         conc_lab = ds.attrs[ 'chosen_smooth' ]
@@ -1043,19 +1049,26 @@ def clus_plot(
         figsize=(f_len , cols / rows * f_len) ,
         dpi=dpi
         )
-    yy = .29
-    xx = .4
-    xxL = .55
-    ypos = .35
-    l_lpb = (.6 , ypos , xx , yy)
-    l_bol = (.6 , 0 , xx , yy)
-    l_ts = (0 , .9 , 1 , .1)
-    l_per_inf = (0 , .7 , .5 , .1)
-    l_far = (0 , 0 , xxL , yy)
-    l_zoom = (0 , ypos , xxL , yy)
+    xn = 2
+    yn = 4
+    xp = .07
+    yp = .05
+    ww = (1-xp*3)/xn
+    hh = (1-yp*5)/yn
+    # yy = .29
+    # xx = .4
+    # xxL = .55
+    # ypos = .35
+    l_lpb       = ((2*xp)+ww, (2*yp)+hh    , .8*ww    , hh)
+    l_bol       = ((2*xp)+ww, yp       , .8*ww    , hh)
+    l_ts        = (xp , 1-yp-hh    , 1-2*xp     , hh)
+    l_per_inf   = (xp , (3*yp) + (2*hh)      , ww    , hh)
+    l_far       = (xp , yp       , 1.2*ww   , hh)
+    l_zoom      = (xp , 2*yp + hh    , 1.2*ww   , hh)
 
     ax_vertical_far_:plt.Axes = f.add_axes( l_far )
     da_lab = ds_lab[conc_lab]
+    da_lab.load()
     plot_vertical_ax( ax_vertical_far_ , conc_lab , ds , da_lab )
     ax_vertical_far_.scatter(0,5240,c='blue',label='CHC')
     ax_vertical_far_.legend()
@@ -1070,7 +1083,6 @@ def clus_plot(
     ax_vertical_zoom.grid( True )
     ax_vertical_zoom.set_axisbelow(False)
 
-    import cartopy.mpl.geoaxes
     carree = crt.crs.PlateCarree()
 
     ax_lpb: cartopy.mpl.geoaxes.GeoAxesSubplot = \
@@ -1099,16 +1111,40 @@ def clus_plot(
     plot_lab_time_series( da_lab=ds_lab[conc_lab_ts] , ax_ts=ax_ts )
 
     ax_per_inf = f.add_axes( l_per_inf )
-    plot_concentration_influence_div_by_cluster(
+    if df_prop is not None:
+        plot_cluster_summary_figure(
+            df_prop,
+            'SRR [%]',
+            'distance from CHC [km]',
+            # save_fig=True,
+            fig_save_name='dis_vs_srr_influence.pdf',
+            xy_locs=([-30, 5], [0, 9], [500, 11], [950, 9]),
+            y_range=(0, 13),
+            add_vertical_lines=True,
+            add_cluster_group_label=False,
+            ax=ax_per_inf
+        )
+        y = df_prop.set_index('cluster_i')['SRR [%]'][i_lab]
+        x = df_prop.set_index('cluster_i')['distance from CHC [km]'][i_lab]
+        # ax_per_inf.scatter(x,y,c='k',s=10,marker='o')
+        ax_per_inf.scatter(x, y, s=200, marker='o', facecolors='none', edgecolors='k')
+
+    #todo fix this
+    else:
+        plot_concentration_influence_div_by_cluster(
         ds=ds , conc_lab=conc_lab , i_lab=i_lab ,
         ax=ax_per_inf
         )
+
+    plt.show()
     if fig_title is None :
-        f.suptitle( f'cluster: {i_lab}' ,y=1)
+        f.suptitle( f'cluster: {i_lab}' ,y=.95)
     else :
         f.suptitle( fig_title ,y=1)
     f.tight_layout()
-    plt.show()
+    log.ger.debug('show plot')
+    f.show()
+    return f
 
 
 def plot_vertical_ax( ax_vertical , conc_lab , ds , ds_lab ,
@@ -1222,3 +1258,66 @@ def add_time_per_row( ds , conc_lab , new_lab ,
         }
     da_per = da_per.assign_attrs( attr_dict )
     ds[ new_lab ] = da_per
+
+
+def plot_cluster_summary_figure(
+        df_prop, y_var, x_var,
+        xy_locs=([150, .5], [0, 4], [400, 6], [950, 5]),
+        range_name='range',
+        figsize=(4, 3),
+        y_range=None,
+        save_fig=False,
+        fig_save_name='dis_vs_hag.pdf',
+        fig_save_dir='/Users/diego/flexpart_management/flexpart_management/victoria_trento/figures/',
+        ax=None,
+        y_label=None,
+        add_vertical_lines=False,
+        add_cluster_group_label = True,
+):
+    if ax is None:
+        f, ax = plt.subplots(figsize=figsize)
+    else:
+        ax = ax
+        f = ax.figure
+    ax: plt.Axes
+    xl = x_var
+    yl = y_var
+    # number_marker_plot( df_prop , xl , yl , ax )
+    # df_prop.plot.scatter(x=xl,y=yl, ax=ax)
+    # sns.scatterplot(x=xl,y=yl,data=df_prop,style=range_name, hue=range_name)
+    # add_zoom_plot(ax, df_prop, xl, yl)
+    ranges = ['SR', 'SM', 'MR', 'LR']
+    shapes = ['o', 's', '^', 'D']
+    texts = ['short\nrange', 'short-medium\nrange',
+             'medium\nrange', 'long\nrange']
+    xys = xy_locs
+    i_range = range(4)
+    for i, r, s, t, xy in zip(i_range, ranges, shapes, texts, xys):
+        _df: pd.DataFrame = df_prop[df_prop[range_name] == r]
+
+        if add_vertical_lines:
+            ax.vlines(_df[xl],ymin=0,ymax=_df[yl],colors=[ucp.cc[i]], alpha=.3)
+
+        _df.plot.scatter(
+            x=xl, y=yl, ax=ax, marker=s, c=[ucp.cc[i]],
+            edgecolor='w', s=30, linewidths=.2
+        )
+        if add_cluster_group_label:
+            ax.annotate(
+                t, xy, xycoords='data', c=ucp.cc[i])
+
+
+    ax.grid(False)
+    if y_range is not None:
+        ax.set_ylim(y_range)
+    if y_label is not None:
+        ax.set_ylabel(y_label)
+
+    plt.tight_layout()
+    f: plt.Figure
+
+    fig_dir = fig_save_dir
+    # plt.show()
+    if save_fig:
+        f.savefig(os.path.join(fig_dir, fig_save_name))
+    return ax

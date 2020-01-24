@@ -22,7 +22,7 @@
 # %% [markdown]
 # imports
 # %%
-
+import flexpart_management.modules.clustering_funs as cfuns
 from useful_scit.imps import *
 # noinspection PyUnresolvedReferences
 import matplotlib.colors
@@ -185,7 +185,7 @@ def main():
     ucp.set_dpi(300)
     # %%
 
-    ax = loc_funs.plot_cluster_summary_figure(
+    ax = cfuns.plot_cluster_summary_figure(
         df_prop,
         hgk_,
         km_,
@@ -203,7 +203,7 @@ def main():
 
     # %%
 
-    loc_funs.plot_cluster_summary_figure(
+    cfuns.plot_cluster_summary_figure(
         df_prop,
         hak_,
         km_,
@@ -216,7 +216,7 @@ def main():
 
     # %%
 
-    loc_funs.plot_cluster_summary_figure(
+    cfuns.plot_cluster_summary_figure(
         df_prop,
         ratio_lab,
         km_,
@@ -230,7 +230,7 @@ def main():
 
     # %%
 
-    loc_funs.plot_cluster_summary_figure(
+    cfuns.plot_cluster_summary_figure(
         df_prop,
         srr_inf_name,
         km_,
@@ -247,7 +247,7 @@ def main():
                          figsize=(8,8/1.4))
     axf = axs.flatten()
     ax = axf[0]
-    ax = loc_funs.plot_cluster_summary_figure(
+    ax = cfuns.plot_cluster_summary_figure(
         df_prop,
         hgk_,
         km_,
@@ -264,7 +264,7 @@ def main():
     # ax.text()
 
 
-    loc_funs.plot_cluster_summary_figure(
+    cfuns.plot_cluster_summary_figure(
         df_prop,
         hak_,
         km_,
@@ -279,7 +279,7 @@ def main():
 
 
 
-    loc_funs.plot_cluster_summary_figure(
+    cfuns.plot_cluster_summary_figure(
         df_prop,
         ratio_lab,
         km_,
@@ -295,7 +295,7 @@ def main():
     # plt.show()
 
 
-    loc_funs.plot_cluster_summary_figure(
+    cfuns.plot_cluster_summary_figure(
         df_prop,
         srr_inf_name,
         km_,
