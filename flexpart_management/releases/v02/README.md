@@ -12,6 +12,7 @@ DI_RA where DI refers to the clock direction where the cluster comes from e.g. 1
 
 - general description for the clusters is [here](./figures/general_description)
 
+- interactive time series of the clusters is [here](./interactive_legend.html)
 
 please use the [issues](https://github.com/daliagachc/flexpart_management/issues)
 section for comments, questions, suggestions, etc but mail is ok as well 

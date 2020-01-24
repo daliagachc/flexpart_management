@@ -8,15 +8,11 @@
       <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/README.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/conc_ts_cluster/conc_ts_cluster.csv" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/conc_ts_cluster/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/figures/4-panel-cluster-medeoids.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/figures/LRtime_series.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/figures/MRtime_series.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/figures/SMtime_series.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/figures/SRtime_series.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/figures/dis_vs_hag.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/figures/dis_vs_hsl.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/figures/dis_vs_srr_influence.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/figures/dis_vs_surface_influence.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/figures/general_description/4-panel-cluster-medeoids.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/figures/general_description/dis_vs_hag.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/figures/general_description/dis_vs_hsl.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/figures/general_description/dis_vs_srr_influence.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/figures/general_description/dis_vs_surface_influence.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/figures/geo_info_for_each_cluster/02_MR.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/figures/geo_info_for_each_cluster/02_SR.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/figures/geo_info_for_each_cluster/03_SM.pdf" afterDir="false" />
@@ -35,6 +31,10 @@
       <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/figures/geo_info_for_each_cluster/11_SR.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/figures/geo_info_for_each_cluster/12_SM.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/figures/geo_info_for_each_cluster/12_SR.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/figures/time_series/LRtime_series.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/figures/time_series/MRtime_series.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/figures/time_series/SMtime_series.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/figures/time_series/SRtime_series.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/interactive_legend.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/02_MR.pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/02_SR.pdf" afterDir="false" />
@@ -743,11 +743,11 @@
       <recent name="$PROJECT_DIR$/flexpart_management/releases/v01" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/flexpart_management/releases/v02/figures/general_description" />
+      <recent name="$PROJECT_DIR$/flexpart_management/releases/v02/figures/time_series" />
       <recent name="$PROJECT_DIR$/flexpart_management/releases/v02/conc_ts_cluster" />
       <recent name="$PROJECT_DIR$/flexpart_management/runs_config_dir" />
       <recent name="$PROJECT_DIR$/flexpart_management/releases/v01" />
-      <recent name="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering" />
-      <recent name="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/chect_rect_grid" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -1146,7 +1146,7 @@
       <workItem from="1579531925473" duration="6122000" />
       <workItem from="1579548284253" duration="6325000" />
       <workItem from="1579588234479" duration="38778000" />
-      <workItem from="1579789468131" duration="11221000" />
+      <workItem from="1579789468131" duration="11860000" />
     </task>
     <servers />
   </component>
