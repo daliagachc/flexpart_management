@@ -5,7 +5,9 @@
 [project](https://github.com/daliagachc/wrf_management)
 
 ## release v01 
-for researchers involved in the Bolivian Campaign please go to [v01](./flexpart_management/releases/v01) 
+for researchers involved in the Bolivian Campaign please go to 
+- [v01](./flexpart_management/releases/v01) 
+- [v02](./flexpart_management/releases/v02) 
 
 ## documentation 
 for documentation about the project go to [doc](./flexpart_management/documentation)
@@ -21,3 +23,8 @@ literature, references, and literature summary goes [here](./flexpart_management
 
 ## runs 
 run conf files go [here](./flexpart_management/runs)
+
+## requests
+data output for for particular requests. please ask for them via the issues tab in github:  
+[./flexpart_management/requests](./flexpart_management/requests)
+  
