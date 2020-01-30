@@ -1,7 +1,8 @@
 - Time series  
 Data extracted from wrf at the cell grid of chacaltaya for
   - the following variables: 'eth','tk','wa','va','ua','th','rh','QVAPOR' (see description in the nc metadata info).  
-  - 2 files produced at [./data](./data).  
+  - 2 files produced at [./data](./data):
+    - time_series_for_selected_values_at_chc_wrf.*
   - They are similar but nc termination contains metadata
 - Column Time series  
   - similar to above but just for wa
