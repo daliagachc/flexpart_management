@@ -2,7 +2,7 @@
 <module type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="Python" name="Python">
-      <configuration sdkName="" />
+      <configuration sdkName="Python 3.6 (b36) (2)" />
     </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
@@ -11,6 +11,9 @@
       <sourceFolder url="file://$MODULE_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/chect_rect_grid" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/flexpart_management/notebooks/run_2019-09-25_15-25-01_" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/flexpart_management/requests/george/slices" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/cluster_vertical_distribution" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/sfc_ratio_clusters" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/flexpart_management/sym_links" />
       <excludeFolder url="file://$MODULE_DIR$/flexpart_management/tmp_data" />
     </content>

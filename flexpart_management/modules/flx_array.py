@@ -5,10 +5,13 @@ Examples:
 
 # project name: flexpart_management
 # created by diego aliaga daliaga_at_chacaltaya.edu.bo
+import os
+
 import netCDF4
 
 import matplotlib
 import numpy
+import pandas
 import xarray
 from matplotlib.collections import PatchCollection
 from matplotlib.colors import ListedColormap, LinearSegmentedColormap
@@ -1147,3 +1150,29 @@ def join_log_pol_dom_ds(ds01: xr.Dataset,
     ds_combined: xr.Dataset = xr.concat([ds02_trimmed, ds01_trimmed],
                                         dim=co.R_CENTER)
     return ds_combined
+
+
+def open_temp_ds(name):
+    ds = xr.open_mfdataset(
+        os.path.join(co.tmp_data_path, name),
+        concat_dim=co.RL,
+        combine='nested')
+    return ds
+
+
+def open_ds_zg(ds, merged_ds):
+    ds_zg = open_temp_ds(merged_ds)
+    ds_zg = ds_zg[{co.ZT: slice(0, 30)}]
+    ds_zg = add_zmid(ds_zg)
+    ds_zg = ds_zg.swap_dims({co.ZT: co.ZM})
+    # ds_zg = ds_zg.assign_coords({'lab': ds['lab']})
+    return ds_zg
+
+
+def import_datasets():
+    ds = open_temp_ds('ds_clustered_18.nc')
+    # %%
+    merged_ds = 'merged_ds.nc'
+    ds_zg = open_ds_zg(ds, merged_ds)
+    prop_df = pd.read_csv(co.prop_df_path)
+    return ds, ds_zg, prop_df
