@@ -2,27 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/cluster_vertical_distribution/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/sfc_ratio_clusters/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/sfc_ratio_clusters/n0_sfc_ratio_clusters.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/sfc_ratio_clusters/n0_sfc_ratio_clusters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/sfc_ratio_clusters/n0_sfc_ratio_clusters_lfc.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/sfc_ratio_clusters/n0_sfc_ratio_clusters_lfc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/pics/IMG_20200127_175726089.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/requests/george/data/time_series_for_selected_values_at_chc_wrf.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/requests/george/data/time_series_for_selected_values_at_chc_wrf.nc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/requests/george/slices/extract_time_series.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/requests/george/slices/extract_time_series.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/requests/george/slices/vertical_plots_from_wrf.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/requests/george/slices/vertical_plots_from_wrf.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/requests/george/slices/vertical_plots_from_wrf_lfc.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/requests/george/slices/vertical_plots_from_wrf_lfc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/flexpart_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flexpart_management.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/requests/george/data/time_series_column_for_selected_values_at_chc_wrf.nc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/requests/george/slices/extract_vertical_col_time_series.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/flx_array.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/flx_array.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/requests/george/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/requests/george/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -677,7 +659,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python&#10;GenericSQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/flexpart_management/pics" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/flexpart_management/requests/george/slices" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -711,19 +693,19 @@
     <option name="mySaveCallSignatures" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/flexpart_management/requests/george/slices" />
+      <recent name="$PROJECT_DIR$/flexpart_management/pics" />
+      <recent name="$PROJECT_DIR$/flexpart_management/releases/v02" />
+      <recent name="$PROJECT_DIR$/flexpart_management/releases" />
+      <recent name="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/flexpart_management/pics" />
       <recent name="$PROJECT_DIR$/flexpart_management/releases/v02/figures/general_description" />
       <recent name="$PROJECT_DIR$/flexpart_management/releases/v02/figures/time_series" />
       <recent name="$PROJECT_DIR$/flexpart_management/releases/v02/conc_ts_cluster" />
       <recent name="$PROJECT_DIR$/flexpart_management/runs_config_dir" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/flexpart_management/pics" />
-      <recent name="$PROJECT_DIR$/flexpart_management/releases/v02" />
-      <recent name="$PROJECT_DIR$/flexpart_management/releases" />
-      <recent name="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering" />
-      <recent name="$PROJECT_DIR$/flexpart_management/requests/george" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -1182,7 +1164,7 @@
       <workItem from="1580115747275" duration="7414000" />
       <workItem from="1580125864650" duration="12422000" />
       <workItem from="1580142336982" duration="68599000" />
-      <workItem from="1580373558106" duration="8183000" />
+      <workItem from="1580373558106" duration="11096000" />
     </task>
     <servers />
   </component>
