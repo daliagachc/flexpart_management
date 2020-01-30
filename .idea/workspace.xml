@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/requests/george/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/requests/george/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -1162,7 +1163,7 @@
       <workItem from="1580115747275" duration="7414000" />
       <workItem from="1580125864650" duration="12422000" />
       <workItem from="1580142336982" duration="68599000" />
-      <workItem from="1580373558106" duration="12252000" />
+      <workItem from="1580373558106" duration="12632000" />
     </task>
     <servers />
   </component>
