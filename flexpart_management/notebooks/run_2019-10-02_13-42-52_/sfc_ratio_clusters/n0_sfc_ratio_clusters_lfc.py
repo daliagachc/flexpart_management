@@ -165,3 +165,28 @@ def plot_ratio_clusters(prop_df,tsdf):
     [ax.set_zorder(30 - i) for i, ax in enumerate(g.axes[0])]
     # return g
     plt.show()
+
+
+def create_sfc_tot_ds_with_attrs(tsdf):
+    new_ts = tsdf.sort_index().reset_index().set_index([co.RL, 'lab_name'])
+    new_ds = new_ts.to_xarray().set_coords('lab')
+    # %%
+    conc_tot = dict(
+        short_name='SRR',
+        description='source receptor relationship for each cluster i such that $sum_{i}{SRR} = 100$',
+        units='%'
+    )
+    conc_sfc = dict(
+        short_name='SRRz0',
+        description='source receptor relationship for each cluster i below 500 magl',
+        units='%'
+    )
+    rat_sfc_tot = dict(
+        short_name='SRRz0/SRR',
+        description='ratio between SRRz0 and SRR for each cluster i',
+        units='%'
+    )
+    new_ds['conc_tot'].attrs = conc_tot
+    new_ds['conc_sfc'].attrs = conc_sfc
+    new_ds['rat_sfc_tot'].attrs = rat_sfc_tot
+    return new_ds

@@ -17,3 +17,5 @@ DI_RA where DI refers to the clock direction where the cluster comes from e.g. 1
 please use the [issues](https://github.com/daliagachc/flexpart_management/issues)
 section for comments, questions, suggestions, etc but mail is ok as well 
 
+- SRR timeseries for each cluster and also surface (<500 magl) SRR timeseries plus their ratio can be found 
+[here](./srr_sfc_tot_clus) 

@@ -30,6 +30,8 @@ ds, ds_zg, prop_df = flexpart_management.modules.flx_array.import_datasets()
 # %%
 comp_dim, da_conc, da_norm, da_zi_cumsum = lfc.process_ds_zg(ds_zg,cum_sum_start=0)
 # %%
+
+# %%
 lfc.plot_cum_sum(da_zi_cumsum)
 # %%
 lfc.plot_norm_cum_sum(da_norm)
@@ -50,7 +52,6 @@ lfc.plot_diurnal_variation_z0_level(df0)
 
 # %%
 lfc.notation_for_diurnal_plot()
-
 # %%
 comp_dim, da_conc, da_norm, da_zi_cumsum =\
     lfc.process_ds_zg(ds_zg,cum_sum_start=6)

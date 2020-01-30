@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/srr_sfc_tot_clus/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/srr_sfc_tot_clus/srr_sfc_tot_clus.nc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/flexpart_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flexpart_management.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/requests/george/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/requests/george/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/cluster_vertical_distribution/n0_explore_cluster_vertical_dist.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/cluster_vertical_distribution/n0_explore_cluster_vertical_dist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/sfc_ratio_clusters/n0_sfc_ratio_clusters.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/sfc_ratio_clusters/n0_sfc_ratio_clusters.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/sfc_ratio_clusters/n0_sfc_ratio_clusters.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/sfc_ratio_clusters/n0_sfc_ratio_clusters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/sfc_ratio_clusters/n0_sfc_ratio_clusters_lfc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/sfc_ratio_clusters/n0_sfc_ratio_clusters_lfc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/presentations/Presentation1.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/presentations/Presentation1.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/releases/v02/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/releases/v02/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -674,7 +682,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.postfix.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="tags.panel.proportion" value="0.5" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -1163,7 +1171,8 @@
       <workItem from="1580115747275" duration="7414000" />
       <workItem from="1580125864650" duration="12422000" />
       <workItem from="1580142336982" duration="68599000" />
-      <workItem from="1580373558106" duration="12632000" />
+      <workItem from="1580373558106" duration="16261000" />
+      <workItem from="1580398337598" duration="5583000" />
     </task>
     <servers />
   </component>
