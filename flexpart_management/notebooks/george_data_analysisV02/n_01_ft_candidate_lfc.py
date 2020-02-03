@@ -29,10 +29,10 @@ def get_per_above5sl(da_srl):
     return da_a5sl
 
 
-def get_per_above_500(da_srl):
+def get_per_above_sfc(da_srl,level=1500):
     topo = da_srl[co.TOPO]
     hagl = da_srl[co.ZM] - topo
-    _boo_hagl = np.logical_and(hagl >= 0, hagl <= 500)
+    _boo_hagl = np.logical_and(hagl >= 0, hagl <= level)
     da_tot = da_srl.sum()
     da_srf = da_srl.where(_boo_hagl).sum()
     per_ft = (da_tot - da_srf) / da_tot * 100
@@ -66,9 +66,9 @@ def plot_double_x_z(ax1, ax2, ax3, da_srl, h11, h12, h21, h22, r):
     mesh1.set_clim(0, vmax)
     mesh2.set_clim(0, vmax)
     plt.colorbar(mesh1, cax=ax3)
-    per_ft = get_per_above_500(da_srl)
+    per_ft = get_per_above_sfc(da_srl)
     per_5sl = get_per_above5sl(da_srl)
-    st = f'% > 0.5 km agl: {int(per_ft)}\n' \
+    st = f'% > 1.5 km agl: {int(per_ft)}\n' \
          f'% > 5.0 km asl: {int(per_5sl)}'
     ax2.annotate(st, (0,-.2),
                  xycoords='axes fraction',

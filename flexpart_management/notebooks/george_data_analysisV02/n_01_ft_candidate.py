@@ -17,8 +17,6 @@
 import \
     flexpart_management.notebooks.george_data_analysisV02.n_01_ft_candidate_lfc as lfc
 # local functions and constants
-from flexpart_management.notebooks.george_data_analysisV02.n_01_ft_candidate_lfc import \
-    get_per_above5sl, get_per_above_500, plot_plot
 from useful_scit.imps import *
 from flexpart_management.modules import constants as co, flx_array as fa
 
