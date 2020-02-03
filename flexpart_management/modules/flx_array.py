@@ -21,7 +21,8 @@ from typing import List
 import cartopy
 import cartopy.mpl.geoaxes
 import area
-import flexpart_management.modules.constants as co
+# import flexpart_management.modules.constants as co
+from flexpart_management.modules import constants as co
 from useful_scit.util.zarray import compressed_netcdf_save
 
 from flexpart_management.modules import constants as co
