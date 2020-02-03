@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/n_01_ft_candidate.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/n_01_ft_candidate.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/n_01_ft_candidate.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/n_01_ft_candidate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/n_01_ft_candidate_lfc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/n_01_ft_candidate_lfc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -1173,7 +1169,7 @@
       <workItem from="1580398337598" duration="6848000" />
       <workItem from="1580476653612" duration="54606000" />
       <workItem from="1580739867487" duration="6255000" />
-      <workItem from="1580746519302" duration="13314000" />
+      <workItem from="1580746519302" duration="13577000" />
     </task>
     <servers />
   </component>
