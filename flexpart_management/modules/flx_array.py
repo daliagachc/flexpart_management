@@ -685,6 +685,7 @@ def logpolar_plot(ds,
                   fig_ops=None,
                   drop_zeros=True,
                   cb_kwargs=None,
+                  return_patch = False
                   ) -> plt.Axes:
     """
     plots a log polar plot from a dataset that contains the following fields:
@@ -692,6 +693,8 @@ def logpolar_plot(ds,
 
     Parameters
     ----------
+    return_patch
+        if true returns a patch instead of ax
     cb_kwargs
         kwargs for the colorbar
     ds
@@ -762,7 +765,12 @@ def logpolar_plot(ds,
             import xarray.plot.utils
             cb_lab = xarray.plot.utils.label_from_attrs(ds)
         cb.ax.set_ylabel(cb_lab, rotation=90)
-    return ax
+
+    if return_patch:
+        ret = p
+    else:
+        ret = ax
+    return ret
 
 
 def get_pol_area(ds):

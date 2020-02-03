@@ -142,11 +142,11 @@ def plot_for_time_stamp(flx_ds, r, l, hs=None):
         flx_Z = flx_trim.sum(co.ZM)
         surf = (flx_Z*flx_trim[co.TOPO])/flx_Z.sum(co.TH_CENTER)
 
-        to_plot = 0.2*flx_Z.mean()
+        to_plot = 0.1*flx_Z.mean()
         _boo = flx_Z.sum(co.TH_CENTER)>to_plot
+        surf.sum(co.TH_CENTER).where(_boo).plot(ax=ax)
 
         flx_sum.plot(cmap=plt.get_cmap('Reds'),ax=ax)
-        surf.sum(co.TH_CENTER).where(_boo).plot(ax=ax,color='k')
 
 
 

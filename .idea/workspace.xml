@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysis/n01_check_input_data.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysis/n01_check_input_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysis/n01_check_input_data_lfc.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysis/n01_check_input_data_lfc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysis/n02_compare_flx.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysis/n02_compare_flx.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysis/n02_compare_flx_lfc.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysis/n02_compare_flx_lfc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/n_01_ft_candidate.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/n_01_ft_candidate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/n_01_ft_candidate_lfc.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/n_01_ft_candidate_lfc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/flexpart_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flexpart_management.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/FlexLogPol.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/FlexLogPol.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flexpart_management/modules/flx_array.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/flx_array.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysis/n02_compare_flx_lfc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysis/n02_compare_flx_lfc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -688,12 +683,13 @@
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="tags.panel.proportion" value="0.5" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="flexpart_management" sdk-home="$PROJECT_DIR$/../miniconda3/envs/b36/bin/python">
+        <option name="useSoftWraps" value="true" />
         <option name="mySdkHome" value="$PROJECT_DIR$/../miniconda3/envs/b36/bin/python" />
         <option name="myModuleName" value="flexpart_management" />
       </console-settings>
@@ -706,19 +702,19 @@
     <option name="mySaveCallSignatures" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/flexpart_management/pics" />
-      <recent name="$PROJECT_DIR$/flexpart_management/releases/v02/figures/general_description" />
-      <recent name="$PROJECT_DIR$/flexpart_management/releases/v02/figures/time_series" />
-      <recent name="$PROJECT_DIR$/flexpart_management/releases/v02/conc_ts_cluster" />
-      <recent name="$PROJECT_DIR$/flexpart_management/runs_config_dir" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysis" />
       <recent name="$PROJECT_DIR$/flexpart_management/requests/george/slices" />
       <recent name="$PROJECT_DIR$/flexpart_management/pics" />
       <recent name="$PROJECT_DIR$/flexpart_management/releases/v02" />
       <recent name="$PROJECT_DIR$/flexpart_management/releases" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/flexpart_management/notebooks" />
+      <recent name="$PROJECT_DIR$/flexpart_management/pics" />
+      <recent name="$PROJECT_DIR$/flexpart_management/releases/v02/figures/general_description" />
+      <recent name="$PROJECT_DIR$/flexpart_management/releases/v02/figures/time_series" />
+      <recent name="$PROJECT_DIR$/flexpart_management/releases/v02/conc_ts_cluster" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -1179,7 +1175,9 @@
       <workItem from="1580142336982" duration="68599000" />
       <workItem from="1580373558106" duration="16261000" />
       <workItem from="1580398337598" duration="6848000" />
-      <workItem from="1580476653612" duration="53459000" />
+      <workItem from="1580476653612" duration="54606000" />
+      <workItem from="1580739867487" duration="6255000" />
+      <workItem from="1580746519302" duration="12460000" />
     </task>
     <servers />
   </component>
@@ -1404,6 +1402,16 @@
           <url>file://$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysis/n01_check_input_data_lfc.py</url>
           <line>133</line>
           <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysis/n02_compare_flx_lfc.py</url>
+          <line>164</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysis/n02_compare_flx_lfc.py</url>
+          <line>148</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
