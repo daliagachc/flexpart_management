@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/n_02_ft_candidate_log.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/n_01_ft_candidate.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/n_01_ft_candidate.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/n_01_ft_candidate.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/n_01_ft_candidate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -661,7 +662,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python&#10;GenericSQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysis" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -697,11 +698,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02" />
       <recent name="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysis" />
       <recent name="$PROJECT_DIR$/flexpart_management/requests/george/slices" />
       <recent name="$PROJECT_DIR$/flexpart_management/pics" />
       <recent name="$PROJECT_DIR$/flexpart_management/releases/v02" />
-      <recent name="$PROJECT_DIR$/flexpart_management/releases" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/flexpart_management/notebooks" />
@@ -1171,7 +1172,8 @@
       <workItem from="1580398337598" duration="6848000" />
       <workItem from="1580476653612" duration="54606000" />
       <workItem from="1580739867487" duration="6255000" />
-      <workItem from="1580746519302" duration="14106000" />
+      <workItem from="1580746519302" duration="16915000" />
+      <workItem from="1580813671474" duration="495000" />
     </task>
     <servers />
   </component>
