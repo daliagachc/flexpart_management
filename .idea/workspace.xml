@@ -4,6 +4,7 @@
     <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/n_02_ft_candidate_log.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/n_01_ft_candidate.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/n_01_ft_candidate.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/n_01_ft_candidate.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/n_01_ft_candidate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" afterDir="false" />
     </list>
@@ -1173,7 +1174,7 @@
       <workItem from="1580476653612" duration="54606000" />
       <workItem from="1580739867487" duration="6255000" />
       <workItem from="1580746519302" duration="16915000" />
-      <workItem from="1580813671474" duration="495000" />
+      <workItem from="1580813671474" duration="1023000" />
     </task>
     <servers />
   </component>

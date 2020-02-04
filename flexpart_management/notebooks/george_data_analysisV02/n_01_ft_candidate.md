@@ -9,6 +9,19 @@ from flexpart_management.modules import constants as co, flx_array as fa
 fa, lfc, plt, co;
 ```
 
+    reload
+
+
+
+
+<div class="bk-root">
+    <a href="https://bokeh.org" target="_blank" class="bk-logo bk-logo-small bk-logo-notebook"></a>
+    <span id="1001">Loading BokehJS ...</span>
+</div>
+
+
+
+
 
 ```python
 # def main():
@@ -29,7 +42,7 @@ df = pd.read_excel(
 ```python
 # CONSTANTS
 t0,      t1,      name,   h11,h12,    h21,h22, tlen = \
-'t0_utc','t1_utc','name','h11','h12','h21','h22','length[h]'
+    't0_utc','t1_utc','name','h11','h12','h21','h22','length[h]'
 ```
 
 
@@ -177,8 +190,24 @@ for l,r in df.iterrows():
 
 
 ```python
-
+r = df[df['name']==11].iloc[0]
 ```
+
+
+```python
+lfc.plot_plot(da, h11, h12, h21, h22, name, r, t0, t1, tlen)
+```
+
+
+![png](n_01_ft_candidate_files/n_01_ft_candidate_9_0.png)
+
+
+
+
+
+![png](n_01_ft_candidate_files/n_01_ft_candidate_9_1.png)
+
+
 
 
 ```python
