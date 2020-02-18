@@ -161,5 +161,7 @@ fm_path = flexpart_management.__file__
 fm_path = os.path.dirname(fm_path)
 
 # %%
+paper_fig_path = '/Users/diego/wrf-flexpart-chc/src/figures'
+
 
 # %%

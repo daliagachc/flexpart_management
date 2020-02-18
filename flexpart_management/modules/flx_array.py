@@ -391,9 +391,15 @@ def get_ax_bolivia(
         chc_lp_legend=True,
         plot_cities=True,
         plot_ocean=False,
-        lola_ticks=None
-        , draw_labels=True, grid_alpha=0.5, grid_color='k', grid_style='--',
-        map_res='10m') -> GeoAxes:
+        lola_ticks=None,
+        draw_labels=True,
+        grid_alpha=0.5,
+        grid_color='k',
+        grid_style='--',
+        map_res='50m',
+        lake_face_color=cartopy.feature.COLORS['water'],
+        map_line_alpha=1
+) -> GeoAxes:
     """
     returns a geo ax object with the area of bolivia
 
@@ -425,17 +431,23 @@ def get_ax_bolivia(
 
     ax.set_extent(lola_extent, crs=proj)
     ax.add_feature(cartopy.feature.LAKES.with_scale(map_res),
-                   alpha=1, linestyle='-'
+                   alpha=1, linestyle='-',
+                   facecolor=lake_face_color,
+                   edgecolor=cartopy.feature.COLORS['water']
                    )
     if plot_ocean:
         ax.add_feature(cartopy.feature.OCEAN.with_scale('50m'))
-    ax.add_feature(cartopy.feature.COASTLINE.with_scale(map_res))
-    ax.add_feature(cartopy.feature.BORDERS.with_scale(map_res))
+    ax.add_feature(cartopy.feature.COASTLINE.with_scale(map_res),
+                   alpha=map_line_alpha
+                   )
+    ax.add_feature(cartopy.feature.BORDERS.with_scale(map_res),
+                   alpha=map_line_alpha
+                   )
     if plot_cities:
         ax.add_feature(cartopy.feature.STATES.with_scale(map_res), alpha=0.5,
                        linestyle=':')
     gl = ax.gridlines(crs=proj, alpha=grid_alpha, linestyle=grid_style,
-                      draw_labels=draw_labels, color =grid_color)
+                      draw_labels=draw_labels, color=grid_color)
     gl.xlabels_top = False
     gl.ylabels_right = False
     if lola_ticks is None:
@@ -469,7 +481,10 @@ def get_ax_lapaz(ax=False,
                  lola_ticks=None
                  , draw_labels=True
                  , plot_cities=True
-                 , grid_alpha=0.5, grid_color='k', grid_style='--', lake_face_color='none'):
+                 , grid_alpha=0.5, grid_color='k', grid_style='--',
+                 lake_face_color='none',
+                 map_line_alpha=1
+                 , y_left_lab=False, y_right_lab=False):
     if fig_args is None:
         fig_args = {}
     import matplotlib.ticker as mticker
@@ -483,25 +498,35 @@ def get_ax_lapaz(ax=False,
     ax.add_feature(cartopy.feature.COASTLINE.with_scale('10m'))
     ax.add_feature(
         cartopy.feature.LAKES.with_scale('10m'),
-        facecolor=lake_face_color, edgecolor=cartopy.feature.COLORS['water']
+        facecolor=lake_face_color, edgecolor=cartopy.feature.COLORS['water'],
+        alpha=map_line_alpha,
     )
-    ax.add_feature(cartopy.feature.BORDERS.with_scale('10m'))
+    ax.add_feature(cartopy.feature.BORDERS.with_scale('10m'),
+                   alpha=map_line_alpha,
+                   )
     if plot_cities:
-        ax.add_feature(cartopy.feature.STATES.with_scale('10m'), alpha=0.5,
+        ax.add_feature(cartopy.feature.STATES.with_scale('10m'),
+                       alpha=map_line_alpha,
                        linestyle=':')
-    gl = ax.gridlines(crs=co.PROJ, alpha=grid_alpha, linestyle=grid_style,
-                      draw_labels=draw_labels, color =grid_color)
+    gl = ax.gridlines(
+        crs=co.PROJ, alpha=grid_alpha,
+        linestyle=grid_style,
+        draw_labels=draw_labels,
+        color=grid_color
+    )
 
     gl.xlabels_top = False
-    gl.ylabels_right = False
+    gl.ylabels_right = y_right_lab
+    gl.ylabels_left = y_left_lab
+    rr=2
     if lola_ticks is None:
-        lo1 = np.round(lalo_extent[0] / 5) * 5 - 5
+        lo1 = np.round(lalo_extent[0] / rr) * rr - 4*rr
         # print(lo1)
-        lo2 = lalo_extent[1] + 5
-        la1 = np.round(lalo_extent[2] / 5) * 5 - 5
-        la2 = lalo_extent[3] + 5
-        lolo = np.arange(*(lo1, lo2, 5))
-        lala = np.arange(*(la1, la2, 5))
+        lo2 = lalo_extent[1] + 4*rr
+        la1 = np.round(lalo_extent[2] / rr) * rr - 4*rr
+        la2 = lalo_extent[3] + 4*rr
+        lolo = np.arange(*(lo1, lo2, rr))
+        lala = np.arange(*(la1, la2, rr))
     else:
         lala = lola_ticks[1]
         lolo = lola_ticks[0]
@@ -664,13 +689,14 @@ def r_th_to_lat(lat_center, rr, th):
     return r_th_to_ll(lat_center, rr, th, np.cos)
 
 
-def polygon_from_row(r):
+def polygon_from_row(r, **kwargs):
+    kw = {'closed': True, **kwargs}
     pol = Polygon([
         [r[co.LON_00], r[co.LAT_00]],
         [r[co.LON_10], r[co.LAT_10]],
         [r[co.LON_11], r[co.LAT_11]],
         [r[co.LON_01], r[co.LAT_01]],
-    ], True)
+    ], **kw)
     return pol
 
 
@@ -685,7 +711,7 @@ def logpolar_plot(ds,
                   fig_ops=None,
                   drop_zeros=True,
                   cb_kwargs=None,
-                  return_patch = False
+                  return_patch=False
                   ) -> plt.Axes:
     """
     plots a log polar plot from a dataset that contains the following fields:
@@ -747,7 +773,7 @@ def logpolar_plot(ds,
         minc = perm
 
     args_ = {
-        'cmap': red_cmap(),
+        'cmap'     : red_cmap(),
         'transform': co.PROJ,
         **patch_args
     }
@@ -841,12 +867,12 @@ def get_custom_cmap(to_rgb, from_rgb=None):
     r2, g2, b2 = to_rgb
 
     cdict = {
-        'red': ((0, r1, r1),
-                (1, r2, r2)),
+        'red'  : ((0, r1, r1),
+                  (1, r2, r2)),
         'green': ((0, g1, g1),
                   (1, g2, g2)),
-        'blue': ((0, b1, b1),
-                 (1, b2, b2))
+        'blue' : ((0, b1, b1),
+                  (1, b2, b2))
     }
 
     cmap = LinearSegmentedColormap('custom_cmap', cdict)
@@ -1169,6 +1195,13 @@ def open_temp_ds(name):
     return ds
 
 
+def open_temp_ds_clustered_18(fix_lab=True):
+    ds = open_temp_ds('ds_clustered_18.nc')
+    ds = ds.assign_coords(
+        {'lab': ds['lab'][{co.RL: 0}].reset_coords(co.RL, drop=True)})
+    return ds
+
+
 def open_ds_zg(ds, merged_ds):
     ds_zg = open_temp_ds(merged_ds)
     ds_zg = ds_zg[{co.ZT: slice(0, 30)}]
@@ -1185,3 +1218,41 @@ def import_datasets():
     ds_zg = open_ds_zg(ds, merged_ds)
     prop_df = pd.read_csv(co.prop_df_path)
     return ds, ds_zg, prop_df
+
+
+def open_clus_ts():
+    clus_ts = pd.read_csv(pjoin(co.tmp_data_path, 'conc_ts_cluster.csv'))
+    clus_ts = clus_ts.set_index(co.RL)
+    clus_ts.index = pd.to_datetime(clus_ts.index)
+    return clus_ts
+
+
+def open_iso_ts():
+    data_path = pjoin(co.tmp_data_path, 'data_george_cc.xlsx')
+    df_ts = pd.read_excel(data_path, sheet_name=1, skiprows=1)
+    df_ts = df_ts.set_index('time_utc')
+    df_ts.index = pd.to_datetime(df_ts.index)
+    df_ts.index.name = co.RL
+    return df_ts
+
+
+def import_george_time_periods():
+    data_path = pjoin(co.tmp_data_path, 'data_george_ccV02.xlsx')
+    ts = pd.read_excel(data_path)
+    ts['t0_utc'] = pd.to_datetime(ts['t0_utc'])
+    ts['t1_utc'] = pd.to_datetime(ts['t1_utc'])
+    return ts
+
+
+def add_ax_lab(ax, text):
+    ax.annotate(text,
+                [0, 1],
+                xytext=[2, 2],
+                xycoords='axes fraction',
+                textcoords='offset points',
+                horizontalalignment='left',
+                verticalalignment='bottom',
+                color='k',
+                fontsize=10,
+                fontweight='bold'
+                )
