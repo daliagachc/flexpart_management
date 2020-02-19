@@ -2,51 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/correlate_high_iso_days_to_cl/correlate_high_iso_days_to_cl.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/correlate_high_iso_days_to_cl/correlate_high_iso_days_to_cl.pptx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/correlate_high_iso_days_to_cl/correlate_high_iso_days_to_cl.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/correlate_high_iso_days_to_cl/correlate_high_iso_days_to_cl_lfc.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/correlate_high_iso_days_to_cl/correlate_high_iso_days_to_cl_lfc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/correlate_isoprene_clusters.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/correlate_isoprene_clusters.pptx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/correlate_isoprene_clusters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/correlate_isoprene_clusters_lfc.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/correlate_isoprene_clusters_lfc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/derive_high_iso_days/derive_high_iso_days.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/derive_high_iso_days/derive_high_iso_days.pptx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/derive_high_iso_days/derive_high_iso_days.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/derive_high_iso_days/derive_high_iso_days_lfc.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/derive_high_iso_days/derive_high_iso_days_lfc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/multicluster_main_pathways/multicluster_main_pathways.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/multicluster_main_pathways/multicluster_main_pathways.pptx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/multicluster_main_pathways/multicluster_main_pathways.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/multicluster_main_pathways/multicluster_main_pathways_lfc.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/multicluster_main_pathways/multicluster_main_pathways_lfc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/add_quantiles_to_medeoids/add_quantiles_to_medeoids.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/add_quantiles_to_medeoids/add_quantiles_to_medeoids.pptx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/add_quantiles_to_medeoids/add_quantiles_to_medeoids.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/add_quantiles_to_medeoids/add_quantiles_to_medeoids.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/add_quantiles_to_medeoids/add_quantiles_to_medeoids_lfc.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/add_quantiles_to_medeoids/add_quantiles_to_medeoids_lfc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_volcano_chc/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_volcano_chc/n01_volcano_sulfate.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_volcano_chc/n01_volcano_sulfate.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_volcano_chc/n01_volcano_sulfate_lfc.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_volcano_chc/n01_volcano_sulfate_lfc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_volcano_chc/n02_regressors/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_volcano_chc/n02_regressors/n02_regressors.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_volcano_chc/n02_regressors/n02_regressors.pptx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_volcano_chc/n02_regressors/n02_regressors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_volcano_chc/n02_regressors/n02_regressors_lfc.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_volcano_chc/n02_regressors/n02_regressors_lfc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_volcano_chc/n02_regressors/n02_regressors_lfc_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v01/releasev01_wiebke.pptx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/legend.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/flexpart_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flexpart_management.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/paper_time_series/paper_time_series.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/paper_time_series/paper_time_series.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/paper_time_series/paper_time_series.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/paper_time_series/paper_time_series_lfc.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/paper_time_series/paper_time_series_lfc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/clustering_funs.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/clustering_funs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flexpart_management/modules/flx_array.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/flx_array.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/multicluster_main_pathways/multicluster_main_pathways_lfc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/multicluster_main_pathways/multicluster_main_pathways_lfc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/cluster_local_funs.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/cluster_local_funs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/4-panel-cluster-medeoids.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/4-panel-cluster-medeoids.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_hag.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_hag.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_hsl.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_hsl.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_srr_influence.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_srr_influence.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_surface_influence.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_surface_influence.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../useful-scit/useful_scit/plot/plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/../useful-scit/useful_scit/plot/plot.py" afterDir="false" />
     </list>
@@ -730,7 +701,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python&#10;Markdown&#10;GenericSQL" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/flexpart_management/releases/v02/figures" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/flexpart_management/tmp_data" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -767,10 +738,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/flexpart_management/tmp_data" />
+      <recent name="$PROJECT_DIR$/flexpart_management/releases/v02/figures" />
       <recent name="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02" />
       <recent name="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysis" />
       <recent name="$PROJECT_DIR$/flexpart_management/requests/george/slices" />
-      <recent name="$PROJECT_DIR$/flexpart_management/pics" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/flexpart_management/notebooks" />
@@ -1251,7 +1222,10 @@
       <workItem from="1581240007432" duration="22545000" />
       <workItem from="1581317296595" duration="129878000" />
       <workItem from="1581693507609" duration="42763000" />
-      <workItem from="1582020571292" duration="17764000" />
+      <workItem from="1582020571292" duration="21861000" />
+      <workItem from="1582059328622" duration="2980000" />
+      <workItem from="1582107774986" duration="9403000" />
+      <workItem from="1582123411235" duration="8466000" />
     </task>
     <servers />
   </component>

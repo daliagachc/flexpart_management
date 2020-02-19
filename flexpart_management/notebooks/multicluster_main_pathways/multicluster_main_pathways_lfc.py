@@ -248,7 +248,7 @@ def create_combined_plot(
     )
     ll = pd.DataFrame(seg.T, columns=['lo', 'la']).sort_values('la').iloc[-1]
     bbox_props = dict(boxstyle="round", fc="w", ec="none", alpha=0.5)
-    axBO.annotate('$z=3.9$ km', ll.values,
+    axBO.annotate('$z=`3.9$ km', ll.values,
                   xytext=[-30, 20],
                   textcoords='offset points',
                   zorder=12,

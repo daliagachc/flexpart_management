@@ -171,7 +171,7 @@ def add_labels_to_cluster_markers(ax, df_prop, hgk_, km_):
     df_prop['hgk_xy'] = [[(6, 6)]] * len(df_prop)
     df_prop.loc[0, 'hgk_xy'] = [[[-23, 3]]]
     df_prop.loc[1, 'hgk_xy'] = [[[5, 6]]]
-    df_prop.loc[2, 'hgk_xy'] = [[[-13, 12]]]
+    df_prop.loc[2, 'hgk_xy'] = [[[-23, 0]]]
     df_prop.loc[3, 'hgk_xy'] = [[[10, -10]]]
     df_prop.loc[4, 'hgk_xy'] = [[[-10, -8]]]
     df_prop.loc[5, 'hgk_xy'] = [[[-7, 8]]]
@@ -186,7 +186,7 @@ def add_labels_to_cluster_markers(ax, df_prop, hgk_, km_):
     df_prop.loc[14, 'hgk_xy'] = [[[10, 0]]]
     df_prop.loc[15, 'hgk_xy'] = [[[6, -8]]]
     df_prop.loc[16, 'hgk_xy'] = [[[8, 4]]]
-    df_prop.loc[17, 'hgk_xy'] = [[[-35, -8]]]
+    df_prop.loc[17, 'hgk_xy'] = [[[-35, -15]]]
     for l, row in df_prop.iterrows():
         ax.annotate(
             row['short_name'],  # + str(l),
@@ -197,7 +197,7 @@ def add_labels_to_cluster_markers(ax, df_prop, hgk_, km_):
             xytext=row['hgk_xy'][0],
             textcoords='offset points',
             # color = 'blue',
-            alpha=.2,
+            alpha=.5,
             arrowprops={'arrowstyle': '-', 'alpha': .1}
 
         )
@@ -218,4 +218,4 @@ def add_indices(ax1, ax2, ax3, ax4):
     axs = [ax1, ax2, ax3, ax4]
     texts = ['a)', 'b)', 'c)', 'd)']
     for ax, text in zip(axs, texts):
-        add_ax_lab(ax, text)
+        fa.add_ax_lab(ax, text)

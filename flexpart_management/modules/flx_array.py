@@ -1256,3 +1256,16 @@ def add_ax_lab(ax, text):
                 fontsize=10,
                 fontweight='bold'
                 )
+
+def add_fig_panels(fig:plt.Axes=None,axl=None, par=')'):
+    import string
+    a_l = list(string.ascii_lowercase)
+    if axl is None:
+        axs = fig.axes
+    else:
+        axs = axl
+    for a,ax in zip(a_l,axs):
+        add_ax_lab(ax,f'{a}{par}')
+
+
+

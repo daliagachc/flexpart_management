@@ -1273,6 +1273,7 @@ def plot_cluster_summary_figure(
         y_label=None,
         add_vertical_lines=False,
         add_cluster_group_label = True,
+        y_ticks = None
 ):
     if ax is None:
         f, ax = plt.subplots(figsize=figsize)
@@ -1312,6 +1313,9 @@ def plot_cluster_summary_figure(
         ax.set_ylim(y_range)
     if y_label is not None:
         ax.set_ylabel(y_label)
+
+    if y_ticks is not None:
+        ax.set_yticks(y_ticks)
 
     plt.tight_layout()
     f: plt.Figure

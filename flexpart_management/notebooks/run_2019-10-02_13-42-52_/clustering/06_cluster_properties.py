@@ -244,7 +244,7 @@ def main():
 
 # %%
     f,axs = plt.subplots(2,2, sharex=True,
-                         figsize=(8,8/1.4))
+                         figsize=(7.25,7.25/1.4))
     axf = axs.flatten()
     ax = axf[0]
     ax = cfuns.plot_cluster_summary_figure(
@@ -275,6 +275,19 @@ def main():
         add_cluster_group_label=False
 
     )
+
+    axsl:plt.Axes = axf[1]
+    axsl.annotate('CHC',xy=[5,5.2],
+                  xytext=[-19, 0],
+                  textcoords='offset points',
+                  zorder=12,
+                  alpha=.5,
+                  fontsize=6,
+                  arrowprops=dict(arrowstyle='-', alpha=.5),
+
+                  )
+    axsl.scatter(0,5.2,c='k',s=10)
+
     # plt.show()
 
 
@@ -289,7 +302,8 @@ def main():
         y_label=r'$\frac{\mathrm{SRR}_{<1.5\mathrm{km}}}{\mathrm{SRR}_{\mathrm{total}}}\ [\%]$',
         ax=axf[2],
         add_vertical_lines=True,
-        add_cluster_group_label=True
+        add_cluster_group_label=True,
+        y_range=(0, 100),
 
     )
     # plt.show()
@@ -305,14 +319,17 @@ def main():
         y_range=(0, 13),
         add_vertical_lines=True,
         add_cluster_group_label=False,
-        ax=axf[3]
+        ax=axf[3],
+        y_ticks=[0,5,10]
     )
 
     loc_funs.add_indices(*axf)
 
     f:plt.Figure
     f.tight_layout()
+    axf[0].set_xlim(0,1150)
     f.savefig(os.path.join(loc_funs.FIG_PATH,'4-panel-cluster-medeoids.pdf'))
+    f.savefig(os.path.join(co.paper_fig_path,'cluster_medeoids_7_25.pdf'))
 
     plt.show()
 
