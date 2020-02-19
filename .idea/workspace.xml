@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/paper_time_series/paper_time_series.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/paper_time_series/paper_time_series.pptx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/paper_time_series/paper_time_series.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/paper_time_series/paper_time_series_lfc.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/paper_time_series/paper_time_series_lfc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/clustering_funs.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/clustering_funs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/flx_array.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/flx_array.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/multicluster_main_pathways/multicluster_main_pathways_lfc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/multicluster_main_pathways/multicluster_main_pathways_lfc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/cluster_local_funs.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/cluster_local_funs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/4-panel-cluster-medeoids.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/4-panel-cluster-medeoids.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_hag.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_hag.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_hsl.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_hsl.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_srr_influence.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_srr_influence.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_surface_influence.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_surface_influence.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../useful-scit/useful_scit/imps/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../useful-scit/useful_scit/plot/plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/../useful-scit/useful_scit/plot/plot.py" afterDir="false" />
     </list>
@@ -1225,7 +1210,7 @@
       <workItem from="1582020571292" duration="21861000" />
       <workItem from="1582059328622" duration="2980000" />
       <workItem from="1582107774986" duration="9403000" />
-      <workItem from="1582123411235" duration="8466000" />
+      <workItem from="1582123411235" duration="8966000" />
     </task>
     <servers />
   </component>
