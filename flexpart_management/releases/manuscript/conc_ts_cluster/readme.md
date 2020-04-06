@@ -1,0 +1,2 @@
+- time in utc (releases)
+- for each cluster name, we report the srr (%) such that summing over all clusters equals 100% 
