@@ -1,0 +1,13 @@
+2020-04-05 18:44:15,610 useful_scit  WARNING  rpy2 not installed. Everything works except functions requiring r
+2020-04-05 18:44:15,612 useful_scit  WARNING  basename is: 2018-04-17
+/homeappl/home/aliagadi/appl_taito/miniconda3/envs/b36backup/lib/python3.6/site-packages/xarray/core/common.py:664: FutureWarning: This DataArray contains multi-dimensional coordinates. In the future, the dimension order of these coordinates will be restored as well unless you specify restore_coord_dims=False.
+  self, group, squeeze=squeeze, restore_coord_dims=restore_coord_dims
+/homeappl/home/aliagadi/appl_taito/miniconda3/envs/b36backup/lib/python3.6/site-packages/xarray/core/common.py:664: FutureWarning: This DataArray contains multi-dimensional coordinates. In the future, the dimension order of these coordinates will be restored as well unless you specify restore_coord_dims=False.
+  self, group, squeeze=squeeze, restore_coord_dims=restore_coord_dims
+/homeappl/home/aliagadi/appl_taito/miniconda3/envs/b36backup/lib/python3.6/site-packages/xarray/core/common.py:664: FutureWarning: This DataArray contains multi-dimensional coordinates. In the future, the dimension order of these coordinates will be restored as well unless you specify restore_coord_dims=False.
+  self, group, squeeze=squeeze, restore_coord_dims=restore_coord_dims
+/homeappl/home/aliagadi/appl_taito/miniconda3/envs/b36backup/lib/python3.6/site-packages/xarray/core/common.py:664: FutureWarning: This DataArray contains multi-dimensional coordinates. In the future, the dimension order of these coordinates will be restored as well unless you specify restore_coord_dims=False.
+  self, group, squeeze=squeeze, restore_coord_dims=restore_coord_dims
+/homeappl/home/aliagadi/appl_taito/miniconda3/envs/b36backup/lib/python3.6/site-packages/xarray/core/common.py:664: FutureWarning: This DataArray contains multi-dimensional coordinates. In the future, the dimension order of these coordinates will be restored as well unless you specify restore_coord_dims=False.
+  self, group, squeeze=squeeze, restore_coord_dims=restore_coord_dims
+2020-04-05 18:45:48,950 useful_scit  WARNING  done s

@@ -42,7 +42,7 @@ def main():
     # plt.show()
     res = (ts_merged[clus_cols]*ls).T.sum()
     # res = (ts_merged[clus_cols]*ls)
-    sr_ = ['04_MR']
+    sr_ = ['09_MR']
     res = (ts_merged[clus_cols]*ls)[sr_]*10
     res.resample('1H').median().plot.area(ax=ax)
     ax.figure.tight_layout()

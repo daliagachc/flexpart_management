@@ -10,5 +10,5 @@ setup(
     author_email='diego.aliaga@helsinki.fi',
     description='package to run flexpart at taito',
     install_requires=['xarray', 'pandas', 'cartopy', 'matplotlib', 'area', 'numpy', 'scikit-learn', 'rpy2',
-                      'scipy', 'netCDF4', 'alphashape']
+                      'scipy', 'netCDF4', 'alphashape', 'sqlalchemy']
 )

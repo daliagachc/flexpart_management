@@ -77,7 +77,10 @@ def get_res_quan(dac_sum, lab, _q, conc_name='CONC'):
 
 def plot_pathways(npdf, dac_sum, conc_name, lon_range=15, lat_range=13,
                   centroid_to_plot=['LR', 'MR'], chc_lp_legend=False,
-                  q_level=.8, ax_bolivia=True, ax=None, min_fs=5):
+                  q_level=.8, ax_bolivia=True, ax=None, min_fs=5,
+                  add_patch=True,
+                  labs_to_plot = 'all'
+                  , background_alpha=0):
     if ax is None:
         ucp.set_dpi(300)
         f_width = 7.25
@@ -86,7 +89,6 @@ def plot_pathways(npdf, dac_sum, conc_name, lon_range=15, lat_range=13,
             subplot_kw=dict(projection=crt.crs.PlateCarree()),
             figsize=figsize
         )
-    f = ax.figure
     ax: plt.Axes
     if ax_bolivia:
         fa.get_ax_bolivia(
@@ -119,7 +121,8 @@ def plot_pathways(npdf, dac_sum, conc_name, lon_range=15, lat_range=13,
             linewidth=1,
             zorder=11
         )
-        ax.add_patch(patch)
+        if add_patch:
+            ax.add_patch(patch)
     npdf['text_xy'] = [[[0, 0]]] * len(npdf)
     npdf.loc['07_LR', 'text_xy'] = [[[-5, -12]]]
     npdf.loc['08_LR', 'text_xy'] = [[[-5, 7]]]
@@ -134,8 +137,8 @@ def plot_pathways(npdf, dac_sum, conc_name, lon_range=15, lat_range=13,
     npdf.loc['03_SM', 'text_xy'] = [[[5, -4]]]
     npdf.loc['06_SM', 'text_xy'] = [[[-7, -10]]]
     npdf.loc['11_SR', 'text_xy'] = [[[-10, 7]]]
+    npdf.loc['02_SR', 'text_xy'] = [[[-3, 7]]]
     npdf.loc['12_SR', 'text_xy'] = [[[-12, 7]]]
-    npdf.loc['02_SR', 'text_xy'] = [[[-6, 7]]]
     npdf.loc['04_SR', 'text_xy'] = [[[4, -10]]]
     npdf.loc['07_SR', 'text_xy'] = [[[-17, -12]]]
     npdf.loc['10_SR', 'text_xy'] = [[[-30, 0]]]
@@ -154,13 +157,20 @@ def plot_pathways(npdf, dac_sum, conc_name, lon_range=15, lat_range=13,
             edgecolors=['k'],
             linewidth=1
         )
+
+    if labs_to_plot == 'all':
+        lab_lrpdf = lrpdf
+    else:
+        lab_lrpdf = npdf[npdf['range'].isin(labs_to_plot)]
+
+    for l, r in lab_lrpdf.iterrows():
         ax.annotate(
             r.name,
             xy=r[['lon', 'lat']],
             xytext=r['text_xy'][0],
             textcoords='offset points',
             zorder=12,
-            # backgroundcolor=[1,1,1,.2],
+            backgroundcolor=[1, 1, 1, background_alpha],
             # bbox=dict(boxstyle="round",
             #           alpha=0,
             #           linewidth=0,
@@ -217,10 +227,10 @@ def get_topoline(zline=3900):
 
 
 def create_combined_plot(
-        conc_name, dac_sum, npdf, path_colors, f_width=7.25,
+        conc_name, dac_sum, npdf, path_colors, *,out_name, f_width=7.25,
         min_fs=8,
         med_fs=10
-):
+        ):
     seg = get_topoline(zline=3900)
     # %%
     ucp.set_dpi(300)
@@ -248,14 +258,14 @@ def create_combined_plot(
     )
     ll = pd.DataFrame(seg.T, columns=['lo', 'la']).sort_values('la').iloc[-1]
     bbox_props = dict(boxstyle="round", fc="w", ec="none", alpha=0.5)
-    axBO.annotate('$z=`3.9$ km', ll.values,
+    axBO.annotate('$z=3.9$ km', ll.values,
                   xytext=[-30, 20],
                   textcoords='offset points',
                   zorder=12,
                   alpha=.5,
                   fontsize=min_fs,
                   arrowprops=dict(arrowstyle='->', alpha=.5),
-                  bbox = bbox_props,
+                  bbox=bbox_props,
                   )
 
     import matplotlib.patches as patches
@@ -335,7 +345,7 @@ def create_combined_plot(
         right=.93
     )
     axLP.figure.show()
-    axBO.figure.savefig(pjoin(co.paper_fig_path, 'horizontal_clus_desc_7_25.pdf'))
+    axBO.figure.savefig(pjoin(co.paper_fig_path, out_name))
     # axLP.figure.savefig('/tmp/lp.pdf')
 
 
@@ -364,3 +374,145 @@ def add_pathways_lab(axBO, axLP, min_fs, path_colors, bbox_props):
                 bbox=bbox_props,
                 zorder=50
             )
+
+def create_combined_plot_simple(
+        conc_name, dac_sum, npdf, path_colors, *,
+        out_name,
+        background_alpha = 0,
+        f_width=7.25,
+        min_fs=8,
+        med_fs=10,
+        add_patch=False
+):
+    seg = get_topoline(zline=3900)
+    # %%
+    ucp.set_dpi(300)
+    f_width = f_width
+    figsize = (f_width, f_width / 1.7)
+    # figsize = (f_width, f_width / .6)
+    f, axs = plt.subplots(
+        1, 2,
+        subplot_kw=dict(projection=crt.crs.PlateCarree()),
+        figsize=figsize
+    )
+    f: plt.Figure
+    lon_range = 2.2
+    lat_range = 2.2
+    axl = axs.flatten()
+    axBO = plot_pathways(
+        npdf, dac_sum, conc_name, ax=axl[0],
+        centroid_to_plot=['MR', 'SM', 'SR','LR'],
+        labs_to_plot = ['MR','LR'],
+        lon_range=15,
+        lat_range=15,
+        min_fs=min_fs,
+        add_patch=add_patch,
+        background_alpha=background_alpha
+
+    )
+
+    alt_style = dict(
+        transform=crt.crs.PlateCarree(), c='brown', linestyle='-', alpha=.3,
+        linewidth = 1
+    )
+
+    axBO.plot(
+        *seg, **alt_style
+    )
+    ll = pd.DataFrame(seg.T, columns=['lo', 'la']).sort_values('la').iloc[-1]
+    bbox_props = dict(boxstyle="round", fc="w", ec="none", alpha=0.5)
+    axBO.annotate('$z=3.9$ km', ll.values,
+                  xytext=[-30, 20],
+                  textcoords='offset points',
+                  zorder=12,
+                  alpha=.5,
+                  fontsize=min_fs,
+                  arrowprops=dict(arrowstyle='->', alpha=.5),
+                  bbox=bbox_props,
+                  )
+
+
+
+    import matplotlib.patches as patches
+    cc = get_extent(lon_range, lat_range)
+    rect = patches.Rectangle(
+        [cc[1], cc[3]], 2 * lon_range, 2 * lat_range,
+        zorder=10,
+        facecolor='none',
+        edgecolor='r',
+        linestyle='-.',
+        linewidth=1.5
+    )
+    axBO.add_patch(rect)
+    axLP = plot_pathways(
+        npdf, dac_sum, conc_name, lon_range=lon_range, lat_range=lat_range,
+        centroid_to_plot=['MR', 'SM', 'SR'],
+        chc_lp_legend=False,
+        q_level=.9,
+        ax_bolivia=False,
+        ax=axl[1],
+        min_fs=min_fs,
+        add_patch=False,
+        background_alpha=background_alpha
+    )
+    axLP.plot(*seg, **alt_style)
+    axLP.outline_patch.set_edgecolor('red')
+    axLP.outline_patch.set_linewidth(2)
+    axLP.outline_patch.set_linestyle('-.')
+    axLP.annotate(
+        'CHC',
+        xy=[co.CHC_LON - .05, co.CHC_LAT],
+        xytext=[20, 0],
+        textcoords='offset points',
+        zorder=30,
+        # alpha = .5,
+        fontsize=min_fs,
+        arrowprops=dict(arrowstyle='->', alpha=1)
+
+    )
+    axLP.annotate(
+        'LPB',
+        xy=[co.LPB_LON, co.LPB_LAT],
+        xytext=[-10, -20],
+        textcoords='offset points',
+        zorder=30,
+        # alpha = .5,
+        fontsize=min_fs,
+        arrowprops=dict(arrowstyle='->', alpha=1)
+
+    )
+    axLP.set_xticks([-70, -68, -66], crs=crt.crs.PlateCarree())
+    axLP.set_yticks([-16, -18], crs=crt.crs.PlateCarree())
+    axLP.yaxis.set_ticks_position('right')
+    axBO.set_xticks([-80, -70, -60], crs=crt.crs.PlateCarree())
+    axBO.set_yticks([-10, -20, -30], crs=crt.crs.PlateCarree())
+    axBO.set_ylabel(r'latitude [$\degree$]')
+    axBO.set_xlabel(r'longitude [$\degree$]')
+    axLP.annotate(
+        'zoomed in panel',
+        xy=[1, 1],
+        xytext=[0, 2],
+        xycoords='axes fraction',
+        textcoords='offset points',
+        verticalalignment='bottom',
+        horizontalalignment='right',
+        zorder=30,
+        fontsize=min_fs,
+        color='red'
+    )
+
+    if add_patch:
+
+        add_pathways_lab(axBO, axLP, min_fs, path_colors, bbox_props)
+
+    fa.add_ax_lab(axBO, 'a)')
+    fa.add_ax_lab(axLP, 'b)')
+    f.subplots_adjust(
+        wspace=.05, hspace=.13,
+        top=.97, bottom=.07, left=0.09,
+        right=.93
+    )
+    axLP.figure.show()
+    axBO.figure.savefig(pjoin(co.paper_fig_path, out_name))
+    # axLP.figure.savefig('/tmp/lp.pdf')
+

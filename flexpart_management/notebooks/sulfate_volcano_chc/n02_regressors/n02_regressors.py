@@ -135,6 +135,7 @@ def main():
     var_na = iso_ts[var].dropna()
     var_na.resample('H').mean().plot()
     plt.show()
+    # %%
 
     # var_na = var_na[var_na>=0]
     # bc = lfc.minmax(lfc.pt(var_na))

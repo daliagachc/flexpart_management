@@ -1,0 +1,17 @@
+2020-04-05 17:35:02,124 useful_scit  WARNING  rpy2 not installed. Everything works except functions requiring r
+2020-04-05 17:35:02,128 useful_scit  WARNING  basename is: 2018-04-09
+2020-04-05 17:35:02,450 useful_scit  WARNING  start 1
+2020-04-05 17:35:15,400 useful_scit  WARNING  load 1
+2020-04-05 17:35:15,429 useful_scit  WARNING  summed 1
+2020-04-05 17:35:15,429 useful_scit  WARNING  start s 1
+/homeappl/home/aliagadi/appl_taito/miniconda3/envs/b36backup/lib/python3.6/site-packages/dask/core.py:119: RuntimeWarning: invalid value encountered in true_divide
+  return func(*args2)
+2020-04-05 17:51:51,320 useful_scit  WARNING  done s 1
+2020-04-05 17:51:51,321 useful_scit  WARNING  start 2
+2020-04-05 17:52:06,161 useful_scit  WARNING  start s 2
+slurmstepd: error: Step 46977581.0 exceeded memory limit (34335058 > 32768000), being killed
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: Exceeded job memory limit
+slurmstepd: error: *** STEP 46977581.0 ON c865 CANCELLED AT 2020-04-05T18:12:25 ***
+srun: error: c865: task 0: Killed
+srun: Terminating job step 46977581.0

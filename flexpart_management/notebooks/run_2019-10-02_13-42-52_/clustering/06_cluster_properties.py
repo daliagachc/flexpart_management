@@ -37,6 +37,7 @@ from mpl_toolkits.axes_grid1.inset_locator import inset_axes
 
 import cluster_local_funs as loc_funs
 
+
 # %%
 
 
@@ -167,7 +168,8 @@ def main():
     df_prop[inf_per_name] = \
         df_prop.apply(lambda r: get_inf_per(ds, dss, r.name), axis=1)
     srr_inf_name = 'SRR [%]'
-    df_prop[srr_inf_name] = df_prop[inf_per_name] / df_prop[inf_per_name].sum() * 100
+    df_prop[srr_inf_name] = df_prop[inf_per_name] / df_prop[
+        inf_per_name].sum() * 100
 
     # %%
 
@@ -199,8 +201,6 @@ def main():
     # print((row[km_], row[hgk_]))
     # ax.text()
 
-
-
     # %%
 
     cfuns.plot_cluster_summary_figure(
@@ -223,7 +223,8 @@ def main():
         save_fig=True,
         fig_save_name='dis_vs_surface_influence.pdf',
         xy_locs=([100, 80], [180, 50], [500, 30], [950, 10]),
-        y_label=r'$\frac{\mathrm{SRR}_{<1.5\mathrm{km}}}{\mathrm{SRR}_{\mathrm{total}}}\ [\%]$'
+        y_label=r'$\frac{\mathrm{SRR}_{<1.5\mathrm{km}}}{\mathrm{SRR}_{'
+                r'\mathrm{total}}}\ [\%]$'
 
     )
     plt.show()
@@ -242,9 +243,9 @@ def main():
     )
     plt.show()
 
-# %%
-    f,axs = plt.subplots(2,2, sharex=True,
-                         figsize=(7.25,7.25/1.4))
+    # %%
+    f, axs = plt.subplots(2, 2, sharex=True,
+                          figsize=(7.25, 7.25 / 1.4))
     axf = axs.flatten()
     ax = axf[0]
     ax = cfuns.plot_cluster_summary_figure(
@@ -254,7 +255,7 @@ def main():
         # save_fig=True,
         fig_save_name='dis_vs_hag.pdf',
         xy_locs=([200, .5], [0, 4], [400, 6], [950, 5]),
-        ax = ax,
+        ax=ax,
         add_cluster_group_label=False
     )
 
@@ -262,7 +263,6 @@ def main():
     # plt.show()
     # print((row[km_], row[hgk_]))
     # ax.text()
-
 
     cfuns.plot_cluster_summary_figure(
         df_prop,
@@ -276,8 +276,8 @@ def main():
 
     )
 
-    axsl:plt.Axes = axf[1]
-    axsl.annotate('CHC',xy=[5,5.2],
+    axsl: plt.Axes = axf[1]
+    axsl.annotate('CHC', xy=[5, 5.2],
                   xytext=[-19, 0],
                   textcoords='offset points',
                   zorder=12,
@@ -286,11 +286,9 @@ def main():
                   arrowprops=dict(arrowstyle='-', alpha=.5),
 
                   )
-    axsl.scatter(0,5.2,c='k',s=10)
+    axsl.scatter(0, 5.2, c='k', s=10)
 
     # plt.show()
-
-
 
     cfuns.plot_cluster_summary_figure(
         df_prop,
@@ -299,7 +297,8 @@ def main():
         # save_fig=True,
         fig_save_name='dis_vs_surface_influence.pdf',
         xy_locs=([100, 80], [180, 50], [500, 30], [950, 10]),
-        y_label=r'$\frac{\mathrm{SRR}_{<1.5\mathrm{km}}}{\mathrm{SRR}_{\mathrm{total}}}\ [\%]$',
+        y_label=r'$\frac{\mathrm{SRR}_{<1.5\mathrm{km}}}{\mathrm{SRR}_{'
+                r'\mathrm{total}}}\ [\%]$',
         ax=axf[2],
         add_vertical_lines=True,
         add_cluster_group_label=True,
@@ -307,7 +306,6 @@ def main():
 
     )
     # plt.show()
-
 
     cfuns.plot_cluster_summary_figure(
         df_prop,
@@ -320,19 +318,18 @@ def main():
         add_vertical_lines=True,
         add_cluster_group_label=False,
         ax=axf[3],
-        y_ticks=[0,5,10]
+        y_ticks=[0, 5, 10]
     )
 
     loc_funs.add_indices(*axf)
 
-    f:plt.Figure
+    f: plt.Figure
     f.tight_layout()
-    axf[0].set_xlim(0,1150)
-    f.savefig(os.path.join(loc_funs.FIG_PATH,'4-panel-cluster-medeoids.pdf'))
-    f.savefig(os.path.join(co.paper_fig_path,'cluster_medeoids_7_25.pdf'))
+    axf[0].set_xlim(0, 1150)
+    f.savefig(os.path.join(loc_funs.FIG_PATH, '4-panel-cluster-medeoids.pdf'))
+    f.savefig(os.path.join(co.paper_fig_path, 'cluster_medeoids_7_25.pdf'))
 
     plt.show()
-
 
     # %%
     # km_ = 'distance from CHC [km]'
@@ -384,7 +381,6 @@ def main():
     xl = km_
     yl = ratio_lab
     loc_funs.number_marker_plot(df_prop, xl, yl, ax)
-
 
     # %%
     df_prop['lat_chc'] = (df_prop[co.R_CENTER] * df_prop[
@@ -473,5 +469,3 @@ def main():
     # %%
 
     # %%
-
-

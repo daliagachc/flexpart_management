@@ -1,0 +1,14 @@
+2020-04-05 17:20:37,135 useful_scit  WARNING  rpy2 not installed. Everything works except functions requiring r
+2020-04-05 17:20:37,138 useful_scit  WARNING  basename is: 2018-01-13
+2020-04-05 17:20:37,302 useful_scit  WARNING  start 1
+2020-04-05 17:20:50,915 useful_scit  WARNING  load 1
+2020-04-05 17:20:50,942 useful_scit  WARNING  summed 1
+2020-04-05 17:20:50,942 useful_scit  WARNING  start s 1
+/homeappl/home/aliagadi/appl_taito/miniconda3/envs/b36backup/lib/python3.6/site-packages/dask/core.py:119: RuntimeWarning: invalid value encountered in true_divide
+  return func(*args2)
+2020-04-05 17:34:17,170 useful_scit  WARNING  done s 1
+2020-04-05 17:34:17,170 useful_scit  WARNING  start 2
+2020-04-05 17:34:29,899 useful_scit  WARNING  start s 2
+/homeappl/home/aliagadi/appl_taito/miniconda3/envs/b36backup/lib/python3.6/site-packages/dask/core.py:119: RuntimeWarning: invalid value encountered in true_divide
+  return func(*args2)
+2020-04-05 17:51:44,423 useful_scit  WARNING  done s 2

@@ -374,9 +374,9 @@ def fix_releases(ds, prnt=False):
 
 def add_chc_lpb(ax):
     ax.scatter(co.CHC_LON, co.CHC_LAT, marker='.', color='b',
-               transform=co.PROJ, label='CHC')
+               transform=co.PROJ, label='CHC',zorder = 100)
     ax.scatter(co.LPB_LON, co.LPB_LAT, marker='.', color='g',
-               transform=co.PROJ, label='La Paz')
+               transform=co.PROJ, label='La Paz', zorder = 100)
     ax.legend()
 
 
@@ -433,7 +433,8 @@ def get_ax_bolivia(
     ax.add_feature(cartopy.feature.LAKES.with_scale(map_res),
                    alpha=1, linestyle='-',
                    facecolor=lake_face_color,
-                   edgecolor=cartopy.feature.COLORS['water']
+                   edgecolor=cartopy.feature.COLORS['water'],
+                   zorder = 0
                    )
     if plot_ocean:
         ax.add_feature(cartopy.feature.OCEAN.with_scale('50m'))
@@ -711,7 +712,9 @@ def logpolar_plot(ds,
                   fig_ops=None,
                   drop_zeros=True,
                   cb_kwargs=None,
-                  return_patch=False
+                  return_patch=False,
+                  cmap=None,
+                  centered_color=False
                   ) -> plt.Axes:
     """
     plots a log polar plot from a dataset that contains the following fields:
@@ -772,19 +775,27 @@ def logpolar_plot(ds,
         maxc = perM
         minc = perm
 
+    if cmap is None:
+        cmap = red_cmap()
+
     args_ = {
-        'cmap'     : red_cmap(),
+        'cmap'     : cmap,
         'transform': co.PROJ,
         **patch_args
     }
 
     p = PatchCollection(df[pol_key].values, **args_)
     p.set_array(df[name].values)
-    p.set_clim(minc, maxc)
+    if centered_color:
+        mmax = max(abs(minc),abs(maxc))
+        p.set_clim(-mmax,mmax)
+    else:
+        p.set_clim(minc, maxc)
+
     ax.add_collection(p)
     fig = ax.figure
     if colorbar:
-        cb = fig.colorbar(p, **cb_kwargs)
+        cb = fig.colorbar(p,ax=ax, **cb_kwargs)
         if name in co.PLOT_LABS:
             cb_lab = co.PLOT_LABS[name]
         else:
@@ -856,6 +867,7 @@ def get_dims_complement(ds, keep):
     return complement
     # return co_keep
 
+dc = get_dims_complement
 
 def get_custom_cmap(to_rgb, from_rgb=None):
     # from color r,g,b
@@ -1195,10 +1207,55 @@ def open_temp_ds(name):
     return ds
 
 
-def open_temp_ds_clustered_18(fix_lab=True):
-    ds = open_temp_ds('ds_clustered_18.nc')
+def open_temp_ds_clustered_18(fix_lab=True,add_names = False):
+    if sys.platform == 'darwin':
+        ds = open_temp_ds('ds_clustered_18.nc')
+    if sys.platform == 'linux':
+        _path = '/homeappl/home/aliagadi/wrk/DONOTREMOVE/' \
+                'flexpart_management_data/runs/run_2019-10-02_13-42-52_/' \
+                'log_pol/run_2019-10-02_13-42-52_/working_datasets/' \
+                'ds_clustered_18.nc'
+        ds = xr.open_mfdataset(
+            _path,
+            concat_dim=co.RL,
+            combine='nested')
+
     ds = ds.assign_coords(
         {'lab': ds['lab'][{co.RL: 0}].reset_coords(co.RL, drop=True)})
+
+    if add_names:
+
+        # %%
+        df = pd.read_csv(pjoin(co.tmp_data_path,'prop_df_.csv'))
+        n6 = pd.read_csv(pjoin(co.tmp_data_path,'nc_18_nc_06.csv'))
+        _dic = df.set_index('cluster_i')['short_name'].to_dict()
+        _dic6 = n6.set_index('18_NC')['06_NC'].to_dict()
+
+        def _fdic(i):
+            # global ii
+            # ii = i
+            # print(i)
+            if np.isnan(i):
+                res = np.nan
+            else:
+                res = _dic[i]
+            return res
+
+        def _fdic6(i):
+            # global ii
+            # ii = i
+            # print(i)
+            if i == 'nan':
+                res = np.nan
+            else:
+                res = _dic6[i]
+            return res
+
+        ds['lab_name']=xr.apply_ufunc(_fdic,ds['lab'].load(),vectorize=True)
+        ds['lab_nc06']=xr.apply_ufunc(_fdic6,ds['lab_name'],vectorize=True)
+        # %%
+        ds=ds.set_coords(names=['lab','lab_name','lab_nc06'])
+
     return ds
 
 
@@ -1269,3 +1326,51 @@ def add_fig_panels(fig:plt.Axes=None,axl=None, par=')'):
 
 
 
+def from_asl_to_agl(ds):
+    ths = ds[co.TH_CENTER]
+    rs = ds[co.R_CENTER]
+    th = ths[0]
+    r = rs[0]
+    # %%
+    th_list = []
+    zrange = np.arange(250, 15000, 500)
+    for th in ths:
+        r_list = []
+        for r in rs:
+            print(th.item())
+            print(r.item())
+            _ds = ds.loc[{co.TH_CENTER: [th], co.R_CENTER: [r]}].copy()
+            _zm = _ds[co.ZM]
+            _zm = _zm - ((_ds[co.TOPO] / 500).round() * 500)
+            _ds[co.ZM].values = _zm.values[:, 0, 0]
+            # _ds = _ds.reset_coords(drop=True)
+            _ds = _ds.transpose(co.RL, co.ZM, co.R_CENTER, co.TH_CENTER)
+            _ds = _ds.interp(**{co.ZM: zrange}, method='nearest', )
+            r_list.append(_ds)
+        print('con')
+        r_con = xr.concat(r_list, dim=co.R_CENTER)
+        th_list.append(r_con)
+    th_con = xr.concat(th_list, dim=co.TH_CENTER)
+    ds1:xr.Dataset = th_con
+    ds1 = ds1.drop_vars(co.ZB).drop_vars(co.ZT)
+    return ds1
+
+def add_lat_lon_corners(ds):
+    r = ds[co.R_CENTER]
+    th = ds[co.TH_CENTER]
+    rM = r * np.exp(co.ROUND_R_LOG / 2)
+    rm = r * np.exp(-co.ROUND_R_LOG / 2)
+    thm = th - co.ROUND_TH_RAD / 2
+    thM = th + co.ROUND_TH_RAD / 2
+    val_list = [
+        [co.LAT_00, co.LON_00, rm, thm],
+        [co.LAT_10, co.LON_10, rM, thm],
+        [co.LAT_11, co.LON_11, rM, thM],
+        [co.LAT_01, co.LON_01, rm, thM],
+    ]
+    for v in val_list:
+        ds[v[0]] = r_th_to_lat(co.CHC_LAT, v[2], v[3])
+        ds[v[1]] = r_th_to_lon(co.CHC_LON, v[2], v[3])
+        ds = ds.set_coords(v[0])
+        ds = ds.set_coords(v[1])
+    return ds

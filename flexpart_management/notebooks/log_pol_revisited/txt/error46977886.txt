@@ -1,0 +1,4 @@
+2020-04-05 19:41:00,032 useful_scit  WARNING  rpy2 not installed. Everything works except functions requiring r
+2020-04-05 19:41:00,034 useful_scit  WARNING  basename is: 2017-12-08
+2020-04-05 19:41:00,104 useful_scit  WARNING  start 2
+2020-04-05 19:41:07,496 useful_scit  WARNING  start s 2

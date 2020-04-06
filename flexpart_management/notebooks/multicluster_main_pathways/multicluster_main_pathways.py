@@ -18,7 +18,6 @@ from flexpart_management.notebooks.multicluster_main_pathways.multicluster_main_
 import \
     flexpart_management.notebooks.multicluster_main_pathways.multicluster_main_pathways_lfc as lfc
 
-# %%
 from flexpart_management.notebooks.multicluster_main_pathways.multicluster_main_pathways_lfc import \
     n2c, n2m
 
@@ -54,7 +53,7 @@ def main():
     dac_sum = dac.sum(co.RL).load()
     # %%
 
-    path_colors = sns.color_palette('Dark2', 6)
+    path_colors = co.pathway_colors
     npdf = pdf.set_index('short_name')
     npdf['clus_6'] = ser_6
     npdf['c6_colors'] = npdf['clus_6'].apply(lambda c: path_colors[c])
@@ -63,6 +62,9 @@ def main():
     npdf['range_marker'] = npdf['range'].apply(lambda r: n2m(r))
 
     # %%
+    table_path = pjoin(co.tmp_data_path, 'combined_cluster_data.xlsx')
+    npdf.to_excel(table_path)
+    # ! open {table_path}
     # f, ax = plt.subplots()
     # ax:plt.Axes
 
@@ -74,10 +76,19 @@ def main():
     # fa.logpolar_plot()
 
     # %%
+    #
+    # lfc.create_combined_plot(
+    #     conc_name, dac_sum, npdf, path_colors,
+    #     f_width=7.25,min_fs=6, out_name='horizontal_clus_desc_7_25_bad.pdf'
+    #                          )
+    # %%
 
-    lfc.create_combined_plot(
+    lfc.create_combined_plot_simple(
         conc_name, dac_sum, npdf, path_colors,
-        f_width=7.25,min_fs=6
-                             )
+        f_width=7.25,min_fs=6, out_name='simple_horizontal_clus_desc_7_25.pdf',
+        add_patch = False, background_alpha = .8
+    )
+    plt.show()
 
-
+if __name__ == '__main__':
+    main()

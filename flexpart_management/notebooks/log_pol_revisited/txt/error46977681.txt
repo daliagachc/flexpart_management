@@ -1,0 +1,56 @@
+2020-04-05 18:40:15,246 useful_scit  WARNING  rpy2 not installed. Everything works except functions requiring r
+2020-04-05 18:40:15,248 useful_scit  WARNING  basename is: 2017-12-23
+Traceback (most recent call last):
+  File "/homeappl/home/aliagadi/appl_taito/miniconda3/envs/b36backup/lib/python3.6/site-packages/xarray/coding/times.py", line 157, in decode_cf_datetime
+    dates = _decode_datetime_with_pandas(flat_num_dates, units, calendar)
+  File "/homeappl/home/aliagadi/appl_taito/miniconda3/envs/b36backup/lib/python3.6/site-packages/xarray/coding/times.py", line 122, in _decode_datetime_with_pandas
+    pd.to_timedelta(flat_num_dates.min(), delta) + ref_date
+  File "/homeappl/home/aliagadi/appl_taito/miniconda3/envs/b36backup/lib/python3.6/site-packages/pandas/core/tools/timedeltas.py", line 109, in to_timedelta
+    return _coerce_scalar_to_timedelta_type(arg, unit=unit, errors=errors)
+  File "/homeappl/home/aliagadi/appl_taito/miniconda3/envs/b36backup/lib/python3.6/site-packages/pandas/core/tools/timedeltas.py", line 116, in _coerce_scalar_to_timedelta_type
+    result = Timedelta(r, unit)
+  File "pandas/_libs/tslibs/timedeltas.pyx", line 1230, in pandas._libs.tslibs.timedeltas.Timedelta.__new__
+  File "pandas/_libs/tslibs/timedeltas.pyx", line 180, in pandas._libs.tslibs.timedeltas.convert_to_timedelta64
+  File "pandas/_libs/tslibs/timedeltas.pyx", line 312, in pandas._libs.tslibs.timedeltas.cast_from_unit
+OverflowError: Python int too large to convert to C long
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/homeappl/home/aliagadi/appl_taito/miniconda3/envs/b36backup/lib/python3.6/site-packages/xarray/coding/times.py", line 77, in _decode_cf_datetime_dtype
+    result = decode_cf_datetime(example_value, units, calendar, use_cftime)
+  File "/homeappl/home/aliagadi/appl_taito/miniconda3/envs/b36backup/lib/python3.6/site-packages/xarray/coding/times.py", line 160, in decode_cf_datetime
+    flat_num_dates.astype(np.float), units, calendar
+  File "/homeappl/home/aliagadi/appl_taito/miniconda3/envs/b36backup/lib/python3.6/site-packages/xarray/coding/times.py", line 97, in _decode_datetime_with_cftime
+    cftime.num2date(num_dates, units, calendar, only_use_cftime_datetimes=True)
+  File "cftime/_cftime.pyx", line 271, in cftime._cftime.num2date
+  File "cftime/_cftime.pyx", line 876, in cftime._cftime.utime.num2date
+  File "cftime/_cftime.pyx", line 500, in cftime._cftime.DateFromJulianDay
+  File "cftime/_cftime.pyx", line 479, in cftime._cftime.DateFromJulianDay.getdateinfo
+  File "cftime/_cftime.pyx", line 1954, in cftime._cftime._IntJulianDayToDate
+ValueError: julian day must be a positive integer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/homeappl/home/aliagadi/saltena_2018/flexpart_management/flexpart_management/notebooks/log_pol_revisited/log_pol_revisited_log_pol_taito.py", line 72, in <module>
+    main()
+  File "/homeappl/home/aliagadi/saltena_2018/flexpart_management/flexpart_management/notebooks/log_pol_revisited/log_pol_revisited_log_pol_taito.py", line 56, in main
+    ds2 = xr.open_dataset(p2)
+  File "/homeappl/home/aliagadi/appl_taito/miniconda3/envs/b36backup/lib/python3.6/site-packages/xarray/backends/api.py", line 538, in open_dataset
+    ds = maybe_decode_store(store)
+  File "/homeappl/home/aliagadi/appl_taito/miniconda3/envs/b36backup/lib/python3.6/site-packages/xarray/backends/api.py", line 453, in maybe_decode_store
+    use_cftime=use_cftime,
+  File "/homeappl/home/aliagadi/appl_taito/miniconda3/envs/b36backup/lib/python3.6/site-packages/xarray/conventions.py", line 585, in decode_cf
+    use_cftime=use_cftime,
+  File "/homeappl/home/aliagadi/appl_taito/miniconda3/envs/b36backup/lib/python3.6/site-packages/xarray/conventions.py", line 494, in decode_cf_variables
+    use_cftime=use_cftime,
+  File "/homeappl/home/aliagadi/appl_taito/miniconda3/envs/b36backup/lib/python3.6/site-packages/xarray/conventions.py", line 336, in decode_cf_variable
+    var = coder.decode(var, name=name)
+  File "/homeappl/home/aliagadi/appl_taito/miniconda3/envs/b36backup/lib/python3.6/site-packages/xarray/coding/times.py", line 426, in decode
+    dtype = _decode_cf_datetime_dtype(data, units, calendar, self.use_cftime)
+  File "/homeappl/home/aliagadi/appl_taito/miniconda3/envs/b36backup/lib/python3.6/site-packages/xarray/coding/times.py", line 86, in _decode_cf_datetime_dtype
+    raise ValueError(msg)
+ValueError: unable to decode time units 'hours since 2017-12-23 00:00:00' with calendar 'proleptic_gregorian'. Try opening your dataset with decode_times=False.
+srun: error: c914: task 0: Exited with exit code 1
+srun: Terminating job step 46977681.0

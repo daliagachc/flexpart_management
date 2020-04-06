@@ -65,8 +65,8 @@ class FlxOutCheckAlt:
                 ds = xr.open_dataset(p)
                 ds.close()
                 checked_list.append(p)
-                    except AssertionError as error:
-            log.ger.error(error)
+            except AssertionError as error:
+                log.ger.error(error)
                 print('cant open', p)
         self.path_list = checked_list
 

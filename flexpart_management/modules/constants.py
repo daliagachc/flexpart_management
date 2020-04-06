@@ -4,6 +4,11 @@ import cartopy
 import numpy as np
 import os
 
+import flexpart_management
+_fm_path = flexpart_management.__file__
+fm_path = os.path.dirname(_fm_path)
+
+
 PROJ = cartopy.crs.PlateCarree()
 TIME = 'Time'
 AC = 'ageclass'
@@ -149,19 +154,29 @@ mid_range_clusters = [15,1,14,7,8]
 mid_range_clusters.sort()
 long_range_clusters = [9,0,4]
 long_range_clusters.sort()
-tmp_data_path = '/Users/diego/flexpart_management/flexpart_management/tmp_data'
+tmp_data_path = os.path.join(fm_path,'tmp_data')
+
 latest_ds_mac = os.path.join(tmp_data_path,'ds_clustered_18_conc_smooth.nc')
 prop_df_path = os.path.join(tmp_data_path, 'prop_df_.csv')
 
 silhouette_path = os.path.join(tmp_data_path,'silhouette_scores.pickle')
 # %%
 
-import flexpart_management
-fm_path = flexpart_management.__file__
-fm_path = os.path.dirname(fm_path)
+
 
 # %%
 paper_fig_path = '/Users/diego/wrf-flexpart-chc/src/figures'
 
 
+
 # %%
+import seaborn as sns
+pathway_colors = sns.color_palette('Dark2', 6)
+pw_col_dict = {
+    '03_PW':  pathway_colors[5],
+    '05_PW':  pathway_colors[2],
+    '07_PW':  pathway_colors[4],
+    '08_PW':  pathway_colors[1],
+    '11_PW':  pathway_colors[3],
+    '12_PW':  pathway_colors[0],
+}

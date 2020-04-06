@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/flexpart_management.iml" filepath="$PROJECT_DIR$/.idea/flexpart_management.iml" />
       <module fileurl="file://$PROJECT_DIR$/../useful-scit/useful_scit/useful_scit.iml" filepath="$PROJECT_DIR$/../useful-scit/useful_scit/useful_scit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../wrf-flexpart-chc/wrf-flexpart-chc.iml" filepath="$PROJECT_DIR$/../wrf-flexpart-chc/wrf-flexpart-chc.iml" />
     </modules>
   </component>
 </project>

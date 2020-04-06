@@ -33,7 +33,11 @@ import flexpart_management.modules.flx_array as fa
 import flexpart_management.modules.clustering_funs as cfuns
 from sklearn.metrics import silhouette_samples
 # %%
-ds = xr.open_mfdataset( [ co.latest_ds_mac ] , combine='by_coords' )
+
+# ds = xr.open_mfdataset( [ co.latest_ds_mac ] , combine='by_coords' )
+
+ds = fa.open_temp_ds_clustered_18()
+
 
 # %%
 ds
@@ -90,21 +94,35 @@ for n in range(2,25):
     from sklearn.cluster import KMeans
     new_lab = KMeans(n_clusters=n).fit_predict(vals_quan,sample_weight=100*tot)
     res = silhouette_samples(vals_quan, new_lab)
+    res2 = silhouette_samples(vals_quan, new_lab, metric='l1')
     from sklearn.metrics import silhouette_score
 
     # print(silhouette_score(vals_quan, new_lab))
     wss = (res*tot).sum()/tot.sum()
     ss = res.mean()
+    
+    wss2 = (res2*tot).sum()/tot.sum()
+    ss2 = res2.mean()
     print(wss)
     print(ss)
-    dic = {'ss':ss,'wss':wss,'res':res,'new_lab':new_lab}
+    dic = {
+        'ss':ss,'wss':wss,'res':res,'new_lab':new_lab,
+        'ss2':ss2,'wss2':wss2,'res':res2
+    }
     out_dic[n]=dic
 
 # %%
-df_dic = pd.DataFrame(out_dic).T
-df_dic.to_pickle(co.silhouette_path)
+
 # %%
-pd.read_pickle(co.silhouette_path)
+df_dic = pd.DataFrame(out_dic).T
+# %%
+df_dic[['wss2','wss','ss','ss2']].plot()
+
+# %%
+# df_dic.to_pickle(co.silhouette_path)
+df_dic.to_pickle('/Users/diego/flexpart_management/flexpart_management/tmp_data/silhouette_scores_non.pickle')
+# %%
+df_dic = pd.read_pickle(co.silhouette_path)
 
 # %%
 plt.scatter(df_dic.index,df_dic['wss'])
@@ -145,10 +163,10 @@ np.exp(bl+.18)
 np.exp(np.log(3))
 
 # %%
- 4248 * 31 *36 * 30
+4248 * 31 *36 * 30
 
 # %%
- 31 *36 * 30
+31 *36 * 30
 
 # %%
 ds[above_thre].reset_coords(drop=True).to_dataframe()[above_thre].value_counts()

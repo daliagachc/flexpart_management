@@ -155,7 +155,7 @@ class FLEXOUT :
                 log.ger.error( f'file {f} is corrupted' )
         return new_out_list
 
-    def get_log_polar_coords( self ,
+    def et_log_polar_coords( self ,
                               release: pd.Timestamp ,
                               coords_to_keep=None ,
                               rounding_vals=None ,
