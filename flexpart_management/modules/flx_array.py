@@ -399,7 +399,7 @@ def get_ax_bolivia(
         map_res='50m',
         lake_face_color=cartopy.feature.COLORS['water'],
         map_line_alpha=1
-) -> GeoAxes:
+, xlab_top=False, ylab_right=False, xlab_bot=True, ylab_left=True) -> GeoAxes:
     """
     returns a geo ax object with the area of bolivia
 
@@ -449,8 +449,11 @@ def get_ax_bolivia(
                        linestyle=':')
     gl = ax.gridlines(crs=proj, alpha=grid_alpha, linestyle=grid_style,
                       draw_labels=draw_labels, color=grid_color)
-    gl.xlabels_top = False
-    gl.ylabels_right = False
+    gl.xlabels_top = xlab_top
+    gl.ylabels_right = ylab_right
+    gl.xlabels_bottom = xlab_bot
+    gl.ylabels_left = ylab_left
+
     if lola_ticks is None:
         lo1 = np.round(lola_extent[0] / 5) * 5 - 5
         # print(lo1)
@@ -545,8 +548,8 @@ def get_ax_lapaz(ax=False,
     return ax
 
 
-def red_cmap():
-    cmap = plt.get_cmap('Reds')
+def red_cmap(N=None):
+    cmap = plt.get_cmap('Reds',N)
     my_cmap = cmap(np.arange(cmap.N))
 
     # Set alpha
@@ -761,11 +764,12 @@ def logpolar_plot(ds,
     if ax is None:
         fig = plt.figure(**fig_ops)
         ax = fig.add_subplot(1, 1, 1, projection=co.PROJ, )
-    df = ds.to_dataframe()
+    df = ds.reset_coords()[[name,*co.LL00]].to_dataframe()
     if drop_zeros:
         df = df[df[name] > 0]
     pol_key = 'pol'
     df[pol_key] = df.apply(lambda r: polygon_from_row(r), axis=1)
+    # print(df)
     df = df.dropna()
 
     if quantile:

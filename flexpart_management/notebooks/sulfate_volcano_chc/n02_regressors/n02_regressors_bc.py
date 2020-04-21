@@ -5,8 +5,8 @@
 #     text_representation:
 #       extension: .py
 #       format_name: percent
-#       format_version: '1.2'
-#       jupytext_version: 1.2.4
+#       format_version: '1.3'
+#       jupytext_version: 1.4.0
 #   kernelspec:
 #     display_name: Python 3
 #     language: python
@@ -125,11 +125,19 @@ def main():
                          # quantile=False,
                          # perm=-3e5,perM=3e5,
                      cmap=plt.get_cmap('RdBu_r'),colorbar=True,
-                    drop_zeros=False,centered_color=True
+                    drop_zeros=False,centered_color=True,
+
                      )
     plt.show()
+    f:plt.Figure
+    f.savefig('/tmp/pdf.pdf')
     # %%
+if __name__ == '__main__':
+    main()
     # %%
+print(1)
     # %%
     # %%
 
+
+# %%

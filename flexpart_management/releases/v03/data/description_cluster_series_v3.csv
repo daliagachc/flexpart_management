@@ -1,0 +1,24 @@
+﻿name,short name,long name,type,descritption
+normalized,normalized    ,normalized    ,dimension,"if true, the SRR values are divided by the theoretical total (24 * 4 * 3600). If False, we use the SRR values in units of seconds"
+z_column,z_column      ,z_column      ,dimension,"If all, we sum all the values along the Z dimension. If surface, we only sum values below 1.5 km above ground level. To get the ratio , you do all/surf"
+releases,releases UTC,release time in utc,dimension,The arrival time at CHC in UTC. To get BOT do: UTC - 4h = BOT
+lab_nc18,label 18 CL,label 18 clusters,dimension,labels for the 18th clusters
+lab_nc06,label 6 PW,label 6 pathways,dimension,labels for the 6th clusters
+conc_all,concentration,concentration,variable,SRR either normalized or not. 
+age_all,age,age,variable,weighted mean age of the airmasses
+R_DIS_all,distance ,radiaal distance from chc,variable,weighted mean distance from CHC of the airmasses
+ZSL_all,ZASL,Z above sea level,variable,weighted mean height above sea level
+ZGL_all,ZAGL,Z above ground level,variable,weighted mean height above ground level
+clock_dir_all,clck dir,clockwise direction,variable,"weighted mean clock direction from chc. 0 -> N, 3 -> E, 6 -> S, 9 -> W"
+conc_lab_nc18,SRR,SRR,variable,SRR either normalized or not. 
+conc_lab_nc06,SRR,SRR,variable,SRR either normalized or not. 
+age_lab_nc18,age,age,variable,weighted mean age of the airmasses
+age_lab_nc06,gea,age,variable,weighted mean age of the airmasses
+r_dis_lab_nc18,distance ,radiaal distance from chc,variable,weighted mean distance from CHC of the airmasses
+r_dis_lab_nc06,distance ,radiaal distance from chc,variable,weighted mean distance from CHC of the airmasses
+zsl_lab_nc18,ZASL,Z above sea level,variable,weighted mean height above ground level
+zsl_lab_nc06,ZASL,Z above sea level,variable,weighted mean height above ground level
+zgl_lab_nc18,ZAGL,Z above ground level,variable,weighted mean height above ground level
+zgl_lab_nc06,ZAGL,Z above ground level,variable,weighted mean height above ground level
+clk_lab_nc18,clck dir,clockwise direction,variable,"weighted mean clock direction from chc. 0 -> N, 3 -> E, 6 -> S, 9 -> W"
+clk_lab_nc06,clck dir,clockwise direction,variable,"weighted mean clock direction from chc. 0 -> N, 3 -> E, 6 -> S, 9 -> W"

@@ -14,133 +14,87 @@
 # ---
 
 # %%
-import flexpart_management.notebooks.sulfate_simple_cluster_corr_paper.\
+import flexpart_management.notebooks.sulfate_simple_cluster_corr_paper. \
     sulfate_simple_cluster_corr_paper_lfc as lfc
 from flexpart_management.notebooks.sulfate_simple_cluster_corr_paper. \
     sulfate_simple_cluster_corr_paper_lfc import *
 
+
 # %%
 def main():
     # %%
-    path = 'CHC_QACSM.xlsx'
-    path = pjoin(co.tmp_data_path, path)
-    acsm = pd.read_excel(path)
-    acsm = acsm.set_index('Date UTC')
-    acsm = acsm[1:]
-    # acsm = acsm['2018-04-01':]
-    acsm = acsm.resample('1H').median()
-    acsm.index.name = co.RL
     sul = 'Sulfate'
+    lab_name = 'lab_name'
     # %%
-    f, axs = plt.subplots(2,2,dpi=300)
-    f:plt.Figure
-    sul_ = acsm[sul]
-    sul_[sul_ <= 0] = 0.01
-    sul_.plot(ax=axs[0, 0])
-    from sklearn.preprocessing import PowerTransformer, QuantileTransformer
-    spt = PowerTransformer(standardize=False).fit_transform(acsm[[sul]])
-    spt2 = PowerTransformer(standardize=True,method='box-cox').fit_transform(acsm[[sul]])
-    sns.distplot(sul_,ax=axs[1,0])
-    axs[1,0].set_title('normal')
-    sns.distplot(spt,ax=axs[1,1])
-    axs[1,1].set_title('power transform')
-    sns.distplot(spt2,ax=axs[0,1])
-    axs[0,1].set_title('power transform Box-Cox')
-    f.tight_layout()
-    plt.show()
+    acsm = lfc.get_acsm_data()
+    # %%
+    lfc.plot_distributions(acsm, sul)
 
     # %%
     ds = fa.open_temp_ds('ds_clustered_18_agl.nc')
     # ds['lab_name'] = ds['lab_name'][{co.RL: 0}]
+    ds
     # %%
-    lab_name = 'lab_name'
-    df3 = get_lab_df(ds, lab_name,zM=3)
-    df33 = get_lab_df(ds,lab_name,zM=None)
-    # %%
-    dj = df3.join(acsm,how='inner')
-    df4 = dj[df3.columns]
-    dj3 = df33.join(acsm,how='inner')
-    df44 = dj3[df33.columns]
-    ac = dj[[sul]].copy()
-    ac.loc[ac[sul]<=0,sul]=.001
-    # %%
-    ac['pt'] = PowerTransformer(standardize=True,method='box-cox').fit_transform(ac)
+    _dic, cols, dj18 = lfc.get_corrs(acsm, ds, lab_name, sul)
+    _dic6, cols6, dj6 = lfc.get_corrs(acsm, ds, 'lab_nc06', sul)
+
+    lfc.plot_corrs(_dic, cols, sul)
+    lfc.plot_corrs(_dic6, cols6, sul)
 
     # %%
-    ac['pt'].describe()
-    res = (df4.T*ac['pt']).T.sum()/df4.sum()
-    res2 = (df44.T * ac['pt']).T.sum() / df44.sum()
-    # %%
-    f, axs = plt.subplots(1,4,figsize=(20,10))
-    axf = axs.flatten()
-
-    res.plot.barh(ax=axf[0])
-    axf[0].set_xlabel('prediction surface')
-    res2.plot.barh(ax=axf[1])
-    axf[1].set_xlabel('prediction all')
-    df4.sum().plot.barh(ax=axf[2])
-    axf[2].set_xlabel('sum surface')
-    df44.sum().plot.barh(ax=axf[3])
-    axf[3].set_xlabel('sum total')
-    plt.tight_layout()
-    plt.show()
+    # s = splot(2,1,dpi=300,figsize=(7.25,4))
+    lfc.plot_fig_comparison(_dic, cols, dj18, sul)
 
     # %%
-    f, ax = plt.subplots(2,2)
-    sm = ac[sul] / ac[sul].mean()
-    sns.distplot(sm, ax=ax[0, 0])
-    _lab = '09_MR'
-    fm = df4[_lab] / df4[_lab].mean()
-    sns.distplot(fm, ax=ax[1, 0])
-    plt.show()
-    # %%
-    from sklearn.linear_model import LinearRegression
-    from sklearn import metrics
-    xy = pd.DataFrame(fm).join(sm).dropna().copy()
-    xy.loc[xy[_lab]<=0,_lab]=0.00001
-
-    # %%
-    from scipy import stats
-    pt = PowerTransformer(standardize=True, method='box-cox')
-    X  = xy[sul]
-    Y = xy[_lab]
-    # X = pt.fit_transform(xy[[sul]])[:,0]
-    # Y = pt.fit_transform(xy[[_lab]])[:,0]
-    res = stats.linregress(X, Y)
-    sns.jointplot(X,Y,kind='hex',xlim=(0,2),ylim=(0,2))
-    plt.show()
-
+    df18, df6, ticks, white_lines = lfc.get_dfs(_dic, _dic6, sul)
 
     # %%
 
-
-# %%
-
-
-def get_lab_df(ds, lab_name,*, zM):
-    # %%
-    # zM=3
-    ds_ = ds[[co.CONC, lab_name]][{co.ZM: slice(0, zM)}]
-    # %%
-    labs = np.unique(ds[lab_name][{co.RL:0}])
-    labs = list(set(labs) - {'nan'})
-    labs.sort()
-
-    # %%
-    ll = []
-    for l in labs:
-        r = ds_[co.CONC].where(ds_[lab_name]==l).sum([co.TH_CENTER,co.R_CENTER,co.ZM])
-        r.name=l
-        ll.append(r)
-    lld = xr.merge(ll)
-    df = lld.to_dataframe()
-
-
-    # %%
+    ds['lab_nc06'] = ds['lab_nc06'][{co.RL: [0]}].sum(co.RL)
+    ds['lab_name'] = ds['lab_name'][{co.RL: [0]}].sum(co.RL)
     # %%
 
-    # df = ds_.to_dataframe()
-    return df
+    dcc, dsn = lfc.get_dcc(ds)
+    # %%
+    d9 = dsn.where(dsn['lab_name'] == '09_MR').sum([co.RL, co.ZM])
+    d9c = d9['CONC'].load()
+    d10 = dsn.where(dsn['lab_name'] == '10_SR').sum([co.RL, co.ZM])
+    d10c = d10['CONC'].load()
+
+    d8M = dsn.where(dsn['lab_name'] == '08_SM').sum([co.RL, co.ZM])
+    d8mc = d8M['CONC'].load()
+
+    d7 = dsn.where(dsn['lab_name'] == '07_SR').sum([co.RL, co.ZM])
+    d7c = d7['CONC'].load()
+
+    d8 = dsn.where(dsn['lab_nc06'] == '08_PW').sum([co.RL, co.ZM])
+    d8c = d8['CONC'].load()
+    # %%
+    f, gs, axa,axc, axd = lfc.plot_fig_corr_s04(_dic, cols, dcc, df18,
+                                            df6, dj18, dj6, sul,
+                                            ticks,
+                                            white_lines, dsn)
+
+    axb = lfc.plot_map2(d10c, d7c, d8c, d8mc, d9c, f, gs)
+
+    axa.annotate(f'a', [-0.2, 1.05], xycoords='axes fraction',weight='bold')
+    axb.annotate(f'b', [-0.05, 1.05], xycoords='axes fraction',weight='bold')
+    axc.annotate(f'c', [0.0, 1.05], xycoords='axes fraction',weight='bold')
+    axd.annotate(f'd', [0.0, 1.05], xycoords='axes fraction',weight='bold')
+
+    f.subplots_adjust(hspace=.5)
+
+    f.show()
+
+    f.savefig(pjoin(co.paper_fig_path, 'pearson_corr_so4.pdf'))
+
+    # %%
+    # %%
+    # %%
+    # %%
+    # %%
+    # %%
+    # %%
 
 # %%
 # %%
@@ -152,5 +106,3 @@ def get_lab_df(ds, lab_name,*, zM):
 # %%
 # %%
 # %%
-
-

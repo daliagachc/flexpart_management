@@ -180,3 +180,15 @@ pw_col_dict = {
     '11_PW':  pathway_colors[3],
     '12_PW':  pathway_colors[0],
 }
+import pandas as pd
+
+
+def get_nc18_order():
+    _d = {'SR': 0, 'SM': 1, 'MR': 2, 'LR': 3}
+    dic_186: pd.DataFrame = pd.read_csv(
+        os.path.join(tmp_data_path, 'nc_18_nc_06.csv'))
+    dic_186['range'] = dic_186['18_NC'].str[-2:]
+    dic_186['sr'] = dic_186['range'].apply(lambda v: _d[v])
+    dic_186 = dic_186.sort_values(['06_NC', 'sr'])
+    return dic_186
+DIC_186 = get_nc18_order()

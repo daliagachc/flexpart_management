@@ -8,6 +8,7 @@
 for researchers involved in the Bolivian Campaign please go to 
 - [v01](./flexpart_management/releases/v01) 
 - [v02](./flexpart_management/releases/v02) 
+- [v03](./flexpart_management/releases/v03) 
 
 ## documentation 
 for documentation about the project go to [doc](./flexpart_management/documentation)
