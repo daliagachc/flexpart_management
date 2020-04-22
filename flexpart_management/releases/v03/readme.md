@@ -4,8 +4,6 @@ import xarray as xr
 
 This notebook contains information regarding the release v03 of the timeseries for the cluster analysis performed at CHC station during the SALTENA campaign
 
-
-This is release v03 of the clusters for CHC for the Saltena campaign
 - the data folder contains the following datasets:
   - description_cluster_series_v3.csv  
   description of all dimensions variables contained in cluster_series_v3.nc
@@ -16,7 +14,7 @@ This is release v03 of the clusters for CHC for the Saltena campaign
   - pol18.kml  
   google earth polygones for the 18 clusters
 
-
+below are some examples on how to use the dataset
 
 open the dataset
 
@@ -224,5 +222,5 @@ ds['conc_all'].loc[
 
 
 ```python
-    
+
 ```

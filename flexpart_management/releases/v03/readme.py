@@ -28,7 +28,7 @@ import xarray as xr
 #   - pol18.kml  
 #   google earth polygones for the 18 clusters
 #
-# below are some examples on how to read 
+# below are some examples on how to use the dataset
 
 # %% [markdown]
 # open the dataset
