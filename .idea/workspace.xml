@@ -2,6 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="˚">
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/readme_files/readme_11_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/readme_files/readme_13_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/readme_files/readme_15_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/readme_files/readme_17_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/readme_files/readme_18_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/readme_files/readme_5_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/readme_files/readme_7_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/readme_files/readme_9_1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
