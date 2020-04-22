@@ -12,13 +12,10 @@
 #     name: python3
 # ---
 
-# %% pycharm={"is_executing": false}
-import xarray as xr
-
 # %% [markdown] pycharm={"name": "#%%\n", "is_executing": false} jupyter={"outputs_hidden": false}
 # This notebook contains information regarding the release v03 of the timeseries for the cluster analysis performed at CHC station during the SALTENA campaign
 #
-# - the data folder contains the following datasets:
+# - the data folder contains the following files:
 #   - description_cluster_series_v3.csv  
 #   description of all dimensions variables contained in cluster_series_v3.nc
 #   - cluster_series_v3.nc  
@@ -32,6 +29,9 @@ import xarray as xr
 
 # %% [markdown]
 # open the dataset
+
+# %% pycharm={"is_executing": false}
+import xarray as xr
 
 # %%
 ds = xr.open_dataset('./data/cluster_series_v3.nc')

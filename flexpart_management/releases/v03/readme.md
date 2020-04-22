@@ -1,10 +1,6 @@
-```python
-import xarray as xr
-```
-
 This notebook contains information regarding the release v03 of the timeseries for the cluster analysis performed at CHC station during the SALTENA campaign
 
-- the data folder contains the following datasets:
+- the data folder contains the following files:
   - description_cluster_series_v3.csv  
   description of all dimensions variables contained in cluster_series_v3.nc
   - cluster_series_v3.nc  
@@ -17,6 +13,11 @@ This notebook contains information regarding the release v03 of the timeseries f
 below are some examples on how to use the dataset
 
 open the dataset
+
+
+```python
+import xarray as xr
+```
 
 
 ```python
