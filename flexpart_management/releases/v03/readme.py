@@ -54,11 +54,11 @@ ds['conc_lab_nc18'].loc[
 ].plot()
 
 # %% [markdown]
-# plot surface normalized SRR timeseries for cluster '11_SR'
+# plot BL normalized SRR timeseries for cluster '11_SR'
 
 # %%
 ds['conc_lab_nc18'].loc[
-    {'z_column':'SURF','lab_nc18':'11_SR','normalized':1}
+    {'z_column':'BL','lab_nc18':'11_SR','normalized':1}
 ].plot()
 
 # %% [markdown]
@@ -69,7 +69,7 @@ dall = ds['conc_lab_nc18'].loc[
     {'z_column':'ALL','lab_nc18':'11_SR','normalized':1}
 ]
 dsurf = ds['conc_lab_nc18'].loc[
-    {'z_column':'SURF','lab_nc18':'11_SR','normalized':1}
+    {'z_column':'BL','lab_nc18':'11_SR','normalized':1}
 ]
 (dsurf/dall).plot()
 

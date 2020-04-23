@@ -15,6 +15,7 @@
       <sourceFolder url="file://$MODULE_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/cluster_vertical_distribution" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/sfc_ratio_clusters" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/add_quantiles_to_medeoids" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/flexpart_management/notebooks/log_pol_revisited/data" />
       <excludeFolder url="file://$MODULE_DIR$/flexpart_management/sym_links" />
       <excludeFolder url="file://$MODULE_DIR$/flexpart_management/tmp_data" />
     </content>

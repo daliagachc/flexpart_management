@@ -46,34 +46,48 @@ def main():
     all_ds6 = get_lab_ser(N6, ds)
     surf_ds18 = get_lab_ser_surf(N18, ds)
     surf_ds6 = get_lab_ser_surf(N6, ds)
+
+    surf0_ds18 = get_lab_ser_surf(N18, ds,slice_s=slice_lev0,s=LEV0)
+    surf0_ds6 = get_lab_ser_surf(N6, ds,slice_s=slice_lev0,s=LEV0)
     # %%
     all_age_18 = get_lab_age(N18, ds)
     all_age_6 = get_lab_age(N6, ds)
     surf_age_18 = get_lab_age_surf(N18, ds)
     surf_age_6 = get_lab_age_surf(N6, ds)
+    surf0_age_18 = get_lab_age_surf(N18, ds, slice_s=slice_lev0,s=LEV0)
+    surf0_age_6 = get_lab_age_surf(N6, ds, slice_s=slice_lev0,s=LEV0)
 
     # %%
     all_rdis_18 = get_lab_rdis(N18, ds)
     all_rdis_6 = get_lab_rdis(N6, ds)
     surf_rdis_18 = get_lab_rdis_surf(N18, ds)
     surf_rdis_6 = get_lab_rdis_surf(N6, ds)
+    surf0_rdis_18 = get_lab_rdis_surf(N18, ds, slice_s=slice_lev0,s=LEV0)
+    surf0_rdis_6 = get_lab_rdis_surf(N6, ds, slice_s=slice_lev0,s=LEV0)
 
     # %%
     all_zsl_18 = get_lab_zsl(N18, ds)
     all_zsl_6 = get_lab_zsl(N6, ds)
     surf_zsl_18 = get_lab_zsl_surf(N18, ds)
     surf_zsl_6 = get_lab_zsl_surf(N6, ds)
+    surf0_zsl_18 = get_lab_zsl_surf(N18, ds, slice_s=slice_lev0,s=LEV0)
+    surf0_zsl_6 = get_lab_zsl_surf(N6, ds, slice_s=slice_lev0,s=LEV0)
     # %%
     all_zgl_18 = get_lab_zgl(N18, ds)
     all_zgl_6 = get_lab_zgl(N6, ds)
     surf_zgl_18 = get_lab_zgl_surf(N18, ds)
     surf_zgl_6 = get_lab_zgl_surf(N6, ds)
+    surf0_zgl_18 = get_lab_zgl_surf(N18, ds,slice_s=slice_lev0,s=LEV0)
+    surf0_zgl_6 = get_lab_zgl_surf(N6, ds, slice_s=slice_lev0,s=LEV0)
 
     # %%
     all_clk_18 = get_lab_clk(N18, ds)
     all_clk_6 = get_lab_clk(N6, ds)
     surf_clk_18 = get_lab_clk_surf(N18, ds)
     surf_clk_6 = get_lab_clk_surf(N6, ds)
+
+    surf0_clk_18 = get_lab_clk_surf(N18, ds, slice_s=slice_lev0,s=LEV0)
+    surf0_clk_6 = get_lab_clk_surf(N6, ds, slice_s=slice_lev0,s=LEV0)
     # %%
     mega_ds = merge_all(
         all_age=all_age,
@@ -107,6 +121,18 @@ def main():
         surf_clk_18=surf_clk_18,
         all_clk_6=all_clk_6,
         surf_clk_6=surf_clk_6,
+        surf0_age_18=surf0_age_18,
+        surf0_age_6=surf0_age_6,
+        surf0_ds18=surf0_ds18,
+        surf0_ds6=surf0_ds6,
+        surf0_rdis_18=surf0_rdis_18,
+        surf0_rdis_6=surf0_rdis_6,
+        surf0_zsl_18=surf0_zsl_18,
+        surf0_zsl_6=surf0_zsl_6,
+        surf0_zgl_18=surf0_zgl_18,
+        surf0_zgl_6=surf0_zgl_6,
+        surf0_clk_18=surf0_clk_18,
+        surf0_clk_6=surf0_clk_6,
 
     )
     mega_ds

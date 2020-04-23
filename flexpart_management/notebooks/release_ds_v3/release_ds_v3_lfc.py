@@ -41,7 +41,9 @@ AALL = 'age_all'
 
 CO = 'CONC'
 
-SURF = 'SURF'
+SURF = 'BL'
+
+LEV0 = 'LEV0'
 
 AGE = 'AGE'
 
@@ -58,6 +60,8 @@ AG18 = 'age_lab_nc18'
 orig = {NORM:False,ZCOL:ALL}
 
 slice_surf = {co.ZM: slice(0, 3)}
+
+slice_lev0 = {co.ZM: [0]}
 
 plt;
 # %%
@@ -92,17 +96,18 @@ def get_lab_ser(NN, ds):
     return ss
 
 
-def get_lab_ser_surf(NN, ds):
+def get_lab_ser_surf(NN, ds,
+                     slice_s=slice_surf, s=SURF):
     dst = ds[[CO]].stack({STACK: NRL})
     n18 = list(set(np.unique(dst[NN])) - {'nan'})
     labs = []
     dsu = dst.unstack()
-    dsu = dsu[slice_surf]
+    dsu = dsu[slice_s]
     dst = dsu.stack({STACK:[co.R_CENTER,co.TH_CENTER,co.ZM]})
     for lab in n18:
         _boo = dst[NN] == lab
         nd = (dst[{STACK: _boo}]).sum(STACK)
-        nd = nd.expand_dims(**{NN: [lab], NORM: [False], ZCOL: [SURF]})
+        nd = nd.expand_dims(**{NN: [lab], NORM: [False], ZCOL: [s]})
         nd = nd.rename({co.CONC: f'conc_{NN}'})
 
         labs.append(nd)
@@ -143,13 +148,13 @@ def get_lab_clk(NN, ds):
     # big_ds = xr.merge([big_ds, ss])
     return ss
 
-def get_lab_clk_surf(NN, ds):
+def get_lab_clk_surf(NN, ds, slice_s=slice_surf,s = SURF):
     # %%
 
     dst = ds[[CO]].stack({STACK: NRL})
     n18 = list(set(np.unique(dst[NN])) - {'nan'})
     dsu = dst.unstack()
-    dsu = dsu[slice_surf]
+    dsu = dsu[slice_s]
     dst = dsu.stack({STACK:[co.R_CENTER,co.TH_CENTER,co.ZM]})
     labs = []
     # %%
@@ -171,7 +176,7 @@ def get_lab_clk_surf(NN, ds):
         # ang_clock_all.name = CLK_DIR
         # ang_clock_all_all = ang_clock_all.expand_dims({ZCOL: [ALL]})
 
-        nd = nd.expand_dims(**{NN: [lab], ZCOL: [SURF]})
+        nd = nd.expand_dims(**{NN: [lab], ZCOL: [s]})
         nd.name = f'clk_{NN}'
         nd = nd.where(con>0)
         labs.append(nd)
@@ -190,7 +195,12 @@ def get_co_all(ds):
     surf: xr.DataArray = ds[slice_surf][CO].sum(NRL)
     surf = surf.expand_dims({NORM: [False], ZCOL: [SURF]})
     surf.name = CALL
-    big_ds = xr.merge([big_ds, surf])
+
+    surf0: xr.DataArray = ds[slice_lev0][CO].sum(NRL)
+    surf0 = surf0.expand_dims({NORM: [False], ZCOL: [LEV0]})
+    surf0.name = CALL
+
+    big_ds = xr.merge([big_ds, surf,surf0])
     # %%
     # norm = big_ds / big_ds[CALL].loc[{ZCOL: ALL, NORM: False}]
     # norm[NORM] = [True]
@@ -220,42 +230,43 @@ def get_lab_wei(NN, ds, val=AGE,prefix='age'):
     ss = _loop_cluster_weighted_mean(NN, dst, n18, val, prefix, ALL)
     return ss
 
-def get_lab_wei_surf(NN, ds, val=AGE, prefix='age'):
+def get_lab_wei_surf(NN, ds, val=AGE, prefix='age', slice_s=slice_surf, s=SURF):
     dst = ds.stack({STACK: NRL})
     n18 = list(set(np.unique(dst[NN])) - {'nan'})
     dsu = dst.unstack()
-    dsu = dsu[slice_surf]
+    dsu = dsu[slice_s]
     dst = dsu.stack({STACK:[co.R_CENTER,co.TH_CENTER,co.ZM]})
-    ss = _loop_cluster_weighted_mean(NN, dst, n18,val,prefix, SURF)
+    ss = _loop_cluster_weighted_mean(NN, dst, n18,val,prefix, s)
     return ss
 
 def get_lab_age(NN,ds):
     return get_lab_wei(NN,ds,val=AGE,prefix = 'age')
 
-def get_lab_age_surf(NN,ds):
-    return get_lab_wei_surf(NN,ds,val=AGE,prefix = 'age')
+def get_lab_age_surf(NN,ds, slice_s=slice_surf, s=SURF):
+    return get_lab_wei_surf(NN,ds,val=AGE,prefix = 'age', slice_s=slice_surf, s=SURF)
 
 def get_lab_rdis(NN,ds):
     return get_lab_wei(NN,ds,val=co.R_CENTER,prefix = 'r_dis')
 
-def get_lab_rdis_surf(NN,ds):
-    return get_lab_wei_surf(NN,ds,val=co.R_CENTER,prefix = 'r_dis')
+def get_lab_rdis_surf(NN,ds, slice_s=slice_surf, s=SURF):
+    return get_lab_wei_surf(NN,ds,val=co.R_CENTER,prefix = 'r_dis',
+                            slice_s=slice_surf, s=SURF)
 
 def get_lab_zsl(NN,ds):
     dzl = ds
     dzl[ZSL] = ds[co.ZM] + ds[co.TOPO]
     return get_lab_wei(NN,dzl,val=ZSL,prefix = 'zsl')
 
-def get_lab_zsl_surf(NN,ds):
+def get_lab_zsl_surf(NN,ds, slice_s=slice_surf, s=SURF):
     dzl = ds
     dzl[ZSL] = ds[co.ZM] + ds[co.TOPO]
-    return get_lab_wei_surf(NN,dzl,val=ZSL,prefix = 'zsl')
+    return get_lab_wei_surf(NN,dzl,val=ZSL,prefix = 'zsl', slice_s=slice_surf, s=SURF)
 
 def get_lab_zgl(NN,ds):
     return get_lab_wei(NN,ds,val=co.ZM,prefix = 'zgl')
 
-def get_lab_zgl_surf(NN,ds):
-    return get_lab_wei_surf(NN,ds,val=co.ZM,prefix = 'zgl')
+def get_lab_zgl_surf(NN,ds, slice_s=slice_surf, s=SURF):
+    return get_lab_wei_surf(NN,ds,val=co.ZM,prefix = 'zgl', slice_s=slice_surf, s=SURF)
 
 
 def get_all_weight(ds, weight_mean, name):
@@ -267,7 +278,15 @@ def get_all_weight(ds, weight_mean, name):
         NRL)
     all_age_s.name = name
     all_age_s = all_age_s.expand_dims({ZCOL: [SURF]})
-    all_age = xr.merge([all_age, all_age_s])
+
+    dsurf0 = ds[slice_lev0]
+    all_age_s0: xr.DataArray = (dsurf0[CO] * dsurf0[weight_mean]).sum(NRL) / dsurf0[CO].sum(
+        NRL)
+    all_age_s0.name = name
+    all_age_s0 = all_age_s0.expand_dims({ZCOL: [LEV0]})
+
+
+    all_age = xr.merge([all_age, all_age_s,all_age_s0])
     return all_age
 
 def get_all_age(ds):
@@ -306,7 +325,17 @@ def get_clock_dir_all(ds):
     ang_clock_all.name = CLK_DIR
     ang_clock_all_surf = ang_clock_all.expand_dims({ZCOL:[SURF]})
 
-    return xr.merge([ang_clock_all_all,ang_clock_all_surf])
+    ds = ds[slice_lev0]
+
+    x = ds[CO] * np.sin(ds[co.TH_CENTER])
+    x = x.sum(NRL)
+    y = ds[CO] * np.cos(ds[co.TH_CENTER])
+    y = y.sum(NRL)
+    ang_clock_all = np.mod(np.arctan2(x, y), 2 * np.pi) * 6 / np.pi
+    ang_clock_all.name = CLK_DIR
+    ang_clock_all_lev0 = ang_clock_all.expand_dims({ZCOL:[LEV0]})
+
+    return xr.merge([ang_clock_all_all,ang_clock_all_surf,ang_clock_all_lev0])
 
 def plt_diag(all_age, all_dis, all_ds, all_zsl, ang_clock_all):
     _row = 7
@@ -327,8 +356,13 @@ def plt_diag(all_age, all_dis, all_ds, all_zsl, ang_clock_all):
     plt.show()
 
 def merge_all(*,all_age, all_age_18, all_age_6, all_dis, all_ds, all_ds18,
-              all_ds6, all_zsl, dsMAX_theory, surf_age_18, surf_age_6,
-              surf_ds18, surf_ds6,all_zgl,ang_clock_all,
+              all_ds6, all_zsl, dsMAX_theory,
+              surf_age_18,
+              surf_age_6,
+              surf_ds18,
+              surf_ds6,
+              all_zgl,
+              ang_clock_all,
               surf_rdis_18  ,
               surf_rdis_6   ,
               surf_zsl_18   ,
@@ -345,6 +379,20 @@ def merge_all(*,all_age, all_age_18, all_age_6, all_dis, all_ds, all_ds18,
               surf_clk_18,
               all_clk_6,
               surf_clk_6,
+
+              surf0_age_18,
+              surf0_age_6,
+              surf0_ds18,
+              surf0_ds6,
+              surf0_rdis_18,
+              surf0_rdis_6,
+              surf0_zsl_18,
+              surf0_zsl_6,
+              surf0_zgl_18,
+              surf0_zgl_6,
+              surf0_clk_18,
+              surf0_clk_6,
+
               ):
     mega_ds = xr.merge([all_ds, all_age, all_dis, all_zsl,
                         all_zgl, ang_clock_all,
@@ -368,6 +416,21 @@ def merge_all(*,all_age, all_age_18, all_age_6, all_dis, all_ds, all_ds18,
                         surf_clk_18,
                         all_clk_6,
                         surf_clk_6,
+                        surf0_age_18,
+                        surf0_age_6,
+                        surf0_ds18,
+                        surf0_ds6,
+                        surf0_rdis_18,
+                        surf0_rdis_6,
+                        surf0_zsl_18,
+                        surf0_zsl_6,
+                        surf0_zgl_18,
+                        surf0_zgl_6,
+                        surf0_clk_18,
+                        surf0_clk_6,
+
+
+
 
                         ])
     norm = mega_ds[[CALL, CL6, CL18]] / dsMAX_theory
@@ -467,3 +530,23 @@ def make_pol(kml:simplekml.kml.Kml,r,col,alpha=200):
     x,y = r['pol'].centroid.xy
     po.coords = [(x[0],y[0])]
     po.style.labelstyle.color = simplekml.Color.rgb(*c,alpha)
+
+c45 = 'C4_C5_compounds'
+c68 = 'C6_C8_compounds'
+c91 = 'C9_C13_compounds'
+bc  =  'BC'
+
+r1 = 'c6_8/c4_5'
+r2 = 'c9_13/c4_5'
+r3 = 'BC/c4_5'
+r4 = 'c4_5'
+
+
+def import_time_series():
+    data_path = pjoin(co.tmp_data_path, 'data_george_cc.xlsx')
+    # df_ft = pd.read_excel(data_path)
+    df_ts = pd.read_excel(data_path, sheet_name=1, skiprows=1)
+    # %%
+    df_ts = df_ts.set_index(pd.to_datetime(df_ts['time_utc']))
+    df_ts = df_ts.drop('time_utc', axis=1)
+    return df_ts

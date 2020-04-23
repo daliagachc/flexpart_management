@@ -1,6 +1,6 @@
 ﻿name,short name,long name,type,descritption
 normalized,normalized    ,normalized    ,dimension,"if true, the SRR values are divided by the theoretical total (24 * 4 * 3600). If False, we use the SRR values in units of seconds"
-z_column,z_column      ,z_column      ,dimension,"If all, we sum all the values along the Z dimension. If surface, we only sum values below 1.5 km above ground level. To get the ratio , you do all/surf"
+z_column,z_column      ,z_column      ,dimension,"If all, we sum all the values along the Z dimension. If BL (boundary layer), we only sum values below 1.5 km above ground level. To get the ratio , you do all/surf. LEV0 only the first model level (<500m)"
 releases,releases UTC,release time in utc,dimension,The arrival time at CHC in UTC. To get BOT do: UTC - 4h = BOT
 lab_nc18,label 18 CL,label 18 clusters,dimension,labels for the 18th clusters
 lab_nc06,label 6 PW,label 6 pathways,dimension,labels for the 6th clusters

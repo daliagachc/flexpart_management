@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="˚" />
+    <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="˚">
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/la_paz_pol.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/flexpart_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flexpart_management.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/release_ds_v3_lfc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/release_ds_v3_lfc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/release_ds_v3_save_mega_ds.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/release_ds_v3_save_mega_ds.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/releases/v03/data/cluster_series_v3.nc" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/cluster_series_v3.nc" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -643,8 +651,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Markdown file" />
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -682,7 +690,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python&#10;TEXT&#10;Markdown&#10;GenericSQL" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/flexpart_management/releases/v03/paper_figs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/flexpart_management/releases/v03/data" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -724,8 +732,8 @@
       <recent name="$PROJECT_DIR$/flexpart_management/releases/v02/figures/general_description" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/flexpart_management/releases/v03/paper_figs" />
       <recent name="$PROJECT_DIR$/flexpart_management/releases/v03/data" />
+      <recent name="$PROJECT_DIR$/flexpart_management/releases/v03/paper_figs" />
       <recent name="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3" />
       <recent name="$PROJECT_DIR$/flexpart_management/notebooks/log_pol_revisited" />
       <recent name="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_volcano_chc/n02_regressors" />
