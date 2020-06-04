@@ -65,7 +65,7 @@ def main():
 
     csv = xr.open_dataset(pjoin(co.tmp_data_path,'cluster_series_v3.nc'))
     # %%
-    s7 = csv['conc_lab_nc18'].loc[{N18:'07_SR',NORM:0,ZCOL:'SURF'}].to_dataframe()[CL18]
+    s7 = csv['conc_lab_nc18'].loc[{N18:'07_SR',NORM:0,ZCOL:'BL'}].to_dataframe()[CL18]
     t7 = csv['conc_lab_nc18'].loc[{N18:'07_SR',NORM:0,ZCOL:'ALL'}].to_dataframe()[CL18]
     # %%
     s07=ds[CO][{co.ZM:[0]}].where(ds[N18]=='07_SR').sum(NRL).to_dataframe()
@@ -126,22 +126,137 @@ def main():
     df_ts = import_time_series()
     df_ts
     # %%
-    df = ser[CO].to_dataframe().reset_index()
-    df['LT']  = df[co.RL] - pd.Timedelta('4H')
-    from bokeh.plotting import figure, output_file, show
-    import bokeh
-    from bokeh.models import ColumnDataSource
-    from bokeh.palettes import Dark2_5 as palette
-    output_file('/tmp/my_first_graph.html')
-    p = figure(x_axis_type='datetime',plot_width=1000, plot_height=500)
-    source = ColumnDataSource(df)
+    # df = ser.to_dataframe().reset_index()
+    # df['LT']  = df[co.RL] - pd.Timedelta('4H')
+    # from bokeh.plotting import figure, output_file, show
+    # import bokeh
+    # from bokeh.models import ColumnDataSource
+    # from bokeh.palettes import Dark2_5 as palette
+    # output_file('/tmp/my_first_graph.html')
+    # p = figure(x_axis_type='datetime',plot_width=1000, plot_height=500)
+    # source = ColumnDataSource(df)
+    #
+    # p.line(x='LT', y=CO, source=source, )
+    # p.line(x='Time_LT', y=c91, source=df_ts, color = palette[1])
+    # show(p)
 
-    p.line(x='LT', y=CO, source=source, )
-    p.line(x='Time_LT', y=c91, source=df_ts, color = palette[1])
-    show(p)
+    # %%
+    # bcc = df_ts[['RH_station']].resample('H').mean().dropna()
+    bcc = df_ts[['BC']].resample('H').mean().dropna()
+    bc = bcc['BC']
+    # %%
+    import sklearn.preprocessing as pre
+    bcT = pre.QuantileTransformer(
+        output_distribution='normal',n_quantiles=100)\
+        .fit_transform(bcc.values)
+    bcL = pre.QuantileTransformer(n_quantiles=100) \
+        .fit_transform(bcc.values)
+    # %%
+    bcc['bcT'] = bcT
+    bcc['bc2'] = bcT+2
+    bcc.index.name=co.RL
 
     # %%
+    # s = splot(3,squeeze=False)
+    # ax0,ax1,ax2 = s.axf[0],s.axf[1],s.axf[2]
+    # x1 = 3
+    # x2 = 5000
+    # bins = np.geomspace(x1,x2,10)
+    # bins = [0,*bins[1:-1],np.max([bc.max()+1,bins[-1]])]
+    # ax0.hist(bc, bins=bins)
+    # ax0.set_xlim(x1,x2)
+    # ax0.set_xscale('log')
+    # ax0.set_title('log')
+    # ax1.hist(bc,bins=100)
+    # ax1.set_title('normal')
+    #
+    # ax2.hist(bcT)
+    # ax2.set_title('bc quantile')
+    # s.f.tight_layout()
+    # plt.show()
+
     # %%
+    dsc = xr.open_dataset(
+        pjoin(co.tmp_data_path,'cluster_series_v3.nc'))
     # %%
+    ser = dsc['conc_lab_nc18'].loc[{'z_column':'BL','normalized':0}]
+    # %%
+    s = splot(2,figsize=(5,10),sharex=False)
+    res = (ser * bcc['BC'].to_xarray()).median(co.RL)
+    # res = res/ser.sum(co.RL)
+
+    res.to_dataframe(name='conv')['conv'].plot.barh(ax=s.axf[0])
+    ser.median(co.RL).to_dataframe()['conc_lab_nc18'].plot.barh(ax=s.axf[1])
+    plt.show()
+    # %%
+    import sklearn.linear_model as lm
+    reg = lm.ElasticNet(
+        positive=True,)
+    # %%
+    su = ds[{co.ZM:[0]}].sum([co.RL,co.ZM])
+    # %%
+    su[co.CONC].plot.hist()
+    plt.show()
+
+
     # %%
 
+    ax = fa.get_ax_bolivia(fig_args={'figsize':(10,10),'dpi':300},
+                           chc_lp_legend=False)
+    where = su.where(su[co.CONC] > 2e4)
+    fa.logpolar_plot(where, ax=ax, cmap='viridis')
+    plt.show()
+    # %%
+    sun = ds[{co.ZM:0}]/su
+    # sun = ds/ds.sum(co.RL)
+    # %%
+    dsun = sun.to_dataframe()[co.CONC]
+    dsun = dsun[~dsun.isnull()]
+    # %%
+    # %%
+    du = dsun.unstack().T
+    # %%
+    # bcc['rat'] = (bcc['C4_C5_compounds']/bcc['C9_C13_compounds'])[bcc['C9_C13_compounds']>0]
+    # buc = bcc[['RH_station']]['2017-12-06':'2018-05-31'].dropna().copy()
+    buc = bcc[['BC']]['2017-12-06':'2018-05-31'].dropna().copy()
+    duc = du.loc[buc.index].copy()
+
+    reg = lm.ElasticNet(positive=True,alpha=.17,fit_intercept=False)
+    reg.fit(duc,buc)
+    we = pd.DataFrame(reg.coef_, index=duc.T.index,columns=['w'])
+    we.to_xarray()['w'].plot()
+    ax = plt.gca()
+    ax.set_yscale('log')
+    plt.show()
+    # %%
+    goo = xr.merge([su,we.to_xarray()])
+    ax = fa.get_ax_lapaz(
+        fig_args={'figsize':(10,10),'dpi':300},
+                                    chc_lp_legend=True)
+    fa.logpolar_plot(goo['w'], ax=ax,name='w')
+    ax.plot(co.lola_la_paz_pol[:, 0], co.lola_la_paz_pol[:, 1])
+
+    plt.show()
+
+
+
+    # %%
+    pred = reg.predict(duc)
+    buc['pred'] = pred
+    buc.corr()
+    # %%
+    s = splot(figsize=(30,5),dpi=300)
+    buc = buc.resample('H').mean()
+    (buc/buc.sum()).plot(ax=s.ax,linewidth=.5)
+    plt.show()
+    # %%
+    sns.distplot(buc['BC'])
+    sns.distplot(buc['pred'])
+    plt.show()
+    # %%
+    plt.hexbin(x=buc['BC'],y=buc['pred'],extent=[0,500,0,200],gridsize=20)
+    plt.show()
+
+
+if __name__ == '__main__':
+    main()

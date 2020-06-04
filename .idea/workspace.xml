@@ -2,15 +2,77 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="˚">
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/la_paz_pol.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/flexpart_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flexpart_management.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/daily_evolution_nc18.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/ecoregions/ecoregions.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/ecoregions/ecoregions.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/ecoregions/ecoregions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/ecoregions/ecoregions_lfc.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/ecoregions/ecoregions_lfc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/fourier_transforms.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/fourier_transforms.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/fourier_transforms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/fourier_transforms_lfc.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/fourier_transforms_lfc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/c18_fourier.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/daily_evolution_nc18.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_07_LR.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_08_LR.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_10_LR.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_11_MR.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_02_MR.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_02_SR.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_03_SM.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_04_MR.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_04_SR.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_05_MR.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_06_SM.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_07_LR.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_07_SR.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_08_LR.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_08_SM.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_09_MR.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_10_LR.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_10_SR.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_11_MR.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_11_SR.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_12_SM.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_12_SR.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_surface_ratio/george_surface_ratio.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_surface_ratio/george_surface_ratio.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_surface_ratio/george_surface_ratio.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_surface_ratio/george_surface_ratio_lfc.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_surface_ratio/george_surface_ratio_lfc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/meteo_cumbre/meteo_cumbre.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/meteo_cumbre/meteo_cumbre.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/meteo_cumbre/meteo_cumbre.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/meteo_cumbre/meteo_cumbre_lfc.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/meteo_cumbre/meteo_cumbre_lfc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/la_paz_bc.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/la_paz_figs/general_surf_infuence.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/la_paz_figs/result.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/la_paz_figs/timeseries.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/table_centroids_with_age_nc18/table_centroids_with_age_nc18.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/table_centroids_with_age_nc18/table_centroids_with_age_nc18.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/table_centroids_with_age_nc18/table_centroids_with_age_nc18.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/table_centroids_with_age_nc18/table_centroids_with_age_nc18_lfc.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/table_centroids_with_age_nc18/table_centroids_with_age_nc18_lfc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/clustering_funs.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/clustering_funs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flexpart_management/modules/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/multicluster_main_pathways/multicluster_main_pathways.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/multicluster_main_pathways/multicluster_main_pathways.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/multicluster_main_pathways/multicluster_main_pathways_lfc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/multicluster_main_pathways/multicluster_main_pathways_lfc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/paper_silhouette/paper_silhouette.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/paper_silhouette/paper_silhouette.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/la_paz_pol.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/la_paz_pol.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/release_ds_v3_lfc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/release_ds_v3_lfc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/release_ds_v3_save_mega_ds.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/release_ds_v3_save_mega_ds.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/releases/v03/data/cluster_series_v3.nc" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/cluster_series_v3.nc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/release_ds_v3_polygones.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/release_ds_v3_polygones.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/cluster_local_funs.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/cluster_local_funs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/4-panel-cluster-medeoids.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/4-panel-cluster-medeoids.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_hag.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_hag.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_hsl.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_hsl.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_srr_influence.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_srr_influence.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_surface_influence.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_surface_influence.pdf" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,600 +115,6 @@
     </expand>
     <select />
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="flexpart_management">
-      <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/releasev01.pdf" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/releasev01.pptx" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/conc_smooth_p.xls" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/~$releasev01.pptx" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/conc_smooth_p_t.xls" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/06_cluster_properties" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/06_cluster_properties/06_cluster_properties_12_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/06_cluster_properties/06_cluster_properties_12_1.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/06_cluster_properties/06_cluster_properties_26_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/06_cluster_properties/06_cluster_properties_27_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/06_cluster_properties/06_cluster_properties_28_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/06_cluster_properties/06_cluster_properties_29_1.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/06_cluster_properties/06_cluster_properties_30_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        </favorite_root>
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/05_simplified_pathways" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/05_simplified_pathways/05_analyze_clusters_new_31_2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/05_simplified_pathways/05_analyze_clusters_new_31_5.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/05_simplified_pathways/05_analyze_clusters_new_31_8.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/05_simplified_pathways/05_analyze_clusters_new_31_11.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/05_simplified_pathways/05_analyze_clusters_new_31_14.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/05_simplified_pathways/05_analyze_clusters_new_31_17.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/05_simplified_pathways/05_analyze_clusters_new_31_20.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/05_simplified_pathways/05_analyze_clusters_new_31_23.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/05_simplified_pathways/05_analyze_clusters_new_31_26.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/05_simplified_pathways/05_analyze_clusters_new_31_29.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/05_simplified_pathways/05_analyze_clusters_new_31_32.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/05_simplified_pathways/05_analyze_clusters_new_31_35.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/05_simplified_pathways/05_analyze_clusters_new_31_38.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/05_simplified_pathways/05_analyze_clusters_new_31_41.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/05_simplified_pathways/05_analyze_clusters_new_31_44.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/05_simplified_pathways/05_analyze_clusters_new_31_47.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/05_simplified_pathways/05_analyze_clusters_new_31_50.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/05_simplified_pathways/05_analyze_clusters_new_31_53.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/05_simplified_pathways/05_analyze_clusters_new_31_56.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/05_simplified_pathways/05_analyze_clusters_new_31_59.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        </favorite_root>
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/meta_info_clusters.xls" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/04_the_eighteen_clusters" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/04_the_eighteen_clusters/04_conc_percentage_calc_12_2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/04_the_eighteen_clusters/04_conc_percentage_calc_12_5.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/04_the_eighteen_clusters/04_conc_percentage_calc_12_8.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/04_the_eighteen_clusters/04_conc_percentage_calc_12_11.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/04_the_eighteen_clusters/04_conc_percentage_calc_12_14.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/04_the_eighteen_clusters/04_conc_percentage_calc_12_17.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/04_the_eighteen_clusters/04_conc_percentage_calc_12_20.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/04_the_eighteen_clusters/04_conc_percentage_calc_12_23.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/04_the_eighteen_clusters/04_conc_percentage_calc_12_26.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/04_the_eighteen_clusters/04_conc_percentage_calc_12_29.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/04_the_eighteen_clusters/04_conc_percentage_calc_12_32.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/04_the_eighteen_clusters/04_conc_percentage_calc_12_35.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/04_the_eighteen_clusters/04_conc_percentage_calc_12_38.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/04_the_eighteen_clusters/04_conc_percentage_calc_12_41.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/04_the_eighteen_clusters/04_conc_percentage_calc_12_44.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/04_the_eighteen_clusters/04_conc_percentage_calc_12_47.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/04_the_eighteen_clusters/04_conc_percentage_calc_12_50.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/releases/v01/04_the_eighteen_clusters/04_conc_percentage_calc_12_53.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        </favorite_root>
-      </favorite_root>
-      <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/main.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/07_export_ds.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/07_export_ds-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/07_export_ds-checkpoint.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/01_post_clustering-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/07_export_ds-Copy1-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/02_analyze_clusters-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/01_post_clustering-checkpoint.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/06_cluster_properties-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/02_analyze_clusters-checkpoint.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/03_diurnal_variability-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/04_conc_percentage_calc-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/05_analyze_clusters_new-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/06_cluster_properties-checkpoint.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/08_short_range_influence-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/02_analyze_clusters-Copy1-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/03_diurnal_variability-checkpoint.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/04_conc_percentage_calc-checkpoint.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/05_analyze_clusters_new-checkpoint.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/08_short_range_influence-checkpoint.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/04_conc_percentage_calc-Copy1-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          </favorite_root>
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/07_export_ds.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_14_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_18_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_18_1.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_18_2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_19_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_25_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_34_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_34_1.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_38_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_39_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_41_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_44_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_50_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_57_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_57_1.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_57_2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_57_3.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_57_4.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_59_1.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_59_3.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_59_5.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_60_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          </favorite_root>
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_1.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_3.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_5.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_7.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_9.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_11.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_13.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_15.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_17.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_19.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_21.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_23.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_25.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_27.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_29.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_31.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_33.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_35.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          </favorite_root>
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_5.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_8.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_11.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_14.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_17.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_20.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_23.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_26.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_29.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_32.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_35.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_38.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_41.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_44.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_47.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_50.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_53.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_56.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_59.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          </favorite_root>
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties_files" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties_files/06_cluster_properties_12_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties_files/06_cluster_properties_12_1.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties_files/06_cluster_properties_26_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties_files/06_cluster_properties_27_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties_files/06_cluster_properties_28_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties_files/06_cluster_properties_29_1.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties_files/06_cluster_properties_30_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          </favorite_root>
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/08_short_range_influence.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_5.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_8.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_1.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_3.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_4.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_5.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_6.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_7.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_8.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_9.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_1.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_3.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_4.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_5.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_6.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_7.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_8.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_9.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_11.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_14.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_17.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_20.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_23.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_26.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_29.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_32.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_35.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_38.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_41.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_44.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_47.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_50.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_53.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_10.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_11.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_12.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_13.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_14.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_15.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_16.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_17.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_10.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_11.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_12.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_13.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_14.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_15.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_16.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_17.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          </favorite_root>
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_5.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_8.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_11.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_14.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_17.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_20.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_23.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_26.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_29.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_32.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_35.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_38.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_41.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_44.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_47.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_50.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_53.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          </favorite_root>
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_5.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_8.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_11.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_14.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_17.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_20.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_23.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_26.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_29.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_32.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_35.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_38.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_41.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_44.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_47.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_50.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_53.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_56.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_59.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          </favorite_root>
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/08_short_range_influence.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/test_03_diurnal_variability.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        </favorite_root>
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/main.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/Untitled.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/Untitled1.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/sum_rect_d2.nc" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/Untitled.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/chect_rect_grid" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/chect_rect_grid/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/chect_rect_grid/funs_check.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/chect_rect_grid/check_rect_grid.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/chect_rect_grid/check_rect_grid.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        </favorite_root>
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/Untitled1.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/srun_launcher.sh" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/.ipynb_checkpoints" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/.ipynb_checkpoints/Untitled-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/.ipynb_checkpoints/Untitled1-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/.ipynb_checkpoints/Untitled2-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/.ipynb_checkpoints/Untitled-checkpoint.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/.ipynb_checkpoints/Untitled1-checkpoint.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/.ipynb_checkpoints/02_check_log_pol_conversion-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/.ipynb_checkpoints/get_flx_log_pol_coords_taito-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/.ipynb_checkpoints/02_check_log_pol_conversion-checkpoint.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/.ipynb_checkpoints/get_flx_log_pol_coords_taito-checkpoint.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        </favorite_root>
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/check_rect_grid.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/reduce_cell_number.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/reduce_cell_number.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/reduce_cell_number.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/reduce_cell_number_files" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/reduce_cell_number_files/reduce_cell_number_9_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/reduce_cell_number_files/reduce_cell_number_10_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/reduce_cell_number_files/reduce_cell_number_11_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/reduce_cell_number_files/reduce_cell_number_12_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/reduce_cell_number_files/reduce_cell_number_13_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        </favorite_root>
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/check_convert_zet_levels.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/check_convert_zet_levels.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/check_convert_zet_levels.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/check_convert_zet_levels_files" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/check_convert_zet_levels_files/check_convert_zet_levels_13_1.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/check_convert_zet_levels_files/check_convert_zet_levels_13_2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        </favorite_root>
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/get_flx_log_pol_coords_taito.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion_files" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion_files/02_check_log_pol_conversion_8_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion_files/02_check_log_pol_conversion_9_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion_files/02_check_log_pol_conversion_11_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/02_check_log_pol_conversion_files/02_check_log_pol_conversion_12_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        </favorite_root>
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/get_flx_log_pol_coords_taito.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-      </favorite_root>
-      <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/07_export_ds.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/07_export_ds.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/07_export_ds-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/07_export_ds-checkpoint.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/01_post_clustering-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/07_export_ds-Copy1-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/02_analyze_clusters-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/01_post_clustering-checkpoint.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/06_cluster_properties-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/02_analyze_clusters-checkpoint.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/03_diurnal_variability-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/04_conc_percentage_calc-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/05_analyze_clusters_new-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/06_cluster_properties-checkpoint.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/08_short_range_influence-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/02_analyze_clusters-Copy1-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/03_diurnal_variability-checkpoint.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/04_conc_percentage_calc-checkpoint.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/05_analyze_clusters_new-checkpoint.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/08_short_range_influence-checkpoint.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/.ipynb_checkpoints/04_conc_percentage_calc-Copy1-checkpoint.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        </favorite_root>
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/07_export_ds.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_14_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_18_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_18_1.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_18_2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_19_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_25_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_34_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_34_1.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_38_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_39_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_41_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_44_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_50_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_57_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_57_1.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_57_2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_57_3.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_57_4.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_59_1.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_59_3.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_59_5.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/00_pre_clustering_files/00_pre_clustering_60_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        </favorite_root>
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_1.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_3.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_5.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_7.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_9.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_11.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_13.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_15.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_17.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_19.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_21.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_23.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_25.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_27.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_29.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_31.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_33.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/01_post_clustering_files/01_post_clustering_13_35.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        </favorite_root>
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_5.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_8.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_11.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_14.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_17.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_20.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_23.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_26.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_29.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_32.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_35.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_38.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_41.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_44.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_47.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_50.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_53.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_56.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/02_analyze_clusters_files/02_analyze_clusters_30_59.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        </favorite_root>
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties_files" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties_files/06_cluster_properties_12_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties_files/06_cluster_properties_12_1.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties_files/06_cluster_properties_26_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties_files/06_cluster_properties_27_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties_files/06_cluster_properties_28_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties_files/06_cluster_properties_29_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties_files/06_cluster_properties_29_1.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties_files/06_cluster_properties_30_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        </favorite_root>
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/08_short_range_influence.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/08_short_range_influence.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_5.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_8.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_1.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_3.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_4.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_5.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_6.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_7.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_8.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_9.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_1.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_3.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_4.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_5.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_6.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_7.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_8.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_9.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_11.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_14.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_17.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_20.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_23.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_26.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_29.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_32.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_35.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_38.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_41.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_44.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_47.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_50.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_6_53.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_10.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_11.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_12.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_13.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_14.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_15.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_16.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_13_17.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_10.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_11.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_12.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_13.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_14.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_15.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_16.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/03_diurnal_variability_files/03_diurnal_variability_14_17.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        </favorite_root>
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_5.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_8.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_11.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_14.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_17.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_20.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_23.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_26.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_29.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_32.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_35.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_38.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_41.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_44.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_47.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_50.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/04_conc_percentage_calc_files/04_conc_percentage_calc_12_53.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        </favorite_root>
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_5.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_8.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_11.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_14.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_17.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_20.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_23.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_26.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_29.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_32.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_35.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_38.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_41.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_44.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_47.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_50.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_53.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_56.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/05_analyze_clusters_new_files/05_analyze_clusters_new_31_59.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        </favorite_root>
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/08_short_range_influence.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/08_short_range_influence_files" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/08_short_range_influence_files/08_short_range_influence_18_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/08_short_range_influence_files/08_short_range_influence_19_0.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/08_short_range_influence_files/08_short_range_influence_19_1.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/08_short_range_influence_files/08_short_range_influence_19_2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/08_short_range_influence_files/08_short_range_influence_19_3.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        </favorite_root>
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/test_03_diurnal_variability.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-      </favorite_root>
-      <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/cluster_local_funs.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-      <favorite_root url="file://$PROJECT_DIR$/flexpart_management/tmp_data" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-      <favorite_root url="file://$PROJECT_DIR$/flexpart_management/requests/george" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/requests/george/slices" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/requests/george/slices/vertical_plots_from_wrf.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/requests/george/slices/vertical_plots_from_wrf.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/requests/george/slices/vertical_plots_from_wrf_lfc.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-          <favorite_root url="file://$PROJECT_DIR$/flexpart_management/requests/george/slices/vertical_plots_from_wrf_lfc.ipynb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        </favorite_root>
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/requests/george/george.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/requests/george/readme.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/requests/george/Timeseries_for_averaging.csv" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-        <favorite_root url="file://$PROJECT_DIR$/flexpart_management/requests/george/Timeseries_for_averaging.xlsx" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-      </favorite_root>
-    </favorites_list>
-    <favorites_list name="favfav">
-      <favorite_root url="file://$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysis" module="flexpart_management" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-    </favorites_list>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -682,7 +150,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="sqlite.xerial&#10;sqlite" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
@@ -690,7 +158,8 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python&#10;TEXT&#10;Markdown&#10;GenericSQL" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/flexpart_management/releases/v03/data" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -703,10 +172,10 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="debugger.stepping" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="tags.panel.proportion" value="0.5" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -732,28 +201,16 @@
       <recent name="$PROJECT_DIR$/flexpart_management/releases/v02/figures/general_description" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3" />
+      <recent name="$PROJECT_DIR$/flexpart_management/tmp_data" />
       <recent name="$PROJECT_DIR$/flexpart_management/releases/v03/data" />
       <recent name="$PROJECT_DIR$/flexpart_management/releases/v03/paper_figs" />
-      <recent name="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3" />
       <recent name="$PROJECT_DIR$/flexpart_management/notebooks/log_pol_revisited" />
-      <recent name="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_volcano_chc/n02_regressors" />
     </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="python" />
-    </option>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
     </option>
   </component>
   <component name="RunManager" selected="Python.plot_test">
@@ -762,43 +219,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="INTERPRETER_PATH" value="" />
-      <option name="PROJECT_INTERPRETER" value="false" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <module name="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="DjangoTestsConfigurationType">
-      <module name="useful-scit" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
       <module name="useful-scit" />
@@ -846,6 +266,43 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="PROJECT_INTERPRETER" value="false" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType">
+      <module name="useful-scit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
     </configuration>
     <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
       <module name="useful-scit" />
@@ -1072,7 +529,7 @@
     </recent_temporary>
   </component>
   <component name="StructureViewFactory">
-    <option name="AUTOSCROLL_MODE" value="false" />
+    <option name="ACTIVE_ACTIONS" value=",SHOW_INHERITED" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -1244,38 +701,46 @@
       <workItem from="1586371878576" duration="40819000" />
       <workItem from="1586858771586" duration="45991000" />
       <workItem from="1586988306058" duration="98594000" />
+      <workItem from="1587726463686" duration="16332000" />
+      <workItem from="1588162857501" duration="1792000" />
+      <workItem from="1588195630651" duration="1000" />
+      <workItem from="1588240449783" duration="386000" />
+      <workItem from="1588241128341" duration="122000" />
+      <workItem from="1588243092895" duration="62000" />
+      <workItem from="1588243231332" duration="9171000" />
+      <workItem from="1588579080657" duration="28706000" />
+      <workItem from="1588667048994" duration="1061000" />
+      <workItem from="1589202408926" duration="31605000" />
+      <workItem from="1589319626317" duration="3697000" />
+      <workItem from="1589811128545" duration="4300000" />
+      <workItem from="1589870882248" duration="47609000" />
+      <workItem from="1589982887246" duration="52081000" />
+      <workItem from="1590491611576" duration="1942000" />
+      <workItem from="1590757365546" duration="1449000" />
+      <workItem from="1591007709578" duration="42000" />
+      <workItem from="1591267016183" duration="3761000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="420" y="184" key="#Deployment" timestamp="1578672601303">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="420" y="184" key="#Deployment/218.923.1440.877/0.23.1440.877@0.23.1440.877" timestamp="1578672601303" />
-    <state x="560" y="217" key="#Deployment/427.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578394432416" />
-    <state x="560" y="217" key="#Images" timestamp="1578471720125">
-      <screen x="0" y="23" width="1920" height="1057" />
-    </state>
-    <state x="560" y="217" key="#Images/427.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578471720125" />
     <state x="560" y="276" key="#Inspections" timestamp="1586168462925">
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
@@ -1287,114 +752,88 @@
     <state x="349" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586334457751">
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
-    <state x="262" y="141" key="#com.intellij.execution.impl.EditConfigurationsDialog/218.923.1440.877/0.23.1440.877@0.23.1440.877" timestamp="1578676955770" />
     <state x="349" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog/336.1223.1280.777/0.23.1920.1177@0.23.1920.1177" timestamp="1586334457751" />
-    <state x="507" y="173" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1578673711029">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="507" y="173" key="#com.intellij.ide.macro.MacrosDialog/218.923.1440.877/0.23.1440.877@0.23.1440.877" timestamp="1578673711029" />
-    <state x="603" y="286" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1578073260266">
-      <screen x="0" y="23" width="1920" height="1057" />
-    </state>
-    <state x="603" y="286" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/427.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578073260266" />
-    <state x="236" y="139" key="#com.intellij.tools.ToolEditorDialog" timestamp="1578663005786">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="236" y="139" key="#com.intellij.tools.ToolEditorDialog/218.923.1440.877/0.23.1440.877@0.23.1440.877" timestamp="1578663005786" />
-    <state x="429" y="60" key="#george" timestamp="1578673871931">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="429" y="60" key="#george/218.923.1440.877/0.23.1440.877@0.23.1440.877" timestamp="1578673871931" />
-    <state x="474" y="233" key="EnvironmentVariablesDialog" timestamp="1578676857118">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="474" y="233" key="EnvironmentVariablesDialog/218.923.1440.877/0.23.1440.877@0.23.1440.877" timestamp="1578676857118" />
-    <state width="586" height="322" key="GridCell.Tab.0.bottom" timestamp="1586334459337">
+    <state x="667" y="421" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589888764830">
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
-    <state width="628" height="194" key="GridCell.Tab.0.bottom/218.923.1440.877/0.23.1440.877@0.23.1440.877" timestamp="1578680522051" />
+    <state x="667" y="421" key="#com.intellij.fileTypes.FileTypeChooser/336.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1589888764830" />
+    <state width="393" height="263" key="GridCell.Tab.0.bottom" timestamp="1591270785787">
+      <screen x="0" y="23" width="1920" height="1177" />
+    </state>
+    <state width="288" height="272" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1589929277179" />
     <state width="586" height="322" key="GridCell.Tab.0.bottom/336.1223.1280.777/0.23.1920.1177@0.23.1920.1177" timestamp="1586334459337" />
-    <state width="484" height="250" key="GridCell.Tab.0.bottom/427.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578397640502" />
-    <state width="586" height="322" key="GridCell.Tab.0.center" timestamp="1586334459336">
+    <state width="393" height="263" key="GridCell.Tab.0.bottom/336.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1591270785787" />
+    <state width="393" height="263" key="GridCell.Tab.0.center" timestamp="1591270785786">
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
-    <state width="628" height="194" key="GridCell.Tab.0.center/218.923.1440.877/0.23.1440.877@0.23.1440.877" timestamp="1578680522050" />
+    <state width="288" height="272" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1589929277179" />
     <state width="586" height="322" key="GridCell.Tab.0.center/336.1223.1280.777/0.23.1920.1177@0.23.1920.1177" timestamp="1586334459336" />
-    <state width="484" height="250" key="GridCell.Tab.0.center/427.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578397640501" />
-    <state width="586" height="322" key="GridCell.Tab.0.left" timestamp="1586334459336">
+    <state width="393" height="263" key="GridCell.Tab.0.center/336.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1591270785786" />
+    <state width="393" height="263" key="GridCell.Tab.0.left" timestamp="1591270785786">
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
-    <state width="628" height="194" key="GridCell.Tab.0.left/218.923.1440.877/0.23.1440.877@0.23.1440.877" timestamp="1578680522050" />
+    <state width="288" height="272" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1589929277178" />
     <state width="586" height="322" key="GridCell.Tab.0.left/336.1223.1280.777/0.23.1920.1177@0.23.1920.1177" timestamp="1586334459336" />
-    <state width="484" height="250" key="GridCell.Tab.0.left/427.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578397640501" />
-    <state width="586" height="322" key="GridCell.Tab.0.right" timestamp="1586334459337">
+    <state width="393" height="263" key="GridCell.Tab.0.left/336.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1591270785786" />
+    <state width="393" height="263" key="GridCell.Tab.0.right" timestamp="1591270785787">
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
-    <state width="628" height="194" key="GridCell.Tab.0.right/218.923.1440.877/0.23.1440.877@0.23.1440.877" timestamp="1578680522051" />
+    <state width="288" height="272" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1589929277179" />
     <state width="586" height="322" key="GridCell.Tab.0.right/336.1223.1280.777/0.23.1920.1177@0.23.1920.1177" timestamp="1586334459337" />
-    <state width="484" height="250" key="GridCell.Tab.0.right/427.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578397640502" />
-    <state width="640" height="274" key="GridCell.Tab.1.bottom" timestamp="1578677099235">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="640" height="274" key="GridCell.Tab.1.bottom/218.923.1440.877/0.23.1440.877@0.23.1440.877" timestamp="1578677099235" />
-    <state width="640" height="274" key="GridCell.Tab.1.center" timestamp="1578677099233">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="640" height="274" key="GridCell.Tab.1.center/218.923.1440.877/0.23.1440.877@0.23.1440.877" timestamp="1578677099233" />
-    <state width="640" height="274" key="GridCell.Tab.1.left" timestamp="1578677099233">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="640" height="274" key="GridCell.Tab.1.left/218.923.1440.877/0.23.1440.877@0.23.1440.877" timestamp="1578677099233" />
-    <state width="640" height="274" key="GridCell.Tab.1.right" timestamp="1578677099234">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state width="640" height="274" key="GridCell.Tab.1.right/218.923.1440.877/0.23.1440.877@0.23.1440.877" timestamp="1578677099234" />
-    <state x="548" y="353" key="IDE.errors.dialog" timestamp="1586169978615">
+    <state width="393" height="263" key="GridCell.Tab.0.right/336.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1591270785787" />
+    <state x="548" y="353" key="IDE.errors.dialog" timestamp="1588243098555">
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
     <state x="548" y="353" key="IDE.errors.dialog/336.1223.1280.777/0.23.1920.1177@0.23.1920.1177" timestamp="1586169978615" />
-    <state x="141" y="87" width="1334" height="722" key="SettingsEditor" timestamp="1586334027596">
+    <state x="548" y="353" key="IDE.errors.dialog/336.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1588243098555" />
+    <state x="123" y="79" width="1334" height="722" key="SettingsEditor" timestamp="1589998241795">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="123" y="79" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1589998241795" />
+    <state x="141" y="87" key="SettingsEditor/336.1223.1280.777/0.23.1920.1177@0.23.1920.1177" timestamp="1586334027596" />
+    <state x="141" y="87" key="SettingsEditor/336.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1589983382701" />
+    <state width="564" height="445" key="SwitcherDM" timestamp="1589982909092">
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
-    <state x="106" y="71" width="1334" height="722" key="SettingsEditor/218.923.1440.877/0.23.1440.877@0.23.1440.877" timestamp="1578677427447" />
-    <state x="141" y="87" key="SettingsEditor/336.1223.1280.777/0.23.1920.1177@0.23.1920.1177" timestamp="1586334027596" />
-    <state x="469" y="190" key="SettingsEditor/427.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578471957129" />
+    <state width="500" height="416" key="SwitcherDM/0.23.1680.1027@0.23.1680.1027" timestamp="1589886730768" />
+    <state width="564" height="445" key="SwitcherDM/336.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1589982909092" />
     <state x="710" y="446" key="cloudConfig.PluginsDialog" timestamp="1586170018144">
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
     <state x="710" y="446" key="cloudConfig.PluginsDialog/336.1223.1280.777/0.23.1920.1177@0.23.1920.1177" timestamp="1586170018144" />
-    <state x="710" y="403" key="cloudConfig.PluginsDialog/427.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578398694310" />
     <state x="723" y="446" width="604" height="446" key="cloudConfig.SelfSettingsDialog" timestamp="1586169989767">
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
-    <state x="542" y="338" key="cloudConfig.SelfSettingsDialog/218.923.1440.877/0.23.1440.877@0.23.1440.877" timestamp="1578490461861" />
     <state x="723" y="446" width="604" height="446" key="cloudConfig.SelfSettingsDialog/336.1223.1280.777/0.23.1920.1177@0.23.1920.1177" timestamp="1586169989767" />
-    <state x="723" y="403" key="cloudConfig.SelfSettingsDialog/427.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578398644588" />
-    <state x="346" y="222" key="com.intellij.javaee.MapExternalResourceDialog" timestamp="1578662935894">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="542" y="299" width="941" height="474" key="find.popup" timestamp="1590757456184">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="346" y="222" key="com.intellij.javaee.MapExternalResourceDialog/218.923.1440.877/0.23.1440.877@0.23.1440.877" timestamp="1578662935894" />
-    <state x="434" y="258" width="832" height="486" key="find.popup" timestamp="1578585476387">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="542" y="299" width="941" height="474" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1590757456184" />
+    <state x="619" y="339" width="830" height="544" key="find.popup/336.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1590072209908" />
+    <state x="560" y="295" width="800" height="608" key="recent.locations.popup" timestamp="1590049303986">
+      <screen x="0" y="23" width="1920" height="1177" />
     </state>
-    <state x="434" y="258" width="832" height="486" key="find.popup/218.923.1440.877/0.23.1440.877@0.23.1440.877" timestamp="1578585476387" />
-    <state x="578" y="306" width="1078" height="501" key="find.popup/427.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578471243149" />
-    <state x="734" y="207" key="ftp.server.browser" timestamp="1578672614954">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="560" y="145" width="800" height="608" key="recent.locations.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1589928244500" />
+    <state x="560" y="295" width="800" height="608" key="recent.locations.popup/336.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1590049303986" />
+    <state x="625" y="288" width="670" height="676" key="search.everywhere.popup" timestamp="1591267054297">
+      <screen x="0" y="23" width="1920" height="1177" />
     </state>
-    <state x="734" y="207" key="ftp.server.browser/218.923.1440.877/0.23.1440.877@0.23.1440.877" timestamp="1578672614954" />
-    <state x="447" y="101" key="new project wizard" timestamp="1578485214438">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="447" y="101" key="new project wizard/218.923.1440.877/0.23.1440.877@0.23.1440.877" timestamp="1578485214438" />
-    <state x="596" y="278" key="new project wizard/427.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578250447158" />
-    <state x="469" y="218" width="670" height="561" key="search.everywhere.popup" timestamp="1578674715054">
-      <screen x="0" y="23" width="1440" height="877" />
-    </state>
-    <state x="469" y="218" width="670" height="561" key="search.everywhere.popup/218.923.1440.877/0.23.1440.877@0.23.1440.877" timestamp="1578674715054" />
-    <state x="625" y="258" width="670" height="676" key="search.everywhere.popup/427.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578471930991" />
+    <state x="547" y="254" width="670" height="590" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1589883714313" />
+    <state x="625" y="288" width="670" height="676" key="search.everywhere.popup/336.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1591267054297" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/flexpart_management/notebooks/multicluster_main_pathways/multicluster_main_pathways_lfc.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/flexpart_management$plot_test.coverage" NAME="plot_test Coverage Results" MODIFIED="1586334438702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flexpart_management/notebooks/log_pol_revisited" />
+    <SUITE FILE_PATH="coverage/flexpart_management$plot_test.coverage" NAME="plot_test Coverage Results" MODIFIED="1589221280045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flexpart_management/notebooks/log_pol_revisited" />
+    <SUITE FILE_PATH="coverage/flexpart_management$.coverage" NAME=" Coverage Results" MODIFIED="1588666908246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

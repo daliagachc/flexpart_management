@@ -171,26 +171,73 @@ def add_labels_to_cluster_markers(ax, df_prop, hgk_, km_):
     df_prop['hgk_xy'] = [[(6, 6)]] * len(df_prop)
     df_prop.loc[0, 'hgk_xy'] = [[[-23, 3]]]
     df_prop.loc[1, 'hgk_xy'] = [[[5, 6]]]
-    df_prop.loc[2, 'hgk_xy'] = [[[-23, 0]]]
+    df_prop.loc[2, 'hgk_xy'] = [[[-10, 15]]]
     df_prop.loc[3, 'hgk_xy'] = [[[10, -10]]]
     df_prop.loc[4, 'hgk_xy'] = [[[-10, -8]]]
-    df_prop.loc[5, 'hgk_xy'] = [[[-7, 8]]]
+    df_prop.loc[5, 'hgk_xy'] = [[[-17, 30]]]
     df_prop.loc[6, 'hgk_xy'] = [[[12, -7]]]
     df_prop.loc[7, 'hgk_xy'] = [[[-16, -8]]]
     df_prop.loc[8, 'hgk_xy'] = [[[-16, -8]]]
     df_prop.loc[9, 'hgk_xy'] = [[[0, -10]]]
-    df_prop.loc[10, 'hgk_xy'] = [[[-15, -8]]]
+    df_prop.loc[10, 'hgk_xy'] = [[[-5, 15]]]
     df_prop.loc[11, 'hgk_xy'] = [[[10, -1]]]
     df_prop.loc[12, 'hgk_xy'] = [[[4, 8]]]
     df_prop.loc[13, 'hgk_xy'] = [[[5, -15]]]
     df_prop.loc[14, 'hgk_xy'] = [[[10, 0]]]
     df_prop.loc[15, 'hgk_xy'] = [[[6, -8]]]
     df_prop.loc[16, 'hgk_xy'] = [[[8, 4]]]
-    df_prop.loc[17, 'hgk_xy'] = [[[-35, -15]]]
+    df_prop.loc[17, 'hgk_xy'] = [[[-25, 0]]]
+
+
     for l, row in df_prop.iterrows():
         ax.annotate(
             row['short_name'],  # + str(l),
             (row[km_], row[hgk_]),
+            fontsize=5,
+            horizontalalignment='left',
+            verticalalignment='center',
+            xytext=row['hgk_xy'][0],
+            textcoords='offset points',
+            # color = 'blue',
+            alpha=.5,
+            arrowprops={'arrowstyle': '-', 'alpha': .1}
+
+        )
+
+
+def add_labels_to_cluster_markers_height(ax, df_prop, km_):
+    # df_prop['hgk_xy'] = [[(6, 6)]] * len(df_prop)
+    # df_prop.loc[0, 'hgk_xy'] = [[[-23, 3]]]
+    # df_prop.loc[1, 'hgk_xy'] = [[[5, 6]]]
+    # df_prop.loc[2, 'hgk_xy'] = [[[-23, 0]]]
+    # df_prop.loc[3, 'hgk_xy'] = [[[10, -10]]]
+    # df_prop.loc[4, 'hgk_xy'] = [[[-10, -8]]]
+    # df_prop.loc[5, 'hgk_xy'] = [[[-17, 30]]]
+    # df_prop.loc[6, 'hgk_xy'] = [[[12, -7]]]
+    # df_prop.loc[7, 'hgk_xy'] = [[[-16, -8]]]
+    # df_prop.loc[8, 'hgk_xy'] = [[[-16, -8]]]
+    # df_prop.loc[9, 'hgk_xy'] = [[[0, -10]]]
+    # df_prop.loc[10, 'hgk_xy'] = [[[-5, 15]]]
+    # df_prop.loc[11, 'hgk_xy'] = [[[10, -1]]]
+    # df_prop.loc[12, 'hgk_xy'] = [[[4, 8]]]
+    # df_prop.loc[13, 'hgk_xy'] = [[[5, -15]]]
+    # df_prop.loc[14, 'hgk_xy'] = [[[10, 0]]]
+    # df_prop.loc[15, 'hgk_xy'] = [[[6, -8]]]
+    # df_prop.loc[16, 'hgk_xy'] = [[[8, 4]]]
+    # df_prop.loc[17, 'hgk_xy'] = [[[-35, -15]]]
+
+    _df:pd.DataFrame = df_prop.set_index('short_name').copy()
+    markers = ['12_SM','03_SM','02_SR']
+    _df = _df.loc[markers]
+    _df.loc['02_SR','hgk_xy'] = [[[10,15]]]
+    _df.loc['12_SM','hgk_xy'] = [[[10,10]]]
+    _df.loc['03_SM','hgk_xy'] = [[[10,0]]]
+
+    hasl = 'height above sea level [km]'
+    for l, row in _df.iterrows():
+        ax.annotate(
+            l,  # + str(l),
+            (row[km_], row[hasl]),
             fontsize=5,
             horizontalalignment='left',
             verticalalignment='center',
@@ -216,6 +263,6 @@ def add_ax_lab(ax, text):
 
 def add_indices(ax1, ax2, ax3, ax4):
     axs = [ax1, ax2, ax3, ax4]
-    texts = ['a)', 'b)', 'c)', 'd)']
+    texts = ['a', 'b', 'c', 'd']
     for ax, text in zip(axs, texts):
         fa.add_ax_lab(ax, text)

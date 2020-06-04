@@ -476,7 +476,7 @@ def get_boundary_pol(ds1, lab, labtype, var2keep,*, threshold):
 
 import shapely
 def get_pol_df(ds1, labtype, var2keep,threshold):
-    labs = set(np.unique(ds1[labtype])) - set(['nan'])
+    labs = set(np.unique(ds1[labtype])) - {'nan'}
     # print(labs)
     pol18 = {}
     for lab in labs:
@@ -494,8 +494,6 @@ def get_pol_df(ds1, labtype, var2keep,threshold):
         pol = pdf.loc[ma]
 
         pol18[lab] = pol
-
-
 
     df18 = pd.DataFrame(pol18).T
     # %%
@@ -550,3 +548,59 @@ def import_time_series():
     df_ts = df_ts.set_index(pd.to_datetime(df_ts['time_utc']))
     df_ts = df_ts.drop('time_utc', axis=1)
     return df_ts
+
+def get_ds_and_vars_to_keep():
+    ds = get_dcc().load()
+    # %%
+    ds_ = ds.copy()
+    lalons = [
+        co.LAT_00, co.LAT_11, co.LAT_01, co.LAT_10,
+        co.LON_00, co.LON_11, co.LON_01, co.LON_10,
+    ]
+    var2keep = [
+        *lalons,
+        'rm', 'rM'
+    ]
+    lam = (ds_[co.LAT_00] + ds_[co.LAT_01]) / 2
+    laM = (ds_[co.LAT_10] + ds_[co.LAT_11]) / 2
+    lom = (ds_[co.LON_00] + ds_[co.LON_01]) / 2
+    loM = (ds_[co.LON_10] + ds_[co.LON_11]) / 2
+    rm = ((lam - co.CHC_LAT) ** 2 + (lom - co.CHC_LON) ** 2) ** (1 / 2)
+    rM = ((laM - co.CHC_LAT) ** 2 + (loM - co.CHC_LON) ** 2) ** (1 / 2)
+    ds_['rm'] = rm
+    ds_['rM'] = rM
+    ds_ = ds_.set_coords(['rm', 'rM'])
+    # for var in var2keep:
+    #     ds_[var] = ds_[var][{co.ZM:0}]
+    # %%
+    ds1 = ds_.sum(co.RL)
+    return ds1, var2keep
+
+
+
+def get_centroid_df(ds1, lab_nc):
+    labs = list(set(np.unique(ds1[lab_nc])) - {'nan'})
+    centroids = {}
+    for lab in labs:
+        res = get_centroid_lat_lon(ds1, lab, lab_nc)
+        centroids[lab] = res
+    centroids_df = pd.DataFrame(centroids).T
+    return centroids_df
+
+
+
+def get_centroid_lat_lon(ds1, lab, lab_nc):
+    conc_da = ds1.where(ds1[lab_nc] == lab)[co.CONC].sum([co.ZM, co.TH_CENTER])
+    r = (conc_da * conc_da[co.R_CENTER]).sum() / conc_da.sum()
+    conc_da = ds1.where(ds1[lab_nc] == lab)[co.CONC].sum([co.ZM, co.R_CENTER])
+
+    ths = conc_da[co.TH_CENTER]
+    x = (conc_da * np.sin(ths)).mean()
+    y = (conc_da * np.cos(ths)).mean()
+    th = np.arctan2(x,y)
+
+    lat = r * np.cos(th) + co.CHC_LAT
+    lon = r * np.sin(th) + co.CHC_LON
+    res = {'lat': lat.item(), 'lon': lon.item()}
+    return res
+

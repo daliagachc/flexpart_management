@@ -5,6 +5,9 @@ import numpy as np
 import os
 
 import flexpart_management
+from useful_scit import plot as ucp
+
+
 _fm_path = flexpart_management.__file__
 fm_path = os.path.dirname(_fm_path)
 
@@ -219,3 +222,22 @@ lola_la_paz_pol = np.array([
 [-68.14983926709843,-16.44601858277946],
     ]
 )
+
+_range_colors = dict(
+    SR=ucp.cc[0],
+    SM=ucp.cc[1],
+    MR=ucp.cc[2],
+    LR=ucp.cc[3]
+)
+
+range_colors_ser = pd.Series(_range_colors)
+
+
+
+_range_markers = dict(
+    SR='o',
+    SM='s',
+    MR='^',
+    LR='p'
+)
+range_markers_ser = pd.Series(_range_markers)

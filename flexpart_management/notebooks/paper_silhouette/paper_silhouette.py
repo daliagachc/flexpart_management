@@ -43,7 +43,17 @@ ax.vlines(
     linewidth=1.5, linestyles='-'
 )
 
+ax.vlines(
+    x=6,ymin=0,ymax=ser[6],
+    color=ucp.cc[0],
+    linewidth=1.5, linestyles='-'
+)
+
 ax.scatter(x=18,y=ser[18], color=ucp.cc[0],zorder=20,
+           s=7
+           )
+
+ax.scatter(x=6,y=ser[6], color=ucp.cc[0],zorder=20,
            s=7
            )
 

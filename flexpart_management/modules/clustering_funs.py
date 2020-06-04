@@ -1266,6 +1266,7 @@ def plot_cluster_summary_figure(
         range_name='range',
         figsize=(4, 3),
         y_range=None,
+        x_range=None,
         save_fig=False,
         fig_save_name='dis_vs_hag.pdf',
         fig_save_dir='/Users/diego/flexpart_management/flexpart_management/victoria_trento/figures/',
@@ -1273,7 +1274,8 @@ def plot_cluster_summary_figure(
         y_label=None,
         add_vertical_lines=False,
         add_cluster_group_label = True,
-        y_ticks = None
+        y_ticks = None,
+        x_ticks = None,
 ):
     if ax is None:
         f, ax = plt.subplots(figsize=figsize)
@@ -1293,14 +1295,19 @@ def plot_cluster_summary_figure(
              'medium\nrange', 'long\nrange']
     xys = xy_locs
     i_range = range(4)
+
     for i, r, s, t, xy in zip(i_range, ranges, shapes, texts, xys):
         _df: pd.DataFrame = df_prop[df_prop[range_name] == r]
 
+        _df['color'] = _df.apply(lambda r: ucp.cc[i],axis=1)
+
         if add_vertical_lines:
-            ax.vlines(_df[xl],ymin=0,ymax=_df[yl],colors=[ucp.cc[i]], alpha=.3)
+            ax.vlines(_df[xl],ymin=0,ymax=_df[yl],colors=_df['color'], alpha=.3)
 
         _df.plot.scatter(
-            x=xl, y=yl, ax=ax, marker=s, c=[ucp.cc[i]],
+            x=xl, y=yl, ax=ax, marker=s,
+            c=_df['color'],
+            # c ='red',
             edgecolor='w', s=30, linewidths=.2
         )
         if add_cluster_group_label:
@@ -1311,11 +1318,15 @@ def plot_cluster_summary_figure(
     ax.grid(False)
     if y_range is not None:
         ax.set_ylim(y_range)
+    if x_range is not None:
+        ax.set_xlim(x_range)
     if y_label is not None:
         ax.set_ylabel(y_label)
 
     if y_ticks is not None:
         ax.set_yticks(y_ticks)
+    if x_ticks is not None:
+        ax.set_xticks(x_ticks)
 
     plt.tight_layout()
     f: plt.Figure

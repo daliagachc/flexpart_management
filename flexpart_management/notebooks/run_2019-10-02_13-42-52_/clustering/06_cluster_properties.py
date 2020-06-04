@@ -33,7 +33,6 @@ import flexpart_management.modules.flx_array as fa
 
 from mpl_toolkits.axes_grid1.inset_locator import mark_inset
 from mpl_toolkits.axes_grid1.inset_locator import inset_axes
-# %%
 
 import cluster_local_funs as loc_funs
 
@@ -244,10 +243,12 @@ def main():
     plt.show()
 
     # %%
-    f, axs = plt.subplots(2, 2, sharex=True,
+    f, axs = plt.subplots(2, 2, sharex=False,
                           figsize=(7.25, 7.25 / 1.4))
+    x_range = [-30,1200]
     axf = axs.flatten()
     ax = axf[0]
+    xticks = [0, 200, 400, 600, 800, 1000, 1200]
     ax = cfuns.plot_cluster_summary_figure(
         df_prop,
         hgk_,
@@ -256,7 +257,11 @@ def main():
         fig_save_name='dis_vs_hag.pdf',
         xy_locs=([200, .5], [0, 4], [400, 6], [950, 5]),
         ax=ax,
-        add_cluster_group_label=False
+        add_cluster_group_label=False,
+        y_range=[0,10],
+        x_range=x_range,
+        x_ticks =xticks,
+
     )
 
     loc_funs.add_labels_to_cluster_markers(ax, df_prop, hgk_, km_)
@@ -272,9 +277,13 @@ def main():
         fig_save_name='dis_vs_hsl.pdf',
         xy_locs=([-10, 5.5], [200, 5.1], [450, 7.5], [950, 7]),
         ax=axf[1],
-        add_cluster_group_label=False
+        add_cluster_group_label=False,
+        y_range=[4,9],
+        x_range=x_range,
+        x_ticks=xticks,
 
     )
+    loc_funs.add_labels_to_cluster_markers_height(axf[1], df_prop, km_)
 
     axsl: plt.Axes = axf[1]
     axsl.annotate('CHC', xy=[5, 5.2],
@@ -302,7 +311,9 @@ def main():
         ax=axf[2],
         add_vertical_lines=True,
         add_cluster_group_label=True,
-        y_range=(0, 100),
+        y_range=(-5, 100),
+        x_range=x_range,
+        x_ticks=xticks,
 
     )
     # plt.show()
@@ -314,18 +325,36 @@ def main():
         # save_fig=True,
         fig_save_name='dis_vs_srr_influence.pdf',
         xy_locs=([-30, 5], [0, 9], [500, 11], [950, 9]),
-        y_range=(0, 13),
+        # y_range=(0, 13),
         add_vertical_lines=True,
         add_cluster_group_label=False,
         ax=axf[3],
-        y_ticks=[0, 5, 10]
+        y_ticks=[0,2,4,6,8,10,12],
+        y_range=[-.5,12],
+        x_range=x_range,
+        x_ticks=xticks,
     )
 
     loc_funs.add_indices(*axf)
 
+    from typing import List
+    axf:List[plt.Axes]
+    _o = {'left':0,'bottom':0}
+    sns.despine(ax=axf[0],bottom=True, trim=True, offset=_o)
+    sns.despine(ax=axf[1],bottom=True, trim=True, offset=_o)
+    sns.despine(ax=axf[2],bottom=False,trim=True, offset=_o)
+    sns.despine(ax=axf[3],bottom=False,trim=True, offset=_o)
+    axf[0].set_xticks([])
+    axf[0].set_xticks([],minor=True)
+    axf[0].set_xlabel(None)
+    axf[1].set_xticks([])
+    axf[1].set_xticks([],minor=True)
+    axf[1].set_xlabel(None)
+
+
     f: plt.Figure
     f.tight_layout()
-    axf[0].set_xlim(0, 1150)
+    # axf[0].set_xlim(0, 1150)
     f.savefig(os.path.join(loc_funs.FIG_PATH, '4-panel-cluster-medeoids.pdf'))
     f.savefig(os.path.join(co.paper_fig_path, 'cluster_medeoids_7_25.pdf'))
 

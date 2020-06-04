@@ -68,9 +68,6 @@ def main():
     # f, ax = plt.subplots()
     # ax:plt.Axes
 
-    # %%
-
-
 
 
     # fa.logpolar_plot()
@@ -92,3 +89,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

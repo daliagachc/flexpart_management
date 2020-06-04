@@ -75,12 +75,23 @@ def get_res_quan(dac_sum, lab, _q, conc_name='CONC'):
     return _df
 
 
-def plot_pathways(npdf, dac_sum, conc_name, lon_range=15, lat_range=13,
-                  centroid_to_plot=['LR', 'MR'], chc_lp_legend=False,
-                  q_level=.8, ax_bolivia=True, ax=None, min_fs=5,
+def plot_pathways(npdf,
+                  dac_sum,
+                  conc_name,
+                  lon_range=15,
+                  lat_range=13,
+                  centroid_to_plot=None,
+                  chc_lp_legend=False,
+                  q_level=.8,
+                  ax_bolivia=True,
+                  ax=None,
+                  min_fs=5,
                   add_patch=True,
-                  labs_to_plot = 'all'
-                  , background_alpha=0):
+                  labs_to_plot = 'all',
+                  background_alpha=0
+                  ):
+    if centroid_to_plot is None:
+        centroid_to_plot = ['LR', 'MR']
     if ax is None:
         ucp.set_dpi(300)
         f_width = 7.25
@@ -384,21 +395,21 @@ def create_combined_plot_simple(
         med_fs=10,
         add_patch=False
 ):
-    seg = get_topoline(zline=3900)
-    # %%
-    ucp.set_dpi(300)
+
     f_width = f_width
     figsize = (f_width, f_width / 1.7)
     # figsize = (f_width, f_width / .6)
     f, axs = plt.subplots(
         1, 2,
         subplot_kw=dict(projection=crt.crs.PlateCarree()),
-        figsize=figsize
+        figsize=figsize,
+        dpi=300
     )
+    axl = axs.flatten()
+
     f: plt.Figure
     lon_range = 2.2
     lat_range = 2.2
-    axl = axs.flatten()
     axBO = plot_pathways(
         npdf, dac_sum, conc_name, ax=axl[0],
         centroid_to_plot=['MR', 'SM', 'SR','LR'],
@@ -411,27 +422,7 @@ def create_combined_plot_simple(
 
     )
 
-    alt_style = dict(
-        transform=crt.crs.PlateCarree(), c='brown', linestyle='-', alpha=.3,
-        linewidth = 1
-    )
-
-    axBO.plot(
-        *seg, **alt_style
-    )
-    ll = pd.DataFrame(seg.T, columns=['lo', 'la']).sort_values('la').iloc[-1]
-    bbox_props = dict(boxstyle="round", fc="w", ec="none", alpha=0.5)
-    axBO.annotate('$z=3.9$ km', ll.values,
-                  xytext=[-30, 20],
-                  textcoords='offset points',
-                  zorder=12,
-                  alpha=.5,
-                  fontsize=min_fs,
-                  arrowprops=dict(arrowstyle='->', alpha=.5),
-                  bbox=bbox_props,
-                  )
-
-
+    plot_altiplano_line(axBO, min_fs)
 
     import matplotlib.patches as patches
     cc = get_extent(lon_range, lat_range)
@@ -455,7 +446,10 @@ def create_combined_plot_simple(
         add_patch=False,
         background_alpha=background_alpha
     )
-    axLP.plot(*seg, **alt_style)
+
+    plot_altiplano_line(axLP, min_fs, annotate=False)
+    # axLP.plot(*seg, **alt_style)
+
     axLP.outline_patch.set_edgecolor('red')
     axLP.outline_patch.set_linewidth(2)
     axLP.outline_patch.set_linestyle('-.')
@@ -515,4 +509,28 @@ def create_combined_plot_simple(
     axLP.figure.show()
     axBO.figure.savefig(pjoin(co.paper_fig_path, out_name))
     # axLP.figure.savefig('/tmp/lp.pdf')
+
+
+def plot_altiplano_line(axBO, min_fs, annotate=True):
+    alt_style = dict(
+        transform=crt.crs.PlateCarree(),
+        c='brown', linestyle='-', alpha=.3,
+        linewidth=1
+    )
+    seg = get_topoline(zline=3900)
+    axBO.plot(
+        *seg, **alt_style
+    )
+    ll = pd.DataFrame(seg.T, columns=['lo', 'la']).sort_values('la').iloc[-1]
+    bbox_props = dict(boxstyle="round", fc="w", ec="none", alpha=0.5)
+    if annotate:
+        axBO.annotate('$z=3.9$ km', ll.values,
+                      xytext=[-30, 20],
+                      textcoords='offset points',
+                      zorder=12,
+                      alpha=.5,
+                      fontsize=min_fs,
+                      arrowprops=dict(arrowstyle='->', alpha=.5),
+                      bbox=bbox_props,
+                      )
 
