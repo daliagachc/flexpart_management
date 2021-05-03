@@ -86,7 +86,7 @@ def get_extent(_xx, _yy):
     extent = [
         co.CHC_LON + _xx, co.CHC_LON - _xx,
         co.CHC_LAT + _yy, co.CHC_LAT - _yy,
-    ]
+        ]
     return extent
 
 
@@ -713,7 +713,7 @@ class FigLayout:
 
         h_ratios = [2, 2, .6]
         self.grid = self.f.add_gridspec(3, 2,
- height_ratios=h_ratios)
+                                        height_ratios=h_ratios)
 
         self.proj = crt.crs.PlateCarree()
         self.axA = self.f.add_subplot(self.grid[0, 0], projection=self.proj)
@@ -748,8 +748,8 @@ class FigLayout:
         fa.add_ax_lab(self.axD, 'd')
 
         self.f.subplots_adjust(left=.1, right=.9,
-                        bottom=.0, top=.95,
-                        hspace=.1, wspace=.005)
+                               bottom=.0, top=.95,
+                               hspace=.1, wspace=.005)
 
 
         # fa.add_ax_lab(self.axE, 'e')
@@ -774,9 +774,9 @@ class FigLayout:
         plot_pols(ax,self.gdf18)
 
         plot_altiplano_line(axBO=ax, min_fs=5, annotate=True,
-                                topoline=self.topoline)
+                            topoline=self.topoline)
         add_red_box(ax=ax, edgecolor='red',
-                        red_rect_extent=self.ext_small)
+                    red_rect_extent=self.ext_small)
         ax.set_yticks(self.big_yticks)
         ax.set_xticks(self.big_xticks)
         ax.tick_params(
@@ -797,10 +797,10 @@ class FigLayout:
         import cartopy.mpl.geoaxes
         ax: cartopy.mpl.geoaxes.GeoAxesSubplot = self.axB
         plot_pathways(geo_df=self.gdf18, ax=ax,
-                          lon_range=self.la_lo_ext_small,
-                          lat_range=self.la_lo_ext_small,
-                          centroid_to_plot=['SR', 'SM']
-                          )
+                      lon_range=self.la_lo_ext_small,
+                      lat_range=self.la_lo_ext_small,
+                      centroid_to_plot=['SR', 'SM']
+                      )
         plot_pols(ax,self.gdf18)
 
         plot_altiplano_line(

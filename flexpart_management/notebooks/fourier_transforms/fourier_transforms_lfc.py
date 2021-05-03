@@ -61,12 +61,20 @@ def plot_fourier_list(col_df, ls18, mean_ds):
     s = splot(6, 3, figsize=(10, 10), sharey=True, sharex=True)
     for ax, lab in zip(s.axf, ls18):
         fdf = col_df[lab]
+        # fdf.index = 1/fdf.index
         mean_ds.plot(ax=ax, c='k',alpha=.5,linewidth=2)
-        fdf.plot(ax=ax, c='red', alpha=.9)
-        # ax.set_xscale('log')
-        # ax.set_yscale('log')
-        ax.set_ylim(.0001, None)
-        ax.set_xlim(.05, 2)
+        fdf.plot(ax=ax, c='red', alpha=.9,
+                 # marker='x'
+                 )
+        ax: plt.Axes
+        ax.set_xscale('log')
+        ax.set_yscale('symlog',linthresh=.005)
+        ax.set_ylim(0, .1)
+        ax.set_xlim(.8, 22)
+        ax.set_xticks(
+            [1,2,4,7,14,21])
+        ax.set_xticks([],minor=True)
+        ax.set_xticklabels(['1','2','4','7','14','21'])
         ax.set_title(lab)
     s.f.tight_layout()
     s.f.show()
@@ -86,15 +94,18 @@ def get_fourier_for_all_df(ds, ls18):
     return col_df
 
 
-def get_dds_km(cl_lab, ds, z='LEV0',h0=0,h1=24):
+def get_dds_km(cl_lab, ds, z='LEV0',h0=0,h1=24,nc=4):
     # %%
     dds = get_ds_for_dtw_kmeans(cl_lab, ds, z,h0=h0,h1=h1)[C18]
     from tslearn.clustering import TimeSeriesKMeans
     from tslearn.metrics import dtw
     km = TimeSeriesKMeans(
-        6,
+        nc,
         metric='dtw',
-        metric_params={'sakoe_chiba_radius': 4})
+        metric_params={'sakoe_chiba_radius': 4},
+        random_state=789
+
+    )
     km.fit(dds.values)
     _ = km.cluster_centers_
     for c in _:
@@ -127,9 +138,11 @@ def get_dds_km(cl_lab, ds, z='LEV0',h0=0,h1=24):
 def get_ds_for_dtw_kmeans(cl_lab, ds, z,h0=0,h1=24):
     # %%
     df = get_df(cl_lab, ds, z=z)
+    df = df - df.rolling(24,1,True).mean()
     df.index = df.index - pd.Timedelta(4, 'hour')
     df: pd.Series = df.resample('30T').asfreq()
     df = df.interpolate()
+
     # %%
     days = np.unique(df.index.round('1d'))
     ds_list = []
@@ -143,7 +156,7 @@ def get_ds_for_dtw_kmeans(cl_lab, ds, z,h0=0,h1=24):
         chunk['date'] = d
         chunk = chunk.set_index(['date','hour'])[C18]
         ds_chunk = chunk.to_xarray()
-        print(len(chunk))
+        # print(len(chunk))
         if len(chunk) is ((h1-h0)*2+1):
             ds_list.append(ds_chunk)
 
@@ -158,27 +171,76 @@ def get_ds_for_dtw_kmeans(cl_lab, ds, z,h0=0,h1=24):
 # %%
 
 
-def plot_ts_clus(dds, km, cl_lab):
-    s = splot(3, 2, sharey=True, sharex=True)
-    for i, ax in enumerate(s.axf):
-        sel = dds[{'date': dds['labs'] == i}]
+def plot_ts_clus(dds, km, cl_lab, _in,
+                 h0=0,h1=24,):
+    nc = km.n_clusters
+    rx = 2
+    ry = int(np.ceil(nc/rx))
+    s = splot(rx, ry, sharey=False, sharex=False, dpi=300,
+              figsize = (3.14,3), squeeze=False
+              )
+    # for i, ax in enumerate(s.axf):
+
+    # _std = dds.to_dataframe().groupby('labs').mean()[
+    #     'conc_lab_nc18'].sort_values()
+    # print(_std)
+    # index_ = _std.index.values
+    # print(index_)
+
+    for i,ci in enumerate(_in):
+        ax = s.axf[i]
+        sel = dds[{'date': dds['labs'] == ci}]*100
+        tot = len(dds['date'])
+        yM = dds.quantile(.999) * 100
+        ym = dds.quantile(.001) * 100
+        yy = np.max([yM,-ym])
         sel.plot(
             hue='date', add_legend=False,
             # col='labs',
             # col_wrap=4
             ax=ax,
             color='k',
-            alpha=.2
+            alpha=.1,
+            xlim=[h0,h1],
+            ylim=[-yy, yy],
+            linewidth=.7
         )
-        cen = km.cluster_centers_[i]
+        cen = km.cluster_centers_[ci]*100
         _df = pd.Series(cen[:, 0], index=dds['hour'].values)
-        _df.plot(ax=ax)
-        ax.set_title(f'n={len(sel)} | c={i}')
-        ax.set_ylabel('SRR')
+        _df.plot(ax=ax, c = ucp.cc[0])
+        ax.set_title(
+            f'n={len(sel)} ({len(sel)/tot*100:2.0f}%)',
+            loc='right',y=.95, alpha=.5, size=8)
+        # ax.set_ylabel('SRR [%]')
+        ax.set_ylabel(None)
+        ax.set_xlabel(None)
+        ax.set_xticks(np.arange(h0,h1+1,4))
+        ax.set_xticks(np.arange(h0, h1 + 1, 2), minor=True)
+        # ax.set_yticks([0,5,10,15])
+        ax.axvline(12, c = ucp.cc[2],zorder = 0, alpha=.5,
+                   linestyle='--')
+        sns.despine(ax=ax,trim=True,offset=[0,5])
+    if ry > 1:
+        for ax in s.axs[:,1:].flatten():
+            # sns.despine(ax=ax,left=True)
+            ax.spines['left'].set_visible(False)
+            ax.set_yticks([])
+            ax.set_yticks([], minor=True)
+            ax.set_ylabel(None)
+    if rx > 1:
+        for ax in s.axs[:-1,:].flatten():
+            ax.spines['bottom'].set_visible(False)
+            ax.set_xticks([])
+            ax.set_xticks([], minor=True)
+            ax.set_xlabel(None)
+    s.axs[-1,0].set_xlabel('Local time [hour]')
+    s.axs[-1,0].set_ylabel('det. SRR [%]')
     s.f.tight_layout()
     s.f.suptitle(f'{cl_lab}',va='top')
-    s.f.subplots_adjust(top=.85)
-    # s.f.tight_layout()
+    fa.add_ax_lab(s.axf[0],'a')
+    fa.add_ax_lab(s.axf[1],'b')
+    # s.f.subplots_adjust(top=.9)
+    s.f.tight_layout()
     plt.show()
     return s
 

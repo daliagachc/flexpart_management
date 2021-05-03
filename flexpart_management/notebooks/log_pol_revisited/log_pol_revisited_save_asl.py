@@ -54,8 +54,8 @@ def main():
             shift_ = np.round(_ds[co.TOPO] / 500)
             shift_ = int(shift_.item())
             __ds = _ds = _ds.shift(**{co.ZM:shift_})
-            _ds[co.ZM] = _ds[co.ZM] + shift_ * 500
-            _ds.expand_dims(**{co.R_CENTER: [r], co.TH_CENTER: [t]})
+            # _ds[co.ZM] = _ds[co.ZM] + shift_ * 500
+            _ds = _ds.expand_dims(**{co.R_CENTER: [r], co.TH_CENTER: [t]})
             t_l.append(_ds)
         tds = xr.concat(t_l, dim=co.TH_CENTER)
         r_l.append(tds)
@@ -65,7 +65,7 @@ def main():
 
     fa.compressed_netcdf_save(
         res,
-        pjoin(co.tmp_data_path, 'new_log_pol_ds_asl.nc')
+        pjoin(co.tmp_data_path, 'new_log_pol_ds_asl_v01.nc')
     )
 
     # %%

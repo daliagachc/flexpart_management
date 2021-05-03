@@ -1,0 +1,11 @@
+xarray
+pandas
+cartopy
+matplotlib
+area
+numpy
+scikit-learn
+scipy
+netCDF4
+alphashape
+sqlalchemy

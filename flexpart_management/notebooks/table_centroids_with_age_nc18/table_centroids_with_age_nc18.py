@@ -50,6 +50,7 @@ def main():
     dfa = lfc.get_plot_df_6(ds)
     round_dic = lfc.round_dic()
 
+    dfa = dfa.rename({SRR:SRR6},axis=1)
 
     tp = lfc.TablePlot(dfa, cwidth=7.25/7, rheight=.45,
                        title_size=8,round_dic=round_dic,

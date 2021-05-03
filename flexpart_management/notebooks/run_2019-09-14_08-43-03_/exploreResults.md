@@ -17,7 +17,7 @@ dir_path = '/homeappl/home/aliagadi/wrk/DONOTREMOVE/flexpart_management_data/run
 
 
 ```python
-DD = co.D2
+DD = co.d2
 nds = fa.euristic_import_flexpart(dir_path, DD)
 ```
 

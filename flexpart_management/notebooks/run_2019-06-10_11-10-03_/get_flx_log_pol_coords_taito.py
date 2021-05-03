@@ -53,7 +53,7 @@ for p in paths:
             fo = FO.FLEXOUT(**fo_dic)
             fo.export_log_polar_coords()
             print('done',d,p)
-                except AssertionError as error:
+        except AssertionError as error:
             log.ger.error(error)
             print('failed when',d,p)
 

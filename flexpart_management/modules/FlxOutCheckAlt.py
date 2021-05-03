@@ -4,6 +4,7 @@ from useful_scit.imps import *
 import flexpart_management.modules.constants as co
 import flexpart_management.modules.flx_array as fa
 
+
 class FlxOutCheckAlt:
     path_pat = None
     dom = None
@@ -16,12 +17,13 @@ class FlxOutCheckAlt:
     head_ds = None
     sum_z_ds = None
     out_z_path = None
+
     def __init__(self,
                  path_pat,
                  dom,
                  out_z_path):
         self.path_pat = path_pat
-        self.dom=dom
+        self.dom = dom
         self.out_z_path = out_z_path
         self.get_globs(dom)
 
@@ -41,11 +43,10 @@ class FlxOutCheckAlt:
         # dim2sum = fa.get_dims_complement(self.dask_ds, co.ZT)
         print('start to sum')
         self.sum_z_ds = self.dask_ds[co.CONC].sum(
-            dim=['releases', 'ageclass', 'south_north', 'west_east',]
+            dim=['releases', 'ageclass', 'south_north', 'west_east', ]
         ).load()
         print('end load')
         self.sum_z_ds = self.sum_z_ds.sum('Time')
-
 
     def get_dask_ds(self):
         self.dask_ds = xr.open_mfdataset(self.path_list, concat_dim=co.TIME)

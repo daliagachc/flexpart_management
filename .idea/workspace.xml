@@ -1,119 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="˚">
-      <change afterPath="$PROJECT_DIR$/daily_evolution_nc18.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/ecoregions/ecoregions.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/ecoregions/ecoregions.pptx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/ecoregions/ecoregions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/ecoregions/ecoregions_lfc.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/ecoregions/ecoregions_lfc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/fourier_transforms.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/fourier_transforms.pptx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/fourier_transforms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/fourier_transforms_lfc.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/fourier_transforms_lfc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/c18_fourier.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/daily_evolution_nc18.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_07_LR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_08_LR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_10_LR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_11_MR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_02_MR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_02_SR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_03_SM.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_04_MR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_04_SR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_05_MR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_06_SM.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_07_LR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_07_SR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_08_LR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_08_SM.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_09_MR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_10_LR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_10_SR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_11_MR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_11_SR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_12_SM.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_12_SR.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_surface_ratio/george_surface_ratio.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_surface_ratio/george_surface_ratio.pptx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_surface_ratio/george_surface_ratio.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_surface_ratio/george_surface_ratio_lfc.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_surface_ratio/george_surface_ratio_lfc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/meteo_cumbre/meteo_cumbre.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/meteo_cumbre/meteo_cumbre.pptx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/meteo_cumbre/meteo_cumbre.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/meteo_cumbre/meteo_cumbre_lfc.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/meteo_cumbre/meteo_cumbre_lfc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/la_paz_bc.pptx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/la_paz_figs/general_surf_infuence.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/la_paz_figs/result.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/la_paz_figs/timeseries.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/table_centroids_with_age_nc18/table_centroids_with_age_nc18.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/table_centroids_with_age_nc18/table_centroids_with_age_nc18.pptx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/table_centroids_with_age_nc18/table_centroids_with_age_nc18.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/table_centroids_with_age_nc18/table_centroids_with_age_nc18_lfc.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/table_centroids_with_age_nc18/table_centroids_with_age_nc18_lfc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management.egg-info/PKG-INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management.egg-info/SOURCES.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management.egg-info/dependency_links.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management.egg-info/requires.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management.egg-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/bams_fig/bams_fig.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/bams_fig/bams_fig.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/bams_fig/bams_fig.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/bams_fig/bams_fig_lfc.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/bams_fig/bams_fig_lfc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/bams_fig/diurnal_BOT_2018-05-24_2018-05-08.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/ecoregions/ecoregions_hatched.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/ecoregions/ecoregions_hatched_lfc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_map_special_times/map_explore.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_map_special_times/map_explore.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_paper/Untitled.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_paper/Untitled.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_paper/c45.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_paper/c45.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_paper/c45_timeseries.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_paper/cluster_george_c45.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/itcz_analysis/itcz_analysis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/itcz_analysis/itcz_analysis_lfc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/log_pol_revisited/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/bams_lapaz_bc.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/la_paz_pol.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/scratch/KF_filter.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/scratch/Untitled.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/scratch/Untitled.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/scratch/Untitled.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/scratch/Untitled1.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/scratch/Untitled1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_simple_cluster_corr_paper/sulfate_simple_cluster_corr_paper_v02-06.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_simple_cluster_corr_paper/sulfate_simple_cluster_corr_paper_v02-06.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_simple_cluster_corr_paper/sulfate_simple_cluster_corr_paper_v02.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_simple_cluster_corr_paper/sulfate_simple_cluster_corr_paper_v02.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/surface_timeseries/dyn_cluster.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/surface_timeseries/level_correlation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/surface_timeseries/surface_timeseries.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/surface_timeseries/surface_timeseries.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/surface_timeseries/surface_timeseries_lfc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/flexpart_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flexpart_management.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/FLEXOUT.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/FLEXOUT.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/FlexLogPol.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/FlexLogPol.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/FlxOutCheckAlt.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/FlxOutCheckAlt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flexpart_management/modules/clustering_funs.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/clustering_funs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/flx_array.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/flx_array.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/ecoregions/ecoregions.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/ecoregions/ecoregions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/ecoregions/ecoregions_lfc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/ecoregions/ecoregions_lfc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/fourier_transforms.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/fourier_transforms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/fourier_transforms_lfc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/fourier_transforms_lfc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/c18_fourier.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/c18_fourier.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/daily_evolution_nc18.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/daily_evolution_nc18.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_02_MR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_02_MR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_02_SR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_02_SR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_03_SM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_03_SM.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_04_MR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_04_MR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_04_SR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_04_SR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_05_MR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_05_MR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_06_SM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_06_SM.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_07_LR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_07_LR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_07_SR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_07_SR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_08_LR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_08_LR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_08_SM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_08_SM.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_09_MR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_09_MR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_10_LR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_10_LR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_10_SR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_10_SR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_11_MR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_11_MR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_11_SR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_11_SR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_12_SM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_12_SM.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_12_SR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_12_SR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_02_MR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_02_MR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_02_SR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_02_SR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_03_SM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_03_SM.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_04_MR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_04_MR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_04_SR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_04_SR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_05_MR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_05_MR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_06_SM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_06_SM.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_07_LR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_07_LR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_07_SR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_07_SR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_08_LR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_08_LR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_08_SM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_08_SM.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_09_MR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_09_MR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_10_LR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_10_LR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_10_SR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_10_SR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_11_MR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_11_MR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_11_SR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_11_SR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_12_SM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_12_SM.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_12_SR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_12_SR.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/get_flx_log_pol_coords_taito.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/get_flx_log_pol_coords_taito.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/get_flx_log_pol_coords_taito_srun.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/get_flx_log_pol_coords_taito_srun.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/log_pol_revisited/log_pol_revisited_lfc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/log_pol_revisited/log_pol_revisited_lfc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/log_pol_revisited/log_pol_revisited_save_asl.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/log_pol_revisited/log_pol_revisited_save_asl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/multicluster_main_pathways/multicluster_main_pathways.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/multicluster_main_pathways/multicluster_main_pathways.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/multicluster_main_pathways/multicluster_main_pathways.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/multicluster_main_pathways/multicluster_main_pathways.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/multicluster_main_pathways/multicluster_main_pathways_lfc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/multicluster_main_pathways/multicluster_main_pathways_lfc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/paper_silhouette/paper_silhouette.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/paper_silhouette/paper_silhouette.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/paper_map_figure/notebooks/map_figure.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/paper_map_figure/notebooks/map_figure.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/la_paz_pol.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/la_paz_pol.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/release_ds_v3_lfc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/release_ds_v3_lfc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/release_ds_v3_polygones.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/release_ds_v3_polygones.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/06_cluster_properties.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/cluster_local_funs.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/clustering/cluster_local_funs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/4-panel-cluster-medeoids.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/4-panel-cluster-medeoids.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_hag.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_hag.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_hsl.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_hsl.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_srr_influence.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_srr_influence.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_surface_influence.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/victoria_trento/figures/dis_vs_surface_influence.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/release_ds_v3_save_mega_ds.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/release_ds_v3_save_mega_ds.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-06-10_11-10-03_/get_flx_log_pol_coords_taito.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-06-10_11-10-03_/get_flx_log_pol_coords_taito.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-09-14_08-43-03_/exploreResults.md" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-09-14_08-43-03_/exploreResults.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/get_flx_log_pol_coords_taito.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/get_flx_log_pol_coords_taito.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/six_clusters_centroids/six_clusters_centroids_create_18agl.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/six_clusters_centroids/six_clusters_centroids_create_18agl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_simple_cluster_corr_paper/sulfate_simple_cluster_corr_paper.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_simple_cluster_corr_paper/sulfate_simple_cluster_corr_paper.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_simple_cluster_corr_paper/sulfate_simple_cluster_corr_paper.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_simple_cluster_corr_paper/sulfate_simple_cluster_corr_paper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_simple_cluster_corr_paper/sulfate_simple_cluster_corr_paper_lfc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_simple_cluster_corr_paper/sulfate_simple_cluster_corr_paper_lfc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/table_centroids_with_age_nc18/table_centroids_with_age_nc18.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/table_centroids_with_age_nc18/table_centroids_with_age_nc18.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2020-01-03_19-44-36_/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2020-01-03_19-44-36_/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="new_clus" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="new_clus" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="new_clus" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="new_clus" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="sqlite_master: table" type="3d80ac25:SqliteImplModel$Table" />
-      </path>
-    </expand>
-    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -121,7 +132,19 @@
         <option value="Markdown file" />
         <option value="Jupyter Notebook" />
         <option value="Python Script" />
+        <option value="README" />
       </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
@@ -137,6 +160,11 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
   <component name="JupyterTrust" id="eb5f1465-adbc-40ac-a492-5f2603a913fd" />
   <component name="ProjectId" id="1TCRQPIdPvCYV9oPDRIids3MfhP" />
   <component name="ProjectLevelVcsManager">
@@ -149,6 +177,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="sqlite.xerial&#10;sqlite" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
@@ -156,10 +185,10 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python&#10;TEXT&#10;Markdown&#10;GenericSQL" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT&#10;Python&#10;Markdown&#10;GenericSQL" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -172,10 +201,10 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="project.structure.side.proportion" value="0.42988506" />
+    <property name="settings.editor.selected.configurable" value="ssh.settings" />
     <property name="tags.panel.proportion" value="0.5" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -201,11 +230,11 @@
       <recent name="$PROJECT_DIR$/flexpart_management/releases/v02/figures/general_description" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3" />
+      <recent name="$APPLICATION_CONFIG_DIR$/scratches" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/flexpart_management/notebooks/george_paper" />
       <recent name="$PROJECT_DIR$/flexpart_management/tmp_data" />
-      <recent name="$PROJECT_DIR$/flexpart_management/releases/v03/data" />
-      <recent name="$PROJECT_DIR$/flexpart_management/releases/v03/paper_figs" />
-      <recent name="$PROJECT_DIR$/flexpart_management/notebooks/log_pol_revisited" />
+      <recent name="$PROJECT_DIR$/flexpart_management/notebooks/itcz_analysis" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -213,12 +242,23 @@
       <command value="python" />
     </option>
   </component>
-  <component name="RunManager" selected="Python.plot_test">
+  <component name="RunManager" selected="Python.log_pol_revisited_save_asl">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="PROJECT_INTERPRETER" value="false" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
       <module name="useful-scit" />
@@ -267,43 +307,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="INTERPRETER_PATH" value="" />
-      <option name="PROJECT_INTERPRETER" value="false" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <module name="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="DjangoTestsConfigurationType">
-      <module name="useful-scit" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
       <module name="useful-scit" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -330,6 +333,41 @@
       <option name="ADDITIONAL_ARGS" value="" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType">
+      <module name="useful-scit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="flexpart_management" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -352,7 +390,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="correlate_high_iso_days_to_cl" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="fourier_transforms" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="flexpart_management" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -360,12 +398,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/correlate_high_iso_days_to_cl" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysisV02/correlate_high_iso_days_to_cl/correlate_high_iso_days_to_cl.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/fourier_transforms.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="log_pol_revisited_save_asl" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="flexpart_management" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flexpart_management/notebooks/log_pol_revisited" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flexpart_management/notebooks/log_pol_revisited/log_pol_revisited_save_asl.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -388,28 +448,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flexpart_management/notebooks/george_data_analysis/n01_check_input_data.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="n0_sfc_ratio_clusters" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="flexpart_management" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="$PROJECT_DIR$/../miniconda3/envs/b36/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/sfc_ratio_clusters" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/sfc_ratio_clusters/n0_sfc_ratio_clusters.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -487,15 +525,6 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file enabled="true" id="idea.log" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
       <module name="useful-scit" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -515,22 +544,14 @@
       <option name="USE_PATTERN" value="false" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Python.correlate_high_iso_days_to_cl" />
-      <item itemvalue="Python.n01_check_input_data" />
-      <item itemvalue="Python.n0_sfc_ratio_clusters" />
-      <item itemvalue="Python.plot_test" />
-      <item itemvalue="Python.vertical_plots_from_wrf" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.plot_test" />
+        <item itemvalue="Python.log_pol_revisited_save_asl" />
+        <item itemvalue="Python.fourier_transforms" />
       </list>
     </recent_temporary>
   </component>
-  <component name="StructureViewFactory">
-    <option name="ACTIVE_ACTIONS" value=",SHOW_INHERITED" />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="" />
@@ -718,12 +739,67 @@
       <workItem from="1590491611576" duration="1942000" />
       <workItem from="1590757365546" duration="1449000" />
       <workItem from="1591007709578" duration="42000" />
-      <workItem from="1591267016183" duration="3761000" />
+      <workItem from="1591267016183" duration="4436000" />
+      <workItem from="1600432934883" duration="120173000" />
+      <workItem from="1601395599361" duration="27429000" />
+      <workItem from="1601914329913" duration="92000" />
+      <workItem from="1601916165387" duration="577000" />
+      <workItem from="1602013914392" duration="3053000" />
+      <workItem from="1602163328459" duration="58000" />
+      <workItem from="1603708435895" duration="5186000" />
+      <workItem from="1603883439471" duration="4000" />
+      <workItem from="1603883446831" duration="2371000" />
+      <workItem from="1604926124236" duration="1864000" />
+      <workItem from="1605871058302" duration="149000" />
+      <workItem from="1605871361046" duration="7464000" />
+      <workItem from="1606044297246" duration="1774000" />
+      <workItem from="1606090057452" duration="215000" />
+      <workItem from="1606127720579" duration="8000" />
+      <workItem from="1608203522646" duration="2416000" />
+      <workItem from="1611672885637" duration="12719000" />
+      <workItem from="1612190473077" duration="8371000" />
+      <workItem from="1612475544638" duration="3610000" />
+      <workItem from="1612896788417" duration="2749000" />
+      <workItem from="1612966024694" duration="4688000" />
+      <workItem from="1613140341600" duration="29000" />
+      <workItem from="1614880725668" duration="3294000" />
+      <workItem from="1615457997447" duration="7932000" />
+      <workItem from="1615746245881" duration="771000" />
+      <workItem from="1616165609718" duration="19948000" />
+      <workItem from="1616624545258" duration="5351000" />
+      <workItem from="1616776609338" duration="1144000" />
+      <workItem from="1616784625589" duration="3100000" />
+      <workItem from="1616956078391" duration="6327000" />
+      <workItem from="1617192848794" duration="595000" />
+      <workItem from="1617487448394" duration="2382000" />
+      <workItem from="1617496122912" duration="11000" />
+      <workItem from="1617496834455" duration="112000" />
+      <workItem from="1617554233239" duration="3002000" />
+      <workItem from="1617832964483" duration="2353000" />
+      <workItem from="1617879794718" duration="4238000" />
+      <workItem from="1617976140486" duration="1053000" />
+      <workItem from="1617982560629" duration="1369000" />
+      <workItem from="1617991435972" duration="38000" />
+      <workItem from="1617991511500" duration="1877000" />
+      <workItem from="1618132118601" duration="597000" />
+      <workItem from="1618388152514" duration="885000" />
+      <workItem from="1619559509015" duration="1218000" />
+      <workItem from="1619640196503" duration="606000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -741,99 +817,91 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="560" y="276" key="#Inspections" timestamp="1586168462925">
-      <screen x="0" y="23" width="1920" height="1177" />
-    </state>
-    <state x="560" y="276" key="#Inspections/336.1223.1280.777/0.23.1920.1177@0.23.1920.1177" timestamp="1586168462925" />
-    <state x="560" y="276" key="#Plugins" timestamp="1586168306263">
-      <screen x="0" y="23" width="1920" height="1177" />
-    </state>
-    <state x="560" y="276" key="#Plugins/336.1223.1280.777/0.23.1920.1177@0.23.1920.1177" timestamp="1586168306263" />
-    <state x="349" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586334457751">
-      <screen x="0" y="23" width="1920" height="1177" />
-    </state>
-    <state x="349" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog/336.1223.1280.777/0.23.1920.1177@0.23.1920.1177" timestamp="1586334457751" />
-    <state x="667" y="421" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589888764830">
-      <screen x="0" y="23" width="1920" height="1177" />
-    </state>
-    <state x="667" y="421" key="#com.intellij.fileTypes.FileTypeChooser/336.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1589888764830" />
-    <state width="393" height="263" key="GridCell.Tab.0.bottom" timestamp="1591270785787">
-      <screen x="0" y="23" width="1920" height="1177" />
-    </state>
-    <state width="288" height="272" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1589929277179" />
-    <state width="586" height="322" key="GridCell.Tab.0.bottom/336.1223.1280.777/0.23.1920.1177@0.23.1920.1177" timestamp="1586334459337" />
-    <state width="393" height="263" key="GridCell.Tab.0.bottom/336.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1591270785787" />
-    <state width="393" height="263" key="GridCell.Tab.0.center" timestamp="1591270785786">
-      <screen x="0" y="23" width="1920" height="1177" />
-    </state>
-    <state width="288" height="272" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1589929277179" />
-    <state width="586" height="322" key="GridCell.Tab.0.center/336.1223.1280.777/0.23.1920.1177@0.23.1920.1177" timestamp="1586334459336" />
-    <state width="393" height="263" key="GridCell.Tab.0.center/336.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1591270785786" />
-    <state width="393" height="263" key="GridCell.Tab.0.left" timestamp="1591270785786">
-      <screen x="0" y="23" width="1920" height="1177" />
-    </state>
-    <state width="288" height="272" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1589929277178" />
-    <state width="586" height="322" key="GridCell.Tab.0.left/336.1223.1280.777/0.23.1920.1177@0.23.1920.1177" timestamp="1586334459336" />
-    <state width="393" height="263" key="GridCell.Tab.0.left/336.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1591270785786" />
-    <state width="393" height="263" key="GridCell.Tab.0.right" timestamp="1591270785787">
-      <screen x="0" y="23" width="1920" height="1177" />
-    </state>
-    <state width="288" height="272" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1589929277179" />
-    <state width="586" height="322" key="GridCell.Tab.0.right/336.1223.1280.777/0.23.1920.1177@0.23.1920.1177" timestamp="1586334459337" />
-    <state width="393" height="263" key="GridCell.Tab.0.right/336.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1591270785787" />
-    <state x="548" y="353" key="IDE.errors.dialog" timestamp="1588243098555">
-      <screen x="0" y="23" width="1920" height="1177" />
-    </state>
-    <state x="548" y="353" key="IDE.errors.dialog/336.1223.1280.777/0.23.1920.1177@0.23.1920.1177" timestamp="1586169978615" />
-    <state x="548" y="353" key="IDE.errors.dialog/336.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1588243098555" />
-    <state x="123" y="79" width="1334" height="722" key="SettingsEditor" timestamp="1589998241795">
+    <state x="328" y="118" key="#Project_Structure" timestamp="1611672966026">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="123" y="79" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1589998241795" />
-    <state x="141" y="87" key="SettingsEditor/336.1223.1280.777/0.23.1920.1177@0.23.1920.1177" timestamp="1586334027596" />
-    <state x="141" y="87" key="SettingsEditor/336.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1589983382701" />
-    <state width="564" height="445" key="SwitcherDM" timestamp="1589982909092">
+    <state x="328" y="118" key="#Project_Structure/0.23.1680.1027@0.23.1680.1027" timestamp="1611672966026" />
+    <state x="650" y="355" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1617991954311">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="650" y="355" key="#com.intellij.fileTypes.FileTypeChooser/-1280.317.1280.777/0.23.1920.1057@0.23.1920.1057" timestamp="1617991954311" />
+    <state x="650" y="355" key="#com.intellij.fileTypes.FileTypeChooser/-1680.317.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1616787184785" />
+    <state x="569" y="346" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1615547058520" />
+    <state x="114" y="138" width="1692" height="948" key="DiffContextDialog" timestamp="1616627225913">
       <screen x="0" y="23" width="1920" height="1177" />
     </state>
-    <state width="500" height="416" key="SwitcherDM/0.23.1680.1027@0.23.1680.1027" timestamp="1589886730768" />
-    <state width="564" height="445" key="SwitcherDM/336.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1589982909092" />
-    <state x="710" y="446" key="cloudConfig.PluginsDialog" timestamp="1586170018144">
-      <screen x="0" y="23" width="1920" height="1177" />
+    <state x="100" y="123" width="1480" height="827" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1615551593828" />
+    <state x="114" y="138" width="1692" height="948" key="DiffContextDialog/77.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1616627225913" />
+    <state width="1304" height="288" key="GridCell.Tab.0.bottom" timestamp="1618067678981">
+      <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="710" y="446" key="cloudConfig.PluginsDialog/336.1223.1280.777/0.23.1920.1177@0.23.1920.1177" timestamp="1586170018144" />
-    <state x="723" y="446" width="604" height="446" key="cloudConfig.SelfSettingsDialog" timestamp="1586169989767">
-      <screen x="0" y="23" width="1920" height="1177" />
+    <state width="1304" height="288" key="GridCell.Tab.0.bottom/-1280.317.1280.777/0.23.1920.1057@0.23.1920.1057" timestamp="1618067678981" />
+    <state width="1638" height="346" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1612199136476" />
+    <state width="1304" height="288" key="GridCell.Tab.0.center" timestamp="1618067678980">
+      <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="723" y="446" width="604" height="446" key="cloudConfig.SelfSettingsDialog/336.1223.1280.777/0.23.1920.1177@0.23.1920.1177" timestamp="1586169989767" />
-    <state x="542" y="299" width="941" height="474" key="find.popup" timestamp="1590757456184">
+    <state width="1304" height="288" key="GridCell.Tab.0.center/-1280.317.1280.777/0.23.1920.1057@0.23.1920.1057" timestamp="1618067678980" />
+    <state width="1638" height="346" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1612199136476" />
+    <state width="1304" height="288" key="GridCell.Tab.0.left" timestamp="1618067678980">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1304" height="288" key="GridCell.Tab.0.left/-1280.317.1280.777/0.23.1920.1057@0.23.1920.1057" timestamp="1618067678980" />
+    <state width="1638" height="346" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1612199136475" />
+    <state width="1304" height="288" key="GridCell.Tab.0.right" timestamp="1618067678981">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1304" height="288" key="GridCell.Tab.0.right/-1280.317.1280.777/0.23.1920.1057@0.23.1920.1057" timestamp="1618067678981" />
+    <state width="1638" height="346" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1612199136476" />
+    <state width="1638" height="346" key="GridCell.Tab.1.bottom" timestamp="1612199136338">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="542" y="299" width="941" height="474" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1590757456184" />
-    <state x="619" y="339" width="830" height="544" key="find.popup/336.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1590072209908" />
-    <state x="560" y="295" width="800" height="608" key="recent.locations.popup" timestamp="1590049303986">
-      <screen x="0" y="23" width="1920" height="1177" />
+    <state width="1638" height="346" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1612199136338" />
+    <state width="1638" height="346" key="GridCell.Tab.1.center" timestamp="1612199136337">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="560" y="145" width="800" height="608" key="recent.locations.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1589928244500" />
-    <state x="560" y="295" width="800" height="608" key="recent.locations.popup/336.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1590049303986" />
-    <state x="625" y="288" width="670" height="676" key="search.everywhere.popup" timestamp="1591267054297">
-      <screen x="0" y="23" width="1920" height="1177" />
+    <state width="1638" height="346" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1612199136337" />
+    <state width="1638" height="346" key="GridCell.Tab.1.left" timestamp="1612199136337">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="547" y="254" width="670" height="590" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1589883714313" />
-    <state x="625" y="288" width="670" height="676" key="search.everywhere.popup/336.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1591267054297" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/flexpart_management/notebooks/multicluster_main_pathways/multicluster_main_pathways_lfc.py</url>
-          <line>16</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state width="1638" height="346" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1612199136337" />
+    <state width="1638" height="346" key="GridCell.Tab.1.right" timestamp="1612199136337">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1638" height="346" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1612199136337" />
+    <state x="331" y="147" width="1268" height="837" key="SettingsEditor" timestamp="1617991709554">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="331" y="147" width="1268" height="837" key="SettingsEditor/-1280.317.1280.777/0.23.1920.1057@0.23.1920.1057" timestamp="1617991709554" />
+    <state x="290" y="143" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1612475353418" />
+    <state x="100" y="123" width="1480" height="827" key="VCS.FileHistoryDialog" timestamp="1616323687980">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="100" y="123" width="1480" height="827" key="VCS.FileHistoryDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1616323687980" />
+    <state x="269" y="318" width="1920" height="1057" key="dock-window-1" timestamp="1617991039255">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="269" y="318" width="1920" height="1057" key="dock-window-1/-1280.317.1280.777/0.23.1920.1057@0.23.1920.1057" timestamp="1617991039255" />
+    <state x="-1639" y="336" width="1415" height="701" key="dock-window-1/-1680.317.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1616956635778" />
+    <state x="77" y="1223" width="1680" height="1027" key="dock-window-1/77.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1616669356096" />
+    <state x="669" y="104" width="813" height="663" key="find.popup" timestamp="1619560154069">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="669" y="104" width="813" height="663" key="find.popup/-1280.317.1280.777/0.23.1920.1057@0.23.1920.1057" timestamp="1619560154069" />
+    <state x="669" y="104" width="813" height="663" key="find.popup/-1680.317.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1616958791109" />
+    <state x="585" y="102" width="711" height="644" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1616279421915" />
+    <state x="625" y="256" key="run.anything.popup" timestamp="1617833124208">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="625" y="256" key="run.anything.popup/-1280.317.1280.777/0.23.1920.1057@0.23.1920.1057" timestamp="1617833124208" />
+    <state x="616" y="302" width="767" height="679" key="search.everywhere.popup" timestamp="1617991693350">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="616" y="302" width="767" height="679" key="search.everywhere.popup/-1280.317.1280.777/0.23.1920.1057@0.23.1920.1057" timestamp="1617991693350" />
+    <state x="547" y="251" width="671" height="658" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1616279622304" />
+    <state x="625" y="284" width="767" height="755" key="search.everywhere.popup/77.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1616631998367" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/flexpart_management$plot_test.coverage" NAME="plot_test Coverage Results" MODIFIED="1589221280045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flexpart_management/notebooks/log_pol_revisited" />
-    <SUITE FILE_PATH="coverage/flexpart_management$.coverage" NAME=" Coverage Results" MODIFIED="1588666908246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/flexpart_management$fourier_transforms.coverage" NAME="fourier_transforms Coverage Results" MODIFIED="1612197508200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms" />
+    <SUITE FILE_PATH="coverage/flexpart_management$log_pol_revisited_save_asl.coverage" NAME="log_pol_revisited_save_asl Coverage Results" MODIFIED="1612199136284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flexpart_management/notebooks/log_pol_revisited" />
   </component>
 </project>

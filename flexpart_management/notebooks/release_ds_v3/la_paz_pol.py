@@ -6,11 +6,11 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.4.0
+#       jupytext_version: 1.6.0
 #   kernelspec:
-#     display_name: Python 3
+#     display_name: Python [conda env:b36]
 #     language: python
-#     name: python3
+#     name: conda-env-b36-py
 # ---
 
 # %%
@@ -29,7 +29,7 @@ def main():
     b2 = ds[co.R_CENTER] < .25
     t1 = ds[co.TH_CENTER] > 5 * np.pi/6
     t2 = ds[co.TH_CENTER] < 7.5 * np.pi/6
-    # %%
+# %%
 
     # %%
     _rt = {co.R_CENTER:(b1 & b2),co.TH_CENTER: (t1 & t2)}
@@ -61,8 +61,6 @@ def main():
     # %%
     df_ts = df_ts.resample('H').mean()
     # %%
-
-
     csv = xr.open_dataset(pjoin(co.tmp_data_path,'cluster_series_v3.nc'))
     # %%
     s7 = csv['conc_lab_nc18'].loc[{N18:'07_SR',NORM:0,ZCOL:'BL'}].to_dataframe()[CL18]
@@ -79,7 +77,7 @@ def main():
 
     # %%
     surf = ds[CO][{co.ZM:[0]}].loc[{co.R_CENTER:slice(0,.30)}].sum(NRL).to_dataframe()
-    # %%
+# %%
 
     df['s7'] = s7
     df['t7'] = t7
@@ -121,7 +119,7 @@ def main():
     p.legend.click_policy = "hide"
     show(p)
 
-    # %%
+# %%
 
     df_ts = import_time_series()
     df_ts
@@ -199,7 +197,7 @@ def main():
     plt.show()
 
 
-    # %%
+# %%
 
     ax = fa.get_ax_bolivia(fig_args={'figsize':(10,10),'dpi':300},
                            chc_lp_legend=False)
@@ -212,7 +210,7 @@ def main():
     # %%
     dsun = sun.to_dataframe()[co.CONC]
     dsun = dsun[~dsun.isnull()]
-    # %%
+# %%
     # %%
     du = dsun.unstack().T
     # %%
@@ -228,17 +226,49 @@ def main():
     ax = plt.gca()
     ax.set_yscale('log')
     plt.show()
+# %%
+
+# %%
+
     # %%
-    goo = xr.merge([su,we.to_xarray()])
+    import cartopy
+    dd = .6 
+    lo_c = -68.5
+    la_c = -16
+    lom = lo_c-dd
+    loM = lo_c+dd
+    lam = la_c-dd
+    laM = la_c+dd
+    ww='$P_w$ [%]'
+    goo = xr.merge([su,we.to_xarray()])*100
+    goo = goo.rename({'w':ww})
     ax = fa.get_ax_lapaz(
-        fig_args={'figsize':(10,10),'dpi':300},
-                                    chc_lp_legend=True)
-    fa.logpolar_plot(goo['w'], ax=ax,name='w')
-    ax.plot(co.lola_la_paz_pol[:, 0], co.lola_la_paz_pol[:, 1])
+        fig_args={'figsize':(5,4),'dpi':100},
+        chc_lp_legend=True,
+        lalo_extent=[lom,loM,lam,laM],
+        lola_ticks=[[-69.0,-68.5,-68.0],[-16.5,-16.0,-15.5]],
+        y_left_lab=True,
+        map_line_alpha=1,
+        borders=False,
+        plot_cities=False,
+        lake_face_color=cartopy.feature.COLORS['water']
+    )
+    
+    fa.logpolar_plot(goo[ww], ax=ax,name=ww)
+    ax.plot(co.lola_la_paz_pol[:, 0], co.lola_la_paz_pol[:, 1],c='g')
+#     ax.get_legend().remove()
 
     plt.show()
 
+    ax.figure.savefig('bams_lapaz_bc.pdf')
 
+    # %%
+
+
+    # %%
+    ax.set_extent([-69.5,-67.6,-17,-15])
+    ax.gridlines()
+    ax.figure
 
     # %%
     pred = reg.predict(duc)

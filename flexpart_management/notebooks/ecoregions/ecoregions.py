@@ -72,6 +72,8 @@ def main():
     # s.f.subplots_adjust(left=.5)
     s.f.savefig(pjoin(co.paper_fig_path,
                       'ecoregions_map.pdf'))
+    s.f.savefig(pjoin(co.paper_fig_path,
+                      'ecoregions_map.svg'))
     s.f.show()
 
     # %%
@@ -95,7 +97,7 @@ def main():
     fl = lfc.FigLayout(cropped_combined_gdf,
                        topoline=topoline,
                        gdf18=gdf18)
-    fl.f.savefig(pjoin(co.paper_fig_path, 'combined_cl18_eco_map.pdf'))
+    fl.f.savefig(pjoin(co.paper_fig_path, 'combined_cl18_eco_map_.pdf'))
     # fl.f.tight_layout()
     plt.show()
 

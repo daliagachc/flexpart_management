@@ -24,8 +24,10 @@ import flexpart_management.modules.constants as co
 plt;
 # %%
 import flexpart_management.notebooks.log_pol_revisited as lpr
+
 _DIR = lpr.__path__._path[0]
-_data_dir = pjoin(_DIR,'data')
+_data_dir = pjoin(_DIR, 'data')
+
 
 # %%
 
@@ -41,10 +43,10 @@ def get_da(d1, h1):
 
     la_med = (h1[co.XLAT] - h1[co.XLAT_CORNER])
     lo_med = (h1[co.XLONG] - h1[co.XLONG_CORNER])
-    area = np.abs((4*lo_med*la_med))
+    area = np.abs((4 * lo_med * la_med))
     d12['G_AREA'] = area
 
-    d12 = d12.reset_coords().set_coords(['LAT', 'LON', 'ZTOP','G_AREA'])
+    d12 = d12.reset_coords().set_coords(['LAT', 'LON', 'ZTOP', 'G_AREA'])
     d12 = d12.swap_dims({co.WE: 'LON', co.SN: 'LAT', co.BT: co.ZT})
     # %%
     # %%
@@ -58,12 +60,13 @@ def get_da(d1, h1):
     d12 = d12.set_coords(
         [co.R_CENTER, co.TH_CENTER,
          'R', 'TH', co.TOPO, co.GA, 'logR', 'deltaR', 'AGE',
-         co.XLAT,co.XLONG
+         co.XLAT, co.XLONG
          ])
     # %%
     da12 = d12['CONC']
-    da12:xr.DataArray = da12.squeeze(['Time', 'ageclass'])[{co.ZT: slice(0, 30)}]
-    da12 = da12.expand_dims(**{'Time':[time]})
+    da12: xr.DataArray = da12.squeeze(['Time', 'ageclass'])[
+        {co.ZT: slice(0, 30)}]
+    da12 = da12.expand_dims(**{'Time': [time]})
     return da12
 
 
@@ -80,8 +83,8 @@ def set_r_th_coords(d12):
     log_ = (d12['logR'] / co.ROUND_R_LOG)
     exp = log_.round() * co.ROUND_R_LOG
     d12[co.R_CENTER] = np.exp(exp)
-    th_ = round_th(d12,lab='TH')
-    d12[co.TH_CENTER] = (np.round(th_,3)*1000).astype(int)/1000
+    th_ = round_th(d12, lab='TH')
+    d12[co.TH_CENTER] = (np.round(th_, 3) * 1000).astype(int) / 1000
     return d12
 
 
@@ -93,9 +96,8 @@ def round_th(d12, lab='TH'):
     return th_
 
 
-
 def get_log_pol(da12):
-    da12_ = da12.reset_coords([co.TOPO, co.XLONG, co.XLAT, co.GA,'G_AREA'])
+    da12_ = da12.reset_coords([co.TOPO, co.XLONG, co.XLAT, co.GA, 'G_AREA'])
     g = da12_.groupby(co.R_CENTER)
     li = []
     for l, _d in g:
@@ -109,24 +111,24 @@ def get_log_pol(da12):
 
         _d['ca'] = _d[co.CONC] * _d['AGE']
 
-        gg=_d[[co.CONC,'ca']].groupby(co.TH_CENTER)
+        gg = _d[[co.CONC, 'ca']].groupby(co.TH_CENTER)
         ag = gg.sum()
-        ag = ag['ca']/ag[co.CONC]
-        ag = ag.expand_dims(**{co.R_CENTER:[l]})
+        ag = ag['ca'] / ag[co.CONC]
+        ag = ag.expand_dims(**{co.R_CENTER: [l]})
         ag.name = 'AGE'
-
 
         num = _d[co.CONC].groupby(co.TH_CENTER).count()
         num = num.expand_dims(**{co.R_CENTER: [l]})
-        num = num.min(fa.dc(num,co.R_CENTER))
+        num = num.min(fa.dc(num, co.R_CENTER))
         res = res.assign_coords(**{'NUM': num})
 
-        res = xr.merge([res, res1,ag])
+        res = xr.merge([res, res1, ag])
         if len(res[co.TH_CENTER]) == 36:
             li.append(res)
     nd = xr.concat(li, dim=co.R_CENTER)
     nd = nd.set_coords([co.GA, co.TOPO, co.XLAT, co.XLONG])
     return nd
+
 
 def get_mid_point(vector):
     i0 = vector[0]
@@ -136,6 +138,7 @@ def get_mid_point(vector):
         nlat.append(im.item())
         nlat.append(vector[i + 1].item())
     return nlat
+
 
 def increase_res(coarse_da, r_max):
     da = coarse_da
@@ -149,11 +152,12 @@ def increase_res(coarse_da, r_max):
     nda = da.interp({'LAT': nlat, 'LON': nlon})
     nda.values = nda.values / 4
     nda[co.GA] = nda[co.GA] / 4
-    nda['G_AREA'] = nda['G_AREA']/4
+    nda['G_AREA'] = nda['G_AREA'] / 4
     nda = set_r_th_coords(nda)
     return nda
 
-def get_merged_da_log_pol(d1, d2, h1, h2)->xr.Dataset:
+
+def get_merged_da_log_pol(d1, d2, h1, h2) -> xr.Dataset:
     da22 = get_da(d2, h2)
     nd2 = get_log_pol(da22)
     da12 = get_da(d1, h1)
@@ -193,6 +197,7 @@ def get_merged_da_log_pol(d1, d2, h1, h2)->xr.Dataset:
     aa = xr.concat([a1, a2, a3, a4, a5, a6], dim=co.R_CENTER)
     aa[co.TH_CENTER] = round_th(aa, lab=co.TH_CENTER)
     return aa
+
 
 # %%
 
@@ -241,7 +246,8 @@ def sum_over_time(da12):
     da['AGE'] = dage
     return da
 
-def get_merged_da_log_pol2(da12, da22)->xr.Dataset:
+
+def get_merged_da_log_pol2(da12, da22) -> xr.Dataset:
     # da22 = get_da(d2, h2)
     nd2 = get_log_pol(da22)
     # da12 = get_da(d1, h1)
@@ -281,4 +287,3 @@ def get_merged_da_log_pol2(da12, da22)->xr.Dataset:
     aa = xr.concat([a1, a2, a3, a4, a5, a6], dim=co.R_CENTER)
     aa[co.TH_CENTER] = round_th(aa, lab=co.TH_CENTER)
     return aa
-

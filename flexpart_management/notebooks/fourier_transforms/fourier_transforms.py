@@ -29,10 +29,13 @@ def main():
     ls18 = co.get_nc18_order().sort_values(['sr', '18_NC'])['18_NC'].values
     # %%
     col_df = lfc.get_fourier_for_all_df(ds, ls18)
+    col_df.index = 1/col_df.index
     mean_ds = col_df.median(axis=1)
 
+    # %%
+
     s = lfc.plot_fourier_list(col_df, ls18, mean_ds)
-    s.f.savefig(pjoin(lfc.img_path,'c18_fourier.pdf'))
+    s.f.savefig(pjoin(lfc.img_path, 'c18_fourier.pdf'))
     # %%
     # %%
     import scipy as sp
@@ -56,28 +59,44 @@ def main():
     # %%
     s = lfc.plot_daily_evolution(ds, ls18)
     s.f.show()
-    s.f.savefig(pjoin(img_path,'daily_evolution_nc18.pdf'))
+    s.f.savefig(pjoin(img_path, 'daily_evolution_nc18.pdf'))
+    # %%
+    ds
+    # %%
+
     # %%
     # cl_lab = '09_MR'
-    for cl_lab in ls18:
-        dds, km = lfc.get_dds_km(cl_lab, ds, z='ALL', h0=0, h1=24)
-        s = lfc.plot_ts_clus(dds, km, cl_lab)
+    sel = [
+        ['02_SR', [1,0]],
+        # '04_SR',
+        ['07_SR', [1,0]],
+        ['10_SR', [0,1]],
+        # '11_SR',
+        ['12_SR', [0,1]]
+    ]
+    for cl_lab, _in in sel:
+        # %%
+        h0, h1 = 0, 24
+        nc = 2
+        dds, km = lfc.get_dds_km(cl_lab, ds, z='ALL', h0=h0, h1=h1, nc=nc)
+        # %%
+        s = lfc.plot_ts_clus(dds, km, cl_lab, h0=h0, h1=h1, _in=_in)
+        # %%
         name = f'day_dtw_kmean_{cl_lab}.pdf'
-        s.f.savefig(pjoin(img_path, name))
-    for cl_lab in ls18:
-        dds, km = lfc.get_dds_km(cl_lab, ds, z='ALL',h0=-12,h1=12)
-        s = lfc.plot_ts_clus(dds, km, cl_lab)
-        name = f'night_dtw_kmean_{cl_lab}.pdf'
-        s.f.savefig(pjoin(img_path,name))
-
-
+        # s.f.savefig(pjoin(img_path, name))
+        s.f.savefig(pjoin(co.paper_fig_path, name))
         # break
+    # for cl_lab in sel:
+    #     h0, h1 = -12, 12
+    #     dds, km = lfc.get_dds_km(cl_lab, ds, z='ALL', h0=h0, h1=h1, nc=nc)
+    #     s = lfc.plot_ts_clus(dds, km, cl_lab, h0=h0, h1=h1)
+    #     name = f'night_dtw_kmean_{cl_lab}.pdf'
+    #     s.f.savefig(pjoin(img_path, name))
+    #     # break
 
     # %%
 
     pass
-
-
 
 # %%
 # %%

@@ -91,7 +91,7 @@ def map_figure():
 
 def add_indices(ax1, ax2, ax3, ax4):
     axs = [ax1, ax2, ax3, ax4]
-    texts = ['a)', 'b)', 'c)', 'd)']
+    texts = ['a', 'b', 'c', 'd']
     for ax, text in zip(axs, texts):
         fa.add_ax_lab(ax, text)
 
@@ -287,7 +287,9 @@ def plot_bolivia_domains(PROJ, ax1, dark_grid_color, grid_style, lala,
                            grid_style=grid_style,
                            grid_color=dark_grid_color,
                            grid_alpha=1,
-                           map_res='110m'
+                           map_res='110m',
+                           xlab_bot=False,
+                           ylab_left=False
                            )
     ax.set_yticks(lat_large_ticks, crs=PROJ)
     ax.set_ylabel(None)
@@ -301,7 +303,9 @@ def plot_bolivia_elevation(PROJ, ax2, bar_legend, grid_style, lala, levels,
                            lola_extent, lolo, lon_large_ticks, ncmap, topo_ds,
                            white_grid_color):
     ax = fa.get_ax_bolivia(
-        chc_lp_legend=False, ax=ax2, plot_cities=False,
+        chc_lp_legend=False,
+        ax=ax2,
+        plot_cities=False,
         lola_extent=lola_extent,
         plot_ocean=True,
         lola_ticks=[lolo, lala],
@@ -309,7 +313,9 @@ def plot_bolivia_elevation(PROJ, ax2, bar_legend, grid_style, lala, levels,
         grid_style=grid_style,
         grid_color=white_grid_color,
         grid_alpha=1,
-        map_res='110m'
+        map_res='110m',
+        xlab_bot=False,
+        ylab_left=False
     )
     # ax.set_yticks([-20,0],crs=ccrs.PlateCarree())
     ax.set_ylabel(None)

@@ -9,6 +9,9 @@ This notebook contains information regarding the release v03 of the timeseries f
   google earth polygones for the 6 pathways
   - pol18.kml  
   google earth polygones for the 18 clusters
+  - csv folder  
+    - a csv "version" of the nc (netCDF) file.
+    - for metadata please refer to the description_cluster_series_v3.csv file. 
 
 below are some examples on how to use the dataset
 

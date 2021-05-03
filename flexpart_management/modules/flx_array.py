@@ -374,9 +374,9 @@ def fix_releases(ds, prnt=False):
 
 def add_chc_lpb(ax):
     ax.scatter(co.CHC_LON, co.CHC_LAT, marker='.', color='b',
-               transform=co.PROJ, label='CHC',zorder = 100)
+               transform=co.PROJ, label='CHC', zorder=100)
     ax.scatter(co.LPB_LON, co.LPB_LAT, marker='.', color='g',
-               transform=co.PROJ, label='La Paz', zorder = 100)
+               transform=co.PROJ, label='La Paz', zorder=100)
     ax.legend()
 
 
@@ -399,7 +399,8 @@ def get_ax_bolivia(
         map_res='50m',
         lake_face_color=cartopy.feature.COLORS['water'],
         map_line_alpha=1
-, xlab_top=False, ylab_right=False, xlab_bot=True, ylab_left=True) -> GeoAxes:
+        , xlab_top=False, ylab_right=False, xlab_bot=True,
+        ylab_left=True) -> GeoAxes:
     """
     returns a geo ax object with the area of bolivia
 
@@ -434,7 +435,7 @@ def get_ax_bolivia(
                    alpha=1, linestyle='-',
                    facecolor=lake_face_color,
                    edgecolor=cartopy.feature.COLORS['water'],
-                   zorder = 0
+                   zorder=0
                    )
     if plot_ocean:
         ax.add_feature(cartopy.feature.OCEAN.with_scale('50m'))
@@ -488,7 +489,7 @@ def get_ax_lapaz(ax=False,
                  , grid_alpha=0.5, grid_color='k', grid_style='--',
                  lake_face_color='none',
                  map_line_alpha=1
-                 , y_left_lab=False, y_right_lab=False):
+                 , y_left_lab=False, y_right_lab=False, borders=True):
     if fig_args is None:
         fig_args = {}
     import matplotlib.ticker as mticker
@@ -504,10 +505,12 @@ def get_ax_lapaz(ax=False,
         cartopy.feature.LAKES.with_scale('10m'),
         facecolor=lake_face_color, edgecolor=cartopy.feature.COLORS['water'],
         alpha=map_line_alpha,
+        zorder=-10
     )
-    ax.add_feature(cartopy.feature.BORDERS.with_scale('10m'),
-                   alpha=map_line_alpha,
-                   )
+    if borders:
+        ax.add_feature(cartopy.feature.BORDERS.with_scale('10m'),
+                       alpha=map_line_alpha,
+                       )
     if plot_cities:
         ax.add_feature(cartopy.feature.STATES.with_scale('10m'),
                        alpha=map_line_alpha,
@@ -522,13 +525,13 @@ def get_ax_lapaz(ax=False,
     gl.xlabels_top = False
     gl.ylabels_right = y_right_lab
     gl.ylabels_left = y_left_lab
-    rr=2
+    rr = 2
     if lola_ticks is None:
-        lo1 = np.round(lalo_extent[0] / rr) * rr - 4*rr
+        lo1 = np.round(lalo_extent[0] / rr) * rr - 4 * rr
         # print(lo1)
-        lo2 = lalo_extent[1] + 4*rr
-        la1 = np.round(lalo_extent[2] / rr) * rr - 4*rr
-        la2 = lalo_extent[3] + 4*rr
+        lo2 = lalo_extent[1] + 4 * rr
+        la1 = np.round(lalo_extent[2] / rr) * rr - 4 * rr
+        la2 = lalo_extent[3] + 4 * rr
         lolo = np.arange(*(lo1, lo2, rr))
         lala = np.arange(*(la1, la2, rr))
     else:
@@ -549,7 +552,7 @@ def get_ax_lapaz(ax=False,
 
 
 def red_cmap(N=None):
-    cmap = plt.get_cmap('Reds',N)
+    cmap = plt.get_cmap('Reds', N)
     my_cmap = cmap(np.arange(cmap.N))
 
     # Set alpha
@@ -764,7 +767,7 @@ def logpolar_plot(ds,
     if ax is None:
         fig = plt.figure(**fig_ops)
         ax = fig.add_subplot(1, 1, 1, projection=co.PROJ, )
-    df = ds.reset_coords()[[name,*co.LL00]].to_dataframe()
+    df = ds.reset_coords()[[name, *co.LL00]].to_dataframe()
     if drop_zeros:
         df = df[df[name] > 0]
     pol_key = 'pol'
@@ -791,15 +794,15 @@ def logpolar_plot(ds,
     p = PatchCollection(df[pol_key].values, **args_)
     p.set_array(df[name].values)
     if centered_color:
-        mmax = max(abs(minc),abs(maxc))
-        p.set_clim(-mmax,mmax)
+        mmax = max(abs(minc), abs(maxc))
+        p.set_clim(-mmax, mmax)
     else:
         p.set_clim(minc, maxc)
 
     ax.add_collection(p)
     fig = ax.figure
     if colorbar:
-        cb = fig.colorbar(p,ax=ax, **cb_kwargs)
+        cb = fig.colorbar(p, ax=ax, **cb_kwargs)
         if name in co.PLOT_LABS:
             cb_lab = co.PLOT_LABS[name]
         else:
@@ -871,7 +874,9 @@ def get_dims_complement(ds, keep):
     return complement
     # return co_keep
 
+
 dc = get_dims_complement
+
 
 def get_custom_cmap(to_rgb, from_rgb=None):
     # from color r,g,b
@@ -1211,7 +1216,7 @@ def open_temp_ds(name):
     return ds
 
 
-def open_temp_ds_clustered_18(fix_lab=True,add_names = False):
+def open_temp_ds_clustered_18(fix_lab=True, add_names=False):
     if sys.platform == 'darwin':
         ds = open_temp_ds('ds_clustered_18.nc')
     if sys.platform == 'linux':
@@ -1230,8 +1235,8 @@ def open_temp_ds_clustered_18(fix_lab=True,add_names = False):
     if add_names:
 
         # %%
-        df = pd.read_csv(pjoin(co.tmp_data_path,'prop_df_.csv'))
-        n6 = pd.read_csv(pjoin(co.tmp_data_path,'nc_18_nc_06.csv'))
+        df = pd.read_csv(pjoin(co.tmp_data_path, 'prop_df_.csv'))
+        n6 = pd.read_csv(pjoin(co.tmp_data_path, 'nc_18_nc_06.csv'))
         _dic = df.set_index('cluster_i')['short_name'].to_dict()
         _dic6 = n6.set_index('18_NC')['06_NC'].to_dict()
 
@@ -1255,10 +1260,10 @@ def open_temp_ds_clustered_18(fix_lab=True,add_names = False):
                 res = _dic6[i]
             return res
 
-        ds['lab_name']=xr.apply_ufunc(_fdic,ds['lab'].load(),vectorize=True)
-        ds['lab_nc06']=xr.apply_ufunc(_fdic6,ds['lab_name'],vectorize=True)
+        ds['lab_name'] = xr.apply_ufunc(_fdic, ds['lab'].load(), vectorize=True)
+        ds['lab_nc06'] = xr.apply_ufunc(_fdic6, ds['lab_name'], vectorize=True)
         # %%
-        ds=ds.set_coords(names=['lab','lab_name','lab_nc06'])
+        ds = ds.set_coords(names=['lab', 'lab_name', 'lab_nc06'])
 
     return ds
 
@@ -1318,16 +1323,16 @@ def add_ax_lab(ax, text):
                 fontweight='bold'
                 )
 
-def add_fig_panels(fig:plt.Axes=None,axl=None, par=')'):
+
+def add_fig_panels(fig: plt.Axes = None, axl=None, par=')'):
     import string
     a_l = list(string.ascii_lowercase)
     if axl is None:
         axs = fig.axes
     else:
         axs = axl
-    for a,ax in zip(a_l,axs):
-        add_ax_lab(ax,f'{a}{par}')
-
+    for a, ax in zip(a_l, axs):
+        add_ax_lab(ax, f'{a}{par}')
 
 
 def from_asl_to_agl(ds):
@@ -1355,9 +1360,10 @@ def from_asl_to_agl(ds):
         r_con = xr.concat(r_list, dim=co.R_CENTER)
         th_list.append(r_con)
     th_con = xr.concat(th_list, dim=co.TH_CENTER)
-    ds1:xr.Dataset = th_con
+    ds1: xr.Dataset = th_con
     ds1 = ds1.drop_vars(co.ZB).drop_vars(co.ZT)
     return ds1
+
 
 def add_lat_lon_corners(ds):
     r = ds[co.R_CENTER]

@@ -355,11 +355,24 @@ def plot_fig_corr_s04(_dic, cols, dcc, df18, df6, dj18, dj6, sul, ticks,
 
 def plot_map2(d10c, d7c, d8c, d8mc, d9c, f, gs):
     def _add_labels(ax2, c9):
-        ax2.scatter(-71.857, -15.787, c='k', edgecolors='w', zorder=10, s=20)
-        ax2.annotate('Sabancaya\nvolcano', xy=[-71.857, -15.787],
-                     xytext=[-73.7, -15.7], size=8,
+
+        _lo = -71.857
+        _la = -15.787
+        ax2.scatter(_lo, _la, c='k', edgecolors='w', zorder=10, s=20)
+        ax2.annotate('Sabancaya', xy=[_lo, _la],
+                     xytext=[-73.7, -15.5], size=8,
                      # arrowprops=dict(arrowstyle='-'),
+                     alpha = .5
                      )
+
+        _la,lo = -16.348611, -70.902222
+        ax2.scatter(_lo, _la, c='k', edgecolors='w', zorder=10, s=20)
+        ax2.annotate('Ubinas', xy=[_lo, _la],
+                     xytext=[_lo, _la -.5], size=8,
+                     # arrowprops=dict(arrowstyle='-'),
+                     alpha = .5
+                     )
+
         ax2.scatter(co.CHC_LON, co.CHC_LAT, c='k', edgecolors='w', zorder=10,
                     s=8)
         ax2.annotate(' CHC', xy=[co.CHC_LON, co.CHC_LAT], size=8,
