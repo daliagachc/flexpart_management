@@ -5,145 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="963ddb05-91a1-42fd-91c7-270c1c11d033" name="Default Changelist" comment="˚">
-      <change afterPath="$PROJECT_DIR$/flexpart_management.egg-info/PKG-INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management.egg-info/SOURCES.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management.egg-info/dependency_links.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management.egg-info/requires.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management.egg-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/bams_fig/bams_fig.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/bams_fig/bams_fig.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/bams_fig/bams_fig.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/bams_fig/bams_fig_lfc.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/bams_fig/bams_fig_lfc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/bams_fig/diurnal_BOT_2018-05-24_2018-05-08.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/ecoregions/ecoregions_hatched.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/ecoregions/ecoregions_hatched_lfc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_map_special_times/map_explore.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_map_special_times/map_explore.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_paper/Untitled.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_paper/Untitled.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_paper/c45.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_paper/c45.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_paper/c45_timeseries.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/george_paper/cluster_george_c45.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/itcz_analysis/itcz_analysis.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/itcz_analysis/itcz_analysis_lfc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/log_pol_revisited/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/bams_lapaz_bc.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/la_paz_pol.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/scratch/KF_filter.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/scratch/Untitled.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/scratch/Untitled.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/scratch/Untitled.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/scratch/Untitled1.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/scratch/Untitled1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_simple_cluster_corr_paper/sulfate_simple_cluster_corr_paper_v02-06.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_simple_cluster_corr_paper/sulfate_simple_cluster_corr_paper_v02-06.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_simple_cluster_corr_paper/sulfate_simple_cluster_corr_paper_v02.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_simple_cluster_corr_paper/sulfate_simple_cluster_corr_paper_v02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/surface_timeseries/dyn_cluster.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/surface_timeseries/level_correlation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/surface_timeseries/surface_timeseries.pptx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/surface_timeseries/surface_timeseries.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/surface_timeseries/surface_timeseries_lfc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/.virtual_documents/Untitled.ipynb.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/.virtual_documents/create_simple_csv.ipynb.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/.virtual_documents/kite_tutorial.ipynb.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/create_simple_csv.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/create_simple_csv.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/R_DIS_all.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/ZGL_all.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/ZSL_all.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/age_all.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/age_lab_nc06.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/age_lab_nc18.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/clk_lab_nc06.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/clk_lab_nc18.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/clock_dir_all.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/conc_all.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/conc_lab_nc06.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/conc_lab_nc18.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/r_dis_lab_nc06.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/r_dis_lab_nc18.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/zgl_lab_nc06.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/zgl_lab_nc18.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/zsl_lab_nc06.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/zsl_lab_nc18.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/flexpart_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flexpart_management.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/FLEXOUT.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/FLEXOUT.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/FlexLogPol.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/FlexLogPol.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/FlxOutCheckAlt.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/FlxOutCheckAlt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/clustering_funs.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/clustering_funs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/modules/flx_array.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/modules/flx_array.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/ecoregions/ecoregions.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/ecoregions/ecoregions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/ecoregions/ecoregions_lfc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/ecoregions/ecoregions_lfc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/fourier_transforms.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/fourier_transforms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/fourier_transforms_lfc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/fourier_transforms_lfc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/c18_fourier.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/c18_fourier.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/daily_evolution_nc18.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/daily_evolution_nc18.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_02_MR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_02_MR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_02_SR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_02_SR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_03_SM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_03_SM.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_04_MR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_04_MR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_04_SR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_04_SR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_05_MR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_05_MR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_06_SM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_06_SM.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_07_LR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_07_LR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_07_SR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_07_SR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_08_LR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_08_LR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_08_SM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_08_SM.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_09_MR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_09_MR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_10_LR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_10_LR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_10_SR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_10_SR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_11_MR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_11_MR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_11_SR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_11_SR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_12_SM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_12_SM.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_12_SR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/day_dtw_kmean_12_SR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_02_MR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_02_MR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_02_SR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_02_SR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_03_SM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_03_SM.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_04_MR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_04_MR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_04_SR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_04_SR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_05_MR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_05_MR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_06_SM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_06_SM.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_07_LR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_07_LR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_07_SR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_07_SR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_08_LR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_08_LR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_08_SM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_08_SM.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_09_MR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_09_MR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_10_LR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_10_LR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_10_SR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_10_SR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_11_MR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_11_MR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_11_SR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_11_SR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_12_SM.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_12_SM.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_12_SR.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms/img/night_dtw_kmean_12_SR.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/get_flx_log_pol_coords_taito.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/get_flx_log_pol_coords_taito.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/get_flx_log_pol_coords_taito_srun.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/get_flx_log_pol_coords_taito_srun.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/log_pol_revisited/log_pol_revisited_lfc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/log_pol_revisited/log_pol_revisited_lfc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/log_pol_revisited/log_pol_revisited_save_asl.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/log_pol_revisited/log_pol_revisited_save_asl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/multicluster_main_pathways/multicluster_main_pathways.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/multicluster_main_pathways/multicluster_main_pathways.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/multicluster_main_pathways/multicluster_main_pathways.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/multicluster_main_pathways/multicluster_main_pathways.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/paper_map_figure/notebooks/map_figure.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/paper_map_figure/notebooks/map_figure.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/la_paz_pol.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/la_paz_pol.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/release_ds_v3_save_mega_ds.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/release_ds_v3/release_ds_v3_save_mega_ds.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-06-10_11-10-03_/get_flx_log_pol_coords_taito.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-06-10_11-10-03_/get_flx_log_pol_coords_taito.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-09-14_08-43-03_/exploreResults.md" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-09-14_08-43-03_/exploreResults.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/get_flx_log_pol_coords_taito.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/run_2019-10-02_13-42-52_/get_flx_log_pol_coords_taito.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/six_clusters_centroids/six_clusters_centroids_create_18agl.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/six_clusters_centroids/six_clusters_centroids_create_18agl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_simple_cluster_corr_paper/sulfate_simple_cluster_corr_paper.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_simple_cluster_corr_paper/sulfate_simple_cluster_corr_paper.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_simple_cluster_corr_paper/sulfate_simple_cluster_corr_paper.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_simple_cluster_corr_paper/sulfate_simple_cluster_corr_paper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_simple_cluster_corr_paper/sulfate_simple_cluster_corr_paper_lfc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_simple_cluster_corr_paper/sulfate_simple_cluster_corr_paper_lfc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/table_centroids_with_age_nc18/table_centroids_with_age_nc18.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/table_centroids_with_age_nc18/table_centroids_with_age_nc18.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/releases/v03/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2020-01-03_19-44-36_/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2020-01-03_19-44-36_/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -809,7 +671,7 @@
       <workItem from="1618388152514" duration="885000" />
       <workItem from="1619559509015" duration="1218000" />
       <workItem from="1619640196503" duration="606000" />
-      <workItem from="1620032453757" duration="851000" />
+      <workItem from="1620032453757" duration="1181000" />
     </task>
     <servers />
   </component>

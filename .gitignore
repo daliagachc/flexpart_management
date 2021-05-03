@@ -2,8 +2,10 @@
 __pycache__
 *.swp
 .DS_Store/
+.DS_Store
 /flexpart_management/sym_links
 .idea
 /flexpart_management/tmp_data
 /flexpart_management/notebooks/log_pol_revisited/data/
 
+.virtual_documents
