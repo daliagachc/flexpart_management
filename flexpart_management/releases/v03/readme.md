@@ -1,4 +1,5 @@
 This notebook contains information regarding the release v03 of the timeseries for the cluster analysis performed at CHC station during the SALTENA campaign
+## info
 
 - the data folder contains the following files:
   - description_cluster_series_v3.csv  
@@ -14,7 +15,14 @@ This notebook contains information regarding the release v03 of the timeseries f
     - a csv "version" of the nc (netCDF) file.
     - for metadata please refer to the description_cluster_series_v3.csv file.
     
-below are some examples on how to use the dataset
+    
+## donwload
+
+download all files from this release in a zip document:
+- [../v03.zip](../v03.zip)
+
+    
+## below are some examples on how to use the dataset
 
 open the dataset
 
@@ -243,7 +251,7 @@ ds['conc_all'].loc[
 
 
 ```python
-!jupyter-nbconvert --to md readme.ipynb
+!jupyter-nbconvert --to markdown readme.ipynb
 ```
 
 
