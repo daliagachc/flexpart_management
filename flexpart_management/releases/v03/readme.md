@@ -9,10 +9,11 @@ This notebook contains information regarding the release v03 of the timeseries f
   google earth polygones for the 6 pathways
   - pol18.kml  
   google earth polygones for the 18 clusters
+
   - csv folder  
     - a csv "version" of the nc (netCDF) file.
-    - for metadata please refer to the description_cluster_series_v3.csv file. 
-
+    - for metadata please refer to the description_cluster_series_v3.csv file.
+    
 below are some examples on how to use the dataset
 
 open the dataset
@@ -32,13 +33,13 @@ ds
 
 
 <pre>&lt;xarray.Dataset&gt;
-Dimensions:         (lab_nc06: 6, lab_nc18: 18, normalized: 2, releases: 4248, z_column: 2)
+Dimensions:         (lab_nc06: 6, lab_nc18: 18, normalized: 2, releases: 4248, z_column: 3)
 Coordinates:
   * normalized      (normalized) int64 0 1
-  * z_column        (z_column) object &#x27;ALL&#x27; &#x27;SURF&#x27;
+  * z_column        (z_column) object &#x27;ALL&#x27; &#x27;BL&#x27; &#x27;LEV0&#x27;
   * releases        (releases) datetime64[ns] 2017-12-06 ... 2018-05-31T23:00:00
-  * lab_nc18        (lab_nc18) object &#x27;11_SR&#x27; &#x27;10_LR&#x27; ... &#x27;08_LR&#x27; &#x27;03_SM&#x27;
-  * lab_nc06        (lab_nc06) object &#x27;07_PW&#x27; &#x27;05_PW&#x27; ... &#x27;03_PW&#x27; &#x27;12_PW&#x27;
+  * lab_nc18        (lab_nc18) object &#x27;08_LR&#x27; &#x27;12_SR&#x27; ... &#x27;08_SM&#x27; &#x27;02_SR&#x27;
+  * lab_nc06        (lab_nc06) object &#x27;05_PW&#x27; &#x27;08_PW&#x27; ... &#x27;11_PW&#x27; &#x27;03_PW&#x27;
 Data variables:
     conc_all        (normalized, z_column, releases) float64 ...
     age_all         (z_column, releases) float64 ...
@@ -73,12 +74,14 @@ ds['conc_lab_nc18'].loc[
 
 
 
-    [<matplotlib.lines.Line2D at 0x11bffb898>]
+    [<matplotlib.lines.Line2D at 0x120977860>]
 
 
 
 
+    
 ![png](readme_files/readme_5_1.png)
+    
 
 
 plot all column normalized SRR timeseries for cluster '11_SR'
@@ -93,32 +96,36 @@ ds['conc_lab_nc18'].loc[
 
 
 
-    [<matplotlib.lines.Line2D at 0x11b9f6710>]
+    [<matplotlib.lines.Line2D at 0x120ac8908>]
 
 
 
 
+    
 ![png](readme_files/readme_7_1.png)
+    
 
 
-plot surface normalized SRR timeseries for cluster '11_SR'
+plot BL normalized SRR timeseries for cluster '11_SR'
 
 
 ```python
 ds['conc_lab_nc18'].loc[
-    {'z_column':'SURF','lab_nc18':'11_SR','normalized':1}
+    {'z_column':'BL','lab_nc18':'11_SR','normalized':1}
 ].plot()
 ```
 
 
 
 
-    [<matplotlib.lines.Line2D at 0x11c35fb00>]
+    [<matplotlib.lines.Line2D at 0x120dd0320>]
 
 
 
 
+    
 ![png](readme_files/readme_9_1.png)
+    
 
 
 plot ratio column normalized SRR timeseries for cluster '11_SR'
@@ -129,7 +136,7 @@ dall = ds['conc_lab_nc18'].loc[
     {'z_column':'ALL','lab_nc18':'11_SR','normalized':1}
 ]
 dsurf = ds['conc_lab_nc18'].loc[
-    {'z_column':'SURF','lab_nc18':'11_SR','normalized':1}
+    {'z_column':'BL','lab_nc18':'11_SR','normalized':1}
 ]
 (dsurf/dall).plot()
 ```
@@ -137,12 +144,14 @@ dsurf = ds['conc_lab_nc18'].loc[
 
 
 
-    [<matplotlib.lines.Line2D at 0x11cf524e0>]
+    [<matplotlib.lines.Line2D at 0x120edf3c8>]
 
 
 
 
+    
 ![png](readme_files/readme_11_1.png)
+    
 
 
 plot age [hours] all column timeseries for cluster '11_SR'
@@ -157,12 +166,14 @@ ds['age_lab_nc18'].loc[
 
 
 
-    [<matplotlib.lines.Line2D at 0x11cdc8d30>]
+    [<matplotlib.lines.Line2D at 0x12114da58>]
 
 
 
 
+    
 ![png](readme_files/readme_13_1.png)
+    
 
 
 plot all column mean height above sea level timeseries for all domain
@@ -177,12 +188,14 @@ ds['ZSL_all'].loc[
 
 
 
-    [<matplotlib.lines.Line2D at 0x11bfe24a8>]
+    [<matplotlib.lines.Line2D at 0x121363f60>]
 
 
 
 
+    
 ![png](readme_files/readme_15_1.png)
+    
 
 
 plot all column not normalized SRR timeseries for all domain
@@ -198,12 +211,14 @@ ds['conc_all'].loc[
 
 
 
-    [<matplotlib.lines.Line2D at 0x11e628ac8>]
+    [<matplotlib.lines.Line2D at 0x12177d6d8>]
 
 
 
 
+    
 ![png](readme_files/readme_17_1.png)
+    
 
 
 
@@ -216,13 +231,20 @@ ds['conc_all'].loc[
 
 
 
-    [<matplotlib.lines.Line2D at 0x11ea86908>]
+    [<matplotlib.lines.Line2D at 0x120aac358>]
 
 
 
 
+    
 ![png](readme_files/readme_18_1.png)
+    
 
+
+
+```python
+!jupyter-nbconvert --to md readme.ipynb
+```
 
 
 ```python

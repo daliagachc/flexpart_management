@@ -47,6 +47,29 @@
       <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/surface_timeseries/surface_timeseries.pptx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/surface_timeseries/surface_timeseries.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/flexpart_management/notebooks/surface_timeseries/surface_timeseries_lfc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/.virtual_documents/Untitled.ipynb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/.virtual_documents/create_simple_csv.ipynb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/.virtual_documents/kite_tutorial.ipynb.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/create_simple_csv.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/create_simple_csv.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/R_DIS_all.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/ZGL_all.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/ZSL_all.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/age_all.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/age_lab_nc06.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/age_lab_nc18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/clk_lab_nc06.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/clk_lab_nc18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/clock_dir_all.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/conc_all.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/conc_lab_nc06.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/conc_lab_nc18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/r_dis_lab_nc06.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/r_dis_lab_nc18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/zgl_lab_nc06.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/zgl_lab_nc18.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/zsl_lab_nc06.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/data/csv/zsl_lab_nc18.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/flexpart_management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flexpart_management.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -118,6 +141,7 @@
       <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_simple_cluster_corr_paper/sulfate_simple_cluster_corr_paper.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_simple_cluster_corr_paper/sulfate_simple_cluster_corr_paper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_simple_cluster_corr_paper/sulfate_simple_cluster_corr_paper_lfc.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/sulfate_simple_cluster_corr_paper/sulfate_simple_cluster_corr_paper_lfc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flexpart_management/notebooks/table_centroids_with_age_nc18/table_centroids_with_age_nc18.py" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/notebooks/table_centroids_with_age_nc18/table_centroids_with_age_nc18.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flexpart_management/releases/v03/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/releases/v03/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2020-01-03_19-44-36_/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/flexpart_management/runs_config_dir/run_2020-01-03_19-44-36_/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
@@ -785,6 +809,7 @@
       <workItem from="1618388152514" duration="885000" />
       <workItem from="1619559509015" duration="1218000" />
       <workItem from="1619640196503" duration="606000" />
+      <workItem from="1620032453757" duration="851000" />
     </task>
     <servers />
   </component>
@@ -815,90 +840,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="328" y="118" key="#Project_Structure" timestamp="1611672966026">
-      <screen x="0" y="23" width="1680" height="1027" />
-    </state>
-    <state x="328" y="118" key="#Project_Structure/0.23.1680.1027@0.23.1680.1027" timestamp="1611672966026" />
-    <state x="650" y="355" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1617991954311">
-      <screen x="0" y="23" width="1920" height="1057" />
-    </state>
-    <state x="650" y="355" key="#com.intellij.fileTypes.FileTypeChooser/-1280.317.1280.777/0.23.1920.1057@0.23.1920.1057" timestamp="1617991954311" />
-    <state x="650" y="355" key="#com.intellij.fileTypes.FileTypeChooser/-1680.317.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1616787184785" />
-    <state x="569" y="346" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1615547058520" />
-    <state x="114" y="138" width="1692" height="948" key="DiffContextDialog" timestamp="1616627225913">
-      <screen x="0" y="23" width="1920" height="1177" />
-    </state>
-    <state x="100" y="123" width="1480" height="827" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1615551593828" />
-    <state x="114" y="138" width="1692" height="948" key="DiffContextDialog/77.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1616627225913" />
-    <state width="1304" height="288" key="GridCell.Tab.0.bottom" timestamp="1618067678981">
-      <screen x="0" y="23" width="1920" height="1057" />
-    </state>
-    <state width="1304" height="288" key="GridCell.Tab.0.bottom/-1280.317.1280.777/0.23.1920.1057@0.23.1920.1057" timestamp="1618067678981" />
-    <state width="1638" height="346" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1612199136476" />
-    <state width="1304" height="288" key="GridCell.Tab.0.center" timestamp="1618067678980">
-      <screen x="0" y="23" width="1920" height="1057" />
-    </state>
-    <state width="1304" height="288" key="GridCell.Tab.0.center/-1280.317.1280.777/0.23.1920.1057@0.23.1920.1057" timestamp="1618067678980" />
-    <state width="1638" height="346" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1612199136476" />
-    <state width="1304" height="288" key="GridCell.Tab.0.left" timestamp="1618067678980">
-      <screen x="0" y="23" width="1920" height="1057" />
-    </state>
-    <state width="1304" height="288" key="GridCell.Tab.0.left/-1280.317.1280.777/0.23.1920.1057@0.23.1920.1057" timestamp="1618067678980" />
-    <state width="1638" height="346" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1612199136475" />
-    <state width="1304" height="288" key="GridCell.Tab.0.right" timestamp="1618067678981">
-      <screen x="0" y="23" width="1920" height="1057" />
-    </state>
-    <state width="1304" height="288" key="GridCell.Tab.0.right/-1280.317.1280.777/0.23.1920.1057@0.23.1920.1057" timestamp="1618067678981" />
-    <state width="1638" height="346" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1612199136476" />
-    <state width="1638" height="346" key="GridCell.Tab.1.bottom" timestamp="1612199136338">
-      <screen x="0" y="23" width="1680" height="1027" />
-    </state>
-    <state width="1638" height="346" key="GridCell.Tab.1.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1612199136338" />
-    <state width="1638" height="346" key="GridCell.Tab.1.center" timestamp="1612199136337">
-      <screen x="0" y="23" width="1680" height="1027" />
-    </state>
-    <state width="1638" height="346" key="GridCell.Tab.1.center/0.23.1680.1027@0.23.1680.1027" timestamp="1612199136337" />
-    <state width="1638" height="346" key="GridCell.Tab.1.left" timestamp="1612199136337">
-      <screen x="0" y="23" width="1680" height="1027" />
-    </state>
-    <state width="1638" height="346" key="GridCell.Tab.1.left/0.23.1680.1027@0.23.1680.1027" timestamp="1612199136337" />
-    <state width="1638" height="346" key="GridCell.Tab.1.right" timestamp="1612199136337">
-      <screen x="0" y="23" width="1680" height="1027" />
-    </state>
-    <state width="1638" height="346" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1612199136337" />
-    <state x="331" y="147" width="1268" height="837" key="SettingsEditor" timestamp="1617991709554">
-      <screen x="0" y="23" width="1920" height="1057" />
-    </state>
-    <state x="331" y="147" width="1268" height="837" key="SettingsEditor/-1280.317.1280.777/0.23.1920.1057@0.23.1920.1057" timestamp="1617991709554" />
-    <state x="290" y="143" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1612475353418" />
-    <state x="100" y="123" width="1480" height="827" key="VCS.FileHistoryDialog" timestamp="1616323687980">
-      <screen x="0" y="23" width="1680" height="1027" />
-    </state>
-    <state x="100" y="123" width="1480" height="827" key="VCS.FileHistoryDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1616323687980" />
-    <state x="269" y="318" width="1920" height="1057" key="dock-window-1" timestamp="1617991039255">
-      <screen x="0" y="23" width="1920" height="1057" />
-    </state>
-    <state x="269" y="318" width="1920" height="1057" key="dock-window-1/-1280.317.1280.777/0.23.1920.1057@0.23.1920.1057" timestamp="1617991039255" />
-    <state x="-1639" y="336" width="1415" height="701" key="dock-window-1/-1680.317.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1616956635778" />
-    <state x="77" y="1223" width="1680" height="1027" key="dock-window-1/77.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1616669356096" />
-    <state x="669" y="104" width="813" height="663" key="find.popup" timestamp="1619560154069">
-      <screen x="0" y="23" width="1920" height="1057" />
-    </state>
-    <state x="669" y="104" width="813" height="663" key="find.popup/-1280.317.1280.777/0.23.1920.1057@0.23.1920.1057" timestamp="1619560154069" />
-    <state x="669" y="104" width="813" height="663" key="find.popup/-1680.317.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1616958791109" />
-    <state x="585" y="102" width="711" height="644" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1616279421915" />
-    <state x="625" y="256" key="run.anything.popup" timestamp="1617833124208">
-      <screen x="0" y="23" width="1920" height="1057" />
-    </state>
-    <state x="625" y="256" key="run.anything.popup/-1280.317.1280.777/0.23.1920.1057@0.23.1920.1057" timestamp="1617833124208" />
-    <state x="616" y="302" width="767" height="679" key="search.everywhere.popup" timestamp="1617991693350">
-      <screen x="0" y="23" width="1920" height="1057" />
-    </state>
-    <state x="616" y="302" width="767" height="679" key="search.everywhere.popup/-1280.317.1280.777/0.23.1920.1057@0.23.1920.1057" timestamp="1617991693350" />
-    <state x="547" y="251" width="671" height="658" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1616279622304" />
-    <state x="625" y="284" width="767" height="755" key="search.everywhere.popup/77.1223.1680.1027/0.23.1920.1177@0.23.1920.1177" timestamp="1616631998367" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/flexpart_management$fourier_transforms.coverage" NAME="fourier_transforms Coverage Results" MODIFIED="1612197508200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flexpart_management/notebooks/fourier_transforms" />

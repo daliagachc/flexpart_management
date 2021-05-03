@@ -5,7 +5,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.4.0
+#       jupytext_version: 1.11.1
 #   kernelspec:
 #     display_name: Python 3
 #     language: python
@@ -25,6 +25,10 @@
 #   - pol18.kml  
 #   google earth polygones for the 18 clusters
 #
+#   - csv folder  
+#     - a csv "version" of the nc (netCDF) file.
+#     - for metadata please refer to the description_cluster_series_v3.csv file.
+#     
 # below are some examples on how to use the dataset
 
 # %% [markdown]
@@ -103,5 +107,8 @@ ds['conc_all'].loc[
     {'z_column':'ALL','normalized':0,'releases':slice('2018-05-09','2018-05-11')}
 ].plot(ylim=(0,None))
 
-# %%
+# %% tags=[]
+# !jupyter-nbconvert --to markdown readme.ipynb
 
+
+# %%
